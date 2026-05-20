@@ -1,0 +1,3804 @@
+[
+    {
+        "type": "tour",
+        "name": "fadsfasd",
+        "content": {
+            "name": "fadsfasd",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-15T00:00:00",
+                    "city": "fasdfad"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-16T00:00:00",
+                    "city": "fasdfasd"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-17T00:00:00",
+                    "city": "fsdafsadf"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-18T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-19T00:00:00",
+                    "city": "fadsfads"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-20T00:00:00",
+                    "city": "fasdf"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "fadsfasd",
+            "cities": [
+                "fasdfad",
+                "fasdfasd",
+                "fsdafsadf",
+                "fadsfads",
+                "fasdf"
+            ],
+            "start_date": "2026-04-15"
+        },
+        "id": "0a4eb165-ef2c-4e54-8f7b-6a0a658b495d",
+        "timestamp": "2026-04-09T02:15:53.802930"
+    },
+    {
+        "type": "tour",
+        "name": "dsafasfd",
+        "content": {
+            "name": "dsafasfd",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-24T00:00:00",
+                    "city": "fasdfa"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-25T00:00:00",
+                    "city": "fasdfads"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-26T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-27T00:00:00",
+                    "city": "fsdafdas"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-28T00:00:00",
+                    "city": "fasdfasdf"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-29T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-30T00:00:00",
+                    "city": "fadsfdas"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-05-01T00:00:00",
+                    "city": "fasdfasd"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-05-02T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-05-03T00:00:00",
+                    "city": "fasd"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "dsafasfd",
+            "cities": [
+                "fasdfa",
+                "fasdfads",
+                "fsdafdas",
+                "fasdfasdf",
+                "fadsfdas",
+                "fasdfasd",
+                "fasd"
+            ],
+            "start_date": "2026-04-24"
+        },
+        "id": "519f66d9-d850-4765-a51a-2e958938e119",
+        "timestamp": "2026-04-09T02:33:49.927207"
+    },
+    {
+        "type": "tour",
+        "name": "afsdfads",
+        "content": {
+            "name": "afsdfads",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-23T00:00:00",
+                    "city": "afsdfa"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-24T00:00:00",
+                    "city": "fasdf"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-25T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-26T00:00:00",
+                    "city": "afadsfads"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-27T00:00:00",
+                    "city": "fads"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-28T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-29T00:00:00",
+                    "city": "fasdfasd"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-30T00:00:00",
+                    "city": "fasdfasd"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-05-01T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-05-02T00:00:00",
+                    "city": "fadsfas"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "afsdfads",
+            "cities": [
+                "afsdfa",
+                "fasdf",
+                "afadsfads",
+                "fads",
+                "fasdfasd",
+                "fasdfasd",
+                "fadsfas"
+            ],
+            "start_date": "2026-04-23"
+        },
+        "id": "3d6f3391-dd94-4488-b1ba-95b1335d5e64",
+        "timestamp": "2026-04-09T02:35:19.039696"
+    },
+    {
+        "type": "tour",
+        "name": "asdfadsf",
+        "content": {
+            "name": "asdfadsf",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-16T00:00:00",
+                    "city": "asfdfa"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-17T00:00:00",
+                    "city": "fasdsfasd"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-18T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-19T00:00:00",
+                    "city": "fadsfdsaf"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-20T00:00:00",
+                    "city": "adsfas"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-21T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-22T00:00:00",
+                    "city": "fasdfasd"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-23T00:00:00",
+                    "city": "fasdfdas"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "asdfadsf",
+            "cities": [
+                "asfdfa",
+                "fasdsfasd",
+                "fadsfdsaf",
+                "adsfas",
+                "fasdfasd",
+                "fasdfdas"
+            ],
+            "start_date": "2026-04-16"
+        },
+        "id": "504548df-d252-4a6a-91fe-c1df578b4221",
+        "timestamp": "2026-04-09T02:41:39.418326"
+    },
+    {
+        "type": "tour",
+        "name": "fdasfd",
+        "content": {
+            "name": "fdasfd",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-15T00:00:00",
+                    "city": "afsdfasd"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-16T00:00:00",
+                    "city": "fdsaf"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-17T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-18T00:00:00",
+                    "city": "dsfaadsfads"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-19T00:00:00",
+                    "city": "fadsfasd"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-20T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-21T00:00:00",
+                    "city": "fasdf"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "fdasfd",
+            "cities": [
+                "afsdfasd",
+                "fdsaf",
+                "dsfaadsfads",
+                "fadsfasd",
+                "fasdf"
+            ],
+            "start_date": "2026-04-15"
+        },
+        "id": "974c13eb-85b9-4809-b6b2-fb728969fab5",
+        "timestamp": "2026-04-09T03:22:31.430881"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fasdfads",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fasdfads  \nVenue: fadsfasdf  \n\nEvent Date: 2026-04-22\n\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $12,321.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fasdfads\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fasdfads",
+            "venue": "fadsfasdf",
+            "date": "2026-04-22"
+        },
+        "id": "d8d0fe14-9758-4bfc-a4b9-345ca890be1d",
+        "timestamp": "2026-04-09T03:22:40.558120"
+    },
+    {
+        "type": "nda_contract",
+        "name": "fasdf",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: fasdf  \nReceiving Party: afsdfas  \n\nPurpose:\nThe purpose of this agreement is: fasdfasdfasdfasdfas\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 2 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: fasdf\n\n_________________________  \nReceiving Party: afsdfas",
+        "metadata": {
+            "disclosing_party": "fasdf",
+            "receiving_party": "afsdfas"
+        },
+        "id": "9345bee9-74c0-4f45-aedb-7e60f7fc4df3",
+        "timestamp": "2026-04-09T03:22:58.034138"
+    },
+    {
+        "type": "tour",
+        "name": "fadsfa",
+        "content": {
+            "name": "fadsfa",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-23T00:00:00",
+                    "city": "fadsfd"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-24T00:00:00",
+                    "city": "adsfa"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-25T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-26T00:00:00",
+                    "city": "asdfads"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-27T00:00:00",
+                    "city": "fasdfasd"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-28T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-29T00:00:00",
+                    "city": "afdsfads"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "fadsfa",
+            "cities": [
+                "fadsfd",
+                "adsfa",
+                "asdfads",
+                "fasdfasd",
+                "afdsfads"
+            ],
+            "start_date": "2026-04-23"
+        },
+        "id": "9e0d41fa-d5ae-42c6-a15a-078e0c66ee15",
+        "timestamp": "2026-04-09T17:03:16.924858"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfda",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fadsfda  \nVenue: adfdsfads  \n\nEvent Date: 2026-04-16\n\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $166,898.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fadsfda\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fadsfda",
+            "venue": "adfdsfads",
+            "date": "2026-04-16"
+        },
+        "id": "349ed0a5-066c-4c97-b3eb-010531cff6c8",
+        "timestamp": "2026-04-09T17:03:36.941406"
+    },
+    {
+        "type": "nda_contract",
+        "name": "fdasfds",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: fdasfds  \nReceiving Party: fasdfasdfa  \n\nPurpose:\nThe purpose of this agreement is: fasdfadsfadsfasdfadsfas\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 5 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: fdasfds\n\n_________________________  \nReceiving Party: fasdfasdfa",
+        "metadata": {
+            "disclosing_party": "fdasfds",
+            "receiving_party": "fasdfasdfa"
+        },
+        "id": "e4affb01-a7b9-4b74-a32e-082de275c155",
+        "timestamp": "2026-04-09T17:03:49.861009"
+    },
+    {
+        "type": "tour",
+        "name": "Alejo",
+        "content": {
+            "name": "Alejo",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-23T00:00:00",
+                    "city": "Miami"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-24T00:00:00",
+                    "city": "Houston"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-25T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-26T00:00:00",
+                    "city": "Dallas"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "cities": [
+                "Miami",
+                "Houston",
+                "Dallas"
+            ],
+            "start_date": "2026-04-23"
+        },
+        "id": "1996783c-fe7c-48d8-8813-4fe91a4e82da",
+        "timestamp": "2026-04-09T18:03:49.943866"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: Alejo  \nVenue: Movistar Arena  \n\nEvent Date: 2026-04-16\n\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $100,000.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: Alejo\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar Arena",
+            "date": "2026-04-16"
+        },
+        "id": "8c2603af-bdc7-4fde-a9df-be4a8ce0ddfe",
+        "timestamp": "2026-04-09T18:04:19.621063"
+    },
+    {
+        "type": "nda_contract",
+        "name": "Alejo",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: Alejo  \nReceiving Party: Luchy  \n\nPurpose:\nThe purpose of this agreement is: Music management app dont talk about it\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 3 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: Alejo\n\n_________________________  \nReceiving Party: Luchy",
+        "metadata": {
+            "disclosing_party": "Alejo",
+            "receiving_party": "Luchy"
+        },
+        "id": "0bbd46aa-9234-4b0b-9407-e6a4322031d9",
+        "timestamp": "2026-04-09T18:04:53.006023"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": "Alejo booked in Pereira at Movistar Arena on 2026-04-22 for fee 2323132.0. Notes: Yes no maybe perhaps",
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Lucy",
+            "city": "Pereira",
+            "venue": "Movistar Arena",
+            "date": "2026-04-22",
+            "fee": 2323132.0,
+            "notes": "Yes no maybe perhaps"
+        },
+        "id": "d4c9fb14-f626-41d2-92d7-7bbc97466cbb",
+        "timestamp": "2026-04-09T22:03:23.173785"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": "Alejo booked in Pereira at Movistar Arena on 2026-04-22 for fee 2323132.0. Notes: Yes no maybe perhaps",
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Lucy",
+            "city": "Pereira",
+            "venue": "Movistar Arena",
+            "date": "2026-04-22",
+            "fee": 2323132.0,
+            "notes": "Yes no maybe perhaps"
+        },
+        "id": "b76526a2-7b6a-499c-ba2f-f33aceab1319",
+        "timestamp": "2026-04-09T22:03:31.750852"
+    },
+    {
+        "type": "booking",
+        "name": "fdasf",
+        "content": "fdasf booked in fadsfads at fadsf on 2026-04-23 for fee 123.0. Notes: 123",
+        "metadata": {
+            "artist": "fdasf",
+            "client": "fadsf",
+            "city": "fadsfads",
+            "venue": "fadsf",
+            "date": "2026-04-23",
+            "fee": 123.0,
+            "notes": "123"
+        },
+        "id": "ae48de57-eeaf-4ce4-8835-235ea434bf4b",
+        "timestamp": "2026-04-09T22:05:00.294647"
+    },
+    {
+        "type": "booking",
+        "name": "fdasf",
+        "content": "fdasf booked in fadsfads at fadsf on 2026-04-23 for fee 123.0. Notes: 123",
+        "metadata": {
+            "artist": "fdasf",
+            "client": "fadsf",
+            "city": "fadsfads",
+            "venue": "fadsf",
+            "date": "2026-04-23",
+            "fee": 123.0,
+            "notes": "123"
+        },
+        "id": "916fd622-4332-490a-ba69-5efa0deb465d",
+        "timestamp": "2026-04-09T22:05:31.756584"
+    },
+    {
+        "type": "booking",
+        "name": "fdasf",
+        "content": "fdasf booked in fadsfads at fadsf on 2026-04-23 for fee 123.0. Notes: 123",
+        "metadata": {
+            "artist": "fdasf",
+            "client": "fadsf",
+            "city": "fadsfads",
+            "venue": "fadsf",
+            "date": "2026-04-23",
+            "fee": 123.0,
+            "notes": "123"
+        },
+        "id": "5b330b0b-9537-4ee9-bf01-ee3fe5a78ba6",
+        "timestamp": "2026-04-09T22:05:34.011420"
+    },
+    {
+        "type": "booking",
+        "name": "afds",
+        "content": "afds booked in dasfs at asdfdas on 2026-04-09 for fee 123213.0. Notes: fadsf",
+        "metadata": {
+            "artist": "afds",
+            "client": "fadsfa",
+            "city": "dasfs",
+            "venue": "asdfdas",
+            "date": "2026-04-09",
+            "fee": 123213.0,
+            "notes": "fadsf"
+        },
+        "id": "7ba8e332-a563-4e88-a814-75621a6b9c35",
+        "timestamp": "2026-04-09T22:06:37.529848"
+    },
+    {
+        "type": "booking",
+        "name": "afdsfad",
+        "content": "afdsfad booked in fadsfa at fdsafadsf on 2026-04-21 for fee 123213213.0. Notes: fsdasdfasdf",
+        "metadata": {
+            "artist": "afdsfad",
+            "client": "fadsf",
+            "city": "fadsfa",
+            "venue": "fdsafadsf",
+            "date": "2026-04-21",
+            "fee": 123213213.0,
+            "notes": "fsdasdfasdf"
+        },
+        "id": "9ddc068c-f044-4bce-8a15-4c9430dd4f77",
+        "timestamp": "2026-04-09T22:07:25.067998"
+    },
+    {
+        "type": "booking",
+        "name": "afdsf",
+        "content": "afdsf booked in fasdfsd at afsdfds on 2026-04-09 for fee 0. Notes: fasdfasd",
+        "metadata": {
+            "artist": "afdsf",
+            "client": "fadsf",
+            "city": "fasdfsd",
+            "venue": "afsdfds",
+            "date": "2026-04-09",
+            "fee": 0,
+            "notes": "fasdfasd"
+        },
+        "id": "6af01108-04ba-4226-9c4b-019d3fbfc106",
+        "timestamp": "2026-04-09T22:09:07.359266"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfa",
+        "content": "fadsfa booked in fasdfasdf at fasdfadsf on 2026-04-09 for fee 21312312.0. Notes: fsadfas",
+        "metadata": {
+            "artist": "fadsfa",
+            "client": "fadsfasdf",
+            "city": "fasdfasdf",
+            "venue": "fasdfadsf",
+            "date": "2026-04-09",
+            "fee": 21312312.0,
+            "notes": "fsadfas"
+        },
+        "id": "54799781-263d-49b8-8e9d-eb1e59f0d22f",
+        "timestamp": "2026-04-09T22:09:58.373416"
+    },
+    {
+        "type": "booking",
+        "name": "ffadsfads",
+        "content": "ffadsfads booked in afdsfads at afsdfadf on 2026-04-09 for fee 12321312312.0. Notes: fafasdfsa",
+        "metadata": {
+            "artist": "ffadsfads",
+            "client": "fasdfasdf",
+            "city": "afdsfads",
+            "venue": "afsdfadf",
+            "date": "2026-04-09",
+            "fee": 12321312312.0,
+            "notes": "fafasdfsa"
+        },
+        "id": "bc2de02d-eda2-4fcb-85f5-9eec86e682b8",
+        "timestamp": "2026-04-09T22:11:45.381083"
+    },
+    {
+        "type": "booking",
+        "name": "Alerjo",
+        "content": "Alerjo booked in fadsfad at fadfasdf on 2026-04-09 for fee 12321.0. Notes: fasdfasdfasd",
+        "metadata": {
+            "artist": "Alerjo",
+            "client": "fadsfasd",
+            "city": "fadsfad",
+            "venue": "fadfasdf",
+            "date": "2026-04-09",
+            "fee": 12321.0,
+            "notes": "fasdfasdfasd"
+        },
+        "id": "c2e7ee09-8b62-4e8b-a7af-7ccaa4185bf5",
+        "timestamp": "2026-04-09T22:16:48.731347"
+    },
+    {
+        "type": "booking",
+        "name": "fdsaf",
+        "content": "fdsaf booked in fadsfa at dsfasdfas on 2026-04-09 for fee 21312312.0. Notes: fasfd",
+        "metadata": {
+            "artist": "fdsaf",
+            "client": "fasdfdsa",
+            "city": "fadsfa",
+            "venue": "dsfasdfas",
+            "date": "2026-04-09",
+            "fee": 21312312.0,
+            "notes": "fasfd"
+        },
+        "id": "79978dad-87d0-46ff-be49-9414e2e9a3a4",
+        "timestamp": "2026-04-09T22:19:43.949348"
+    },
+    {
+        "type": "booking",
+        "name": "fasdfasd",
+        "content": "fasdfasd booked in fadsfasd at asfdfasdfa on 2026-04-09 for fee 12321312.0. Notes: fasdf",
+        "metadata": {
+            "artist": "fasdfasd",
+            "client": "fadsfasd",
+            "city": "fadsfasd",
+            "venue": "asfdfasdfa",
+            "date": "2026-04-09",
+            "fee": 12321312.0,
+            "notes": "fasdf"
+        },
+        "id": "934b595e-aa4d-4378-8939-339afc847dc8",
+        "timestamp": "2026-04-09T22:21:24.881877"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fasdfasd",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fasdfasd  \nClient: fadsfasd\nVenue: asfdfasdfa  \n\nEvent Date: 2026-04-09\nLocation: fadsfasd\nFee: $12,321,312.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $12,321,312.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fasdfasd\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fasdfasd",
+            "venue": "asfdfasdfa",
+            "date": "2026-04-09"
+        },
+        "id": "4c29e4a0-1daa-42e2-8125-3a5458211eb2",
+        "timestamp": "2026-04-09T22:21:27.080056"
+    },
+    {
+        "type": "booking",
+        "name": "afsdfdsa",
+        "content": "afsdfdsa booked in fasdfasd at fasdfadsf on 2026-04-09 for fee 21312312.0. Notes: fadsfads",
+        "metadata": {
+            "artist": "afsdfdsa",
+            "client": "fadsfadsf",
+            "city": "fasdfasd",
+            "venue": "fasdfadsf",
+            "date": "2026-04-09",
+            "fee": 21312312.0,
+            "notes": "fadsfads"
+        },
+        "id": "62f748e5-22cb-4d3b-91a1-b6dfddb36620",
+        "timestamp": "2026-04-09T22:26:28.235891"
+    },
+    {
+        "type": "booking",
+        "name": "afsdfa",
+        "content": "afsdfa booked in fasdfasd at fadsfadsf on 2026-04-09 for fee 123123213.0. Notes: fsdaf",
+        "metadata": {
+            "artist": "afsdfa",
+            "client": "fdsafdsa",
+            "city": "fasdfasd",
+            "venue": "fadsfadsf",
+            "date": "2026-04-09",
+            "fee": 123123213.0,
+            "notes": "fsdaf"
+        },
+        "id": "99186072-3bc3-4a95-8171-29bdbe536261",
+        "timestamp": "2026-04-09T22:27:07.885509"
+    },
+    {
+        "type": "performance_contract",
+        "name": "afsdfa",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: afsdfa  \nClient: fdsafdsa\nVenue: fadsfadsf  \n\nEvent Date: 2026-04-09\nLocation: fasdfasd\nFee: $123,123,213.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $123,123,213.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: afsdfa\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "afsdfa",
+            "venue": "fadsfadsf",
+            "date": "2026-04-09"
+        },
+        "id": "fe724cf9-c57a-4c73-8477-674d09bbad78",
+        "timestamp": "2026-04-09T22:27:10.896778"
+    },
+    {
+        "type": "booking",
+        "name": "fdasf",
+        "content": "fdasf booked in fadsfa at fadsfa on 2026-04-09 for fee 21312312.0. Notes: fassdfasdfa",
+        "metadata": {
+            "artist": "fdasf",
+            "client": "fasdfz",
+            "city": "fadsfa",
+            "venue": "fadsfa",
+            "date": "2026-04-09",
+            "fee": 21312312.0,
+            "notes": "fassdfasdfa"
+        },
+        "id": "8a5580d3-479e-456e-90f9-4d87fbfdf78b",
+        "timestamp": "2026-04-09T22:37:35.552934"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fdasf",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fdasf  \nClient: fasdfz\nVenue: fadsfa  \n\nEvent Date: 2026-04-09\nLocation: fadsfa\nFee: $21,312,312.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $21,312,312.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fdasf\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fdasf",
+            "venue": "fadsfa",
+            "date": "2026-04-09"
+        },
+        "id": "d261fe84-94fe-4eea-8258-68b0922609b8",
+        "timestamp": "2026-04-09T22:37:37.397288"
+    },
+    {
+        "type": "booking",
+        "name": "dasfsa",
+        "content": "dasfsa booked in fasddfasd at fasdfasdf on 2026-04-09 for fee 123123123.0. Notes: dfafasdfsa",
+        "metadata": {
+            "artist": "dasfsa",
+            "client": "fasdfads",
+            "city": "fasddfasd",
+            "venue": "fasdfasdf",
+            "date": "2026-04-09",
+            "fee": 123123123.0,
+            "notes": "dfafasdfsa"
+        },
+        "id": "4e4a6bef-8072-4e6b-8dab-3dc6bd00f1d2",
+        "timestamp": "2026-04-09T22:44:53.145622"
+    },
+    {
+        "type": "booking",
+        "name": "dsafdfa",
+        "content": "dsafdfa booked in fadsfasd at fasdfasd on 2026-04-09 for fee 12321312.0. Notes: fdsadfasd",
+        "metadata": {
+            "artist": "dsafdfa",
+            "client": "afdsfsa",
+            "city": "fadsfasd",
+            "venue": "fasdfasd",
+            "date": "2026-04-09",
+            "fee": 12321312.0,
+            "notes": "fdsadfasd"
+        },
+        "id": "50182174-c157-46c7-9d85-cb171331d973",
+        "timestamp": "2026-04-09T22:47:19.739716"
+    },
+    {
+        "type": "booking",
+        "name": "fasdfa",
+        "content": "fasdfa booked in fasdfads at fasdfads on 2026-04-09 for fee 213123.0. Notes: fasddfadsf",
+        "metadata": {
+            "artist": "fasdfa",
+            "client": "fadsfas",
+            "city": "fasdfads",
+            "venue": "fasdfads",
+            "date": "2026-04-09",
+            "fee": 213123.0,
+            "notes": "fasddfadsf"
+        },
+        "id": "ced4eeda-3a3d-4c9b-9087-5afa4e72b968",
+        "timestamp": "2026-04-09T22:55:38.289313"
+    },
+    {
+        "type": "booking",
+        "name": "fasdfa",
+        "content": "fasdfa booked in fasdfads at fasdfads on 2026-04-09 for fee 213123.0. Notes: fasddfadsf",
+        "metadata": {
+            "artist": "fasdfa",
+            "client": "fadsfas",
+            "city": "fasdfads",
+            "venue": "fasdfads",
+            "date": "2026-04-09",
+            "fee": 213123.0,
+            "notes": "fasddfadsf"
+        },
+        "id": "cd86c7f0-beb1-4d83-803d-23785602d5e5",
+        "timestamp": "2026-04-09T22:55:46.409126"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfds",
+        "content": "fadsfds booked in fasdfads at fadsfads on 2026-04-09 for fee 12312312.0. Notes: fasdfas",
+        "metadata": {
+            "artist": "fadsfds",
+            "client": "fasdfas",
+            "city": "fasdfads",
+            "venue": "fadsfads",
+            "date": "2026-04-09",
+            "fee": 12312312.0,
+            "notes": "fasdfas"
+        },
+        "id": "c61269c6-72ee-4ec7-a416-eb78c7b39689",
+        "timestamp": "2026-04-09T22:57:49.502626"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfds",
+        "content": "fadsfds booked in fasdfads at fadsfads on 2026-04-09 for fee 12312312.0. Notes: fasdfas",
+        "metadata": {
+            "artist": "fadsfds",
+            "client": "fasdfas",
+            "city": "fasdfads",
+            "venue": "fadsfads",
+            "date": "2026-04-09",
+            "fee": 12312312.0,
+            "notes": "fasdfas"
+        },
+        "id": "3662bf2b-1b62-4eef-8179-9bcd67822261",
+        "timestamp": "2026-04-09T22:57:52.385463"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafd",
+        "content": "fdsafd booked in fadsfas at fdsafas on 2026-04-09 for fee 12321.0. Notes: fasdfa",
+        "metadata": {
+            "artist": "fdsafd",
+            "client": "fsadf",
+            "city": "fadsfas",
+            "venue": "fdsafas",
+            "date": "2026-04-09",
+            "fee": 12321.0,
+            "notes": "fasdfa"
+        },
+        "id": "c8282135-8efb-4404-966b-5014965d86d9",
+        "timestamp": "2026-04-09T23:00:03.012067"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasdf",
+        "content": "fadsfasdf booked in fasdfas at fadsfa on 2026-04-09 for fee 123123.0. Notes: fsadfa",
+        "metadata": {
+            "artist": "fadsfasdf",
+            "client": "fadsfas",
+            "city": "fasdfas",
+            "venue": "fadsfa",
+            "date": "2026-04-09",
+            "fee": 123123.0,
+            "notes": "fsadfa"
+        },
+        "id": "954096a4-3bce-481b-b47a-ee38969e9014",
+        "timestamp": "2026-04-09T23:01:37.747739"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfasdf",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fadsfasdf  \nClient: fadsfas\nVenue: fadsfa  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: fasdfas\nFee: $123,123.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $123,123.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fadsfasdf\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fadsfasdf",
+            "venue": "fadsfa",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "8cee2f5e-852c-4f3d-b75f-fe520fcaf3ff",
+        "timestamp": "2026-04-09T23:01:45.965998"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdsf",
+        "content": "fdsafdsf booked in adsfasd at fasdfas on 2026-04-09 for fee 0.0. Notes: fadsfasdfasdfas",
+        "metadata": {
+            "artist": "fdsafdsf",
+            "client": "fasdsfasdf",
+            "city": "adsfasd",
+            "venue": "fasdfas",
+            "date": "2026-04-09",
+            "fee": 0.0,
+            "notes": "fadsfasdfasdfas"
+        },
+        "id": "f2f99804-a2bd-459c-9d2f-74bd985b5410",
+        "timestamp": "2026-04-09T23:03:11.103228"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdsf",
+        "content": "fdsafdsf booked in adsfasd at fasdfas on 2026-04-09 for fee 431243241.0. Notes: fadsfasdfasdfas",
+        "metadata": {
+            "artist": "fdsafdsf",
+            "client": "fasdsfasdf",
+            "city": "adsfasd",
+            "venue": "fasdfas",
+            "date": "2026-04-09",
+            "fee": 431243241.0,
+            "notes": "fadsfasdfasdfas"
+        },
+        "id": "9e93fb59-e3bc-4383-a519-f58990eb731b",
+        "timestamp": "2026-04-09T23:03:25.991523"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fdsafdsf",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fdsafdsf  \nClient: fasdsfasdf\nVenue: fasdfas  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: adsfasd\nFee: $431,243,241.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $431,243,241.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fdsafdsf\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fdsafdsf",
+            "venue": "fasdfas",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "c54501f9-4f2e-44f5-890a-50653647e1de",
+        "timestamp": "2026-04-09T23:03:28.599197"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasdf",
+        "content": "fadsfasdf booked in fasdfa at fasdfads on 2026-04-09 for fee 12321321.0. Notes: fadsfads",
+        "metadata": {
+            "artist": "fadsfasdf",
+            "client": "fasdfads",
+            "city": "fasdfa",
+            "venue": "fasdfads",
+            "date": "2026-04-09",
+            "fee": 12321321.0,
+            "notes": "fadsfads"
+        },
+        "id": "eecca210-fea8-4369-a993-3ad947d829b2",
+        "timestamp": "2026-04-09T23:07:17.235136"
+    },
+    {
+        "type": "booking",
+        "name": "fadfads",
+        "content": "fadfads booked in fadsfsa at afdsfasd on 2026-04-09 for fee 123123.0. Notes: fdsafadsfasdfafds",
+        "metadata": {
+            "artist": "fadfads",
+            "client": "fasdfas",
+            "city": "fadsfsa",
+            "venue": "afdsfasd",
+            "date": "2026-04-09",
+            "fee": 123123.0,
+            "notes": "fdsafadsfasdfafds"
+        },
+        "id": "8b56b82f-8c1d-4f0d-bf37-70f6d1d71a05",
+        "timestamp": "2026-04-09T23:08:04.502029"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadfads",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fadfads  \nClient: fasdfas\nVenue: afdsfasd  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: fadsfsa\nFee: $123,123.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $123,123.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fadfads\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fadfads",
+            "venue": "afdsfasd",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "eefca401-ff40-4381-ba3e-cc4e6e8b8149",
+        "timestamp": "2026-04-09T23:08:16.869952"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfdas",
+        "content": "fadsfdas booked in fasdfads at fasdsfasd on 2026-04-09 for fee 1213123.0. Notes: fsadfasd",
+        "metadata": {
+            "artist": "fadsfdas",
+            "client": "fasdfasd",
+            "city": "fasdfads",
+            "venue": "fasdsfasd",
+            "date": "2026-04-09",
+            "fee": 1213123.0,
+            "notes": "fsadfasd"
+        },
+        "id": "4833a07e-581d-4d0e-9362-523c2e7352cb",
+        "timestamp": "2026-04-09T23:08:51.357348"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfdas",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fadsfdas  \nClient: fasdfasd\nVenue: fasdsfasd  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: fasdfads\nFee: $1,213,123.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $1,213,123.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fadsfdas\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fadsfdas",
+            "venue": "fasdsfasd",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "6dc247fe-79d4-412d-883a-7b89e20fbdcd",
+        "timestamp": "2026-04-09T23:08:54.640090"
+    },
+    {
+        "type": "booking",
+        "name": "fasdfa",
+        "content": "fasdfa booked in dsafsdf at afdsfasd on 2026-04-09 for fee 123123.0. Notes: fadsfa",
+        "metadata": {
+            "artist": "fasdfa",
+            "client": "fasdfa",
+            "city": "dsafsdf",
+            "venue": "afdsfasd",
+            "date": "2026-04-09",
+            "fee": 123123.0,
+            "notes": "fadsfa"
+        },
+        "id": "fc931117-d8bd-44ad-8bf4-a61ba1ed337b",
+        "timestamp": "2026-04-09T23:10:05.727778"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fasdfa",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fasdfa  \nClient: fasdfa\nVenue: afdsfasd  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: dsafsdf\nFee: $123,123.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $123,123.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fasdfa\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fasdfa",
+            "venue": "afdsfasd",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "feb7db04-491a-499b-9200-3bf73d9a3f16",
+        "timestamp": "2026-04-09T23:10:09.656722"
+    },
+    {
+        "type": "booking",
+        "name": "adfsaf",
+        "content": "adfsaf booked in fasdfa at fasdfads on 2026-04-09 for fee 123213.0. Notes: fassdfa",
+        "metadata": {
+            "artist": "adfsaf",
+            "client": "fsdafdfa",
+            "city": "fasdfa",
+            "venue": "fasdfads",
+            "date": "2026-04-09",
+            "fee": 123213.0,
+            "notes": "fassdfa"
+        },
+        "id": "0950510c-f3aa-44ec-8c07-5323b8c4e980",
+        "timestamp": "2026-04-09T23:13:34.781808"
+    },
+    {
+        "type": "performance_contract",
+        "name": "adfsaf",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: adfsaf  \nClient: fsdafdfa\nVenue: fasdfads  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: fasdfa\nFee: $123,213.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $123,213.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: adfsaf\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "adfsaf",
+            "venue": "fasdfads",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "8cebe43f-5a9e-4239-a9d1-fda1c665f644",
+        "timestamp": "2026-04-09T23:13:36.660647"
+    },
+    {
+        "type": "performance_contract",
+        "name": "adfsaf",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: adfsaf  \nClient: fsdafdfa\nVenue: fasdfads  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: fasdfa\nFee: $123,213.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $123,213.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: adfsaf\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "adfsaf",
+            "venue": "fasdfads",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "f4d759b7-e597-4632-bdf9-83d7b3335ac3",
+        "timestamp": "2026-04-09T23:15:47.395119"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfads",
+        "content": "fadsfads booked in afsdfasd at fasdfasd on 2026-04-09 for fee 213213.0. Notes: fasdsfasd",
+        "metadata": {
+            "artist": "fadsfads",
+            "client": "fasdfaf",
+            "city": "afsdfasd",
+            "venue": "fasdfasd",
+            "date": "2026-04-09",
+            "fee": 213213.0,
+            "notes": "fasdsfasd"
+        },
+        "id": "6b41675e-a9a6-47cc-8a6d-79b326208135",
+        "timestamp": "2026-04-09T23:16:14.548191"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfads",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fadsfads  \nClient: fasdfaf\nVenue: fasdfasd  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: afsdfasd\nFee: $213,213.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $213,213.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fadsfads\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fadsfads",
+            "venue": "fasdfasd",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "fb03c9af-91e8-4a3d-859b-87a6f2a7d936",
+        "timestamp": "2026-04-09T23:16:16.680195"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfas",
+        "content": "fadsfas booked in afdsfasd at fasdfad on 2026-04-09 for fee 1223213.0. Notes: fasdfdsa",
+        "metadata": {
+            "artist": "fadsfas",
+            "client": "fasdfasd",
+            "city": "afdsfasd",
+            "venue": "fasdfad",
+            "date": "2026-04-09",
+            "fee": 1223213.0,
+            "notes": "fasdfdsa"
+        },
+        "id": "0edc13d7-81ac-42af-8402-a3011e48f400",
+        "timestamp": "2026-04-09T23:18:23.528984"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfas",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fadsfas  \nClient: fasdfasd\nVenue: fasdfad  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: afdsfasd\nFee: $1,223,213.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $1,223,213.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fadsfas\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fadsfas",
+            "venue": "fasdfad",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "aa1c5270-eec9-4b36-9b9b-004bae5f9364",
+        "timestamp": "2026-04-09T23:18:25.776932"
+    },
+    {
+        "type": "booking",
+        "name": "fasdf",
+        "content": "fasdf booked in afdsfsa at fasdf on 2026-04-09 for fee 12321312.0. Notes: fsadfa",
+        "metadata": {
+            "artist": "fasdf",
+            "client": "fasdfads",
+            "city": "afdsfsa",
+            "venue": "fasdf",
+            "date": "2026-04-09",
+            "fee": 12321312.0,
+            "notes": "fsadfa"
+        },
+        "id": "a964c33d-7bc0-43ee-86d4-dab029802ba2",
+        "timestamp": "2026-04-10T04:13:43.119227"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fasdf",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fasdf  \nClient: fasdfads\nVenue: fasdf  \n\nEvent Date: 2026-04-09 00:00:00\nLocation: afdsfsa\nFee: $12,321,312.00\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $12,321,312.00 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fasdf\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fasdf",
+            "venue": "fasdf",
+            "date": "2026-04-09 00:00:00"
+        },
+        "id": "d326f531-7a33-47df-ad74-cac558a2b9be",
+        "timestamp": "2026-04-10T04:13:45.785868"
+    },
+    {
+        "type": "booking",
+        "name": "fdsaf",
+        "content": {
+            "artist": "fdsaf",
+            "client": "fadsfasd",
+            "city": "fdsafds",
+            "venue": "fasdf",
+            "date": "2026-04-11",
+            "fee": 12312312.0,
+            "notes": "fadsfasd"
+        },
+        "metadata": {
+            "artist": "fdsaf",
+            "client": "fadsfasd",
+            "city": "fdsafds",
+            "venue": "fasdf",
+            "date": "2026-04-11"
+        },
+        "id": "2b7d151f-2683-41a1-ba31-058e6c8beb28",
+        "timestamp": "2026-04-11T20:49:04.318073"
+    },
+    {
+        "type": "booking",
+        "name": "fdsad",
+        "content": {
+            "artist": "fdsad",
+            "client": "afsdfa",
+            "city": "fasdfads",
+            "venue": "fasdf",
+            "date": "2026-04-11",
+            "fee": 124321.0,
+            "notes": "fsdafas"
+        },
+        "metadata": {
+            "artist": "fdsad",
+            "client": "afsdfa",
+            "city": "fasdfads",
+            "venue": "fasdf",
+            "date": "2026-04-11"
+        },
+        "id": "19ff51ef-5fec-4a4e-aeab-82e3cdd6862d",
+        "timestamp": "2026-04-11T20:49:41.866405"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfa",
+        "content": {
+            "artist": "fadsfa",
+            "client": "fdsafads",
+            "city": "fdsafa",
+            "venue": "fadsfdas",
+            "date": "2026-04-11",
+            "fee": 213123.0,
+            "notes": "fdsafdsa"
+        },
+        "metadata": {
+            "artist": "fadsfa",
+            "client": "fdsafads",
+            "city": "fdsafa",
+            "venue": "fadsfdas",
+            "date": "2026-04-11"
+        },
+        "id": "c9dcfa60-3b3c-46fe-b342-0b3b9f35b17b",
+        "timestamp": "2026-04-11T21:15:59.429090"
+    },
+    {
+        "type": "booking",
+        "name": "fadsf",
+        "content": {
+            "artist": "fadsf",
+            "client": "fadsfs",
+            "city": "fadsfdsa",
+            "venue": "fasdfads",
+            "date": "2026-04-11",
+            "fee": 321321.0,
+            "notes": "fdsadsa"
+        },
+        "metadata": {
+            "artist": "fadsf",
+            "client": "fadsfs",
+            "city": "fadsfdsa",
+            "venue": "fasdfads",
+            "date": "2026-04-11"
+        },
+        "id": "a0f204cd-e20a-4a6a-9a0f-e05aa5d1901c",
+        "timestamp": "2026-04-11T21:19:24.882116"
+    },
+    {
+        "type": "booking",
+        "name": "fdasfdas",
+        "content": {
+            "artist": "fdasfdas",
+            "client": "fasdfads",
+            "venue": "fasdfas",
+            "city": "fadsfa",
+            "date": "2026-04-11",
+            "fee": 123132331.0,
+            "notes": "fdsafads"
+        },
+        "metadata": {
+            "artist": "fdasfdas",
+            "client": "fasdfads",
+            "city": "fadsfa",
+            "venue": "fasdfas",
+            "date": "2026-04-11"
+        },
+        "id": "7e575b9d-5c95-482b-93fc-15277fd60e1b",
+        "timestamp": "2026-04-11T21:34:45.487399"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafds",
+        "content": {
+            "artist": "fdsafds",
+            "client": "fasdfs",
+            "venue": "fadsfads",
+            "city": "afsdfasd",
+            "date": "2026-04-11",
+            "fee": 123213123.0,
+            "notes": "fdsaf"
+        },
+        "metadata": {
+            "artist": "fdsafds",
+            "client": "fasdfs",
+            "city": "afsdfasd",
+            "venue": "fadsfads",
+            "date": "2026-04-11"
+        },
+        "id": "4969c9f2-c1d8-4b91-a163-e3eb8fcf1a6d",
+        "timestamp": "2026-04-11T21:38:05.219323"
+    },
+    {
+        "type": "booking",
+        "name": "fdasfd",
+        "content": {
+            "artist": "fdasfd",
+            "client": "fasdfdasf",
+            "venue": "fasdfasd",
+            "city": "fadsfasd",
+            "date": "2026-04-11",
+            "fee": 213123.0,
+            "notes": "fsadfas"
+        },
+        "metadata": {
+            "artist": "fdasfd",
+            "client": "fasdfdasf",
+            "city": "fadsfasd",
+            "venue": "fasdfasd",
+            "date": "2026-04-11"
+        },
+        "id": "839fe4d2-8205-4aa9-8eed-f50c2d73226f",
+        "timestamp": "2026-04-11T21:42:54.181155"
+    },
+    {
+        "type": "booking",
+        "name": "afdsfadsf",
+        "content": {
+            "artist": "afdsfadsf",
+            "client": "fadsfa",
+            "venue": "fadsfasf",
+            "city": "fdsafdsa",
+            "date": "2026-04-11",
+            "fee": 123213.0,
+            "notes": "fdas"
+        },
+        "metadata": {
+            "artist": "afdsfadsf",
+            "client": "fadsfa",
+            "city": "fdsafdsa",
+            "venue": "fadsfasf",
+            "date": "2026-04-11"
+        },
+        "id": "3493f1ec-cdaa-47c0-adf1-859cfad29827",
+        "timestamp": "2026-04-11T21:45:38.068513"
+    },
+    {
+        "type": "booking",
+        "name": "afsdfads",
+        "content": {
+            "artist": "afsdfads",
+            "client": "fadsfdasfdsa",
+            "venue": "fadsfasd",
+            "city": "fadsfads",
+            "date": "2026-04-11",
+            "fee": 213321.0,
+            "notes": "fdsafa"
+        },
+        "metadata": {
+            "artist": "afsdfads",
+            "client": "fadsfdasfdsa",
+            "city": "fadsfads",
+            "venue": "fadsfasd",
+            "date": "2026-04-11"
+        },
+        "id": "228522a1-e63c-4854-bb6b-22f817165595",
+        "timestamp": "2026-04-11T21:46:27.061377"
+    },
+    {
+        "type": "booking",
+        "name": "hello",
+        "content": {
+            "artist": "hello",
+            "client": "fadsfdasfdsa",
+            "venue": "fdasfad",
+            "city": "fadsfads",
+            "date": "2026-04-11",
+            "fee": 213321.0,
+            "notes": "fdsafa"
+        },
+        "metadata": {
+            "artist": "hello",
+            "client": "fadsfdasfdsa",
+            "city": "fadsfads",
+            "venue": "fdasfad",
+            "date": "2026-04-11"
+        },
+        "id": "862354f2-cead-40d5-8f54-6d839c9d6446",
+        "timestamp": "2026-04-11T21:46:41.532456"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasd",
+        "content": {
+            "artist": "fadsfasd",
+            "client": "fadsfdsa",
+            "venue": "fasdfads",
+            "city": "fdsafsd",
+            "date": "2026-04-11",
+            "fee": 213213.0,
+            "notes": "fadsf"
+        },
+        "metadata": {
+            "artist": "fadsfasd",
+            "client": "fadsfdsa",
+            "city": "fdsafsd",
+            "venue": "fasdfads",
+            "date": "2026-04-11"
+        },
+        "id": "2bab6fc6-c8f9-4375-a1a8-6857e13d4224",
+        "timestamp": "2026-04-11T21:47:47.427623"
+    },
+    {
+        "type": "booking",
+        "name": "fdasfdasf",
+        "content": {
+            "artist": "fdasfdasf",
+            "client": "fadsfdsaf",
+            "venue": "fasdfadsf",
+            "city": "ffdsafa",
+            "date": "2026-04-21",
+            "fee": 123123.0,
+            "notes": "fsdadf"
+        },
+        "metadata": {
+            "artist": "fdasfdasf",
+            "client": "fadsfdsaf",
+            "city": "ffdsafa",
+            "venue": "fasdfadsf",
+            "date": "2026-04-21"
+        },
+        "id": "a231fc48-774b-403b-8168-ac7cdb3dbacf",
+        "timestamp": "2026-04-11T21:48:47.184036"
+    },
+    {
+        "type": "booking",
+        "name": "fdsadf",
+        "content": {
+            "artist": "fdsadf",
+            "client": "fasdf",
+            "venue": "fasdfdas",
+            "city": "fadsfa",
+            "date": "2026-04-23",
+            "fee": 1233.0,
+            "notes": "fadsf"
+        },
+        "metadata": {
+            "artist": "fdsadf",
+            "client": "fasdf",
+            "city": "fadsfa",
+            "venue": "fasdfdas",
+            "date": "2026-04-23"
+        },
+        "id": "717d6011-197f-4cf5-a5bf-b46eef4053b7",
+        "timestamp": "2026-04-13T15:27:56.627155"
+    },
+    {
+        "type": "booking",
+        "name": "fadsf",
+        "content": {
+            "artist": "fadsf",
+            "client": "fdsafasd",
+            "venue": "adsfa",
+            "city": "fdsasfasd",
+            "date": "2026-04-15",
+            "fee": 123123123.0,
+            "notes": "fasdfadsfdas"
+        },
+        "metadata": {
+            "artist": "fadsf",
+            "client": "fdsafasd",
+            "city": "fdsasfasd",
+            "venue": "adsfa",
+            "date": "2026-04-15"
+        },
+        "id": "2d09ff59-6fd6-48f9-a59f-4b180f4256d5",
+        "timestamp": "2026-04-13T15:29:26.646398"
+    },
+    {
+        "type": "tour",
+        "name": "fadsffadsf",
+        "content": {
+            "name": "fadsffadsf",
+            "schedule": [
+                {
+                    "type": "concert",
+                    "date": "2026-04-23T00:00:00",
+                    "city": "afsdfdsafadsf"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-24T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-25T00:00:00",
+                    "city": "fadsfasd"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-26T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-27T00:00:00",
+                    "city": "fadsfasdf"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-28T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-04-29T00:00:00",
+                    "city": "adsfasdf"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-04-30T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-05-01T00:00:00",
+                    "city": "adsffsdafasd"
+                },
+                {
+                    "type": "rest",
+                    "date": "2026-05-02T00:00:00"
+                },
+                {
+                    "type": "concert",
+                    "date": "2026-05-03T00:00:00",
+                    "city": "fadsfasda"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "fadsffadsf",
+            "cities": [
+                "afsdfdsafadsf",
+                "fadsfasd",
+                "fadsfasdf",
+                "adsfasdf",
+                "adsffsdafasd",
+                "fadsfasda"
+            ],
+            "start_date": "2026-04-23"
+        },
+        "id": "f2f3f0ad-bb85-482b-8d6c-0065179cc2f2",
+        "timestamp": "2026-04-13T15:29:41.540146"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfads",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fadsfads  \nClient: fasdfads\nVenue: fasdfdasf  \n\nEvent Date: 2026-04-22\nLocation: fasdfadsf\nFee: $321323213\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $321323213 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fadsfads\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fadsfads",
+            "venue": "fasdfdasf",
+            "date": "2026-04-22"
+        },
+        "id": "b55ba5dc-5b1a-48e1-916c-666154647909",
+        "timestamp": "2026-04-13T15:33:39.838442"
+    },
+    {
+        "type": "nda_contract",
+        "name": "fadsfasd",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: fadsfasd  \nReceiving Party: fasdfasdfasdf  \n\nPurpose:\nThe purpose of this agreement is: fasdfasdfasdfasdfsda\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 1233 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: fadsfasd\n\n_________________________  \nReceiving Party: fasdfasdfasdf",
+        "metadata": {
+            "disclosing_party": "fadsfasd",
+            "receiving_party": "fasdfasdfasdf"
+        },
+        "id": "1f6e3e32-8ac5-4fdf-b17a-a9cb52098eff",
+        "timestamp": "2026-04-13T15:40:20.848459"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasd",
+        "content": {
+            "artist": "fadsfasd",
+            "client": "fasdfasdf",
+            "venue": "fadsfads",
+            "city": "fsdafds",
+            "date": "2026-04-16",
+            "fee": 213123123.0,
+            "notes": "fsdafasdfasdf"
+        },
+        "metadata": {
+            "artist": "fadsfasd",
+            "client": "fasdfasdf",
+            "city": "fsdafds",
+            "venue": "fadsfads",
+            "date": "2026-04-16"
+        },
+        "id": "efb3cbb7-91ec-41f5-a77f-7b4467a8ce17",
+        "timestamp": "2026-04-13T15:52:43.660054"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfadsf",
+        "content": {
+            "artist": "fadsfadsf",
+            "client": "fasdfsdafads",
+            "venue": "fasdfdsaf",
+            "city": "fdasfasdfdsa",
+            "date": "2026-04-14",
+            "fee": 123123123321.0,
+            "notes": "fadsfdfsafdsafdsafasdfdsa"
+        },
+        "metadata": {
+            "artist": "fadsfadsf",
+            "client": "fasdfsdafads",
+            "city": "fdasfasdfdsa",
+            "venue": "fasdfdsaf",
+            "date": "2026-04-14"
+        },
+        "id": "fe60fb60-066e-46e5-b61b-e3e138f5793b",
+        "timestamp": "2026-04-13T15:59:54.863331"
+    },
+    {
+        "type": "booking",
+        "name": "Hello",
+        "content": {
+            "artist": "Hello",
+            "client": "fasdfsdafads",
+            "venue": "fasdfdsaf",
+            "city": "fdasfasdfdsa",
+            "date": "2026-04-14",
+            "fee": 123123123321.0,
+            "notes": "fadsfdfsafdsafdsafasdfdsa"
+        },
+        "metadata": {
+            "artist": "Hello",
+            "client": "fasdfsdafads",
+            "city": "fdasfasdfdsa",
+            "venue": "fasdfdsaf",
+            "date": "2026-04-14"
+        },
+        "id": "9b414771-9432-4a02-af4d-efc71389f7e8",
+        "timestamp": "2026-04-13T16:00:05.870435"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfa",
+        "content": {
+            "artist": "fadsfa",
+            "client": "fasdfads",
+            "venue": "fasdfa",
+            "city": "fadsfdasf",
+            "date": "2026-04-22",
+            "fee": 123123.0,
+            "notes": "fdasfasfdsafds"
+        },
+        "metadata": {
+            "artist": "fadsfa",
+            "client": "fasdfads",
+            "city": "fadsfdasf",
+            "venue": "fasdfa",
+            "date": "2026-04-22"
+        },
+        "id": "31c249be-8768-41c9-bdf4-d047894df455",
+        "timestamp": "2026-04-13T16:23:49.004014"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafd",
+        "content": {
+            "artist": "fdsafd",
+            "client": "ffadsfsad",
+            "venue": "fasdfasd",
+            "city": "fsdafas",
+            "date": "2026-04-23",
+            "fee": 213123213.0,
+            "notes": "fdafdsas"
+        },
+        "metadata": {
+            "artist": "fdsafd",
+            "client": "ffadsfsad",
+            "city": "fsdafas",
+            "venue": "fasdfasd",
+            "date": "2026-04-23"
+        },
+        "id": "df9577c2-f9bf-4b6b-bc68-6a99afd78c30",
+        "timestamp": "2026-04-13T17:52:33.385272"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfdasfas",
+        "content": {
+            "artist": "fadsfdasfas",
+            "client": "afdsfsdf",
+            "venue": "dasfadsf",
+            "city": "fadsfsdaf",
+            "date": "2026-04-22",
+            "fee": 213123123.0,
+            "notes": "443fdsasfd"
+        },
+        "metadata": {
+            "artist": "fadsfdasfas",
+            "client": "afdsfsdf",
+            "city": "fadsfsdaf",
+            "venue": "dasfadsf",
+            "date": "2026-04-22"
+        },
+        "id": "67a76f75-e887-4bf4-8d24-822491270c85",
+        "timestamp": "2026-04-13T19:17:17.928685"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfdas",
+        "content": {
+            "artist": "fadsfdas",
+            "client": "fadsfads",
+            "venue": "afdsfads",
+            "city": "fadsfads",
+            "date": "2026-04-21",
+            "fee": 123123.0,
+            "notes": "fadsfadsf"
+        },
+        "metadata": {
+            "artist": "fadsfdas",
+            "client": "fadsfads",
+            "city": "fadsfads",
+            "venue": "afdsfads",
+            "date": "2026-04-21"
+        },
+        "id": "cc6b041f-172f-44ba-8ae2-1321d4c7465e",
+        "timestamp": "2026-04-13T19:21:05.015696"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfads",
+        "content": {
+            "artist": "fadsfads",
+            "client": "afsdfas",
+            "venue": "afsdfads",
+            "city": "fadsfdas",
+            "date": "2026-04-22",
+            "fee": 213123123.0,
+            "notes": "fsdadsfasd"
+        },
+        "metadata": {
+            "artist": "fadsfads",
+            "client": "afsdfas",
+            "city": "fadsfdas",
+            "venue": "afsdfads",
+            "date": "2026-04-22"
+        },
+        "id": "85150175-2f91-4fb2-ae6d-52ffdbdeecf4",
+        "timestamp": "2026-04-13T23:45:30.624549"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fsdafadsf",
+        "content": "PERFORMANCE AGREEMENT\n\nThis Performance Agreement is entered into between:\n\nArtist: fsdafadsf  \nClient: fasdfads\nVenue: fadsfasd  \n\nEvent Date: 2026-04-22\nLocation: fdsafads\nFee: $41234132\nThe Artist agrees to perform at the Venue on the specified date.\n\nPayment:\nThe Venue agrees to pay the Artist a total fee of $41234132 for the performance.\n\nAdditional Terms:\n- The Artist will provide their own equipment unless otherwise agreed.\n- The Venue will provide necessary facilities and support staff.\n- Both parties agree to comply with local laws and regulations.\n\nSignatures:\n\n_________________________  \nArtist: fsdafadsf\n\n_________________________  \nVenue Representative",
+        "metadata": {
+            "artist": "fsdafadsf",
+            "venue": "fadsfasd",
+            "date": "2026-04-22"
+        },
+        "id": "65d16790-eb15-4dda-86f1-273f7125057f",
+        "timestamp": "2026-04-14T00:12:27.754084"
+    },
+    {
+        "type": "nda_contract",
+        "name": "fdasfdsa",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: fdasfdsa  \nReceiving Party: fasdfasd  \n\nPurpose:\nThe purpose of this agreement is: fasdfasdfsadfasdf\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 2 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: fdasfdsa\n\n_________________________  \nReceiving Party: fasdfasd",
+        "metadata": {
+            "disclosing_party": "fdasfdsa",
+            "receiving_party": "fasdfasd"
+        },
+        "id": "4e2c924f-4247-4b17-8f74-3b03a646b4f1",
+        "timestamp": "2026-04-14T00:12:34.319338"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfs",
+        "content": {
+            "artist": "fadsfs",
+            "client": "fasfdsa",
+            "venue": "fdasfdsa",
+            "city": "231fdsa",
+            "date": "2026-04-22",
+            "fee": 213213.0,
+            "notes": "fdsasfdsafadsfa"
+        },
+        "metadata": {
+            "artist": "fadsfs",
+            "client": "fasfdsa",
+            "city": "231fdsa",
+            "venue": "fdasfdsa",
+            "date": "2026-04-22"
+        },
+        "id": "8ac590f6-98cd-464c-93a3-697db7204f93",
+        "timestamp": "2026-04-14T00:38:28.585563"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfas",
+        "content": {
+            "artist": "fadsfas",
+            "client": "fasdfdasfdas",
+            "venue": "fasdfdsa",
+            "city": "fasdfa",
+            "date": "2026-04-14",
+            "fee": 1231233.0,
+            "notes": "fasdfadsffasdfs"
+        },
+        "metadata": {
+            "artist": "fadsfas",
+            "client": "fasdfdasfdas",
+            "city": "fasdfa",
+            "venue": "fasdfdsa",
+            "date": "2026-04-14"
+        },
+        "id": "9fc142ca-9088-41b5-9d51-5a9636e925ad",
+        "timestamp": "2026-04-14T18:58:09.430736"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdas",
+        "content": {
+            "artist": "fdsafdas",
+            "client": "fadsfdsafs",
+            "venue": "fasdfdsa",
+            "city": "fasdfdsafdsa",
+            "date": "2026-04-22",
+            "fee": 2311232.0,
+            "notes": "fdsafdsaf"
+        },
+        "metadata": {
+            "artist": "fdsafdas",
+            "client": "fadsfdsafs",
+            "city": "fasdfdsafdsa",
+            "venue": "fasdfdsa",
+            "date": "2026-04-22"
+        },
+        "id": "c84b5389-21e0-411c-8c04-5260eeb6fbde",
+        "timestamp": "2026-04-14T19:08:19.403248"
+    },
+    {
+        "type": "booking",
+        "name": "teest1",
+        "content": {
+            "artist": "teest1",
+            "client": "fsadfadsfs",
+            "venue": "fasdfasd",
+            "city": "fadsfas",
+            "date": "2026-04-16",
+            "fee": 2133213213.0,
+            "notes": "fdasfsadf"
+        },
+        "metadata": {
+            "artist": "teest1",
+            "client": "fsadfadsfs",
+            "city": "fadsfas",
+            "venue": "fasdfasd",
+            "date": "2026-04-16"
+        },
+        "id": "2a72ad52-05fc-487d-88bc-ada58272e666",
+        "timestamp": "2026-04-14T19:15:44.551082"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafd",
+        "content": {
+            "artist": "fdsafd",
+            "client": "fsdafas",
+            "venue": "fadsfa",
+            "city": "fdsafdsafs",
+            "date": "2026-04-15",
+            "fee": 21312.0,
+            "notes": "fadsfdsafdasdsf"
+        },
+        "metadata": {
+            "artist": "fdsafd",
+            "client": "fsdafas",
+            "city": "fdsafdsafs",
+            "venue": "fadsfa",
+            "date": "2026-04-15"
+        },
+        "id": "ae5bd948-e23d-420d-a939-a72754745723",
+        "timestamp": "2026-04-14T19:22:16.986108"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafd",
+        "content": {
+            "artist": "fdsafd",
+            "client": "fsdafas",
+            "venue": "fadsfa",
+            "city": "fdsafdsafs",
+            "date": "2026-04-15",
+            "fee": 21312.0,
+            "notes": "fadsfdsafdasdsf"
+        },
+        "metadata": {
+            "artist": "fdsafd",
+            "client": "fsdafas",
+            "city": "fdsafdsafs",
+            "venue": "fadsfa",
+            "date": "2026-04-15"
+        },
+        "id": "ac729581-b445-4c0d-9a74-79698ac29c5a",
+        "timestamp": "2026-04-14T19:22:21.151642"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafd",
+        "content": {
+            "artist": "fdsafd",
+            "client": "fsdafas",
+            "venue": "fadsfa",
+            "city": "fdsafdsafs",
+            "date": "2026-04-15",
+            "fee": 21312.0,
+            "notes": "fadsfdsafdasdsf"
+        },
+        "metadata": {
+            "artist": "fdsafd",
+            "client": "fsdafas",
+            "city": "fdsafdsafs",
+            "venue": "fadsfa",
+            "date": "2026-04-15"
+        },
+        "id": "7d7f06c2-d29a-4b20-b243-e13286807a8e",
+        "timestamp": "2026-04-14T19:22:22.066945"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdsa",
+        "content": {
+            "artist": "fdsafdsa",
+            "client": "fadsfdas",
+            "venue": "fdasfdas",
+            "city": "fdasfdsa",
+            "date": "2026-04-15",
+            "fee": 3123.0,
+            "notes": "fdsafsdafadsf"
+        },
+        "metadata": {
+            "artist": "fdsafdsa",
+            "client": "fadsfdas",
+            "city": "fdasfdsa",
+            "venue": "fdasfdas",
+            "date": "2026-04-15"
+        },
+        "id": "b543e05a-47f5-4bf5-98f9-7ca9bc971802",
+        "timestamp": "2026-04-14T19:22:46.137458"
+    },
+    {
+        "type": "booking",
+        "name": "test 2",
+        "content": {
+            "artist": "test 2",
+            "client": "fadsfsaddf",
+            "venue": "fasdfsad",
+            "city": "fsdfsafdsa",
+            "date": "2026-04-22",
+            "fee": 213123321.0,
+            "notes": "fadsfadsfdsafds"
+        },
+        "metadata": {
+            "artist": "test 2",
+            "client": "fadsfsaddf",
+            "city": "fsdfsafdsa",
+            "venue": "fasdfsad",
+            "date": "2026-04-22"
+        },
+        "id": "d284aa59-e9d6-488b-b399-db9b57f326a0",
+        "timestamp": "2026-04-14T19:23:35.925661"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafasdf",
+        "content": {
+            "artist": "fdsafasdf",
+            "client": "fsadfasdf",
+            "venue": "asdfds",
+            "city": "fadsfdsads",
+            "date": "2026-04-22",
+            "fee": 321312.0,
+            "notes": "fdasfasdfsdafasf"
+        },
+        "metadata": {
+            "artist": "fdsafasdf",
+            "client": "fsadfasdf",
+            "city": "fadsfdsads",
+            "venue": "asdfds",
+            "date": "2026-04-22"
+        },
+        "id": "206d13c5-3a04-4a90-a5ed-4c3d2d332557",
+        "timestamp": "2026-04-14T19:29:50.576223"
+    },
+    {
+        "type": "booking",
+        "name": "fdasfdsafds",
+        "content": {
+            "artist": "fdasfdsafds",
+            "client": "fadsfasdfasdfsa",
+            "venue": "faesfsdafds",
+            "city": "adsfdsafas",
+            "date": "2026-04-15",
+            "fee": 213123.0,
+            "notes": "fadsfdasfdsafadsf"
+        },
+        "metadata": {
+            "artist": "fdasfdsafds",
+            "client": "fadsfasdfasdfsa",
+            "city": "adsfdsafas",
+            "venue": "faesfsdafds",
+            "date": "2026-04-15"
+        },
+        "id": "b38a4b75-3c72-4c32-8bd3-c0603856a385",
+        "timestamp": "2026-04-14T19:36:32.341988"
+    },
+    {
+        "type": "booking",
+        "name": "fdasfds",
+        "content": {
+            "artist": "fdasfds",
+            "client": "fsdafsda",
+            "venue": "fasdfsda",
+            "city": "fadsfds",
+            "date": "2026-04-09",
+            "fee": 12321.0,
+            "notes": "fdsafdas"
+        },
+        "metadata": {
+            "artist": "fdasfds",
+            "client": "fsdafsda",
+            "city": "fadsfds",
+            "venue": "fasdfsda",
+            "date": "2026-04-09"
+        },
+        "id": "d1c270e3-244e-41db-8783-591c21fccd14",
+        "timestamp": "2026-04-14T19:43:20.755685"
+    },
+    {
+        "type": "booking",
+        "name": "fsdafdas",
+        "content": {
+            "artist": "fsdafdas",
+            "client": "fasdfdas",
+            "venue": "fdsafads",
+            "city": "fadsfdsa",
+            "date": "2026-04-22",
+            "fee": 213213213.0,
+            "notes": "fdsaafsdafsadfds"
+        },
+        "metadata": {
+            "artist": "fsdafdas",
+            "client": "fasdfdas",
+            "city": "fadsfdsa",
+            "venue": "fdsafads",
+            "date": "2026-04-22"
+        },
+        "id": "4a5edf2d-1e73-4f2f-80fe-342ccdd9dd30",
+        "timestamp": "2026-04-14T20:12:12.212901"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafas",
+        "content": {
+            "artist": "fdsafas",
+            "client": "fadsfsda",
+            "venue": "fadsfsdafsa",
+            "city": "afdsfdsaf",
+            "date": "2026-04-15",
+            "fee": 213213123.0,
+            "notes": "fasdfadsfasdf"
+        },
+        "metadata": {
+            "artist": "fdsafas",
+            "client": "fadsfsda",
+            "city": "afdsfdsaf",
+            "venue": "fadsfsdafsa",
+            "date": "2026-04-15"
+        },
+        "id": "d848ac03-4d98-4a90-a387-854655ea62f7",
+        "timestamp": "2026-04-14T20:31:13.700878"
+    },
+    {
+        "type": "booking",
+        "name": "fsdafds",
+        "content": {
+            "artist": "fsdafds",
+            "client": "fadsfasd",
+            "venue": "fasdfdsa",
+            "city": "fdasfdsafdsa",
+            "date": "2026-04-15",
+            "fee": 213123.0,
+            "notes": "fasdfasdfdsadafs"
+        },
+        "metadata": {
+            "artist": "fsdafds",
+            "client": "fadsfasd",
+            "city": "fdasfdsafdsa",
+            "venue": "fasdfdsa",
+            "date": "2026-04-15"
+        },
+        "id": "4a197a0a-963d-40c5-83b2-45d92fcf22fd",
+        "timestamp": "2026-04-14T20:34:00.110352"
+    },
+    {
+        "type": "booking",
+        "name": "afdsfadsf",
+        "content": {
+            "artist": "afdsfadsf",
+            "client": "fsdafasdfadasf",
+            "venue": "fadsfasdfdsa",
+            "city": "fadsfadsfa",
+            "date": "2026-04-15",
+            "fee": 2131323212.0,
+            "notes": "fdsafasdfasdfads"
+        },
+        "metadata": {
+            "artist": "afdsfadsf",
+            "client": "fsdafasdfadasf",
+            "city": "fadsfadsfa",
+            "venue": "fadsfasdfdsa",
+            "date": "2026-04-15"
+        },
+        "id": "10072f0d-ae32-4c3c-9091-e1690297f2dd",
+        "timestamp": "2026-04-14T20:35:44.827914"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdas",
+        "content": {
+            "artist": "fdsafdas",
+            "client": "fdsafdsafasd",
+            "venue": "fadsfasdf",
+            "city": "fdsadfsfdas",
+            "date": "2026-04-15",
+            "fee": 123132231.0,
+            "notes": "fdsafadsfsadfadsf"
+        },
+        "metadata": {
+            "artist": "fdsafdas",
+            "client": "fdsafdsafasd",
+            "city": "fdsadfsfdas",
+            "venue": "fadsfasdf",
+            "date": "2026-04-15"
+        },
+        "id": "3a43e345-17c1-45a3-a601-4f4052f71f88",
+        "timestamp": "2026-04-14T20:40:34.670711"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasdf",
+        "content": {
+            "artist": "fadsfasdf",
+            "client": "fadsdfasfas",
+            "venue": "fadsfadsf",
+            "city": "adfsfadsfas",
+            "date": "2026-04-15",
+            "fee": 2313213.0,
+            "notes": "fdsfasdfdasfdasfads"
+        },
+        "metadata": {
+            "artist": "fadsfasdf",
+            "client": "fadsdfasfas",
+            "city": "adfsfadsfas",
+            "venue": "fadsfadsf",
+            "date": "2026-04-15"
+        },
+        "id": "e862a107-22b5-415c-9acc-baa9cd819208",
+        "timestamp": "2026-04-14T20:44:25.422275"
+    },
+    {
+        "type": "booking",
+        "name": "fdasfdsafdsa",
+        "content": {
+            "artist": "fdasfdsafdsa",
+            "client": "fadsfadsdfs",
+            "venue": "fasdfasdfad",
+            "city": "fdasfsad",
+            "date": "2026-04-15",
+            "fee": 2311233.0,
+            "notes": "fsadfasdffdsafadsdfs"
+        },
+        "metadata": {
+            "artist": "fdasfdsafdsa",
+            "client": "fadsfadsdfs",
+            "city": "fdasfsad",
+            "venue": "fasdfasdfad",
+            "date": "2026-04-15"
+        },
+        "id": "77e94adf-65e8-4ed8-b825-cfb177558b23",
+        "timestamp": "2026-04-14T20:49:47.561425"
+    },
+    {
+        "type": "booking",
+        "name": "Artist",
+        "content": {
+            "artist": "Artist",
+            "client": "Client",
+            "venue": "Arena",
+            "city": "Bogota",
+            "date": "2026-04-14",
+            "fee": 1000.0,
+            "notes": "Notes"
+        },
+        "metadata": {
+            "artist": "Artist",
+            "client": "Client",
+            "city": "Bogota",
+            "venue": "Arena",
+            "date": "2026-04-14"
+        },
+        "id": "3c73fd46-5909-415b-b3e4-8965fcb61dce",
+        "timestamp": "2026-04-14T21:10:25.917421"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Artist",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Artist",
+            "client": "Client",
+            "company_name": "Client",
+            "venue": "Arena",
+            "date": "2026-04-14",
+            "city": "Bogota",
+            "fee": 1000.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "Artist",
+            "venue": "Arena",
+            "date": "2026-04-14",
+            "number_of_shows": 2
+        },
+        "id": "2083b7f6-aa7b-4379-9c5e-aaa4a5cb0fc4",
+        "timestamp": "2026-04-14T21:10:27.556717"
+    },
+    {
+        "type": "nda_contract",
+        "name": "A",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: A  \nReceiving Party: B  \n\nPurpose:\nThe purpose of this agreement is: This is a valid purpose.\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 12 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: A\n\n_________________________  \nReceiving Party: B",
+        "metadata": {
+            "disclosing_party": "A",
+            "receiving_party": "B"
+        },
+        "id": "e54c71a6-ca6d-4249-949e-fccc9621f09c",
+        "timestamp": "2026-04-14T21:11:10.436528"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdsa",
+        "content": {
+            "artist": "fdsafdsa",
+            "client": "fasdfdsaf",
+            "venue": "fsdafdsa",
+            "city": "fdasfads",
+            "date": "2026-04-16",
+            "fee": 232131.0,
+            "notes": "fdssfadsfsdaf"
+        },
+        "metadata": {
+            "artist": "fdsafdsa",
+            "client": "fasdfdsaf",
+            "city": "fdasfads",
+            "venue": "fsdafdsa",
+            "date": "2026-04-16"
+        },
+        "id": "d938df2e-9930-4817-946c-624063cc8bf5",
+        "timestamp": "2026-04-14T21:13:24.636542"
+    },
+    {
+        "type": "booking",
+        "name": "tst",
+        "content": {
+            "artist": "tst",
+            "client": "fsdafsdafadf",
+            "venue": "afdsfsdafsda",
+            "city": "fadsfdasf",
+            "date": "2026-04-16",
+            "fee": 123231312.0,
+            "notes": "fadsdfsadfs"
+        },
+        "metadata": {
+            "artist": "tst",
+            "client": "fsdafsdafadf",
+            "city": "fadsfdasf",
+            "venue": "afdsfsdafsda",
+            "date": "2026-04-16"
+        },
+        "id": "624c6ff3-c509-4cbd-af33-ecefde5b9247",
+        "timestamp": "2026-04-15T16:21:23.163718"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasdfdsa",
+        "content": {
+            "artist": "fadsfasdfdsa",
+            "client": "fdsafdsasfdfdsa",
+            "venue": "fadsfasdfasd",
+            "city": "fadsfasdfsa",
+            "date": "2026-04-17",
+            "fee": 213321132321.0,
+            "notes": "fdsafddasfdasfdasfa"
+        },
+        "metadata": {
+            "artist": "fadsfasdfdsa",
+            "client": "fdsafdsasfdfdsa",
+            "city": "fadsfasdfsa",
+            "venue": "fadsfasdfasd",
+            "date": "2026-04-17"
+        },
+        "id": "e34e5406-14db-4644-bc7d-50b9a7c48af6",
+        "timestamp": "2026-04-15T16:57:42.964881"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasdf",
+        "content": {
+            "artist": "fadsfasdf",
+            "client": "fasdfdasfdsa",
+            "venue": "fadsfasdfdas",
+            "city": "fdsafasdf",
+            "date": "2026-04-16",
+            "fee": 2131233213.0,
+            "notes": "fdsafdsasdffasdfs"
+        },
+        "metadata": {
+            "artist": "fadsfasdf",
+            "client": "fasdfdasfdsa",
+            "city": "fdsafasdf",
+            "venue": "fadsfasdfdas",
+            "date": "2026-04-16"
+        },
+        "id": "877b906c-6031-4a27-9921-30d7e8431c19",
+        "timestamp": "2026-04-15T17:00:10.710888"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfasdf",
+        "content": {
+            "artist": "fadsfasdf",
+            "client": "fasdfdasfdsa",
+            "venue": "fadsfasdfdas",
+            "city": "fdsafasdf",
+            "date": "2026-04-16",
+            "fee": 2131233213.0,
+            "notes": "fdsafdsasdffasdfs"
+        },
+        "metadata": {
+            "artist": "fadsfasdf",
+            "client": "fasdfdasfdsa",
+            "city": "fdsafasdf",
+            "venue": "fadsfasdfdas",
+            "date": "2026-04-16"
+        },
+        "id": "6dd3f16f-5c7a-4766-891e-a0751bc58ba7",
+        "timestamp": "2026-04-15T17:00:20.672716"
+    },
+    {
+        "type": "booking",
+        "name": "hello",
+        "content": {
+            "artist": "hello",
+            "client": "fasdfdasfdsa",
+            "venue": "fadsfasdfdas",
+            "city": "fdsafasdf",
+            "date": "2026-04-16",
+            "fee": 2131233213.0,
+            "notes": "fdsafdsasdffasdfs"
+        },
+        "metadata": {
+            "artist": "hello",
+            "client": "fasdfdasfdsa",
+            "city": "fdsafasdf",
+            "venue": "fadsfasdfdas",
+            "date": "2026-04-16"
+        },
+        "id": "f65f9cfd-4636-4c22-99ff-e5cd7a96b2b3",
+        "timestamp": "2026-04-15T17:00:34.889762"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfsdaf",
+        "content": {
+            "artist": "fadsfsdaf",
+            "client": "fadsfasdfdsa",
+            "venue": "fasdfadsf",
+            "city": "fadsfsdafdas",
+            "date": "2026-04-23",
+            "fee": 321231321213.0,
+            "notes": "fdsafasdffadsafdas"
+        },
+        "metadata": {
+            "artist": "fadsfsdaf",
+            "client": "fadsfasdfdsa",
+            "city": "fadsfsdafdas",
+            "venue": "fasdfadsf",
+            "date": "2026-04-23"
+        },
+        "id": "f2afc0f6-b8bf-4c9b-aa76-6580edc6224e",
+        "timestamp": "2026-04-15T17:01:30.168162"
+    },
+    {
+        "type": "booking",
+        "name": "fasdfsadfdas",
+        "content": {
+            "artist": "fasdfsadfdas",
+            "client": "fadsfdsafdas",
+            "venue": "fadsfsdafdsa",
+            "city": "fasdfdsafds",
+            "date": "2026-04-17",
+            "fee": 213123321.0,
+            "notes": "fdsafasdfdfsa"
+        },
+        "metadata": {
+            "artist": "fasdfsadfdas",
+            "client": "fadsfdsafdas",
+            "city": "fasdfdsafds",
+            "venue": "fadsfsdafdsa",
+            "date": "2026-04-17"
+        },
+        "id": "e712c149-58c7-4e16-ae9c-7c6999e7c523",
+        "timestamp": "2026-04-15T17:05:50.777621"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdsafdsa",
+        "content": {
+            "artist": "fdsafdsafdsa",
+            "client": "fasdfsdafasdf",
+            "venue": "fasdfdsafdsafds",
+            "city": "fsadfdas",
+            "date": "2026-04-17",
+            "fee": 32131231.0,
+            "notes": "fesdafasdfdsaf"
+        },
+        "metadata": {
+            "artist": "fdsafdsafdsa",
+            "client": "fasdfsdafasdf",
+            "city": "fsadfdas",
+            "venue": "fasdfdsafdsafds",
+            "date": "2026-04-17"
+        },
+        "id": "ec9c0ef7-bcaf-458c-b671-1eb37375fb07",
+        "timestamp": "2026-04-15T17:07:36.793268"
+    },
+    {
+        "type": "booking",
+        "name": "hello",
+        "content": {
+            "artist": "hello",
+            "client": "fdsafdas",
+            "venue": "fdsafdas",
+            "city": "fadsfdsa",
+            "date": "2026-04-16",
+            "fee": 213213321.0,
+            "notes": "fdsafadsf"
+        },
+        "metadata": {
+            "artist": "hello",
+            "client": "fdsafdas",
+            "city": "fadsfdsa",
+            "venue": "fdsafdas",
+            "date": "2026-04-16"
+        },
+        "id": "2940287d-7a97-4607-a5dc-211da8f17afe",
+        "timestamp": "2026-04-15T17:10:08.861442"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafads",
+        "content": {
+            "artist": "fdsafads",
+            "client": "fasdfadsffas",
+            "venue": "dfasfdsasdf",
+            "city": "fdsafdsaaf",
+            "date": "2026-04-17",
+            "fee": 231132.0,
+            "notes": "fsdaffasdafs"
+        },
+        "metadata": {
+            "artist": "fdsafads",
+            "client": "fasdfadsffas",
+            "city": "fdsafdsaaf",
+            "venue": "dfasfdsasdf",
+            "date": "2026-04-17"
+        },
+        "id": "5e17ccbd-97f1-43d9-9e08-000a4bbfdb32",
+        "timestamp": "2026-04-15T17:16:08.746537"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafdas",
+        "content": {
+            "artist": "fdsafdas",
+            "client": "fadsfasdf",
+            "venue": "fadsfadsf",
+            "city": "fdasadsfads",
+            "date": "2026-04-16",
+            "fee": 32123321.0,
+            "notes": "fadsfadsfasdfasf"
+        },
+        "metadata": {
+            "artist": "fdsafdas",
+            "client": "fadsfasdf",
+            "city": "fdasadsfads",
+            "venue": "fadsfadsf",
+            "date": "2026-04-16"
+        },
+        "id": "f32bd8c7-2194-45f7-8130-45fb266e4633",
+        "timestamp": "2026-04-15T18:03:18.057320"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfads",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fadsfads",
+            "client": "fadsfdasfads",
+            "company_name": "fadsfdasfads",
+            "venue": "fasdfadsf",
+            "date": "2026-04-16",
+            "city": "fdasfadsfda",
+            "fee": 32423432.0,
+            "number_of_shows": 3,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfads",
+            "venue": "fasdfadsf",
+            "date": "2026-04-16",
+            "number_of_shows": 3
+        },
+        "id": "31e5b1db-c23b-4110-8239-092e1a283454",
+        "timestamp": "2026-04-15T18:03:34.306746"
+    },
+    {
+        "type": "nda_contract",
+        "name": "fadsfads",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: fadsfads  \nReceiving Party: fdasfadsf  \n\nPurpose:\nThe purpose of this agreement is: fadsfdasfads\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 2313 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: fadsfads\n\n_________________________  \nReceiving Party: fdasfadsf",
+        "metadata": {
+            "disclosing_party": "fadsfads",
+            "receiving_party": "fdasfadsf"
+        },
+        "id": "6e394bc8-44a3-4f3c-899d-f6f8438387b3",
+        "timestamp": "2026-04-15T18:03:48.797803"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fdsaf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fdsaf",
+            "client": "fadsfasd",
+            "company_name": "fadsfasd",
+            "venue": "fasdf",
+            "date": "2026-04-17",
+            "city": "afdsfas",
+            "fee": 23123.0,
+            "number_of_shows": 12,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fdsaf",
+            "venue": "fasdf",
+            "date": "2026-04-17",
+            "number_of_shows": 12
+        },
+        "id": "06951da6-94b6-4832-a54c-6808909548eb",
+        "timestamp": "2026-04-15T18:09:50.851204"
+    },
+    {
+        "type": "booking",
+        "name": "fadsfas",
+        "content": {
+            "artist": "fadsfas",
+            "client": "dafsfdsaf",
+            "venue": "fadsfdas",
+            "city": "fadsfsa",
+            "date": "2026-04-17",
+            "fee": 231132231.0,
+            "notes": "fdsafadfsdsaffdsa"
+        },
+        "metadata": {
+            "artist": "fadsfas",
+            "client": "dafsfdsaf",
+            "city": "fadsfsa",
+            "venue": "fadsfdas",
+            "date": "2026-04-17"
+        },
+        "id": "690b4318-aca8-4076-bb29-f1d190d5a938",
+        "timestamp": "2026-04-15T18:21:19.048640"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfdsa",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "fadsfdsa",
+            "client": "afsdfdas",
+            "company_name": "afsdfdas",
+            "venue": "fadsfads",
+            "date": "2026-04-15",
+            "city": "dsafadsfa",
+            "fee": 1.0,
+            "number_of_shows": 1,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfdsa",
+            "venue": "fadsfads",
+            "date": "2026-04-15",
+            "number_of_shows": 1
+        },
+        "id": "9de3cc95-3e2b-4e6c-87a3-4a2c44523e1a",
+        "timestamp": "2026-04-15T18:32:14.272840"
+    },
+    {
+        "type": "nda_contract",
+        "name": "fdasfads",
+        "content": "NON-DISCLOSURE AGREEMENT (NDA)\n\nThis Agreement is made between:\n\nDisclosing Party: fdasfads  \nReceiving Party: fasdf  \n\nPurpose:\nThe purpose of this agreement is: fadsfadsfasd\n\nConfidential Information:\nThe Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.\n\nObligations:\n- The Receiving Party will protect the confidentiality of all shared information.\n- Information may only be used for the stated purpose.\n- No information may be shared with third parties without written consent.\n\nTerm:\nThis Agreement remains in effect for 1 months unless otherwise agreed in writing.\n\nSignatures:\n\n_________________________  \nDisclosing Party: fdasfads\n\n_________________________  \nReceiving Party: fasdf",
+        "metadata": {
+            "disclosing_party": "fdasfads",
+            "receiving_party": "fasdf"
+        },
+        "id": "c9330a83-40fa-4249-b9f4-0c2c5aadabc3",
+        "timestamp": "2026-04-15T18:32:21.532097"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsf",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "fadsf",
+            "client": "fdsafd",
+            "company_name": "fdsafd",
+            "venue": "afsdf",
+            "date": "2026-04-17",
+            "city": "fasdfsdaaf",
+            "fee": 21312.0,
+            "number_of_shows": 1,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsf",
+            "venue": "afsdf",
+            "date": "2026-04-17",
+            "number_of_shows": 1
+        },
+        "id": "e709d6ee-d057-44fd-b5a2-8e8ce3ba81f1",
+        "timestamp": "2026-04-15T20:09:02.312457+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfa",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fadsfa",
+            "client": "fadsfsa",
+            "company_name": "fadsfsa",
+            "venue": "fadsfads",
+            "date": "2026-04-15",
+            "city": "fasdfdsa",
+            "fee": 123.0,
+            "number_of_shows": 12,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfa",
+            "venue": "fadsfads",
+            "date": "2026-04-15",
+            "number_of_shows": 12
+        },
+        "id": "537f1944-9212-4aaf-a760-23136e38ca33",
+        "timestamp": "2026-04-15T20:11:11.336477+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfa",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "fadsfa",
+            "client": "fadsfsa",
+            "company_name": "fadsfsa",
+            "venue": "fadsfads",
+            "date": "2026-04-15",
+            "city": "fasdfdsa",
+            "fee": 123.0,
+            "number_of_shows": 1,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfa",
+            "venue": "fadsfads",
+            "date": "2026-04-15",
+            "number_of_shows": 1
+        },
+        "id": "c463243a-cf8f-4d5a-9023-8307c51f0b6b",
+        "timestamp": "2026-04-15T20:12:10.797376+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fdsaf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fdsaf",
+            "client": "fadsfda",
+            "company_name": "fadsfda",
+            "venue": "fdsafds",
+            "date": "2026-04-16",
+            "city": "fasdf",
+            "fee": 21332.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fdsaf",
+            "venue": "fdsafds",
+            "date": "2026-04-16",
+            "number_of_shows": 2
+        },
+        "id": "3d2692e0-0131-4ad4-bdf4-6c7cd55733c8",
+        "timestamp": "2026-04-15T20:51:34.982836+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfds",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fadsfds",
+            "client": "fadsfdas",
+            "company_name": "fadsfdas",
+            "venue": "fdsafdsa",
+            "date": "2026-04-16",
+            "city": "dfadsfdsa",
+            "fee": 213.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfds",
+            "venue": "fdsafdsa",
+            "date": "2026-04-16",
+            "number_of_shows": 2
+        },
+        "id": "1c65ac51-da94-4d90-b432-5c4441df487e",
+        "timestamp": "2026-04-15T20:56:58.705617+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "hellooo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "hellooo",
+            "client": "hellooo",
+            "company_name": "hellooo",
+            "venue": "hellooo",
+            "date": "2026-04-09",
+            "city": "hellooo",
+            "fee": 231.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "hellooo",
+            "venue": "hellooo",
+            "date": "2026-04-09",
+            "number_of_shows": 2
+        },
+        "id": "7c3fbc8d-aa4b-458d-ba89-0e1708f2ed3a",
+        "timestamp": "2026-04-15T21:00:40.504830+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "hello",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "hello",
+            "client": "hello",
+            "company_name": "hello",
+            "venue": "hello",
+            "date": "2026-04-24",
+            "city": "hello",
+            "fee": 2312.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "hello",
+            "venue": "hello",
+            "date": "2026-04-24",
+            "number_of_shows": 2
+        },
+        "id": "196117c8-df80-4ed5-a743-d51f2d09d3ea",
+        "timestamp": "2026-04-15T21:08:50.463283+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "hello",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "hello",
+            "client": "hello",
+            "company_name": "hello",
+            "venue": "hello",
+            "date": "2026-04-16",
+            "city": "hello",
+            "fee": 2.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "hello",
+            "venue": "hello",
+            "date": "2026-04-16",
+            "number_of_shows": 2
+        },
+        "id": "5252e1c7-e357-46a7-aa7b-7270e5035f47",
+        "timestamp": "2026-04-15T21:15:35.522980+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "afdsf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "afdsf",
+            "client": "adsfa",
+            "company_name": "adsfa",
+            "venue": "fasdfa",
+            "date": "2026-04-17",
+            "city": "fadsfads",
+            "fee": 2.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "afdsf",
+            "venue": "fasdfa",
+            "date": "2026-04-17",
+            "number_of_shows": 2
+        },
+        "id": "d56eb4af-88f8-406f-a691-b0e46f2be83a",
+        "timestamp": "2026-04-15T21:17:47.254320+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "hello",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "hello",
+            "client": "hello",
+            "company_name": "hello",
+            "venue": "hello",
+            "date": "2026-04-16",
+            "city": "hello",
+            "fee": 1.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "hello",
+            "venue": "hello",
+            "date": "2026-04-16",
+            "number_of_shows": 2
+        },
+        "id": "5bf4f480-73fb-46ba-80dc-0a859c504480",
+        "timestamp": "2026-04-15T21:25:29.110878+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "afdsf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "afdsf",
+            "client": "fadsf",
+            "company_name": "fadsf",
+            "venue": "afdsf",
+            "date": "2026-04-15",
+            "city": "fasdfads",
+            "fee": 1.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "afdsf",
+            "venue": "afdsf",
+            "date": "2026-04-15",
+            "number_of_shows": 2
+        },
+        "id": "7796ba62-59af-4fbf-a90b-37931388c808",
+        "timestamp": "2026-04-15T21:32:37.116298+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfa",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fadsfa",
+            "client": "fasdf",
+            "company_name": "fasdf",
+            "venue": "fasdf",
+            "date": "2026-04-16",
+            "city": "fasdf",
+            "fee": 213.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfa",
+            "venue": "fasdf",
+            "date": "2026-04-16",
+            "number_of_shows": 2
+        },
+        "id": "32684fbf-2b6f-4fc7-99e8-11907c2d79b2",
+        "timestamp": "2026-04-15T21:36:50.672967+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fasdfa",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fasdfa",
+            "client": "fdsafs",
+            "company_name": "fdsafs",
+            "venue": "fads",
+            "date": "2026-04-17",
+            "city": "fadsfdsa",
+            "fee": 1.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fasdfa",
+            "venue": "fads",
+            "date": "2026-04-17",
+            "number_of_shows": 2
+        },
+        "id": "70ad7433-999b-454b-bca4-665dc3571e96",
+        "timestamp": "2026-04-15T21:40:36.043790+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfsa",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fadsfsa",
+            "client": "fadsfas",
+            "company_name": "fadsfas",
+            "venue": "dsafsa",
+            "date": "2026-04-17",
+            "city": "afdsfa",
+            "fee": 1.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfsa",
+            "venue": "dsafsa",
+            "date": "2026-04-17",
+            "number_of_shows": 2
+        },
+        "id": "1da42cdf-bb7b-4949-be65-399be3a21557",
+        "timestamp": "2026-04-15T21:44:34.653176+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "afsdf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "afsdf",
+            "client": "fadsf",
+            "company_name": "fadsf",
+            "venue": "fadsfa",
+            "date": "2026-04-16",
+            "city": "fadsf",
+            "fee": 1.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "afsdf",
+            "venue": "fadsfa",
+            "date": "2026-04-16",
+            "number_of_shows": 2
+        },
+        "id": "91df1164-d4c1-4e47-96be-6604e3739e0c",
+        "timestamp": "2026-04-15T21:46:24.951530+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fadsf",
+            "client": "fasdfa",
+            "company_name": "fasdfa",
+            "venue": "fasdf",
+            "date": "2026-04-15",
+            "city": "fadsf",
+            "fee": 1.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsf",
+            "venue": "fasdf",
+            "date": "2026-04-15",
+            "number_of_shows": 2
+        },
+        "id": "f99c4ad6-4590-482f-97fe-0eb1e4aa6ec9",
+        "timestamp": "2026-04-15T21:48:07.298067+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "dfdsf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "dfdsf",
+            "client": "fdsaffds",
+            "company_name": "fdsaffds",
+            "venue": "fasdfdsafads",
+            "date": "2026-04-16",
+            "city": "fasdf",
+            "fee": 1.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "dfdsf",
+            "venue": "fasdfdsafads",
+            "date": "2026-04-16",
+            "number_of_shows": 2
+        },
+        "id": "6bcd8aa5-94cf-4147-949d-2b96bcb53282",
+        "timestamp": "2026-04-15T21:51:05.637414+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Alejo",
+            "client": "Luchy",
+            "company_name": "Luchy",
+            "venue": "Movistar",
+            "date": "2026-04-24",
+            "city": "Bogota",
+            "fee": 5.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar",
+            "date": "2026-04-24",
+            "number_of_shows": 2
+        },
+        "id": "f9de97e8-516f-4f23-8fc3-280ad54ae213",
+        "timestamp": "2026-04-22T15:56:48.660125+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fadsfds",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fadsfds",
+            "client": "fadsfd",
+            "company_name": "fadsfd",
+            "venue": "fadsdfds",
+            "date": "2026-04-23",
+            "city": "dsafads",
+            "fee": 321.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fadsfds",
+            "venue": "fadsdfds",
+            "date": "2026-04-23",
+            "number_of_shows": 2
+        },
+        "id": "0033e22e-04da-48ad-8d41-31b2be435d95",
+        "timestamp": "2026-04-22T16:05:47.996461+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Alejo",
+            "client": "Luchy",
+            "company_name": "Luchy",
+            "venue": "Movistar",
+            "date": "2026-04-24",
+            "city": "Bogota",
+            "fee": 5.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar",
+            "date": "2026-04-24",
+            "number_of_shows": 2
+        },
+        "id": "c90501e1-8ef7-429f-ae58-b27677e91c28",
+        "timestamp": "2026-04-22T16:14:08.096866+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fasdf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fasdf",
+            "client": "fasdf",
+            "company_name": "fasdf",
+            "venue": "fasdf",
+            "date": "2026-04-22",
+            "city": "fasd",
+            "fee": 31213.0,
+            "number_of_shows": 2,
+            "notes": ""
+        },
+        "metadata": {
+            "artist": "fasdf",
+            "venue": "fasdf",
+            "date": "2026-04-22",
+            "number_of_shows": 2
+        },
+        "id": "9d3c267c-b679-4662-877b-468285c924b6",
+        "timestamp": "2026-04-22T16:21:32.189526+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Alejo",
+            "client": "Luchy",
+            "purchaser_name": "Luchy Buyer",
+            "purchaser_address": "123 Buyer St",
+            "signatory": "Lucy Signer",
+            "company_name": "Luchy Presents",
+            "company_address": "500 Company Ave",
+            "venue": "Movistar Arena",
+            "date": "2026-04-24",
+            "signature_date": "2026-04-22",
+            "city": "Bogota",
+            "fee": 50000.0,
+            "number_of_shows": 3,
+            "notes": "Special guest DJ",
+            "show_length": "95 minutes",
+            "capacity": "5200",
+            "air_transportation": "Business class for artist party",
+            "hotel_accommodations": "5 rooms, 2 nights",
+            "air_freight": "Included",
+            "ground_transportation": "Sprinter van and SUV",
+            "meals_incidentals": "Hot meal buyout",
+            "special_provisions": "No pyrotechnics without approval",
+            "concessionaire_fee": "10%",
+            "seller": "Venue",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "25",
+            "production_catering": "Full backline and hot catering",
+            "additional_addenda": "Security schedule attached",
+            "merchandising_terms": "Artist keeps 100% less approved fee",
+            "buyer_name": "Lucy Signer",
+            "buyer_company_name": "Luchy Presents",
+            "shows": [
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-04-24",
+                    "time": "8:00 PM",
+                    "show_length": "95 minutes",
+                    "capacity": "5200",
+                    "notes": "Special guest DJ",
+                    "gross_potential": 100000,
+                    "net_potential": 90000,
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035
+                        }
+                    ],
+                    "expenses": {
+                        "fixed_expenses": 12000,
+                        "variable_expenses": 4000,
+                        "break_even": 30000,
+                        "net_potential": 90000,
+                        "total_est_expenses": 16000,
+                        "amount_to_split": 74000,
+                        "walkout_potential": 50000
+                    }
+                },
+                {
+                    "city": "Medellin",
+                    "venue": "La Macarena",
+                    "date": "2026-04-25",
+                    "time": "9:00 PM",
+                    "show_length": "95 minutes",
+                    "capacity": "4700",
+                    "notes": "Local opener",
+                    "gross_potential": 85000,
+                    "net_potential": 76000,
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 300,
+                            "comps_kills": 10,
+                            "price": 60,
+                            "line_total": 18000
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 350,
+                            "comps_kills": 10,
+                            "price": 50,
+                            "line_total": 17500
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 120,
+                            "comps_kills": 0,
+                            "price": 42,
+                            "line_total": 5040
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 500,
+                            "comps_kills": 5,
+                            "price": 38,
+                            "line_total": 19000
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 900,
+                            "comps_kills": 5,
+                            "price": 34,
+                            "line_total": 30600
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1400,
+                            "comps_kills": 0,
+                            "price": 29,
+                            "line_total": 40600
+                        }
+                    ],
+                    "expenses": {
+                        "fixed_expenses": 10000,
+                        "variable_expenses": 5000,
+                        "break_even": 28000,
+                        "net_potential": 76000,
+                        "total_est_expenses": 15000,
+                        "amount_to_split": 61000,
+                        "walkout_potential": 43000
+                    }
+                },
+                {
+                    "city": "Cali",
+                    "venue": "Arena Canaveralejo",
+                    "date": "2026-04-26",
+                    "time": "7:30 PM",
+                    "show_length": "95 minutes",
+                    "capacity": "4300",
+                    "notes": "Festival format",
+                    "gross_potential": 78000,
+                    "net_potential": 70000,
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 250,
+                            "comps_kills": 10,
+                            "price": 55,
+                            "line_total": 13750
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 300,
+                            "comps_kills": 10,
+                            "price": 48,
+                            "line_total": 14400
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 150,
+                            "comps_kills": 0,
+                            "price": 41,
+                            "line_total": 6150
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 550,
+                            "comps_kills": 5,
+                            "price": 35,
+                            "line_total": 19250
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 800,
+                            "comps_kills": 5,
+                            "price": 31,
+                            "line_total": 24800
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1300,
+                            "comps_kills": 0,
+                            "price": 27,
+                            "line_total": 35100
+                        }
+                    ],
+                    "expenses": {
+                        "fixed_expenses": 9500,
+                        "variable_expenses": 3500,
+                        "break_even": 25000,
+                        "net_potential": 70000,
+                        "total_est_expenses": 13000,
+                        "amount_to_split": 57000,
+                        "walkout_potential": 39000
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar Arena",
+            "date": "2026-04-24",
+            "number_of_shows": 3
+        },
+        "id": "929e0b3d-7db8-410a-9df5-d1cce146e3fd",
+        "timestamp": "2026-04-22T16:29:13.707120+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Alejo",
+            "client": "Luchy",
+            "purchaser_name": "Luchy Buyer",
+            "purchaser_address": "123 Buyer St",
+            "signatory": "Lucy Signer",
+            "company_name": "Luchy Presents",
+            "company_address": "500 Company Ave",
+            "venue": "Movistar Arena",
+            "date": "2026-04-24",
+            "signature_date": "2026-04-22",
+            "city": "Bogota",
+            "fee": 50000.0,
+            "number_of_shows": 3,
+            "notes": "Special guest DJ",
+            "show_length": "95 minutes",
+            "capacity": "5200",
+            "air_transportation": "Business class for artist party",
+            "hotel_accommodations": "5 rooms, 2 nights",
+            "air_freight": "Included",
+            "ground_transportation": "Sprinter van and SUV",
+            "meals_incidentals": "Hot meal buyout",
+            "special_provisions": "No pyrotechnics without approval",
+            "concessionaire_fee": "10%",
+            "seller": "Venue",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "25",
+            "production_catering": "Full backline and hot catering",
+            "additional_addenda": "Security schedule attached",
+            "merchandising_terms": "Artist keeps 100% less approved fee",
+            "buyer_name": "Lucy Signer",
+            "buyer_company_name": "Luchy Presents",
+            "shows": [
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-04-24",
+                    "time": "8:00 PM",
+                    "show_length": "95 minutes",
+                    "capacity": "5200",
+                    "notes": "Special guest DJ",
+                    "gross_potential": 100000,
+                    "net_potential": 90000,
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035
+                        }
+                    ],
+                    "expenses": {
+                        "fixed_expenses": 12000,
+                        "variable_expenses": 4000,
+                        "break_even": 30000,
+                        "net_potential": 90000,
+                        "total_est_expenses": 16000,
+                        "amount_to_split": 74000,
+                        "walkout_potential": 50000
+                    }
+                },
+                {
+                    "city": "Medellin",
+                    "venue": "La Macarena",
+                    "date": "2026-04-25",
+                    "time": "9:00 PM",
+                    "show_length": "95 minutes",
+                    "capacity": "4700",
+                    "notes": "Local opener",
+                    "gross_potential": 85000,
+                    "net_potential": 76000,
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 300,
+                            "comps_kills": 10,
+                            "price": 60,
+                            "line_total": 18000
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 350,
+                            "comps_kills": 10,
+                            "price": 50,
+                            "line_total": 17500
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 120,
+                            "comps_kills": 0,
+                            "price": 42,
+                            "line_total": 5040
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 500,
+                            "comps_kills": 5,
+                            "price": 38,
+                            "line_total": 19000
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 900,
+                            "comps_kills": 5,
+                            "price": 34,
+                            "line_total": 30600
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1400,
+                            "comps_kills": 0,
+                            "price": 29,
+                            "line_total": 40600
+                        }
+                    ],
+                    "expenses": {
+                        "fixed_expenses": 10000,
+                        "variable_expenses": 5000,
+                        "break_even": 28000,
+                        "net_potential": 76000,
+                        "total_est_expenses": 15000,
+                        "amount_to_split": 61000,
+                        "walkout_potential": 43000
+                    }
+                },
+                {
+                    "city": "Cali",
+                    "venue": "Arena Canaveralejo",
+                    "date": "2026-04-26",
+                    "time": "7:30 PM",
+                    "show_length": "95 minutes",
+                    "capacity": "4300",
+                    "notes": "Festival format",
+                    "gross_potential": 78000,
+                    "net_potential": 70000,
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 250,
+                            "comps_kills": 10,
+                            "price": 55,
+                            "line_total": 13750
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 300,
+                            "comps_kills": 10,
+                            "price": 48,
+                            "line_total": 14400
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 150,
+                            "comps_kills": 0,
+                            "price": 41,
+                            "line_total": 6150
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 550,
+                            "comps_kills": 5,
+                            "price": 35,
+                            "line_total": 19250
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 800,
+                            "comps_kills": 5,
+                            "price": 31,
+                            "line_total": 24800
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1300,
+                            "comps_kills": 0,
+                            "price": 27,
+                            "line_total": 35100
+                        }
+                    ],
+                    "expenses": {
+                        "fixed_expenses": 9500,
+                        "variable_expenses": 3500,
+                        "break_even": 25000,
+                        "net_potential": 70000,
+                        "total_est_expenses": 13000,
+                        "amount_to_split": 57000,
+                        "walkout_potential": 39000
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar Arena",
+            "date": "2026-04-24",
+            "number_of_shows": 3
+        },
+        "id": "49004768-03f9-415f-a19a-5189727b8ea7",
+        "timestamp": "2026-04-22T16:30:59.087989+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Solo Artist",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Solo Artist",
+            "client": "Promoter",
+            "purchaser_name": "Promoter LLC",
+            "purchaser_address": "1 Main St",
+            "signatory": "Jane Doe",
+            "company_name": "Promoter LLC",
+            "company_address": "1 Main St",
+            "venue": "The Hall",
+            "date": "2026-05-01",
+            "signature_date": "2026-04-22",
+            "city": "Miami",
+            "fee": 10000.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 minutes",
+            "capacity": "5000",
+            "air_transportation": "Provided",
+            "hotel_accommodations": "Provided",
+            "air_freight": "Included",
+            "ground_transportation": "Provided",
+            "meals_incidentals": "Provided",
+            "special_provisions": "None",
+            "concessionaire_fee": "0%",
+            "seller": "TBD",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "20",
+            "production_catering": "Standard production provided",
+            "additional_addenda": "None",
+            "merchandising_terms": "Standard merchandising terms apply",
+            "buyer_name": "Jane Doe",
+            "buyer_company_name": "Promoter LLC",
+            "shows": []
+        },
+        "metadata": {
+            "artist": "Solo Artist",
+            "venue": "The Hall",
+            "date": "2026-05-01",
+            "number_of_shows": 1
+        },
+        "id": "1746a9e4-eead-4796-9383-d3f9475a9f51",
+        "timestamp": "2026-04-22T16:31:47.958242+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Alejo",
+            "client": "Luchy",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Movistar Arena",
+            "signatory": "Luchy",
+            "company_name": "Luchy",
+            "company_address": "Movistar Arena",
+            "venue": "Movistar Arena",
+            "date": "2026-04-24",
+            "signature_date": "2026-04-24",
+            "city": "Bogota",
+            "fee": 50000.0,
+            "number_of_shows": 3,
+            "notes": "",
+            "show_length": "90 minutes",
+            "capacity": "5000",
+            "air_transportation": "Provided",
+            "hotel_accommodations": "Provided",
+            "air_freight": "Included",
+            "ground_transportation": "Provided",
+            "meals_incidentals": "Provided",
+            "special_provisions": "None",
+            "concessionaire_fee": "0%",
+            "seller": "TBD",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "20",
+            "production_catering": "Standard production provided",
+            "additional_addenda": "None",
+            "merchandising_terms": "Standard merchandising terms apply",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "Luchy",
+            "shows": [
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-04-24",
+                    "time": "8:00 PM"
+                },
+                {
+                    "city": "Medellin",
+                    "venue": "La Macarena",
+                    "date": "2026-04-25",
+                    "time": "9:00 PM"
+                },
+                {
+                    "city": "Cali",
+                    "venue": "Arena Canaveralejo",
+                    "date": "2026-04-26",
+                    "time": "7:30 PM"
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar Arena",
+            "date": "2026-04-24",
+            "number_of_shows": 3
+        },
+        "id": "0dc98deb-8ea8-47c2-9c11-82404240bfc1",
+        "timestamp": "2026-04-22T16:32:16.673404+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Alejo",
+            "client": "Luchy",
+            "purchaser_name": "Movistar arena",
+            "purchaser_address": "Con san jose",
+            "signatory": "Alejo",
+            "company_name": "Luchy Cor",
+            "company_address": "bogotrans",
+            "venue": "Movistar Arena",
+            "date": "2026-04-22",
+            "signature_date": "2026-04-22",
+            "city": "Bogota",
+            "fee": 123.0,
+            "number_of_shows": 3,
+            "notes": "hello",
+            "show_length": "90 minutes",
+            "capacity": "5000",
+            "air_transportation": "Provided",
+            "hotel_accommodations": "Provided",
+            "air_freight": "Included",
+            "ground_transportation": "Provided",
+            "meals_incidentals": "Provided",
+            "special_provisions": "None",
+            "concessionaire_fee": "0%",
+            "seller": "TBD",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "20",
+            "production_catering": "Standard production provided",
+            "additional_addenda": "None",
+            "merchandising_terms": "Standard merchandising terms apply",
+            "buyer_name": "hi",
+            "buyer_company_name": "hi",
+            "shows": [
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": 

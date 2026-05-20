@@ -1,0 +1,28 @@
+NON-DISCLOSURE AGREEMENT (NDA)
+
+This Agreement is made between:
+
+Disclosing Party: {disclosing_party}  
+Receiving Party: {receiving_party}  
+
+Purpose:
+The purpose of this agreement is: {purpose}
+
+Confidential Information:
+The Receiving Party agrees not to disclose any confidential information obtained from the Disclosing Party.
+
+Obligations:
+- The Receiving Party will protect the confidentiality of all shared information.
+- Information may only be used for the stated purpose.
+- No information may be shared with third parties without written consent.
+
+Term:
+This Agreement remains in effect for {duration} months unless otherwise agreed in writing.
+
+Signatures:
+
+_________________________  
+Disclosing Party: {disclosing_party}
+
+_________________________  
+Receiving Party: {receiving_party}
