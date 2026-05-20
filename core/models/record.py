@@ -6,27 +6,42 @@ from typing import Any, Optional
 @dataclass
 class Record:
     """
-    # Generic record model used for persistence
+    Generic persistence model used across the application
 
-    # This is the universal structured stored in JSON
-    # All features like booking, contracts, ect. are stored as records
+    Records represent the standardized structure stored in 
+    JSON persistence regardless of feature type
+
+    Examples:
+    - Bookings
+    - Contracts
+    - Tour entries
+    - Historical records
+
+    This model acts as a shared persistence wrapper that allows different
+    features to store structured data in a consistent format
     """
 
-    # e.g, "booking", "contract"
+    # Record category identifier
     type: str
-    # Human-readable identifier (e.g., artist name)
+
+    # Human-readable display name
     name: str
-    # Actual data payload (Like dict, string, etc.)
+
+    # Primary structured payload associated with the record
     content: dict
-    # Extra searchable info
+
+    # Optional searchable or filtering metadata
     metadata: Optional[dict] = None
-    # Unique identifier
+
+    # Unique record identifier
     id: Optional[str] = None
-    # Creation time
+
+    # Record creation timestamp
     timestamp: Optional[str] = None
 
     def to_dict(self) -> dict:
         """
-        # Convert record to dictionary for JSON storage
+        Convert the record into a serializable dictionary 
+        for JSON persistence
         """
         return asdict(self)

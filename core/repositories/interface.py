@@ -1,50 +1,54 @@
 # core/repositories/interface.py
 
 from typing import Protocol, List
+
 from core.models.record import Record
+
 
 class Repository(Protocol):
     """
-    # Repository Interface (using Python Protocol)
+    Repository contract for persistence operations.
 
-    # Purpose
-    # - define a contract for repository behaviour
-    # - ensure all repository implementations provide the same methods
-    # - decouple services from concrete implementations
+    Defines the required behavior for repository
+    implementations used throughout the application.
 
-    # This allows
-    # - swapping storage implementations (JSON -> DB -> API)
-    # - easier testing (mock repositories)
+    Responsibilities:
+    - Persist records
+    - Retrieve stored records
+    - Delete records
+
+    Using a protocol-based interface allows:
+    - Swappable storage implementations
+    - Easier unit testing and mocking
+    - Decoupling services from persistence details
     """
+
     def save(self, record: Record) -> str:
         """
-        # Save a record to storage
-`                           
-        # Args
-        # - record (Record): The record to persist'
+        Persist a record to storage.
 
-        # Returns
-        # - str: The ID of the saved record
+        Args:
+            record: Record instance to store.
+
+        Returns:
+            str: Unique identifier of the saved record.
         """
         ...
 
     def get_all(self) -> List[dict]:
         """
-        # Retrieve all records from storage
+        Retrieve all stored records.
 
-        # Returns
-        # - List[dict]: Raw stored records
+        Returns:
+            List[dict]: Raw persisted record data.
         """
         ...
 
-    def delete(self, record_id:str) -> None:
+    def delete(self, record_id: str) -> None:
         """
-        # Delete a record by its ID
+        Delete a record from storage.
 
-        # Args
-        # - record_id (str): Unique identifier of the record
+        Args:
+            record_id: Unique identifier of the record.
         """
         ...
-        
-
-    

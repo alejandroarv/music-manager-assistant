@@ -1,67 +1,128 @@
 # app.py
 
 import logging
+
 import streamlit as st
 
-# Dependency container (wires up services, repositories, etc.)
+
+# Dependency injection container responsible
+# for wiring repositories, services,
+# and infrastructure components
 from core.container import Container
 
-# Import feature UI entry points
-# Each feature exposes a "presentation" layer function
-from features.booking.presentation import render_booking
-from features.contracts.presentation import render_contracts
-from features.history.presentation import render_history
-from features.tour.presentation import render_tour
 
-
-# Configure global logging for the entire app
-# It helps track events like template loading, saving records, errors, etc.
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+# Feature presentation entry points
+# Each feature exposes its UI layer here
+from features.booking.presentation import (
+    render_booking,
 )
 
-# Initialize the dependency container once
-# This creates and connects:
-# - Repositories (data layer e.g., ContractRepository, BookingRepository)
-# - Services (business logic layer e.g., ContractService, BookingService)
+from features.contracts.presentation import (
+    render_contracts,
+)
+
+from features.history.presentation import (
+    render_history,
+)
+
+from features.tour.presentation import (
+    render_tour,
+)
+
+
+# Configure global application logging.
+# Used for:
+# - Persistence events
+# - Template loading
+# - Runtime diagnostics
+# - Error tracing
+logging.basicConfig(
+    level=logging.INFO,
+
+    format=(
+        "%(asctime)s "
+        "[%(levelname)s] "
+        "%(name)s: "
+        "%(message)s"
+    ),
+)
+
+
+# Initialize dependency container once.
+# This centralizes creation of:
+# - Infrastructure components
+# - Repositories
+# - Application services
 container = Container()
 
-# Configure Streamlit page serttings 
-# Has to be called before UI rendering
-st.set_page_config(
-    page_title="Music Manager Assistant", 
-    page_icon=":material/music_note:"
-    )
 
-# Main app title at the top of the page
+# Configure Streamlit page settings.
+# Must execute before rendering UI elements.
+st.set_page_config(
+    page_title="Music Manager Assistant",
+
+    page_icon=":material/music_note:",
+)
+
+
+# Main application title
 st.title("Music Manager Assistant")
 
-# Sidebar navigation menu
-# Controls which feature's UI is rendered in the main area
-menu = ["Booking", "Tour Planner", "Contracts", "History"]
-choice = st.sidebar.selectbox("Select Feature", menu)
 
-# Route user to the selected feature
-# This is essentially the router or controller layer
+# -----------------------------------
+# Sidebar Navigation
+# -----------------------------------
+
+# Primary feature routing menu
+menu = [
+    "Booking",
+    "Tour Planner",
+    "Contracts",
+    "History",
+]
+
+choice = st.sidebar.selectbox(
+    "Select Feature",
+    menu,
+)
+
+
+# -----------------------------------
+# Feature Routing
+# -----------------------------------
+
+# Route user interaction to the
+# selected presentation layer
 if choice == "Contracts":
-    # Additional optioin for contracts feature
-    # Lets the user choose a contract type
+
+    # Contract-specific routing selector
     contract_type = st.sidebar.selectbox(
         "Contract Type",
+
         ["Performance", "NDA"],
+
         key="contract_type",
     )
 
-    # Pass both the selected type and the container
-    #The UI will extract the needed services from the container based on the contract type
-    render_contracts(contract_type, container)
+    # Render contracts workflow
+    render_contracts(
+        contract_type,
+        container,
+    )
+
 elif choice == "Tour Planner":
-    # Render the tour planning feature
+
+    # Render tour planning workflow
     render_tour(container)
+
 elif choice == "History":
-    # Render the history/audit feature
+
+    # Render persisted record history
     render_history(container)
+
 elif choice == "Booking":
-    # Render the booking feature's core functionality
-    render_booking(container.booking_service)
+
+    # Render booking management workflow
+    render_booking(
+        container.booking_service
+    )

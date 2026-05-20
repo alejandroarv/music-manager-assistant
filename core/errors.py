@@ -2,7 +2,9 @@
 
 class ValidationError(Exception):
     """
-    # Represents user input validation errors
-    # Should be safely shown in the UI
+    Raised when user-provided input fails validation.
+    
+    These errors are intended to be safely displayed
+    to the user interface.
     """
     pass

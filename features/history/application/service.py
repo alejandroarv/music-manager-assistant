@@ -2,102 +2,173 @@
 
 import json
 
-from core.repositories.record_repository import RecordRepository
+from core.repositories.record_repository import (
+    RecordRepository,
+)
 
 
 class HistoryService:
     """
-    # Application Service for History feature
+    Application service responsible for
+    history and record retrieval workflows.
 
-    # Responsibilities:
-    # - Retrieve stored records
-    # - Filter and sort records
-    # - Provide record type options
-    # - Prepare content for download/export
-    # - Handle deletion for records
+    Responsibilities:
+    - Retrieve persisted records
+    - Filter and sort records
+    - Provide record type metadata
+    - Prepare downloadable content
+    - Coordinate record deletion operations
 
-    # This service acts as a "read and utility layer" over the repository
+    This service acts as a read-oriented
+    utility layer over the repository system.
     """
 
-    def __init__(self, repository: RecordRepository):
-        # Inject repository dependency
+    def __init__(
+        self,
+        repository: RecordRepository
+    ):
+        """
+        Initialize the history service with
+        a repository dependency.
+        """
+
         self.repo = repository
 
-    def get_all_records(self, record_type: str = "All"):
+    def get_all_records(
+        self,
+        record_type: str = "All"
+    ):
         """
-        # Retrieve all records, optionally filtered by type
+        Retrieve persisted records with
+        optional type filtering.
 
-        # Args:
-        #   Record_type (str): Type for filter by (e. g., "booking", "tour")
-        
-        # Steps:
-        # 1. Fetch all records
-        # 2. Filter by type (if not "All")
-        # 3. Sort by timestamp (newest first)
+        Responsibilities:
+        - Retrieve all records
+        - Filter by record type
+        - Sort records by timestamp
+
+        Args:
+            record_type:
+                Optional record type filter.
+
+        Returns:
+            list: Filtered and sorted records.
         """
+
+        # Retrieve all persisted records
         records = self.repo.get_all()
 
-        # Filter records by type
+        # Filter records when a specific
+        # record type is selected
         filtered = [
-            record for record in records
-            if record_type == "All" or record.get("type") == record_type
+            record
+            for record in records
+            if (
+                record_type == "All"
+                or record.get("type")
+                == record_type
+            )
         ]
 
-        # Sort newest first
-        filtered.sort(key=lambda item: item.get("timestamp", ""), reverse=True)
+        # Sort newest records first
+        filtered.sort(
+            key=lambda item: item.get(
+                "timestamp",
+                ""
+            ),
+            reverse=True,
+        )
+
         return filtered
 
     def get_record_types(self) -> list[str]:
         """
-        # Extract unique record types from storage
+        Retrieve all unique persisted
+        record types.
 
-        # Returns:
-        #   list[str]: ["All", "booking", "tour", "nda_contract", ...]
+        Returns:
+            list[str]:
+                Available record type options.
         """
 
-        # Collect unique types
-        types = sorted({
-            record.get("type", "unknown") 
-            for record in self.repo.get_all()
-        })
-        
-        # Add "All" option for UI
+        # Extract unique record categories
+        types = sorted(
+            {
+                record.get(
+                    "type",
+                    "unknown"
+                )
+                for record in self.repo.get_all()
+            }
+        )
+
+        # Include generic UI filter option
         return ["All", *types]
 
-    def build_download_content(self, record: dict, tour_exporter) -> str:
+    def build_download_content(
+        self,
+        record: dict,
+        tour_exporter
+    ) -> str:
         """
-        # Prepare record content for download
+        Build downloadable content for
+        persisted records.
 
-        # Handles different content formats depending on record type
+        Handles multiple content formats:
+        - Tour exports
+        - Structured JSON content
+        - Plain string content
 
-        # Args:
-        #   record (dict): Stored record
-        #   tour_exporter (function): function to format tour data
+        Args:
+            record:
+                Persisted record structure.
 
-        # Logic:
-        # - Tour (dict) -> use exporter
-        # - Dict -> JSON string
-        # - String -> return as-is
+            tour_exporter:
+                Formatter function for
+                exporting tour data.
+
+        Returns:
+            str: Download-ready content.
         """
 
         record_type = record.get("type")
-        content = record.get("content", "")
 
-        # Special handling for tours
-        if record_type == "tour" and isinstance(content, dict):
+        content = record.get(
+            "content",
+            ""
+        )
+
+        # Tour exports require custom
+        # formatting logic
+        if (
+            record_type == "tour"
+            and isinstance(content, dict)
+        ):
+
             return tour_exporter(content)
 
-        # Generic dict -> JSON
+        # Serialize structured data
+        # into formatted JSON
         if isinstance(content, dict):
-            return json.dumps(content, indent=2)
 
-        # Fallback (string content like contracts)
+            return json.dumps(
+                content,
+                indent=2
+            )
+
+        # Fallback for plain text
+        # contract or export content
         return str(content)
-    
 
-    def delete_record(self, record_id: str):
+    def delete_record(
+        self,
+        record_id: str
+    ):
         """
-        # Delete a record by ID
-        # Delegates to repository
+        Delete a persisted record by ID.
+
+        Delegates deletion operations
+        to the repository layer.
         """
+
         self.repo.delete(record_id)

@@ -6,47 +6,56 @@ import tempfile
 
 class Storage:
     """
-    # Low-level persistence layer
+    Low-level JSON persistence layer
 
-    # Responsibilities:
-    # - Manage file existence
-    # - Read data from disk
-    # - Write data to disk
+    Responsibilities:
+    - Ensure storage files/directories exist
+    - Read raw data from disk
+    - Persist raw data to disk safely
 
-    # IMPORTANT
-    # This class doesn't uunderstand:
-    # - Bookings
-    # - Contracts
-    # - Business logic
-    # It only knows how to read/write raw data (lists, dicts) to a file
+    This class is intentionally generic and contains no business-specific
+    logic related to bookings, contracts, tours, or domain entities
     """
-    def __init__(self, file_path):\
-        # Path to the JSON storage file (provided by config)
+
+    def __init__(self, file_path):
+        """
+        Initialize the sotrage layer
+
+        Args:
+            file_path: Path to the JSON storage file
+        """
+
         self.file_path = file_path
 
-        # Ensure the storage file and directory exist
+        # Ensure the storage environment exists before use
         self._ensure_storage()
 
     def _ensure_storage(self):
         """
-        Ensure storage environment is ready
+        Prepare the storage environment
 
-        Steps:
-        1. Create directory if it doesn't exist
-        2. Create empty JSON file if it doesn't exist
+        Creates:
+        - The parent directory if missing
+        - An empty JSON file if one does not exist
         """
 
-        # Create directory if missing (e. g., data/)
+        # Create directory if needed
         os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
 
-        # If file does not exist, initialize it with an empty list
+        # Initialize storage file with an empty list
         if not os.path.exists(self.file_path):
             with open(self.file_path, "w", encoding="utf-8") as f:
                 json.dump([], f)
 
     def load_all(self):
         """
-        Load all records safely.
+        Load all and return all sotred records
+
+        Returns:
+            lists: Parsed JSON data from storage
+
+        If the file is corrupted or invalid JSON, an empty
+        list is returned as a safe fallback
         """
         try:
             if not os.path.exists(self.file_path):
@@ -56,7 +65,7 @@ class Storage:
                 return json.load(f)
 
         except json.JSONDecodeError:
-            # Corrupted file → recover gracefully
+            # Recover gracefully from corrupted JSON files
             return []
 
         except Exception as e:
@@ -64,7 +73,10 @@ class Storage:
 
     def save_all(self, data):
         """
-        Safely overwrite storage using atomic write.
+        Persist all records using an atomic write operation
+
+        Data is first written to a temporary file and then atomically replaces
+        the original file to reduce the risk of corruption during writes
         """
         try:
             dir_name = os.path.dirname(self.file_path)
@@ -79,7 +91,7 @@ class Storage:
                 json.dump(data, tmp_file, indent=4)
                 temp_name = tmp_file.name
 
-            # Replace original file atomically
+            # Atomically replace the original file
             os.replace(temp_name, self.file_path)
 
         except Exception as e:

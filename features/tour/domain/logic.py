@@ -1,75 +1,103 @@
 # features/tour/domain/logic.py
 
-from datetime import datetime, timedelta
+from datetime import (
+    datetime,
+    timedelta,
+)
+
 from core.models.tour import TourData
+
 
 def build_tour(data: TourData):
     """
-    # Generate a tour schedule based on input data
+    Generate a structured tour schedule
+    from normalized tour configuration data.
 
-    # Responsibilities:
-    # - Create ordered schedule of concerts and rest days
-    # - Enforce sequencing logic (concert -> rest cycles)
-    # - Return structured result(no formatting, no storage)
+    Responsibilities:
+    - Build ordered concert schedules
+    - Insert rest-day intervals
+    - Enforce concert/rest sequencing rules
+    - Return pure structured data
 
-    # This is a PURE FUNCTION:
-    # - No side effects
-    # - No storage
-    # - Derteministic output
+    This is a pure domain function:
+    - No persistence
+    - No UI formatting
+    - No side effects
+    - Deterministic output
     """
 
-    # List to hold the final schedule
+    # Container for generated schedule events
     tour = []
 
-    # Initialize starting date (combine date with midnight time)
-    current_date = datetime.combine(data.start_date, datetime.min.time())
+    # Normalize starting date into a full
+    # datetime object for arithmetic operations
+    current_date = datetime.combine(
+        data.start_date,
+        datetime.min.time(),
+    )
 
-    # Counter for consecutive concerts
+    # Tracks consecutive concerts in order
+    # to determine when rest periods occur
     concert_count = 0
 
-    # Iterate through each city
+    # Build tour schedule sequentially
     for i, city in enumerate(data.cities):
 
         # ------------------------
-        # Add concert event
+        # Concert Event
         # ------------------------
 
-        tour.append({
-            "type": "concert",
-            "date": current_date,
-            "city": city
-        })
+        tour.append(
+            {
+                "type": "concert",
+                "date": current_date,
+                "city": city,
+            }
+        )
 
         concert_count += 1
 
-        # Move to next day
+        # Advance to the next calendar day
         current_date += timedelta(days=1)
 
         # -----------------------------
-        # Determines if rest is needed
+        # Rest-Day Scheduling Logic
         # -----------------------------
 
-        should_rest = concert_count == data.concerts_before_rest
+        should_rest = (
+            concert_count
+            == data.concerts_before_rest
+        )
 
-        # Only add rest if:
-        # - we reached the limit
-        # - AND this is not the last city
-        if should_rest and i != len(data.cities) - 1:
+        # Insert rest periods only if:
+        # - the concert threshold is reached
+        # - there are remaining tour cities
+        if (
+            should_rest
+            and i != len(data.cities) - 1
+        ):
 
-            # Add rest days
+            # Generate configured rest days
             for _ in range(data.rest_days):
-                tour.append({
-                    "type": "rest",
-                    "date": current_date
-                })
 
-                # Move to next day
-                current_date += timedelta(days=1)
-            # Reset concert counter after rest
+                tour.append(
+                    {
+                        "type": "rest",
+                        "date": current_date,
+                    }
+                )
+
+                # Advance timeline during rest
+                current_date += timedelta(
+                    days=1
+                )
+
+            # Reset concert counter after
+            # completing the rest cycle
             concert_count = 0
 
-    # Return structured result
+    # Return normalized tour structure
     return {
         "name": data.artist,
-        "schedule": tour
+        "schedule": tour,
     }

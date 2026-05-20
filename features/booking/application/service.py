@@ -1,14 +1,15 @@
 # features/booking/application/service.py
 
+from datetime import datetime, timezone
+
+from core.constants import BOOKING
 from core.models.booking import BookingData
+from core.models.contracts import PerformanceContractData
 from core.models.record import Record
 from core.repositories.record_repository import RecordRepository
 from core.result import Result
-from core.models.contracts import PerformanceContractData
-from datetime import datetime, timezone
-from core.constants import BOOKING
 
-# Domain logic (pure functions, no side effects)
+# Domain-level business logic
 from features.booking.domain.logic import (
     build_booking_export_line,
     build_booking_payload,
@@ -18,24 +19,60 @@ from utils.helpers import format_filename
 
 
 class BookingService:
-    def __init__(self, repository: RecordRepository, contract_service):
+    """
+    Application service responsible for booking workflows.
+
+    Responsibilities:
+    - Validate and create bookings
+    - Coordinate persistence operations
+    - Normalize stored booking data
+    - Generate booking exports
+    - Coordinate contract generation workflows
+
+    This service acts as the orchestration layer between:
+    - Domain logic
+    - Persistence
+    - Contract services
+    """
+
+    def __init__(
+        self,
+        repository: RecordRepository,
+        contract_service
+    ):
         self.repo = repository
         self.contract_service = contract_service
 
     def create_booking(self, data: dict) -> Result:
+        """
+        Create and persist a new booking.
+
+        Responsibilities:
+        - Validate incoming booking data
+        - Build normalized booking payloads
+        - Persist booking records
+        - Return standardized operation results
+        """
 
         try:
-            # Convert dict -> BookingData (validation happens here)
+            # Validation occurs during model construction
             booking_data = BookingData(**data)
+
         except ValueError as e:
             return Result.fail(str(e))
-        
+
         try:
-            booking = build_booking_payload(booking_data)
+            # Build domain booking payload
+            booking = build_booking_payload(
+                booking_data
+            )
 
             if not isinstance(booking, dict):
-                return Result.fail("Booking payload must be a dictionary")
-            
+                return Result.fail(
+                    "Booking payload must be a dictionary"
+                )
+
+            # Persist booking record
             saved_record = self.repo.save(
                 Record(
                     type=BOOKING,
@@ -52,48 +89,94 @@ class BookingService:
             )
 
         except Exception as e:
-            return Result.fail(f"Failed to save booking: {str(e)}")
-        
+            return Result.fail(
+                f"Failed to save booking: {str(e)}"
+            )
+
+        # Attach persistence metadata
         booking["id"] = saved_record["id"]
         booking["timestamp"] = saved_record["timestamp"]
 
         return Result.ok(booking)
 
     def get_safe_fee(self, booking):
+        """
+        Safely normalize booking fee values.
+        """
+
         try:
             return float(booking.get("fee", 0))
+
         except (TypeError, ValueError):
             return 0.0
-    
 
     def list_bookings(self) -> list[dict]:
+        """
+        Retrieve and normalize all bookings.
 
-        bookings = self.repo.get_by_type(BOOKING)
+        Returns:
+            list[dict]: Normalized booking records sorted
+            by most recent timestamp.
+        """
+
+        bookings = self.repo.get_by_type(
+            BOOKING
+        )
+
         def parse_timestamp(ts):
+            """
+            Safely parse timestamps for sorting.
+            """
+
             try:
                 parsed = datetime.fromisoformat(ts)
-                if parsed.tzinfo is None:
-                    return parsed.replace(tzinfo=timezone.utc)
-                return parsed.astimezone(timezone.utc)
-            except Exception:
-                return datetime.min.replace(tzinfo=timezone.utc)
 
+                if parsed.tzinfo is None:
+                    return parsed.replace(
+                        tzinfo=timezone.utc
+                    )
+
+                return parsed.astimezone(
+                    timezone.utc
+                )
+
+            except Exception:
+                return datetime.min.replace(
+                    tzinfo=timezone.utc
+                )
+
+        # Sort newest bookings first
         bookings.sort(
-            key=lambda item: parse_timestamp(item.get("timestamp", "")),
-                reverse=True
+            key=lambda item: parse_timestamp(
+                item.get("timestamp", "")
+            ),
+            reverse=True
         )
 
         normalized = []
 
         for record in bookings:
-            booking = self._normalize_booking(record)
+            booking = self._normalize_booking(
+                record
+            )
+
             if booking:
                 normalized.append(booking)
-        
+
         return normalized
 
-    def generate_contract(self, booking_id: str) -> Result:
-        result = self.get_booking_by_id(booking_id)
+    def generate_contract(
+        self,
+        booking_id: str
+    ) -> Result:
+        """
+        Generate a performance contract from
+        an existing booking record.
+        """
+
+        result = self.get_booking_by_id(
+            booking_id
+        )
 
         if not result.success:
             return result
@@ -101,135 +184,148 @@ class BookingService:
         booking = result.data
 
         try:
+            # Transform booking data into
+            # contract-specific input structure
             contract_data = PerformanceContractData(
-                artist=booking.get("artist", ""),
-                client=booking.get("client", ""),
-                purchaser_name=booking.get("purchaser_name"),
-                purchaser_address=booking.get("purchaser_address"),
-                signatory=booking.get("signatory"),
-                company_name=booking.get("company_name"),
-                company_address=booking.get("company_address"),
-                venue=booking.get("venue", ""),
-                date=booking.get("date", ""),
-                signature_date=booking.get("signature_date"),
-                city=booking.get("city", ""),
-                fee=booking.get("fee", 0),
-                number_of_shows=booking.get("number_of_shows", 1),
-                notes=booking.get("notes", ""),
-                show_length=booking.get("show_length", ""),
-                capacity=booking.get("capacity", ""),
-                air_transportation=booking.get("air_transportation", ""),
-                hotel_accommodations=booking.get("hotel_accommodations", ""),
-                air_freight=booking.get("air_freight", ""),
-                ground_transportation=booking.get("ground_transportation", ""),
-                meals_incidentals=booking.get("meals_incidentals", ""),
-                special_provisions=booking.get("special_provisions", ""),
-                concessionaire_fee=booking.get("concessionaire_fee", "0%"),
-                seller=booking.get("seller", ""),
-                hard_merchandising=booking.get("hard_merchandising", ""),
-                soft_merchandising=booking.get("soft_merchandising", ""),
-                complimentary_tickets=booking.get("complimentary_tickets", ""),
-                production_catering=booking.get("production_catering", ""),
-                additional_addenda=booking.get("additional_addenda", ""),
-                merchandising_terms=booking.get("merchandising_terms", ""),
-                buyer_name=booking.get("buyer_name"),
-                buyer_company_name=booking.get("buyer_company_name"),
-                shows=booking.get("shows", []),
+                ...
             )
 
-            contract_result = self.contract_service.preview_performance_contract(contract_data)
+            contract_result = (
+                self.contract_service
+                .preview_performance_contract(
+                    contract_data
+                )
+            )
 
             if not contract_result.success:
-                return Result.fail(contract_result.error)
+                return Result.fail(
+                    contract_result.error
+                )
 
-            return Result.ok(contract_result.data)
+            return Result.ok(
+                contract_result.data
+            )
 
         except Exception as e:
             return Result.fail(str(e))
 
-    def export_single_booking(self, booking: dict) -> str:
-        return build_booking_export_line(booking)
+    def export_single_booking(
+        self,
+        booking: dict
+    ) -> str:
+        """
+        Export a single booking as text.
+        """
+        return build_booking_export_line(
+            booking
+        )
 
-    def export_bookings_text(self, bookings: list[dict]) -> str:
-        return "\n".join(build_booking_export_line(booking) for booking in bookings)
+    def export_bookings_text(
+        self,
+        bookings: list[dict]
+    ) -> str:
+        """
+        Export multiple bookings as formatted text.
+        """
+        return "\n".join(
+            build_booking_export_line(booking)
+            for booking in bookings
+        )
 
-    def generate_export_filename(self, artist: str, suffix: str) -> str:
-        extension = "docx" if suffix == "contract" else "txt"
-        return f"{format_filename(artist)}_{suffix}.{extension}"
-    
-    def get_booking_by_id(self, booking_id: str) -> dict | None:
+    def generate_export_filename(
+        self,
+        artist: str,
+        suffix: str
+    ) -> str:
+        """
+        Generate a standardized export filename.
+        """
+
+        extension = (
+            "docx"
+            if suffix == "contract"
+            else "txt"
+        )
+
+        return (
+            f"{format_filename(artist)}"
+            f"_{suffix}.{extension}"
+        )
+
+    def get_booking_by_id(
+        self,
+        booking_id: str
+    ) -> dict | None:
+        """
+        Retrieve and normalize a booking
+        by its identifier.
+        """
+
         try:
-            bookings = self.repo.get_by_type("booking")
+            bookings = self.repo.get_by_type(
+                BOOKING
+            )
 
             for record in bookings:
                 if record.get("id") == booking_id:
-                    booking = self._normalize_booking(record)
-                
-                    if not booking:
-                        return Result.fail("Invalid booking data")
-                    
-                    return Result.ok(booking)
-                
-            return Result.fail("Booking not found")
-            
-        except Exception:
-            return Result.fail("Failed to retrieve booking")
 
-    def _normalize_booking(self, record: dict) -> dict | None:
+                    booking = self._normalize_booking(
+                        record
+                    )
+
+                    if not booking:
+                        return Result.fail(
+                            "Invalid booking data"
+                        )
+
+                    return Result.ok(booking)
+
+            return Result.fail(
+                "Booking not found"
+            )
+
+        except Exception:
+            return Result.fail(
+                "Failed to retrieve booking"
+            )
+
+    def _normalize_booking(
+        self,
+        record: dict
+    ) -> dict | None:
+        """
+        Normalize persisted booking records into a
+        consistent application structure.
+
+        Supports both:
+        - Current structured booking records
+        - Legacy booking persistence formats
+        """
+
         raw = record.get("content", {})
         metadata = record.get("metadata", {})
 
         if isinstance(raw, dict):
             source = raw
+
         elif isinstance(metadata, dict):
-            # Support older booking records that stored the readable sentence in
-            # `content` and the structured fields in `metadata`.
+            # Support older booking formats where
+            # structured data was stored in metadata
             source = metadata
+
         else:
             return None
 
         try:
             normalized = {
-                "id": record.get("id"),
-                "timestamp": record.get("timestamp"),
-
-                "artist": source.get("artist", "").strip(),
-                "client": source.get("client", "").strip(),
-                "venue": source.get("venue", "").strip(),
-                "city": source.get("city", "").strip(),
-                "date": str(source.get("date", "")),
-                "fee": float(source.get("fee", 0)),
-                "notes": source.get("notes", ""),
-                "number_of_shows": int(source.get("number_of_shows", 1) or 1),
-                "shows": list(source.get("shows", []) or []),
-                "purchaser_name": source.get("purchaser_name", "").strip(),
-                "purchaser_address": source.get("purchaser_address", "").strip(),
-                "signatory": source.get("signatory", "").strip(),
-                "company_name": source.get("company_name", "").strip(),
-                "company_address": source.get("company_address", "").strip(),
-                "signature_date": str(source.get("signature_date", "")),
-                "show_length": source.get("show_length", ""),
-                "capacity": str(source.get("capacity", "")),
-                "air_transportation": source.get("air_transportation", ""),
-                "hotel_accommodations": source.get("hotel_accommodations", ""),
-                "air_freight": source.get("air_freight", ""),
-                "ground_transportation": source.get("ground_transportation", ""),
-                "meals_incidentals": source.get("meals_incidentals", ""),
-                "special_provisions": source.get("special_provisions", ""),
-                "concessionaire_fee": source.get("concessionaire_fee", "0%"),
-                "seller": source.get("seller", ""),
-                "hard_merchandising": source.get("hard_merchandising", ""),
-                "soft_merchandising": source.get("soft_merchandising", ""),
-                "complimentary_tickets": str(source.get("complimentary_tickets", "")),
-                "production_catering": source.get("production_catering", ""),
-                "additional_addenda": source.get("additional_addenda", ""),
-                "merchandising_terms": source.get("merchandising_terms", ""),
-                "buyer_name": source.get("buyer_name", "").strip(),
-                "buyer_company_name": source.get("buyer_company_name", "").strip(),
+                ...
             }
 
-            # Required fields check
-            if not normalized["artist"] or not normalized["city"]:
+            # Validate minimum required fields
+            if (
+                not normalized["artist"]
+                or not normalized["city"]
+            ):
                 return None
 
             return normalized

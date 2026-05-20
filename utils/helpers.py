@@ -1,88 +1,151 @@
 # utils/helpers.py
 
-import re
 import logging
+import re
 
-# Module- level logger
+
+# Module-level logger used for helper
+# and utility-related operations
 logger = logging.getLogger(__name__)
+
 
 def format_filename(name):
     """
-    # Convert a string into a safe filename
+    Convert arbitrary text into a safe,
+    filesystem-friendly filename.
 
-    # Steps:
-    # 1. Lowercase everything
-    # 2. Remove special characters
-    # 3. Replace spaces with underscores
+    Processing steps:
+    - Convert to lowercase
+    - Remove special characters
+    - Replace spaces with underscores
 
-    # Example
-    #"Artist live @ NYC!" -> "drake_live_nyc"
+    Example:
+        "Artist live @ NYC!"
+        ->
+        "artist_live_nyc"
     """
 
+    # Normalize casing
     name = name.lower()
-    
-    # Remove anything that is not word, space, or dash
-    name = re.sub(r'[^\w\s-]', '', name)
 
-    # Replace spaces with underscores
-    name = re.sub(r'\s+', '_', name.strip())
+    # Remove unsupported filename characters
+    name = re.sub(
+        r"[^\w\s-]",
+        "",
+        name,
+    )
+
+    # Normalize whitespace into underscores
+    name = re.sub(
+        r"\s+",
+        "_",
+        name.strip(),
+    )
 
     return name
 
 
 def make_json_safe(value):
+    """
+    Recursively convert values into
+    JSON-serializable structures.
+
+    Handles:
+    - datetime/date objects
+    - nested dictionaries
+    - nested lists
+
+    Returns:
+        JSON-safe normalized value.
+    """
+
+    # Convert datetime-like objects
+    # using ISO formatting
     if hasattr(value, "isoformat"):
+
         try:
+
             return value.isoformat()
+
         except TypeError:
+
             pass
 
+    # Recursively normalize dictionaries
     if isinstance(value, dict):
-        return {key: make_json_safe(item) for key, item in value.items()}
 
+        return {
+            key: make_json_safe(item)
+            for key, item in value.items()
+        }
+
+    # Recursively normalize lists
     if isinstance(value, list):
-        return [make_json_safe(item) for item in value]
+
+        return [
+            make_json_safe(item)
+            for item in value
+        ]
 
     return value
 
 
-# In-memory cache for templates
+# In-memory cache for reusable template content
 _template_cache = {}
 
 
 def load_template(path):
     """
-    # Load a template file from disk caching
+    Load and cache text-based templates.
 
-    # Behavior:
-    # - First call -> reads file from disk
-    # - Subsequent calls -> returns cached version
+    Behavior:
+    - First load reads from disk
+    - Subsequent loads use in-memory cache
 
-    # This avoids:
-    # - repeated disk I/O
-    # - unnecessary file reads (important in Streamlit reruns)
+    Benefits:
+    - Reduces repeated disk I/O
+    - Improves Streamlit rerun performance
+    - Avoids unnecessary file reads
     """
 
-    # Returned cached version if already loaded
+    # Return cached template when available
     if path in _template_cache:
+
         return _template_cache[path]
 
     try:
-        # Read template file
-        with open(path, "r", encoding="utf-8") as file:
+
+        # Read template file contents
+        with open(
+            path,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
             content = file.read()
 
-            # Store in cache
+            # Store template in cache
             _template_cache[path] = content
 
-            logger.info(f"Template loaded: {path}")
-            
+            logger.info(
+                f"Template loaded: {path}"
+            )
+
             return content
 
     except FileNotFoundError:
-        logger.error(f"Template not found: {path}")
+
+        logger.error(
+            f"Template not found: {path}"
+        )
+
         raise
 
-    except Exception as e:
-        logger.exception(f"Unexpected error loading template: {path}")
+    except Exception:
+
+        logger.exception(
+            "Unexpected error loading "
+            f"template: {path}"
+        )
+
         raise
