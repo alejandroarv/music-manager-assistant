@@ -7050,5 +7050,2525 @@
         },
         "id": "3f5540ef-3750-4495-853d-106ea69780bd",
         "timestamp": "2026-04-23T19:14:02.799768+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "venue": "Movistar Arena",
+            "city": "Bogota",
+            "date": "2026-05-22",
+            "fee": 200.0,
+            "notes": "TBD",
+            "number_of_shows": 2,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                },
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "Andres",
+            "purchaser_address": "TBD",
+            "signatory": "Dunno",
+            "company_name": "Avila",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "city": "Bogota",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22"
+        },
+        "id": "26fe88ba-0c59-404c-839b-482c1c1b5e94",
+        "timestamp": "2026-05-22T20:13:01.293436+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "venue": "Movistar Arena",
+            "city": "Bogota",
+            "date": "2026-05-22",
+            "fee": 200.0,
+            "notes": "TBD",
+            "number_of_shows": 2,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 800,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 45904.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 167633.0,
+                    "net_potential": 167633.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 167633.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 167633.0,
+                        "walkout_potential": 167633.0
+                    }
+                },
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "Andres",
+            "purchaser_address": "TBD",
+            "signatory": "Dunno",
+            "company_name": "Avila",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "city": "Bogota",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22"
+        },
+        "id": "f1bf16e2-fe44-429f-80cb-867a5ce0709d",
+        "timestamp": "2026-05-22T20:13:26.998028+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "venue": "Movistar Arena",
+            "city": "Bogota",
+            "date": "2026-05-22",
+            "fee": 200.0,
+            "notes": "TBD",
+            "number_of_shows": 2,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 800,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 45904.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 167633.0,
+                    "net_potential": 167633.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 167633.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 167633.0,
+                        "walkout_potential": 167633.0
+                    }
+                },
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "Andres",
+            "purchaser_address": "TBD",
+            "signatory": "Dunno",
+            "company_name": "Avila",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "city": "Bogota",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22"
+        },
+        "id": "9dea6aa8-a49a-4147-b0e3-8352c63b1972",
+        "timestamp": "2026-05-22T20:13:34.017789+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "venue": "Movistar Arena",
+            "city": "Bogota",
+            "date": "2026-05-22",
+            "fee": 200.0,
+            "notes": "TBD",
+            "number_of_shows": 2,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 800,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 45904.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 167633.0,
+                    "net_potential": 167633.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 167633.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 167633.0,
+                        "walkout_potential": 167633.0
+                    }
+                },
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "Andres",
+            "purchaser_address": "TBD",
+            "signatory": "Dunno",
+            "company_name": "Avila",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "city": "Bogota",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22"
+        },
+        "id": "c28c4a64-2280-4688-8725-22dc5aeb7f1e",
+        "timestamp": "2026-05-22T20:13:34.152955+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "venue": "Movistar Arena",
+            "city": "Bogota",
+            "date": "2026-05-22",
+            "fee": 200.0,
+            "notes": "TBD",
+            "number_of_shows": 2,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 800,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 45904.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 167633.0,
+                    "net_potential": 167633.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 167633.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 167633.0,
+                        "walkout_potential": 167633.0
+                    }
+                },
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "Andres",
+            "purchaser_address": "TBD",
+            "signatory": "Dunno",
+            "company_name": "Avila",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "city": "Bogota",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22"
+        },
+        "id": "4532023c-3a89-4937-8bdc-5ba75e2469c9",
+        "timestamp": "2026-05-22T20:13:47.304531+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "venue": "Movistar Arena",
+            "city": "Bogota",
+            "date": "2026-05-22",
+            "fee": 200.0,
+            "notes": "TBD",
+            "number_of_shows": 2,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 800,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 45904.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 167633.0,
+                    "net_potential": 167633.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 167633.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 167633.0,
+                        "walkout_potential": 167633.0
+                    }
+                },
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "Andres",
+            "purchaser_address": "TBD",
+            "signatory": "Dunno",
+            "company_name": "Avila",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "city": "Bogota",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22"
+        },
+        "id": "98caa229-ba68-4b0a-bbb0-52e093381c1c",
+        "timestamp": "2026-05-22T20:13:47.650370+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "Alejo",
+        "content": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "venue": "Movistar Arena",
+            "city": "Bogota",
+            "date": "2026-05-22",
+            "fee": 200.0,
+            "notes": "TBD",
+            "number_of_shows": 2,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 800,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 45904.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 167633.0,
+                    "net_potential": 167633.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 167633.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 167633.0,
+                        "walkout_potential": 167633.0
+                    }
+                },
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "Andres",
+            "purchaser_address": "TBD",
+            "signatory": "Dunno",
+            "company_name": "Avila",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "client": "Luchy",
+            "city": "Bogota",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22"
+        },
+        "id": "13546598-f39e-4e1a-ab22-8e860ff0a722",
+        "timestamp": "2026-05-22T20:13:47.765912+00:00"
+    },
+    {
+        "type": "booking",
+        "name": "fdsafds",
+        "content": {
+            "artist": "fdsafds",
+            "client": "fdsa",
+            "venue": "fasd",
+            "city": "fsda",
+            "date": "2026-05-22",
+            "fee": 100.0,
+            "notes": "TBD",
+            "number_of_shows": 1,
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ],
+            "purchaser_name": "fdsa",
+            "purchaser_address": "TBD",
+            "signatory": "fdas",
+            "company_name": "fad",
+            "company_address": "TBD",
+            "signature_date": "2026-05-22",
+            "show_length": "TBD",
+            "capacity": "TBD",
+            "air_transportation": "TBD",
+            "hotel_accommodations": "TBD",
+            "air_freight": "TBD",
+            "ground_transportation": "TBD",
+            "meals_incidentals": "TBD",
+            "special_provisions": "TBD",
+            "concessionaire_fee": "TBD",
+            "seller": "TBD",
+            "hard_merchandising": "TBD",
+            "soft_merchandising": "TBD",
+            "complimentary_tickets": "TBD",
+            "production_catering": "TBD",
+            "additional_addenda": "TBD",
+            "merchandising_terms": "TBD",
+            "buyer_name": "TBD",
+            "buyer_company_name": "TBD"
+        },
+        "metadata": {
+            "artist": "fdsafds",
+            "client": "fdsa",
+            "city": "fsda",
+            "venue": "fasd",
+            "date": "2026-05-22"
+        },
+        "id": "f7ad94ba-5eb4-4999-a934-e3260afce3e5",
+        "timestamp": "2026-05-22T20:14:33.480804+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fads",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "fads",
+            "client": "fdas",
+            "purchaser_name": "fdsa",
+            "purchaser_address": "",
+            "signatory": "fdas",
+            "company_name": "fads",
+            "company_address": "",
+            "venue": "fdas",
+            "date": "2026-05-22",
+            "signature_date": "2026-05-22",
+            "city": "fdas",
+            "fee": 100.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "",
+            "capacity": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "air_freight": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "special_provisions": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "complimentary_tickets": "",
+            "production_catering": "",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "fdas",
+            "buyer_company_name": "fads",
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "fads",
+            "venue": "fdas",
+            "date": "2026-05-22",
+            "number_of_shows": 1
+        },
+        "id": "0512e987-d0fa-40ff-b6bb-5b2c980a4792",
+        "timestamp": "2026-05-22T20:15:17.996392+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Alejo",
+            "client": "Arnulfo",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Home from home to home by home as home",
+            "signatory": "Luchy Avila",
+            "company_name": "Avila",
+            "company_address": "not home from not home to not home by not home as not home",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22",
+            "signature_date": "2026-05-22",
+            "city": "Bogota",
+            "fee": 200.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "30",
+            "capacity": "10000",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "air_freight": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "special_provisions": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "complimentary_tickets": "",
+            "production_catering": "",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "Luchy Avila",
+            "buyer_company_name": "Avila",
+            "shows": [
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "30",
+                    "capacity": "10000",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                },
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22",
+            "number_of_shows": 2
+        },
+        "id": "c6fe6c25-c133-48b2-8f23-cec51b7b947f",
+        "timestamp": "2026-05-22T20:28:07.236967+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "Home Purchaser",
+            "signatory": "Pepito Perez",
+            "company_name": "Bad Bunny LLC",
+            "company_address": "Home Company",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22",
+            "signature_date": "2026-05-22",
+            "city": "Bogota",
+            "fee": 100000.0,
+            "number_of_shows": 2,
+            "notes": "TBD",
+            "show_length": "90 min",
+            "capacity": "15000",
+            "air_transportation": "PURCHASER shall provide and pay for Air Transportation",
+            "hotel_accommodations": "PURCHASER shall provide and pay for hotel accomodation",
+            "air_freight": "PURCHASER shall provide and pay for hotel accomodation",
+            "ground_transportation": "PURCHASER shall provide and pay for hotel accomodation",
+            "meals_incidentals": "PURCHASER shall provide and pay for hotel accomodation",
+            "special_provisions": "Radius clause 200 miles",
+            "concessionaire_fee": "30%",
+            "seller": "Venue Sells",
+            "hard_merchandising": "70%",
+            "soft_merchandising": "70%",
+            "complimentary_tickets": "PURCHASER shall provide and pay for hotel accomodation",
+            "production_catering": "PURCHASER shall provide and pay for Sound, Lights, Video and Backline",
+            "additional_addenda": "N/A",
+            "merchandising_terms": "N/A",
+            "buyer_name": "Pepito Perez",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar Arena",
+                    "date": "2026-05-23",
+                    "time": "Doors open at 10",
+                    "show_length": "90 min",
+                    "capacity": "15000",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 100,
+                            "price": 50.0,
+                            "line_total": 15000.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 300,
+                            "comps_kills": 3,
+                            "price": 49.18,
+                            "line_total": 14606.46
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 4,
+                            "price": 40.98,
+                            "line_total": 3934.08
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 5,
+                            "price": 36.89,
+                            "line_total": 21949.55
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 6,
+                            "price": 32.79,
+                            "line_total": 32593.26
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 7,
+                            "price": 28.69,
+                            "line_total": 42834.170000000006
+                        }
+                    ],
+                    "gross_potential": 130917.52,
+                    "net_potential": 130917.52,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 130917.52,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 130917.52,
+                        "walkout_potential": 130917.52
+                    }
+                },
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-22",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-05-22",
+            "number_of_shows": 2
+        },
+        "id": "4bf80494-e72f-4a81-b348-1adebe1968f9",
+        "timestamp": "2026-05-22T22:21:56.164628+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Alejo",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Alejo",
+            "client": "Arnulfo",
+            "purchaser_name": "Arnulfo",
+            "purchaser_address": "",
+            "signatory": "Arnulfo",
+            "company_name": "Arnulfo",
+            "company_address": "",
+            "venue": "Movistar Arena",
+            "date": "2026-05-23",
+            "signature_date": "2026-05-23",
+            "city": "Bogota",
+            "fee": 100.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "",
+            "capacity": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "air_freight": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "special_provisions": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "complimentary_tickets": "",
+            "production_catering": "",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "Arnulfo",
+            "buyer_company_name": "Arnulfo",
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-23",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Alejo",
+            "venue": "Movistar Arena",
+            "date": "2026-05-23",
+            "number_of_shows": 1
+        },
+        "id": "1340a8e5-4c42-4ea2-9931-70d05967b180",
+        "timestamp": "2026-05-23T14:37:43.865236+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "afdsfdsa",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "afdsfdsa",
+            "client": "fads",
+            "purchaser_name": "fads",
+            "purchaser_address": "",
+            "signatory": "fads",
+            "company_name": "fads",
+            "company_address": "",
+            "venue": "fads",
+            "date": "2026-05-23",
+            "signature_date": "2026-05-23",
+            "city": "fads",
+            "fee": 100.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "",
+            "capacity": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "air_freight": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "special_provisions": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "complimentary_tickets": "",
+            "production_catering": "",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "fads",
+            "buyer_company_name": "fads",
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-23",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "afdsfdsa",
+            "venue": "fads",
+            "date": "2026-05-23",
+            "number_of_shows": 1
+        },
+        "id": "7b589c2c-df7e-4d63-b927-1f0b17f3ef4d",
+        "timestamp": "2026-05-23T14:57:30.215962+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fdasf",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "fdasf",
+            "client": "fads",
+            "purchaser_name": "fads",
+            "purchaser_address": "",
+            "signatory": "fads",
+            "company_name": "fads",
+            "company_address": "",
+            "venue": "fads",
+            "date": "2026-05-20",
+            "signature_date": "2026-05-23",
+            "city": "fads",
+            "fee": 100.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "",
+            "capacity": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "air_freight": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "special_provisions": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "complimentary_tickets": "",
+            "production_catering": "",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "fads",
+            "buyer_company_name": "fads",
+            "shows": [
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-23",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                },
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": null,
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "fdasf",
+            "venue": "fads",
+            "date": "2026-05-20",
+            "number_of_shows": 2
+        },
+        "id": "45be3c39-1d32-41ce-8ddd-15d86b7c0c56",
+        "timestamp": "2026-05-23T15:36:09.103593+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "afds",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "afds",
+            "client": "afds",
+            "purchaser_name": "fad",
+            "purchaser_address": "",
+            "signatory": "fad",
+            "company_name": "afds",
+            "company_address": "",
+            "venue": "afds",
+            "date": "2026-05-25",
+            "signature_date": "2026-05-25",
+            "city": "afds",
+            "fee": 10000.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "",
+            "capacity": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "air_freight": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "special_provisions": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "complimentary_tickets": "",
+            "production_catering": "",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "fad",
+            "buyer_company_name": "afds",
+            "shows": [
+                {
+                    "city": "afds",
+                    "venue": "afds",
+                    "date": "2026-05-25",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                },
+                {
+                    "city": "",
+                    "venue": "",
+                    "date": "2026-05-25",
+                    "time": "",
+                    "show_length": "",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "afds",
+            "venue": "afds",
+            "date": "2026-05-25",
+            "number_of_shows": 2
+        },
+        "id": "c622a7e7-1a36-427b-ac86-9e027f0c492f",
+        "timestamp": "2026-05-25T19:18:36.227477+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "fads",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "fads",
+            "client": "fads",
+            "purchaser_name": "fad",
+            "purchaser_address": "",
+            "signatory": "fad",
+            "company_name": "fads",
+            "company_address": "",
+            "venue": "fads",
+            "date": "2026-05-25",
+            "signature_date": "2026-05-25",
+            "city": "fad",
+            "fee": 12345.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "1000Hours",
+            "capacity": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "air_freight": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "special_provisions": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "complimentary_tickets": "",
+            "production_catering": "",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "fad",
+            "buyer_company_name": "fads",
+            "shows": [
+                {
+                    "city": "fad",
+                    "venue": "fads",
+                    "date": "2026-05-25",
+                    "time": "",
+                    "show_length": "1000Hours",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "fads",
+            "venue": "fads",
+            "date": "2026-05-25",
+            "number_of_shows": 1
+        },
+        "id": "c8a9c30e-9813-4ef0-90d5-89da4266c2e7",
+        "timestamp": "2026-05-25T19:34:28.516992+00:00"
     }
 ]

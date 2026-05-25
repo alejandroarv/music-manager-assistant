@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 # Default ticket pricing configuration used
 # to initialize ticket scaling tables
 DEFAULT_TICKET_ROWS = [
@@ -11,7 +10,6 @@ DEFAULT_TICKET_ROWS = [
     ("Platea Este", 1000, 0, 32.79, 32790.00),
     ("Popular", 1500, 0, 28.69, 43035.00),
 ]
-
 
 def compute_ticket_totals(
     ticket_rows: list[dict]
@@ -103,33 +101,94 @@ def render_performance_contract_fields(
     # Left-side core contract fields
     with col1:
 
-        artist = st.text_input(
-            "Artist Name",
-            key=f"{key_prefix}_artist"
-        )
-
-        client = st.text_input(
-            "Client / Promoter",
-            key=f"{key_prefix}_client"
-        )
-
-        purchaser_name = st.text_input(
-            "Purchaser Name",
-            value=client,
-            key=f"{key_prefix}_purchaser_name",
-        )
-
         company_name = st.text_input(
             "Company Name",
-            value=client,
             key=f"{key_prefix}_company_name",
         )
 
+        artist_key = (
+            f"{key_prefix}_artist"
+        )
+
+        artist_touched_key = (
+            f"{artist_key}_touched"
+        )
+
+        # Initialize artist from company
+        if artist_key not in st.session_state:
+
+            st.session_state[
+                artist_key
+            ] = company_name
+
+        # Keep synced until manually edited
+        if (
+            not st.session_state.get(
+                artist_touched_key,
+                False,
+            )
+        ):
+
+            st.session_state[
+                artist_key
+            ] = company_name
+
+        artist = st.text_input(
+            "Artist Name",
+            key=artist_key,
+        )
+
+        # Detect manual override
+        if artist != company_name:
+
+            st.session_state[
+                artist_touched_key
+            ] = True
+        
+
+        purchaser_name = st.text_input(
+            "Promoter / Purchasing Company",
+            key=f"{key_prefix}_purchaser_name",
+        )
+
+        signatory_key = (
+            f"{key_prefix}_signatory"
+        )
+
+        signatory_touched_key = (
+            f"{signatory_key}_touched"
+        )
+
+        # Initialize from purchaser
+        if signatory_key not in st.session_state:
+
+            st.session_state[
+                signatory_key
+            ] = purchaser_name
+        
+        # Keep synced until manually edited
+        if (
+            not st.session_state.get(
+                signatory_touched_key,
+                False,
+            )
+        ):
+
+            st.session_state[
+                signatory_key
+            ] = purchaser_name
+        
         signatory = st.text_input(
             "Purchaser Signatory",
-            value=purchaser_name,
-            key=f"{key_prefix}_signatory",
+            key=signatory_key,
         )
+        
+        # Detect manual override
+        if signatory != purchaser_name:
+
+            st.session_state[
+                signatory_touched_key
+            ] = True
 
     # Right-side event and fee fields
     with col2:
@@ -139,9 +198,11 @@ def render_performance_contract_fields(
             key=f"{key_prefix}_venue"
         )
 
+        city_key = f"{key_prefix}_city"
+
         city = st.text_input(
             "Primary City",
-            key=f"{key_prefix}_city"
+            key=city_key,
         )
 
         date = st.date_input(
@@ -155,12 +216,38 @@ def render_performance_contract_fields(
             key=f"{key_prefix}_signature_date",
         )
 
-        fee = st.number_input(
+        fee_key = f"{key_prefix}_fee"
+
+        # Initialize fee field
+        if fee_key not in st.session_state:
+
+            st.session_state[fee_key] = ""
+
+        fee_input = st.text_input(  
             "Flat Guarantee",
-            min_value=0.0,
-            step=100.0,
-            key=f"{key_prefix}_fee",
+            key=fee_key,
+            placeholder="Enter amount in USD",
         )
+
+        # Remove commas before conversion
+        clean_fee = (
+            fee_input
+            .replace(",", "")
+            .strip()
+        )
+
+        # Convert formatted value into float
+        try:
+            fee = (
+                float(clean_fee)
+                if clean_fee
+                else 0
+            )
+
+        except ValueError:
+
+            fee = 0
+        
 
     # Address-related sections
     col3, col4 = st.columns(2)
@@ -208,10 +295,40 @@ def render_performance_contract_fields(
 
     with col6:
 
-        show_length = st.text_input(
+        show_length_value = st.number_input(
             "Default Show Length",
-            key=f"{key_prefix}_show_length",
+
+            min_value=1,
+
+            value=90,
+            
+            step=1,
+
+            key=f"{key_prefix}_show_length_value",
         )
+
+        show_length_unit = st.selectbox(
+            "Show Length Unit",
+            options=[
+                "Minutes",
+                "Hours",
+            ],
+
+            key=f"{key_prefix}_show_length_unit",
+        )
+
+        unit = (
+            show_length_unit[:-1]
+            if show_length_value == 1
+            else show_length_unit
+        )
+
+        show_length = (
+            f"{show_length_value}"
+            f"{unit}"
+        )
+
+    
 
     with col7:
 
@@ -270,16 +387,6 @@ def render_performance_contract_fields(
             key=f"{key_prefix}_seller",
         )
 
-        hard_merchandising = st.text_input(
-            "Hard Merchandising",
-            key=f"{key_prefix}_hard_merchandising",
-        )
-
-        soft_merchandising = st.text_input(
-            "Soft Merchandising",
-            key=f"{key_prefix}_soft_merchandising",
-        )
-
         special_provisions = st.text_area(
             "Special Provisions",
             key=f"{key_prefix}_special_provisions",
@@ -289,6 +396,39 @@ def render_performance_contract_fields(
         "Production & Catering",
         key=f"{key_prefix}_production_catering",
     )
+
+    st.markdown("### Merchandising")
+
+    merch_col1, merch_col2 = st.columns(2)
+
+    with merch_col1:
+
+        hard_merchandising = st.selectbox(
+            "Hard Mechandising",
+
+            options=[
+                "Allowed",
+                "Restricted",
+                "Not Allowed",
+            ],
+
+            key=f"{key_prefix}_hard_merchandising",
+        )
+    
+    with merch_col2:
+
+        soft_merchandising = st.selectbox(
+            "Soft Merchandising",
+
+            options=[
+                "Allowed",
+                "Restricted",
+                "Not Allowed",
+            ],
+
+            key=f"{key_prefix}_soft_merchandising",
+        )
+
 
     merchandising_terms = st.text_area(
         "Merchandising Terms",
@@ -339,23 +479,118 @@ def render_performance_contract_fields(
             # Core venue and date fields
             with top_left:
 
+                show_city_key = (
+                    f"{key_prefix}_show_city_{i}"
+                )
+
+                show_city_touched_key = (
+                    f"{show_city_key}_touched"
+                )
+
+                # Initialize city field
+                if show_city_key not in st.session_state:
+
+                    st.session_state[show_city_key] = (
+                        city if i == 0 else ""
+                    )
+
+                if (
+                    i == 0
+                    and not st.session_state.get(
+                        show_city_touched_key,
+                        False,
+                    )
+                ):
+
+                    st.session_state[show_city_key] = city
+
                 show_city = st.text_input(
                     f"City {i + 1}",
-                    value=city,
-                    key=f"{key_prefix}_show_city_{i}",
+                    key=show_city_key,
                 )
+
+                # Detect manual edit
+                if i == 0 and show_city != city:
+
+                    st.session_state[
+                        show_city_touched_key
+                    ] = True
+
+                  
+                show_venue_key = (
+                    f"{key_prefix}_show_venue_{i}"
+                )
+
+                show_venue_touched_key = (
+                    f"{show_venue_key}_touched"
+                )
+
+                # Initialize venue field
+                if show_venue_key not in st.session_state:
+
+                    st.session_state[show_venue_key] = (
+                        venue if i == 0 else ""
+                    )
+
+                if (
+                    i == 0
+                    and not st.session_state.get(
+                        show_venue_touched_key,
+                        False,
+                    )
+                ):
+
+                    st.session_state[show_venue_key] = venue
 
                 show_venue = st.text_input(
                     f"Venue {i + 1}",
-                    value=venue,
-                    key=f"{key_prefix}_show_venue_{i}",
+                    key=show_venue_key,
                 )
+
+                # Detect manual edit
+                if i == 0 and show_venue != venue:
+
+                    st.session_state[
+                        show_venue_touched_key
+                    ] = True
+
+
+
+                show_date_key = (
+                    f"{key_prefix}_show_date_{i}"  
+                )
+
+                show_date_touched_key = (
+                    f"{show_date_key}_touched"
+                )
+
+                # Initialize date field
+                if show_date_key not in st.session_state:
+
+                    st.session_state[show_date_key] = date
+                
+                # Keep show 1 synced until manually edit
+                if (
+                    i == 0
+                    and not st.session_state.get(
+                        show_date_touched_key,
+                        False,
+                    )
+                ):
+
+                    st.session_state[show_date_key] = date
 
                 show_date = st.date_input(
                     f"Date {i + 1}",
-                    value=date,
-                    key=f"{key_prefix}_show_date_{i}",
+                    key=show_date_key,
                 )
+
+                # Detect manual edit
+                if i == 0 and show_date != date:
+
+                    st.session_state[
+                        show_date_touched_key
+                    ] = True
 
             # Scheduling and capacity fields
             with top_mid:
@@ -365,24 +600,136 @@ def render_performance_contract_fields(
                     key=f"{key_prefix}_show_time_{i}",
                 )
 
-                show_length_value = st.text_input(
-                    f"Show Length {i + 1}",
-                    key=f"{key_prefix}_show_length_{i}",
+                show_length_key = (
+                    f"{key_prefix}_show_length_{i}"
+                )  
+
+                show_length_touched_key = (
+                    f"{show_length_key}_touched"
                 )
 
+                # Initialize show length field
+                if show_length_key not in st.session_state:
+
+                    st.session_state[show_length_key] = (
+                        show_length if i == 0 else ""
+                    )
+
+                # Keep show 1 synced until manually edit
+                if (
+                    i == 0
+                    and not st.session_state.get(
+                        show_length_touched_key,
+                        False,
+                    )
+                ):
+
+                    st.session_state[
+                        show_length_key
+                    ] = show_length
+                
+                show_length_value = st.text_input(
+                    f"Show Length {i + 1}",
+                    key=show_length_key,
+                )
+
+                # Detect manual edit to show length
+
+                if (
+                    i == 0
+                    and show_length_value != show_length
+                ):
+
+                    st.session_state[
+                        show_length_touched_key
+                    ] = True    
+                
+
+                capacity_key = (
+                    f"{key_prefix}_capacity_{i}"
+                )
+                capacity_touched_key = (
+                    f"{capacity_key}_touched"
+                )
+
+                # Initialize capacity field
+                if capacity_key not in st.session_state:
+
+                    st.session_state[capacity_key] = (
+                        capacity if i == 0 else ""
+                    )
+
+                # Keep show 1 synced until manually edit
+                if (
+                    i == 0
+                    and not st.session_state.get(
+                        capacity_touched_key,
+                        False,
+                    )
+                ):
+
+                    st.session_state[
+                        capacity_key
+                    ] = capacity
+                
                 show_capacity = st.text_input(
                     f"Capacity {i + 1}",
-                    key=f"{key_prefix}_show_capacity_{i}",
+                    key=capacity_key,
                 )
+                # Detect manual edit to capacity
+                if (
+                    i == 0
+                    and show_capacity != capacity
+                ):
+
+                    st.session_state[
+                        capacity_touched_key
+                    ] = True
 
             # Per-show notes and support acts
             with top_right:
 
+                show_notes_key = (
+                    f"{key_prefix}_show_notes_{i}"
+                )
+
+                show_notes_touched_key = (
+                    f"{show_notes_key}_touched"
+                )
+
+                # Initialize ntoes field
+                if show_notes_key not in st.session_state:
+
+                    st.session_state[show_notes_key] = (
+                        general_notes if i == 0 else ""
+                    )
+                
+                # Keep SHow 1 synced until manually edit
+                if (
+                    i == 0
+                    and not st.session_state.get(
+                        show_notes_touched_key,
+                        False,
+                    )
+                ):
+
+                    st.session_state[show_notes_key] = (
+                        general_notes
+                    )
+                
                 show_notes = st.text_area(
                     f"Additional Acts / Notes {i + 1}",
-                    value=general_notes,
-                    key=f"{key_prefix}_show_notes_{i}",
+                    key=show_notes_key, 
                 )
+
+                if i == 0 and show_notes != general_notes:
+
+                    st.session_state[
+                        show_notes_touched_key
+                    ] = True
+
+
+
 
             # Expand advanced financial sections
             # automatically for multi-show contracts
@@ -857,7 +1204,7 @@ def render_performance_contract_fields(
     # consumed by the application layer
     return {
         "artist": artist,
-        "client": client,
+        "client": company_name,
 
         "purchaser_name": purchaser_name,
         "purchaser_address": purchaser_address,

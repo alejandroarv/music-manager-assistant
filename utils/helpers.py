@@ -149,3 +149,22 @@ def load_template(path):
         )
 
         raise
+
+def format_fee_input(session_state, key):
+    """
+    Auto-format fee input with commas.
+    """
+
+    raw_value = (
+        session_state[key]
+        .replace(",", "")
+        .strip()
+    )
+
+    # Ignore invalid input
+    if not raw_value.isdigit():
+        return
+
+    session_state[key] = (
+        f"{int(raw_value):,}"
+    )

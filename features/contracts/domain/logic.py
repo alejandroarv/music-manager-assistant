@@ -145,6 +145,39 @@ def fill_after_header(doc, header_text, value):
                                 return
 
 
+def fill_merchandising_terms(
+    doc,
+    merchandising_terms,
+):
+    """
+    Inject merchandising terms into the
+    merchandising contract section.
+    """
+
+    if not merchandising_terms.strip():
+        return
+
+    for table in get_all_tables(doc):
+
+        for row in table.rows:
+
+            for cell in row.cells:
+
+                if (
+                    "MERCHANDISING"
+                    in cell.text.upper()
+                ):
+
+                    # Append terms cleanly
+                    cell.text += (
+                        "\n\n"
+                        "Merchandising Terms:\n"
+                        f"{merchandising_terms}"
+                    )
+
+                    return
+
+
 def set_paragraph_text(paragraph, new_text):
     """
     Replace paragraph content while preserving
@@ -680,7 +713,7 @@ def format_currency(value):
     """
 
     try:
-        return f"$ {float(value):,.2f}"
+        return f"$ {float(value):,.0f}"
 
     except (TypeError, ValueError):
 
@@ -1368,7 +1401,9 @@ def build_performance_contract(
 
         fee_value = 0.0
 
-    formatted_fee = f"{fee_value:.2f}"
+    formatted_fee = format_currency(
+        fee_value
+    ).replace("$", "")
 
     # Populate shared contract sections
     replace_fee(doc, formatted_fee)
@@ -1542,9 +1577,8 @@ def build_performance_contract(
         normalized["additional_addenda"]
     )
 
-    fill_after_header(
+    fill_merchandising_terms(
         doc,
-        "MERCHANDISING",
         normalized["merchandising_terms"]
     )
 
