@@ -11,9 +11,13 @@ from features.tour.application.service import TourService
 from features.history.application.service import HistoryService
 from features.booking.application.service import BookingService
 from features.contracts.application.service import ContractService
+from features.profiles.application.service import (
+    ProfileService,
+)
 
 # Application configuration
 from core.config import settings
+
 
 
 class Container:
@@ -52,10 +56,12 @@ class Container:
             self.record_repository
         )
 
+        # Historical record viewing and retrieval service
         self.history_service = HistoryService(
             self.record_repository
         )
 
+        # Contract generation and management service
         self.contract_service = ContractService(
             self.record_repository
         )
@@ -65,4 +71,11 @@ class Container:
         self.booking_service = BookingService(
             self.record_repository,
             self.contract_service
+        )
+
+        # Artist profile management service
+        # handles profile creation, persistence, reusable artist 
+        # defaults, and future contract autofill support
+        self.profile_service = ProfileService(
+            self.record_repository
         )

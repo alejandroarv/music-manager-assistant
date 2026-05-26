@@ -80,7 +80,8 @@ def compute_expense_totals(
 
 
 def render_performance_contract_fields(
-    key_prefix: str
+    key_prefix: str,
+    container,
 ) -> dict:
     """
     Render the complete performance contract
@@ -93,6 +94,166 @@ def render_performance_contract_fields(
     - Calculate financial projections
     - Return structured form payload
     """
+
+    # Retrieve all saved artist profiles
+    profiles = (
+        container.profile_service
+        .get_all_profiles()
+    )
+
+    # Build dropdown options
+    profile_names = [
+        profile["name"] 
+        for profile in profiles
+    ]
+
+    # Session-state key used to prevent
+    # repeated autofill ovceerwriting edits
+    last_profile_key = (
+        f"{key_prefix}_last_profile"
+    )
+
+    # Artist profile selector
+    selected_profile = st.selectbox(
+        "Artist Profile",
+
+        options=[
+            "None",
+            *profile_names,
+        ],
+
+        key=f"{key_prefix}_profile_selector",
+      )
+     # Only autofill when the selected
+    # profile actually changes
+    if (
+        selected_profile != "None"
+        and
+        st.session_state.get(
+            last_profile_key
+        ) != selected_profile
+    ):
+
+        # Load selected artist profile
+        profile = (
+            container.profile_service
+            .get_profile_by_artist(
+                selected_profile
+            )
+        )
+
+        if profile:
+
+            # Convert profile into
+            # reusable form defaults
+            defaults = (
+                container.profile_service
+                .build_form_defaults(
+                    profile
+                )
+            )
+
+            # ==========================================
+            # Autofill Core Contract Fields
+            # ==========================================
+
+            st.session_state[
+                f"{key_prefix}_company_name"
+            ] = defaults.get(
+                "company_name",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_artist"
+            ] = defaults.get(
+                "artist_name",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_purchaser_name"
+            ] = defaults.get(
+                "purchaser_name",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_purchaser_address"
+            ] = defaults.get(
+                "purchaser_address",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_signatory"
+            ] = defaults.get(
+                "signatory",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_company_address"
+            ] = defaults.get(
+                "company_address",
+                "",
+            )
+
+            # ==========================================
+            # Autofill Terms & Logistics
+            # ==========================================
+
+            st.session_state[
+                f"{key_prefix}_air_transportation"
+            ] = defaults.get(
+                "air_transportation",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_hotel_accommodations"
+            ] = defaults.get(
+                "hotel_accommodations",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_ground_transportation"
+            ] = defaults.get(
+                "ground_transportation",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_special_provisions"
+            ] = defaults.get(
+                "special_provisions",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_production_catering"
+            ] = defaults.get(
+                "production_catering",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_merchandising_terms"
+            ] = defaults.get(
+                "merchandising_terms",
+                "",
+            )
+
+            # Save selected profile state
+            # to prevent rerun overwrites
+            st.session_state[
+                last_profile_key
+            ] = selected_profile
+
+            # Force rerun so populated
+            # values appear immediately
+            st.rerun()
 
     st.markdown("### Core Details")
 

@@ -41,7 +41,8 @@ def render_performance(container):
 
     # Render shared contract form fields
     form_data = render_performance_contract_fields(
-        "perf"
+        "perf",
+        container,
     )
 
     if st.button(

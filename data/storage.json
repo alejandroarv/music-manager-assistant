@@ -9570,5 +9570,175 @@
         },
         "id": "c8a9c30e-9813-4ef0-90d5-89da4266c2e7",
         "timestamp": "2026-05-25T19:34:28.516992+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Maluma",
+        "content": {
+            "artist_name": "Maluma",
+            "company_name": "Maluma INC",
+            "company_address": "",
+            "purchaser_name": "",
+            "purchaser_address": "",
+            "signatory": "",
+            "merchandising_terms": "",
+            "production_catering": "",
+            "special_provisions": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "ground_transportation": "",
+            "show_length": "90 Minutes",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Maluma"
+        },
+        "id": "56991f4d-38aa-4945-bf26-b3a5c2a52a41",
+        "timestamp": "2026-05-26T21:43:51.817086+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Arnulfo",
+            "merchandising_terms": "yes",
+            "production_catering": "yes",
+            "special_provisions": "yes",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "ground_transportation": "yes",
+            "show_length": "90 Minutes",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "c5de2377-3549-4f94-9b99-7fe8300bc962",
+        "timestamp": "2026-05-26T22:20:38.338809+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "Movistar arena",
+            "date": "2026-05-26",
+            "signature_date": "2026-05-26",
+            "city": "Bogota",
+            "fee": 100000.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production_catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "Bogota",
+                    "venue": "Movistar arena",
+                    "date": "2026-05-26",
+                    "time": "",
+                    "show_length": "90Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "Movistar arena",
+            "date": "2026-05-26",
+            "number_of_shows": 1
+        },
+        "id": "df97c54f-4edf-44ff-8118-6149cc1947b9",
+        "timestamp": "2026-05-26T22:21:27.329403+00:00"
     }
 ]

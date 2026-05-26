@@ -25,6 +25,10 @@ from features.history.presentation import (
     render_history,
 )
 
+from features.profiles.presentation.ui import (
+    render_profiles,
+)
+
 from features.tour.presentation import (
     render_tour,
 )
@@ -75,10 +79,11 @@ st.title("Music Manager Assistant")
 
 # Primary feature routing menu
 menu = [
+    "Contracts",
+    "Artist Profiles",
     "Booking",
     "Tour Planner",
-    "Contracts",
-    "History",
+    "History",  
 ]
 
 choice = st.sidebar.selectbox(
@@ -126,3 +131,7 @@ elif choice == "Booking":
     render_booking(
         container.booking_service
     )
+
+elif choice == "Artist Profiles":
+    # Render artist profile management workflow
+    render_profiles(container)

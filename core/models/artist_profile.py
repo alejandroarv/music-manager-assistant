@@ -1,0 +1,122 @@
+# core/models/artist_profile.py
+
+from dataclasses import dataclass, field
+
+
+@dataclass
+class ArtistProfile:
+    """
+    Represts a reusable artist profile used throughout the application.
+
+    Profiles store artist-specific information that can
+    automatically populate future contracts and workflows
+
+    This mode separates:
+    - Reusable artist/company data
+    - Contract preset defaults
+    - Flexible future expansion data
+    """
+
+    # Core artist identity
+    artist_name: str
+
+    # Company / business information
+    company_name: str = ""
+    company_address: str = ""
+
+    # Purchaser information commonly reused in contracts
+    purchaser_name: str = ""
+    purchaser_address: str = ""
+
+    # Primary contract signatory
+    signatory: str = ""
+
+    # Frequently reused contract clauses and provisions
+    merchandising_terms: str = ""
+    production_catering: str = ""
+    special_provisions: str = ""
+
+    # Transportation and hospitality requirements
+    air_transportation: str = ""
+    hotel_accommodations: str = ""
+    ground_transportation: str = ""
+
+    # Default performance length for contracts
+    show_length: str = "90 Minutes"
+
+    # Internal notes for profile management
+    profile_notes: str = ""
+
+    # Default contract template associated with this artist
+    default_contract_type: str = "performance"
+
+    # Stores reusable contract field presets
+    contract_defaults: dict = field(default_factory=dict)
+
+    # Flexible storage for future expansion without needing schema changes
+    additional_data: dict = field(default_factory=dict)
+
+    def to_dict(self):
+        """
+        Converts the Artistprofile instance into a dictionary
+
+        This is used when persisting profiles in the repository
+        and JSON storage system
+        """
+        return {
+            "artist_name": self.artist_name,
+            "company_name": self.company_name,
+            "company_address": self.company_address,
+            "purchaser_name": self.purchaser_name,
+            "purchaser_address": self.purchaser_address,
+            "signatory": self.signatory,
+            "merchandising_terms": self.merchandising_terms,
+            "production_catering": self.production_catering,
+            "special_provisions": self.special_provisions,
+            "air_transportation": self.air_transportation,
+            "hotel_accommodations": self.hotel_accommodations,
+            "ground_transportation": self.ground_transportation,
+            "show_length": self.show_length,
+            "profile_notes": self.profile_notes,
+            "default_contract_type": self.default_contract_type,
+            "contract_defaults": self.contract_defaults,
+            "additional_data": self.additional_data,
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        """
+        Reconstructs in ArtistProfile object from a dictionary
+
+        This allows profile records retrieved from storage to be converted
+        back into strongly-typed model objects
+        """
+        
+        return cls(
+            artist_name=data.get("artist_name", ""),
+            company_name=data.get("company_name", ""),
+            company_address=data.get("company_address", ""),
+            purchaser_name=data.get("purchaser_name", ""),
+            purchaser_address=data.get("purchaser_address", ""),
+            signatory=data.get("signatory", ""),
+            merchandising_terms=data.get("merchandising_terms", ""),
+            production_catering=data.get("production_catering", ""),
+            special_provisions=data.get("special_provisions", ""),
+            air_transportation=data.get("air_transportation", ""),
+            hotel_accommodations=data.get("hotel_accommodations", ""),
+            ground_transportation=data.get("ground_transportation", ""),
+            show_length=data.get("show_length", "90 Minutes"),
+            profile_notes=data.get("profile_notes", ""),
+            default_contract_type=data.get(
+                "default_contract_type",
+                "performance",
+            ),
+            contract_defaults=data.get(
+                "contract_defaults",
+                {},
+            ),
+            additional_data=data.get(
+                "additional_data",
+                {},
+            ),
+        )
