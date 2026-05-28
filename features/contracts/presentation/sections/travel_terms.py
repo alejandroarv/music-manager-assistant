@@ -74,17 +74,16 @@ def render_travel_terms_section(
             key=f"{key_prefix}_seller",
         )
 
+        production_catering = st.text_area(
+            "Production & Catering",
+            key=f"{key_prefix}_production_catering",
+        )
+
         special_provisions = st.text_area(
             "Special Provisions",
             key=f"{key_prefix}_special_provisions",
         )
 
-
-    # Large Free-Text Sections
-    production_catering = st.text_area(
-        "Production & Catering",
-        key=f"{key_prefix}_production_catering",
-    )
 
     # Return normalized section payload
     return {

@@ -1,3 +1,5 @@
+# features/contracts/domain/logic.py
+
 """
 Domain logic for contract document generation.
 
@@ -13,7 +15,7 @@ Responsibilities:
 - Document export generation
 """
 
-# features/contracts/domain/logic.py
+
 
 from io import BytesIO
 from copy import deepcopy
@@ -36,6 +38,9 @@ from utils.contract_helpers import (
     parse_date_value,
 )
 
+from features.contracts.application.formatters import (
+    format_purchaser_term,
+)
 
 def get_all_tables(doc):
     """
@@ -695,15 +700,6 @@ def fill_show_table(
                         f"{show['additional_acts']}"
                     )
 
-                elif (
-                    "City Schedule:" in text
-                    or "City  Schedule:" in text
-                ):
-
-                    cell.text = (
-                        f"City Schedule: "
-                        f"{show['time']}"
-                    )
 
 
 def format_currency(value):
@@ -1108,9 +1104,29 @@ def fill_single_show_details(doc, show):
                 f"{show['capacity']}"
             )
 
-            table.rows[5].cells[0].text = (
-                f"SCHEDULE: "
-                f"{show['time']}"
+            schedules = show.get(
+                "schedules",
+                [],
+            )
+
+            if schedules:
+
+                formatted_schedule = "\n".join(
+                    (
+                        f"{item.get('type', '')}: "
+                        f"{item.get('time', '')}"
+                    )
+                    for item in schedules
+                )
+
+            else:
+
+                formatted_schedule = "TBD"
+
+            replace_schedule_preserve_format(
+                doc,
+                formatted_schedule,
+                0,
             )
 
         # Populate venue information section
@@ -1243,36 +1259,21 @@ def replace_schedule_preserve_format(
                     if (
                         "cityschedule:"
                         in normalized_text
+                        or "schedule:"
+                        in normalized_text
                     ):
 
                         if count == occurrence_index:
 
-                            # Preserve existing run
-                            # formatting while injecting
-                            # schedule values
-                            combined = ""
+                            set_paragraph_text(
+                                paragraph,
+                                (
+                                    "City Schedule:\n"
+                                    f"{value}"
+                                ),
+                            )
 
-                            for i, run in enumerate(runs):
-
-                                combined += run.text
-
-                                if (
-                                    "schedule"
-                                    in combined.lower()
-                                ):
-
-                                    for j in range(
-                                        i,
-                                        len(runs)
-                                    ):
-
-                                        if ":" in runs[j].text:
-
-                                            runs[j].text += (
-                                                f" {value}"
-                                            )
-
-                                            return
+                            return
 
                         count += 1
 
@@ -1297,7 +1298,30 @@ def fill_show_sections(doc, shows):
             show["capacity"],
             show["additional_acts"],
         )
+        schedules = show.get(
+            "schedules",
+            [],
+        )
 
+        if schedules:
+
+            formatted_schedule = "\n".join(
+                (
+                    f"{item.get('type', '')}: "
+                    f"{item.get('time', '')}"
+                )
+                for item in schedules
+            )
+
+        else:
+
+            formatted_schedule = "TBD"
+
+        replace_schedule_preserve_format(
+            doc,
+            formatted_schedule,
+            index,
+        )
 
 def fill_signature_table(doc, data):
     """
@@ -1462,7 +1486,7 @@ def build_performance_contract(
     replace_everywhere(
         doc,
         "Company is furnishing "
-        "the services of ARTIST:",
+        "the services of",
         normalized["artist"],
     )
 
@@ -1494,33 +1518,71 @@ def build_performance_contract(
     replace_everywhere(
         doc,
         "Air Transportation:",
-        normalized["air_transportation"]
+        format_purchaser_term(
+            normalized["purchaser_name"],
+
+            "Air Transportation",
+
+            normalized["air_transportation"],
+        )
     )
 
     replace_everywhere(
         doc,
         "Hotel Accommodations:",
-        normalized["hotel_accommodations"]
+        format_purchaser_term(
+            normalized["purchaser_name"],
+
+            "Hotel Accommodations",
+
+            normalized[
+                "hotel_accommodations"
+            ],
+        )
     )
 
     replace_everywhere(
         doc,
         "Air Freight & Excess Baggage:",
-        normalized["air_freight"]
+        format_purchaser_term(
+            normalized["purchaser_name"],
+
+            "Air Freight & Excess Baggage",
+
+            normalized[
+                "air_freight"
+            ],
+        )
     )
 
     replace_everywhere(
         doc,
         "Ground Transportation:",
-        normalized["ground_transportation"]
+        format_purchaser_term(
+            normalized["purchaser_name"],
+
+            "Ground Transportation",
+
+            normalized[
+                "ground_transportation"
+            ],
+        )
     )
 
     replace_everywhere(
         doc,
         "Meals & Incidentals:",
-        normalized["meals_incidentals"]
-    )
+        format_purchaser_term(
+            normalized["purchaser_name"],
 
+            "Meals & Incidentals",
+
+            normalized[
+                "meals_incidentals"
+            ],
+        )
+    )
+    
     # Contract and merchandising terms
     replace_everywhere(
         doc,

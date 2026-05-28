@@ -1,3 +1,5 @@
+# features/contracts/presentation/sections/show_details.py
+
 # Streamlit UI framework
 import streamlit as st
 
@@ -9,7 +11,6 @@ from utils.state_sync import (
 from utils.show_sync import (
     initialize_show_sync,
 )
-
 
 # Default ticket pricing configuration used
 # to initialize ticket scaling tables
@@ -249,10 +250,80 @@ def render_show_details_section(
             # Scheduling and capacity fields
             with top_mid:
 
-                show_time = st.text_input(
-                    f"Schedule {i + 1}",
-                    key=f"{key_prefix}_show_time_{i}",
+                schedule_count = st.number_input(
+                    f"Schedule Entries {i + 1}",
+
+                    min_value=1,
+
+                    max_value=10,
+
+                    value=1,
+
+                    step=1,
+
+                    key=(
+                        f"{key_prefix}"
+                        f"_schedule_count_{i}"
+                    ),
                 )
+
+                schedule_rows = []
+
+                st.markdown(
+                    "##### Schedule"
+                )
+
+                for schedule_index in range(
+                    schedule_count
+                ):
+
+                    s1, s2 = st.columns(2)
+
+                    with s1:
+
+                        schedule_type = (
+                            st.text_input(
+                                (
+                                    "Schedule Type "
+                                    f"{schedule_index + 1}"
+                                ),
+
+                                key=(
+                                    f"{key_prefix}"
+                                    f"_schedule_type_"
+                                    f"{i}_{schedule_index}"
+                                ),
+                            )
+                        )
+
+                    with s2:
+
+                        schedule_time = (
+                            st.text_input(
+                                (
+                                    "Schedule Time "
+                                    f"{schedule_index + 1}"
+                                ),
+
+                                key=(
+                                    f"{key_prefix}"
+                                    f"_schedule_time_"
+                                    f"{i}_{schedule_index}"
+                                ),
+                            )
+                        )
+
+                    schedule_rows.append(
+                        {
+                            "type": (
+                                schedule_type
+                            ),
+
+                            "time": (
+                                schedule_time
+                            ),
+                        }
+                    )
 
                 show_length_key = (
                     f"{key_prefix}_show_length_{i}"
@@ -545,6 +616,40 @@ def render_show_details_section(
                     )
                 )
 
+                include_merchandising = (
+                    st.checkbox(
+                        "Include Merchandising Revenue",
+
+                        value=False,
+
+                        key=(
+                            f"{key_prefix}"
+                            f"_include_merch_{i}"
+                        ),
+                    )
+                )
+
+                merchandising_revenue = (
+                    st.number_input(
+                        f"Merchandising Revenue {i + 1}",
+
+                        min_value=0.0,
+
+                        step=100.0,
+
+                        value=0.0,
+
+                        disabled=(
+                            not include_merchandising
+                        ),
+
+                        key=(
+                            f"{key_prefix}"
+                            f"_merch_revenue_{i}"
+                        ),
+                    )
+                )
+
                 auto_calc_enabled = st.checkbox(
                     "Auto-calculate Gross/Net "
                     "from ticket rows",
@@ -554,9 +659,20 @@ def render_show_details_section(
                     key=f"{key_prefix}_auto_calc_{i}",
                 )
 
+                if include_merchandising:
+
+                    auto_gross += (
+                        merchandising_revenue
+                    )
+
+                    auto_net += (
+                        merchandising_revenue
+                    )
+
                 if auto_calc_enabled:
 
                     gross_potential = auto_gross
+
                     net_potential = auto_net
 
                     st.caption(
@@ -792,7 +908,9 @@ def render_show_details_section(
                     "city": show_city,
                     "venue": show_venue,
                     "date": show_date,
-                    "time": show_time,
+                    "schedules": (
+                        schedule_rows
+                    ),
 
                     "show_length": (
                         show_length_value
@@ -811,6 +929,13 @@ def render_show_details_section(
 
                     "net_potential": (
                         net_potential
+                    ),
+                    "include_merchandising": (
+                        include_merchandising
+                    ),
+
+                    "merchandising_revenue": (
+                        merchandising_revenue
                     ),
 
                     # Expense breakdown projections

@@ -44,7 +44,10 @@ def normalize_show(show, data):
         ),
 
         # Performance details
-        "time": safe_value(show.get("time")),
+        "schedules": show.get(
+            "schedules",
+            [],
+        ),
         "additional_acts": safe_value(
             show.get("additional_acts") or data["additional_acts"],
             default="None"

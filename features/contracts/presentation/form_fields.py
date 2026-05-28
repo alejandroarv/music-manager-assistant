@@ -1,36 +1,16 @@
 import streamlit as st
 
-from features.contracts.presentation.sections.profile_autofill import (
-    render_profile_autofill,
-)
-
-from features.contracts.presentation.sections.travel_terms import (
-    render_travel_terms_section,
-)
-
-from features.contracts.presentation.sections.merchandising import (
-    render_merchandising_section,
-)
-
 from utils.state_sync import (
     sync_linked_text_field,
     detect_manual_override,
 )
 
-from features.contracts.presentation.sections.show_details import (
+from features.contracts.presentation.sections import (
+    render_profile_autofill,
+    render_travel_terms_section,
+    render_merchandising_section,
     render_show_details_section,
 )
-# Default ticket pricing configuration used
-# to initialize ticket scaling tables
-DEFAULT_TICKET_ROWS = [
-    ("Platinum", 400, 0, 57.38, 22952.00),
-    ("Gold", 400, 0, 49.18, 19672.00),
-    ("VIP", 100, 0, 40.98, 4098.00),
-    ("Platea Oeste", 600, 0, 36.89, 22134.00),
-    ("Platea Este", 1000, 0, 32.79, 32790.00),
-    ("Popular", 1500, 0, 28.69, 43035.00),
-]
-
 
 def render_performance_contract_fields(
     key_prefix: str,
@@ -389,12 +369,43 @@ def render_performance_contract_fields(
     )
 
     # Buyer signature configuration
-    buyer_name = st.text_input(
-        "Buyer Signature Name",
-        value=signatory,
-        key=f"{key_prefix}_buyer_name",
+    buyer_name_key = (
+        f"{key_prefix}_buyer_name"
     )
 
+    buyer_name_touched_key = (
+        f"{buyer_name_key}_touched"
+    )
+
+    # Synchronize buyer signature name
+    # with purchaser signatory until
+    # manually overridden
+    sync_linked_text_field(
+        source_value=signatory,
+
+        target_key=buyer_name_key,
+
+        touched_key=(
+            buyer_name_touched_key
+        ),
+    )
+
+    buyer_name = st.text_input(
+        "Buyer Signature Name",
+        key=buyer_name_key,
+    )
+
+    # Detect manual override
+    detect_manual_override(
+        source_value=signatory,
+
+        target_value=buyer_name,
+
+        touched_key=(
+            buyer_name_touched_key
+        ),
+    )
+    
     buyer_company_name = st.text_input(
         "Buyer Signature Company",
         value=company_name,
