@@ -96,6 +96,7 @@ def render_show_details_section(
     date,
     show_length,
     capacity,
+    ticketing_fee_percent,
     general_notes,
 ):
     """
@@ -610,10 +611,28 @@ def render_show_details_section(
                     )
 
                 # Calculate aggregate revenue projections
-                auto_gross, auto_net = (
+                auto_gross, _ = (
                     compute_ticket_totals(
                         ticket_rows
                     )
+                )
+
+                ticketing_fee_amount = (
+                    auto_gross
+                    * (
+                        ticketing_fee_percent
+                        / 100
+                    )
+                )
+
+                st.caption(
+                    f"Ticketing Fee: "
+                    f"${ticketing_fee_amount:,.2f}"
+                )
+                
+                auto_net = (
+                    auto_gross
+                    - ticketing_fee_amount
                 )
 
                 include_merchandising = (
@@ -930,6 +949,17 @@ def render_show_details_section(
                     "net_potential": (
                         net_potential
                     ),
+
+                    # Keep the calculated ticketing-fee values with each show
+                    # so the DOCX summary can render the percent and amount.
+                    "ticketing_fee_percent": (
+                        ticketing_fee_percent
+                    ),
+
+                    "ticketing_fee_amount": (
+                        ticketing_fee_amount
+                    ),
+
                     "include_merchandising": (
                         include_merchandising
                     ),
@@ -970,3 +1000,7 @@ def render_show_details_section(
                     },
                 }
             )
+
+    # Return the collected per-show payloads so schedules and show-specific
+    # details reach the contract builder instead of falling back to TBD.
+    return show_details

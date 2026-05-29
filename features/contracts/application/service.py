@@ -133,6 +133,9 @@ class ContractService:
 
                     "city": data.city,
                     "fee": data.fee,
+                    "ticketing_fee_percent": (
+                        data.ticketing_fee_percent
+                    ),
 
                     "number_of_shows": (
                         data.number_of_shows

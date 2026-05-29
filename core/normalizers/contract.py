@@ -30,6 +30,16 @@ def normalize_show(show, data):
         sum(float(row.get("line_total", 0) or 0) for row in ticket_rows),
     )
 
+    ticketing_fee_percent = show.get(
+        "ticketing_fee_percent",
+        data.get("ticketing_fee_percent", 0),
+    )
+
+    ticketing_fee_amount = show.get(
+        "ticketing_fee_amount",
+        float(gross_potential or 0) * (float(ticketing_fee_percent or 0) / 100),
+    )
+
     expenses = show.get("expenses") or {}
 
     return {
@@ -44,9 +54,12 @@ def normalize_show(show, data):
         ),
 
         # Performance details
-        "schedules": show.get(
-            "schedules",
-            [],
+        # Accept both the current UI field and the older singular field
+        # so schedule rows render consistently in every contract template.
+        "schedules": (
+            show.get("schedules")
+            or show.get("schedule")
+            or []
         ),
         "additional_acts": safe_value(
             show.get("additional_acts") or data["additional_acts"],
@@ -64,6 +77,10 @@ def normalize_show(show, data):
         # Revenue projections
         "gross_potential": gross_potential,
         "net_potential": show.get("net_potential", gross_potential),
+        # Preserve ticketing-fee values calculated by the UI so the DOCX
+        # summary table can fill both the percent and dollar amount.
+        "ticketing_fee_percent": ticketing_fee_percent,
+        "ticketing_fee_amount": ticketing_fee_amount,
 
         # Expense breakdown
         "expenses": {
@@ -122,6 +139,7 @@ def normalize_performance_contract(data):
         # Financial and scheduling information
         "fee": data.fee,
         "number_of_shows": data.number_of_shows,
+        "ticketing_fee_percent": data.ticketing_fee_percent,
 
         # Performer information
         "additional_acts": fallback(data.additional_acts, "None"),

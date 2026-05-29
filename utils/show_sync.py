@@ -57,4 +57,8 @@ def initialize_show_sync(
 
         st.session_state[
             target_key
-        ] = fallback_value
+        ] = (
+            source_value
+            if source_value
+            else fallback_value
+        )

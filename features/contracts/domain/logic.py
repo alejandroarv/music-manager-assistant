@@ -200,6 +200,50 @@ def set_paragraph_text(paragraph, new_text):
         paragraph.add_run(new_text)
 
 
+def get_show_schedules(show):
+    """
+    Return non-empty schedule rows from a show.
+    """
+
+    rows = (
+        show.get("schedules")
+        or show.get("schedule")
+        or []
+    )
+
+    # Drop blank UI rows so an untouched schedule field
+    # does not render as an empty "=" line in the contract.
+    return [
+        row
+        for row in rows
+        if (
+            str(row.get("type", "")).strip()
+            or str(row.get("time", "")).strip()
+        )
+    ]
+
+
+def format_show_schedule(show):
+    """
+    Format schedule rows for DOCX templates.
+    """
+
+    schedules = get_show_schedules(show)
+
+    if not schedules:
+        return "TBD"
+
+    # Keep schedule rendering modular: one row becomes one line,
+    # while multiple rows become separate DOCX lines.
+    return "\n".join(
+        (
+            f"{str(item.get('type', '')).strip()} = "
+            f"{str(item.get('time', '')).strip()}"
+        )
+        for item in schedules
+    )
+
+
 def format_effective_date(value):
     """
     Format dates for contract effective date sections.
@@ -394,6 +438,32 @@ def find_body_tables(doc, predicate):
     ]
 
 
+def find_expense_metric_tables(doc):
+    """
+    Find visible expense metric tables in document order.
+    """
+
+    matches = []
+
+    for table in get_all_tables(doc):
+
+        cell_values = [
+            cell.text.strip()
+            for row in table.rows
+            for cell in row.cells
+        ]
+
+        # Use exact cell labels so single-show and multi-show contracts both
+        # target the visible TOTAL EXPENSES / DEAL CALCULATIONS table.
+        if (
+            "Fixed Expenses" in cell_values
+            and "Walkout Potential" in cell_values
+        ):
+            matches.append(table)
+
+    return matches
+
+
 def get_table_text(table):
     """
     Extract combined text content
@@ -474,7 +544,9 @@ def is_expense_table(table):
     text = get_table_text_recursive(table)
 
     return (
-        "EXPENSES for " in text
+        # Single-show templates use "EXPENSES" while multi-show templates use
+        # "EXPENSES for ...", so match the shared heading plus a metric label.
+        "EXPENSES" in text
         and "Walkout Potential" in text
     )
 
@@ -522,9 +594,8 @@ def ensure_repeated_tables(
         is_ticket_summary_table
     )
 
-    expense_tables = find_body_tables(
-        doc,
-        is_expense_table
+    expense_tables = find_expense_metric_tables(
+        doc
     )
 
     # Abort if required template sections
@@ -667,8 +738,14 @@ def fill_show_table(
                 # Replace show-specific placeholders
                 if "City Date:" in text:
 
+                    weekday = (
+                        show["raw_date"]
+                        .strftime("%A")
+                    )
+
                     cell.text = (
                         f"City Date: "
+                        f"{weekday}, "
                         f"{show['date']}"
                     )
 
@@ -677,6 +754,13 @@ def fill_show_table(
                     cell.text = (
                         f"City Venue: "
                         f"{show['venue']}"
+                    )
+
+                elif "City Schedule:" in text:
+
+                    cell.text = (
+                        "City Schedule:\n"
+                        f"{format_show_schedule(show)}"
                     )
 
                 elif "City Length:" in text:
@@ -717,6 +801,49 @@ def format_currency(value):
             str(value).strip()
             or "$ 0.00"
         )
+
+
+def format_percent(value):
+    """
+    Format percentages without unnecessary
+    trailing decimal places.
+    """
+
+    try:
+        numeric_value = float(value)
+
+    except (TypeError, ValueError):
+        return str(value).strip() or "0"
+
+    if numeric_value.is_integer():
+        return str(int(numeric_value))
+
+    return f"{numeric_value:g}"
+
+
+def fill_ticketing_fee_paragraph(cell, fee_text):
+    """
+    Fill the ticketing-fee value without disturbing
+    the nested gross/net potential table.
+    """
+
+    paragraphs = list(cell.paragraphs)
+
+    for paragraph in paragraphs:
+
+        if paragraph.text.strip() != "Ticketing Fees":
+            continue
+
+        # The label is italic and sits in the outer cell, while gross/net live
+        # in a nested table. Appending the value to the label paragraph keeps it
+        # visible without rewriting the nested gross/net potential rows.
+        paragraph.add_run(
+            f"\n{fee_text}"
+        )
+
+        return True
+
+    return False
 
 
 def fill_ticket_pricing_table(table, show):
@@ -810,12 +937,39 @@ def fill_ticket_summary_table(table, show):
         0
     )
 
+    ticketing_fee_percent = (
+        show.get(
+            "ticketing_fee_percent",
+            0
+        )
+    )
+
+    ticketing_fee_amount = (
+        show.get(
+            "ticketing_fee_amount",
+            0
+        )
+    )
+
+    fee_text = (
+        f"{format_percent(ticketing_fee_percent)}% "
+        f"({format_currency(ticketing_fee_amount)})"
+    )
+
+    for cell in table.rows[0].cells:
+        fill_ticketing_fee_paragraph(
+            cell,
+            fee_text,
+        )
+
     for nested in (
         table.rows[0]
         .cells[0]
         .tables
     ):
 
+        # Keep gross/net updates scoped to the nested table cells so the
+        # outer ticketing-fee paragraph does not wipe those existing rows.
         nested.rows[0].cells[4].text = (
             format_currency(gross)
         )
@@ -825,116 +979,153 @@ def fill_ticket_summary_table(table, show):
         )
 
 
+def set_table_value_after_label(table, label, value):
+    """
+    Fill the value cell that follows a label
+    in DOCX tables that contain spacer cells.
+    """
+
+    for row in table.rows:
+
+        cells = list(row.cells)
+
+        for index, cell in enumerate(cells):
+
+            if cell.text.strip() != label:
+                continue
+
+            target_index = min(
+                index + 2,
+                len(cells) - 1,
+            )
+
+            # Expense rows use blank spacer cells between labels and values,
+            # so the value usually sits two cells after the matching label.
+            cells[target_index].text = value
+
+            return True
+
+    return False
+
+
 def fill_expense_table(table, show):
     """
     Populate expense breakdown tables using
     normalized financial projections.
     """
 
-    title = (
-        f"EXPENSES for "
-        f"{show['city']} - "
-        f"{show['venue']} - "
-        f"{format_short_date(show.get('raw_date', show['date']))}"
-    ).strip()
-
     expenses = show.get("expenses", {})
 
-    # Update expense table title
-    if (
-        table.rows
-        and table.rows[0].cells
-        and table.rows[0]
-        .cells[0]
-        .tables
-    ):
+    # Fill by label instead of fixed row/column indexes because the single
+    # and multi templates use spacer/merged cells differently.
+    set_table_value_after_label(
+        table,
+        "Fixed Expenses",
+        format_currency(
+            expenses.get("fixed_expenses", 0)
+        ),
+    )
 
-        table.rows[0] \
-            .cells[0] \
-            .tables[0] \
-            .rows[0] \
-            .cells[0] \
-            .text = title
+    set_table_value_after_label(
+        table,
+        "Net Potential",
+        format_currency(
+            expenses.get("net_potential", 0)
+        ),
+    )
 
-    # Populate expense metrics
-    if (
-        table.rows
-        and table.rows[0].cells
-        and len(
-            table.rows[0]
-            .cells[0]
-            .tables
-        ) > 1
-    ):
+    set_table_value_after_label(
+        table,
+        "Variable Expenses",
+        format_currency(
+            expenses.get("variable_expenses", 0)
+        ),
+    )
 
-        nested = (
-            table.rows[0]
-            .cells[0]
-            .tables[1]
-        )
+    set_table_value_after_label(
+        table,
+        "Total Est. Expenses",
+        format_currency(
+            expenses.get("total_est_expenses", 0)
+        ),
+    )
 
-        nested.rows[1].cells[2].text = (
-            format_currency(
-                expenses.get(
-                    "fixed_expenses",
-                    0
-                )
+    set_table_value_after_label(
+        table,
+        "Break Even",
+        format_currency(
+            expenses.get("break_even", 0)
+        ),
+    )
+
+    set_table_value_after_label(
+        table,
+        "Amount to Split",
+        format_currency(
+            expenses.get("amount_to_split", 0)
+        ),
+    )
+
+    set_table_value_after_label(
+        table,
+        "Walkout Potential",
+        format_currency(
+            expenses.get("walkout_potential", 0)
+        ),
+    )
+
+
+def fill_approved_walkout_section(doc, shows):
+    """
+    Add calculated walkout values to the
+    approved production expenses section.
+    """
+
+    lines = []
+
+    for index, show in enumerate(shows):
+
+        expenses = show.get("expenses", {})
+
+        walkout = format_currency(
+            expenses.get(
+                "walkout_potential",
+                0,
             )
         )
 
-        nested.rows[1].cells[6].text = (
-            format_currency(
-                expenses.get(
-                    "net_potential",
-                    0
-                )
+        if len(shows) == 1:
+            lines.append(
+                f"Approved Walkout: {walkout}"
             )
+        else:
+            lines.append(
+                "Approved Walkout "
+                f"{index + 1} - "
+                f"{show.get('venue', '')}: "
+                f"{walkout}"
+            )
+
+    if not lines:
+        return
+
+    for paragraph in doc.paragraphs:
+
+        if paragraph.text.strip() != (
+            "APPROVED PRODUCTION EXPENSES"
+        ):
+            continue
+
+        # The single-show template was not reliably showing inserted or
+        # appended description text, so attach the value to the visible section
+        # heading itself using Word line breaks.
+        run = paragraph.add_run()
+        run.add_break()
+        run.add_text(
+            "\n".join(lines)
         )
 
-        nested.rows[2].cells[2].text = (
-            format_currency(
-                expenses.get(
-                    "variable_expenses",
-                    0
-                )
-            )
-        )
-
-        nested.rows[2].cells[6].text = (
-            format_currency(
-                expenses.get(
-                    "total_est_expenses",
-                    0
-                )
-            )
-        )
-
-        nested.rows[3].cells[2].text = (
-            format_currency(
-                expenses.get(
-                    "break_even",
-                    0
-                )
-            )
-        )
-
-        nested.rows[3].cells[6].text = (
-            format_currency(
-                expenses.get(
-                    "amount_to_split",
-                    0
-                )
-            )
-        )
-
-        nested.rows[4].cells[6].text = (
-            format_currency(
-                expenses.get(
-                    "walkout_potential",
-                    0
-                )
-            )
-        )
+        return
 
 
 def update_fee_table(
@@ -1024,9 +1215,8 @@ def update_show_related_tables(
         is_ticket_summary_table
     )
 
-    expense_tables = find_body_tables(
-        doc,
-        is_expense_table
+    expense_tables = find_expense_metric_tables(
+        doc
     )
 
     # Populate financial sections
@@ -1080,8 +1270,14 @@ def fill_single_show_details(doc, show):
             and "SCHEDULE" in text
         ):
 
+            weekday = (
+                show["raw_date"]
+                .strftime("%A")
+            )
+
             table.rows[0].cells[0].text = (
                 f"DATE OF SHOW(S): "
+                f"{weekday}, "
                 f"{show['date']}"
             )
 
@@ -1104,29 +1300,11 @@ def fill_single_show_details(doc, show):
                 f"{show['capacity']}"
             )
 
-            schedules = show.get(
-                "schedules",
-                [],
-            )
-
-            if schedules:
-
-                formatted_schedule = "\n".join(
-                    (
-                        f"{item.get('type', '')}: "
-                        f"{item.get('time', '')}"
-                    )
-                    for item in schedules
-                )
-
-            else:
-
-                formatted_schedule = "TBD"
-
-            replace_schedule_preserve_format(
-                doc,
-                formatted_schedule,
-                0,
+            # The single-show template has its own SCHEDULE row,
+            # so write the modular schedule text directly there.
+            table.rows[5].cells[0].text = (
+                "SCHEDULE:\n"
+                f"{format_show_schedule(show)}"
             )
 
         # Populate venue information section
@@ -1298,28 +1476,9 @@ def fill_show_sections(doc, shows):
             show["capacity"],
             show["additional_acts"],
         )
-        schedules = show.get(
-            "schedules",
-            [],
-        )
-
-        if schedules:
-
-            formatted_schedule = "\n".join(
-                (
-                    f"{item.get('type', '')}: "
-                    f"{item.get('time', '')}"
-                )
-                for item in schedules
-            )
-
-        else:
-
-            formatted_schedule = "TBD"
-
         replace_schedule_preserve_format(
             doc,
-            formatted_schedule,
+            format_show_schedule(show),
             index,
         )
 
@@ -1694,6 +1853,13 @@ def build_performance_contract(
             : data.number_of_shows
         ],
         formatted_fee
+    )
+
+    fill_approved_walkout_section(
+        doc,
+        normalized_shows[
+            : data.number_of_shows
+        ],
     )
 
     # Export final DOCX document

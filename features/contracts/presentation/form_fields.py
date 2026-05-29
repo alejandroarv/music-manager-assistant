@@ -173,7 +173,25 @@ def render_performance_contract_fields(
         except ValueError:
 
             fee = 0
-        
+
+        ticketing_fee_percent = (
+            st.number_input(
+                "Ticketing Fee %",
+
+                min_value=0.0,
+
+                max_value=100.0,
+
+                value=0.0,
+
+                step=0.1,
+
+                key=(
+                    f"{key_prefix}"
+                    f"_ticketing_fee_percent"
+                ),
+            )
+        )
 
     # Address-related sections
     col3, col4 = st.columns(2)
@@ -436,6 +454,10 @@ def render_performance_contract_fields(
 
             capacity=capacity,
 
+            ticketing_fee_percent=(
+                ticketing_fee_percent
+            ),
+
             general_notes=general_notes,
         )
     )
@@ -458,6 +480,10 @@ def render_performance_contract_fields(
 
         "city": city,
         "fee": fee,
+
+        "ticketing_fee_percent": (
+            ticketing_fee_percent
+        ),
 
         "number_of_shows": (
             number_of_shows

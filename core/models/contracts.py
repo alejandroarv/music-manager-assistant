@@ -35,6 +35,7 @@ class PerformanceContractData:
         shows=None,
         show_length="90 minutes",
         capacity="",
+        ticketing_fee_percent=0.0,
         air_transportation="Provided",
         hotel_accommodations="Provided",
         air_freight="Included",
@@ -106,7 +107,10 @@ class PerformanceContractData:
         self.show_length = str(show_length).strip()
         self.shows = shows or []
         self.capacity = str(capacity).strip()
-
+        self.ticketing_fee_percent = (
+            float(ticketing_fee_percent)
+        )
+        
         # Logistics and accommodations
         self.air_transportation = str(air_transportation).strip()
         self.hotel_accommodations = str(hotel_accommodations).strip()
