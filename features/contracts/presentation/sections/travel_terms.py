@@ -55,11 +55,6 @@ def render_travel_terms_section(
             key=f"{key_prefix}_meals_incidentals",
         )
 
-        complimentary_tickets = st.text_input(
-            "Complimentary Tickets",
-            key=f"{key_prefix}_complimentary_tickets",
-        )
-
 
     # Business & Contract Fields
     with col9:
@@ -74,9 +69,19 @@ def render_travel_terms_section(
             key=f"{key_prefix}_seller",
         )
 
-        production_catering = st.text_area(
-            "Production & Catering",
-            key=f"{key_prefix}_production_catering",
+        complimentary_tickets = st.text_input(
+            "Complimentary Tickets",
+            key=f"{key_prefix}_complimentary_tickets",
+        )
+        
+        production = st.text_area(
+            "Production",
+            key=f"{key_prefix}_production",
+        )
+
+        catering = st.text_area(
+            "Catering",
+            key=f"{key_prefix}_catering",
         )
 
         special_provisions = st.text_area(
@@ -121,7 +126,11 @@ def render_travel_terms_section(
             special_provisions
         ),
 
-        "production_catering": (
-            production_catering
+        "production": (
+            production
+        ),
+
+        "catering": (
+            catering
         ),
     }

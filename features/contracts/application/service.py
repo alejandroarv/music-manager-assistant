@@ -1,3 +1,5 @@
+# features/contracts/application/service.py
+
 from core.constants import (
     PERFORMANCE_CONTRACT,
     NDA_CONTRACT,
@@ -195,8 +197,12 @@ class ContractService:
                         data.complimentary_tickets
                     ),
 
-                    "production_catering": (
-                        data.production_catering
+                    "production": (
+                        data.production
+                    ),
+
+                    "catering": (
+                        data.catering
                     ),
 
                     "additional_addenda": (

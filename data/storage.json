@@ -13395,5 +13395,1334 @@
         },
         "id": "984becc1-eade-4a13-9eb7-6d77f8f95065",
         "timestamp": "2026-05-29T22:33:50.387391+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fdas",
+            "date": "2026-05-30",
+            "signature_date": "2026-05-30",
+            "city": "fad",
+            "fee": 4132.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production_catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fad",
+                    "venue": "fdas",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "fdas",
+            "date": "2026-05-30",
+            "number_of_shows": 1
+        },
+        "id": "66fa0996-e3bf-43d9-b0b4-30f213b3908b",
+        "timestamp": "2026-05-30T18:21:06.851988+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fdas",
+            "date": "2026-05-30",
+            "signature_date": "2026-05-30",
+            "city": "fad",
+            "fee": 4132.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production_catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fad",
+                    "venue": "fdas",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "fdas",
+                            "time": "fads"
+                        },
+                        {
+                            "type": "fdas",
+                            "time": "fads"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                },
+                {
+                    "city": "fad",
+                    "venue": "fdas",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "afds",
+                            "time": "fads"
+                        },
+                        {
+                            "type": "fdas",
+                            "time": "fad"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "fdas",
+            "date": "2026-05-30",
+            "number_of_shows": 2
+        },
+        "id": "911f39e9-4815-4b6b-8522-488433bceb19",
+        "timestamp": "2026-05-30T18:22:00.134169+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "afds",
+            "date": "2026-05-30",
+            "signature_date": "2026-05-30",
+            "city": "fda",
+            "fee": 341234.0,
+            "ticketing_fee_percent": 12.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "4132",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production_catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fda",
+                    "venue": "afds",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "dfads",
+                            "time": "90 Minutes"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "4132",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                },
+                {
+                    "city": "fda",
+                    "venue": "afds",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "Avila",
+                            "time": "fad"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "4321",
+                    "notes": "1432",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "afds",
+            "date": "2026-05-30",
+            "number_of_shows": 2
+        },
+        "id": "ed40e765-1c7e-4541-81c2-36a226afd944",
+        "timestamp": "2026-05-30T18:26:46.046195+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "afds",
+            "date": "2026-05-30",
+            "signature_date": "2026-05-30",
+            "city": "fda",
+            "fee": 341234.0,
+            "ticketing_fee_percent": 12.0,
+            "number_of_shows": 3,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "4132",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production_catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fda",
+                    "venue": "afds",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "dfads",
+                            "time": "90 Minutes"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "4132",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                },
+                {
+                    "city": "fda",
+                    "venue": "afds",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "Avila",
+                            "time": "fad"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "4321",
+                    "notes": "1432",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                },
+                {
+                    "city": "fda",
+                    "venue": "afds",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "4132",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "afds",
+            "date": "2026-05-30",
+            "number_of_shows": 3
+        },
+        "id": "0d1c56f4-83b2-45e6-90cf-b29673a97a2c",
+        "timestamp": "2026-05-30T18:27:13.903268+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fadfd",
+            "date": "2026-05-30",
+            "signature_date": "2026-05-30",
+            "city": "dsafds",
+            "fee": 213312.0,
+            "ticketing_fee_percent": 12.0,
+            "number_of_shows": 2,
+            "notes": "fads",
+            "show_length": "90 Minutes",
+            "capacity": "2313",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "dfas",
+            "ground_transportation": "yes",
+            "meals_incidentals": "fad",
+            "special_provisions": "yes",
+            "concessionaire_fee": "fdas",
+            "seller": "fda",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "fdas",
+            "production": "fad",
+            "catering": "fads",
+            "additional_addenda": "fads",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "fads",
+            "shows": [
+                {
+                    "city": "dsafds",
+                    "venue": "fadfd",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "afds",
+                            "time": "fad"
+                        },
+                        {
+                            "type": "fads",
+                            "time": "fads"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "2313",
+                    "notes": "fads",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144804.0,
+                    "net_potential": 127442.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": true,
+                    "merchandising_revenue": 123.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127442.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127442.28,
+                        "walkout_potential": 127442.28
+                    }
+                },
+                {
+                    "city": "dsafds",
+                    "venue": "fadfd",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "213",
+                            "time": "321"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "2313",
+                    "notes": "fdasf",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144803.0,
+                    "net_potential": 127441.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": true,
+                    "merchandising_revenue": 122.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127441.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127441.28,
+                        "walkout_potential": 127441.28
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "fadfd",
+            "date": "2026-05-30",
+            "number_of_shows": 2
+        },
+        "id": "dc47d818-e0ee-4e59-91ad-32143452d2f6",
+        "timestamp": "2026-05-30T19:04:49.311808+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "gfdfda",
+            "date": "2026-05-30",
+            "signature_date": "2026-05-30",
+            "city": "fds",
+            "fee": 231232.0,
+            "ticketing_fee_percent": 12.0,
+            "number_of_shows": 1,
+            "notes": "fad",
+            "show_length": "90 Minutes",
+            "capacity": "dafsf",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "fdas",
+            "ground_transportation": "yes",
+            "meals_incidentals": "fad",
+            "special_provisions": "fdaf",
+            "concessionaire_fee": "fads",
+            "seller": "fdas",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "fda",
+            "production": "fda",
+            "catering": "fad",
+            "additional_addenda": "afd",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "fasd",
+            "shows": [
+                {
+                    "city": "fds",
+                    "venue": "gfdfda",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "fad",
+                            "time": "fad"
+                        },
+                        {
+                            "type": "fads",
+                            "time": "fad"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "dafsf",
+                    "notes": "fad",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 375804.0,
+                    "net_potential": 358442.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": true,
+                    "merchandising_revenue": 231123.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 358442.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 358442.28,
+                        "walkout_potential": 358442.28
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "gfdfda",
+            "date": "2026-05-30",
+            "number_of_shows": 1
+        },
+        "id": "6fe758b7-5220-4c22-af11-a9f75dd01a7a",
+        "timestamp": "2026-05-30T19:10:35.190972+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Luchy",
+            "purchaser_address": "Luchy home",
+            "signatory": "Luchy",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "gfdfda",
+            "date": "2026-05-30",
+            "signature_date": "2026-05-30",
+            "city": "fds",
+            "fee": 231232.0,
+            "ticketing_fee_percent": 12.0,
+            "number_of_shows": 2,
+            "notes": "fad",
+            "show_length": "90 Minutes",
+            "capacity": "dafsf",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "fdas",
+            "ground_transportation": "yes",
+            "meals_incidentals": "fad",
+            "special_provisions": "fdaf",
+            "concessionaire_fee": "fads",
+            "seller": "fdas",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "fda",
+            "production": "fda",
+            "catering": "fad",
+            "additional_addenda": "afd",
+            "merchandising_terms": "yes",
+            "buyer_name": "Luchy",
+            "buyer_company_name": "fasd",
+            "shows": [
+                {
+                    "city": "fds",
+                    "venue": "gfdfda",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "fad",
+                            "time": "fad"
+                        },
+                        {
+                            "type": "fads",
+                            "time": "fad"
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "dafsf",
+                    "notes": "fad",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 375804.0,
+                    "net_potential": 358442.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": true,
+                    "merchandising_revenue": 231123.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 358442.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 358442.28,
+                        "walkout_potential": 358442.28
+                    }
+                },
+                {
+                    "city": "fds",
+                    "venue": "gfdfda",
+                    "date": "2026-05-30",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "dafsf",
+                    "notes": "fad",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "gfdfda",
+            "date": "2026-05-30",
+            "number_of_shows": 2
+        },
+        "id": "199f8078-c652-4775-ab6b-f37237c1dd08",
+        "timestamp": "2026-05-30T19:11:05.143380+00:00"
     }
 ]

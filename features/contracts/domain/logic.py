@@ -99,7 +99,33 @@ def replace_everywhere(doc, label, value):
 
                     cell.text = before + new_value
 
+def replace_label_only(
+    doc,
+    label,
+    value,
+):
+    """
+    Replace a label cell entirely with
+    the provided value.
+    """
 
+    for table in get_all_tables(doc):
+
+        for row in table.rows:
+
+            for cell in row.cells:
+
+                if (
+                    cell.text.strip()
+                    == label
+                ):
+
+                    cell.text = (
+                        str(value).strip()
+                    )
+
+                    return
+                
 def replace_fee(doc, formatted_fee):
     """
     Replace flat guarantee fee sections
@@ -728,6 +754,11 @@ def fill_show_table(
     normalized show information.
     """
 
+    city_label = (
+        show["city"]
+        .strip()
+    )
+
     for current_table in iter_tables_recursive(table):
 
         for row in current_table.rows:
@@ -744,7 +775,7 @@ def fill_show_table(
                     )
 
                     cell.text = (
-                        f"City Date: "
+                        f"{city_label} Date: "
                         f"{weekday}, "
                         f"{show['date']}"
                     )
@@ -752,35 +783,35 @@ def fill_show_table(
                 elif "City Venue:" in text:
 
                     cell.text = (
-                        f"City Venue: "
+                        f"{city_label} Venue: "
                         f"{show['venue']}"
                     )
 
                 elif "City Schedule:" in text:
 
                     cell.text = (
-                        "City Schedule:\n"
+                        f"{city_label} Schedule:\n"
                         f"{format_show_schedule(show)}"
                     )
 
                 elif "City Length:" in text:
 
                     cell.text = (
-                        f"City Length: "
+                        f"{city_label} Length: "
                         f"{show_length}"
                     )
 
                 elif "City Capacity:" in text:
 
                     cell.text = (
-                        f"City Capacity: "
+                        f"{city_label} Capacity: "
                         f"{show['capacity']}"
                     )
 
                 elif "City  Additional Acts:" in text:
 
                     cell.text = (
-                        "City  Additional Acts: "
+                        f"{city_label} Additional Acts: "
                         f"{show['additional_acts']}"
                     )
 
@@ -1395,6 +1426,7 @@ def replace_nth_occurrence(
 
 def replace_schedule_preserve_format(
     doc,
+    show,
     value,
     occurrence_index
 ):
@@ -1446,11 +1478,11 @@ def replace_schedule_preserve_format(
                             set_paragraph_text(
                                 paragraph,
                                 (
-                                    "City Schedule:\n"
+                                    f"{show.get('city', 'City')} "
+                                    "Schedule:\n"
                                     f"{value}"
                                 ),
                             )
-
                             return
 
                         count += 1
@@ -1478,6 +1510,7 @@ def fill_show_sections(doc, shows):
         )
         replace_schedule_preserve_format(
             doc,
+            show,
             format_show_schedule(show),
             index,
         )
@@ -1743,9 +1776,9 @@ def build_performance_contract(
     )
     
     # Contract and merchandising terms
-    replace_everywhere(
+    replace_label_only(
         doc,
-        "SPECIAL PROVISIONS:",
+        "Special Provisions:",
         normalized["special_provisions"]
     )
 
@@ -1773,9 +1806,9 @@ def build_performance_contract(
         normalized["soft_merchandising"]
     )
 
-    replace_everywhere(
+    replace_label_only(
         doc,
-        "COMPLIMENTARY TICKETS:",
+        "Complimentary Tickets:",
         normalized["complimentary_tickets"]
     )
 
@@ -1786,15 +1819,21 @@ def build_performance_contract(
     )
 
     # Populate large free-text sections
-    fill_after_header(
+    replace_label_only(
         doc,
-        "PRODUCTION & CATERING",
-        normalized["production_catering"]
+        "Production:",
+        normalized["production"]
     )
 
-    fill_after_header(
+    replace_label_only(
         doc,
-        "ADDITIONAL ADDENDA",
+        "Catering:",
+        normalized["catering"]
+    )
+
+    replace_label_only(
+        doc,
+        "Additional Addenda:",
         normalized["additional_addenda"]
     )
 

@@ -47,7 +47,8 @@ class PerformanceContractData:
         hard_merchandising="Allowed",
         soft_merchandising="Allowed",
         complimentary_tickets="20",
-        production_catering="Standard production provided",
+        production="Standard production provided",
+        catering="Standard catering provided",
         additional_addenda="None",
         merchandising_terms="Standard merchandising terms apply",
         buyer_name=None,
@@ -125,7 +126,13 @@ class PerformanceContractData:
         self.hard_merchandising = str(hard_merchandising).strip()
         self.soft_merchandising = str(soft_merchandising).strip()
         self.complimentary_tickets = str(complimentary_tickets).strip()
-        self.production_catering = str(production_catering).strip()
+        self.production = str(
+            production
+        ).strip()
+
+        self.catering = str(
+            catering
+        ).strip()
         self.additional_addenda = str(additional_addenda).strip()
         self.merchandising_terms = str(merchandising_terms).strip()
 

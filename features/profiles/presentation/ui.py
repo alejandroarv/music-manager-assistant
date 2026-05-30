@@ -161,16 +161,25 @@ def render_profiles(container):
         "### Contract Clauses"
     )
 
-    production_catering = st.text_area(
-        "Production & Catering",
+    production = st.text_area(
+        "Production",
 
         value=(
-            loaded_profile.production_catering
+            loaded_profile.production
             if loaded_profile
             else ""
         ),
     )
 
+    catering = st.text_area(
+        "Catering",
+
+        value=(
+            loaded_profile.catering
+            if loaded_profile
+            else ""
+        ),
+    )
     merchandising_terms = st.text_area(
         "Merchandising Terms",
 
@@ -223,8 +232,10 @@ def render_profiles(container):
 
                 ground_transportation=ground_transportation,
 
-                production_catering=production_catering,
+                production=production,
 
+                catering=catering,
+                
                 merchandising_terms=merchandising_terms,
 
                 special_provisions=special_provisions,

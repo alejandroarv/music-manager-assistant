@@ -210,8 +210,12 @@ class ProfileService:
                 profile.merchandising_terms
             ),
 
-            "production_catering": (
-                profile.production_catering
+            "production": (
+                profile.production
+            ),
+
+            "catering": (
+                profile.catering
             ),
 
             "special_provisions": (

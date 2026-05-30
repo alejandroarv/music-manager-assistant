@@ -162,9 +162,13 @@ def normalize_performance_contract(data):
         "hard_merchandising": fallback(data.hard_merchandising, "Allowed"),
         "soft_merchandising": fallback(data.soft_merchandising, "Allowed"),
         "complimentary_tickets": fallback(data.complimentary_tickets, "20"),
-        "production_catering": fallback(
-            data.production_catering,
+        "production": fallback(
+            data.production,
             "Standard production provided",
+        ),
+        "catering": fallback(
+            data.catering,
+            "Standard catering provided",
         ),
         "additional_addenda": fallback(data.additional_addenda, "None"),
         "merchandising_terms": fallback(

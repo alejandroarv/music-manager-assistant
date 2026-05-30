@@ -33,7 +33,8 @@ class ArtistProfile:
 
     # Frequently reused contract clauses and provisions
     merchandising_terms: str = ""
-    production_catering: str = ""
+    production: str = ""
+    catering: str = ""
     special_provisions: str = ""
 
     # Transportation and hospitality requirements
@@ -71,7 +72,8 @@ class ArtistProfile:
             "purchaser_address": self.purchaser_address,
             "signatory": self.signatory,
             "merchandising_terms": self.merchandising_terms,
-            "production_catering": self.production_catering,
+            "production": self.production,
+            "catering": self.catering,
             "special_provisions": self.special_provisions,
             "air_transportation": self.air_transportation,
             "hotel_accommodations": self.hotel_accommodations,
@@ -100,7 +102,14 @@ class ArtistProfile:
             purchaser_address=data.get("purchaser_address", ""),
             signatory=data.get("signatory", ""),
             merchandising_terms=data.get("merchandising_terms", ""),
-            production_catering=data.get("production_catering", ""),
+            production=data.get(
+                "production",
+                ""
+            ),
+            catering=data.get(
+                "catering",
+                ""
+            ),
             special_provisions=data.get("special_provisions", ""),
             air_transportation=data.get("air_transportation", ""),
             hotel_accommodations=data.get("hotel_accommodations", ""),

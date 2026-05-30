@@ -340,12 +340,17 @@ def render_performance_contract_fields(
         ]
     )
 
-    production_catering = (
+    production = (
         travel_terms[
-            "production_catering"
+            "production"
         ]
     )
 
+    catering = (
+        travel_terms[
+            "catering"
+        ]
+    )
 
     # Merchandising Section
     merchandising = (
@@ -537,8 +542,12 @@ def render_performance_contract_fields(
         ),
 
         # Large text sections
-        "production_catering": (
-            production_catering
+        "production": (
+            production
+        ),
+
+        "catering": (
+            catering
         ),
 
         "additional_addenda": (
