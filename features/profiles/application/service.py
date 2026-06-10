@@ -193,18 +193,6 @@ class ProfileService:
                 profile.company_address
             ),
 
-            # Purchaser information
-            "purchaser_name": (
-                profile.purchaser_name
-            ),
-
-            "purchaser_address": (
-                profile.purchaser_address
-            ),
-
-            # Contract signatory
-            "signatory": profile.signatory,
-
             # Reusable contract clauses
             "merchandising_terms": (
                 profile.merchandising_terms

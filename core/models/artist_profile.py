@@ -24,12 +24,6 @@ class ArtistProfile:
     company_name: str = ""
     company_address: str = ""
 
-    # Purchaser information commonly reused in contracts
-    purchaser_name: str = ""
-    purchaser_address: str = ""
-
-    # Primary contract signatory
-    signatory: str = ""
 
     # Frequently reused contract clauses and provisions
     merchandising_terms: str = ""
@@ -68,9 +62,6 @@ class ArtistProfile:
             "artist_name": self.artist_name,
             "company_name": self.company_name,
             "company_address": self.company_address,
-            "purchaser_name": self.purchaser_name,
-            "purchaser_address": self.purchaser_address,
-            "signatory": self.signatory,
             "merchandising_terms": self.merchandising_terms,
             "production": self.production,
             "catering": self.catering,
@@ -98,9 +89,6 @@ class ArtistProfile:
             artist_name=data.get("artist_name", ""),
             company_name=data.get("company_name", ""),
             company_address=data.get("company_address", ""),
-            purchaser_name=data.get("purchaser_name", ""),
-            purchaser_address=data.get("purchaser_address", ""),
-            signatory=data.get("signatory", ""),
             merchandising_terms=data.get("merchandising_terms", ""),
             production=data.get(
                 "production",

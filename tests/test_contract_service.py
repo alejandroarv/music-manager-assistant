@@ -224,6 +224,43 @@ def test_multi_contract_renders_schedule(
     assert "Closing = 3:00 AM" in text
 
 
+def test_contract_renders_signature_block(
+    contract_service,
+    performance_payload
+):
+    """
+    Verify purchaser and company signature
+    block placeholders fill in each template.
+    """
+
+    for number_of_shows in (1, 2):
+
+        payload = {
+            **performance_payload,
+            "number_of_shows": number_of_shows,
+            "buyer_name": "Buyer Signer",
+            "buyer_company_name": "Buyer LLC",
+            "manager_name": "Manager Signer",
+            "manager_company_name": "Manager LLC",
+        }
+
+        result = (
+            contract_service
+            .create_performance_contract(payload)
+        )
+
+        text = docx_text(result.data)
+
+        assert "Buyer Signer" in text
+        assert "Buyer LLC" in text
+        assert "Manager Signer" in text
+        assert "Manager LLC" in text
+        assert "Buyer Name" not in text
+        assert "Buyer Company Name" not in text
+        assert "Manager Name" not in text
+        assert "Manager Company Name" not in text
+
+
 def test_contract_renders_ticketing_fee_summary(
     contract_service,
     performance_payload

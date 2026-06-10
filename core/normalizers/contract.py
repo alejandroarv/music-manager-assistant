@@ -177,9 +177,24 @@ def normalize_performance_contract(data):
         ),
 
         # Buyer information
-        "buyer_name": fallback(data.buyer_name, data.signatory or data.client),
+        "buyer_name": fallback(
+            data.buyer_name,
+            data.signatory or data.client,
+        ),
+
         "buyer_company_name": fallback(
-            data.buyer_company_name, data.company_name or data.client
+            data.buyer_company_name,
+            data.company_name or data.client,
+        ),
+
+        "manager_name": fallback(
+            data.manager_name,
+            "",
+        ),
+
+        "manager_company_name": fallback(
+            data.manager_company_name,
+            data.company_name,
         ),
 
         # Multi-show configuration

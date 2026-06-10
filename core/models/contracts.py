@@ -53,6 +53,10 @@ class PerformanceContractData:
         merchandising_terms="Standard merchandising terms apply",
         buyer_name=None,
         buyer_company_name=None,
+
+        manager_name="",
+        manager_company_name="",
+
         signature_date=None,
     ):
         
@@ -137,9 +141,29 @@ class PerformanceContractData:
         self.merchandising_terms = str(merchandising_terms).strip()
 
         # Buyer information
-        self.buyer_name = (buyer_name or self.signatory).strip()
-        self.buyer_company_name = (buyer_company_name or self.company_name).strip()
-        self.signature_date = signature_date or date
+        # Buyer information
+        self.buyer_name = (
+            buyer_name
+            or self.signatory
+        ).strip()
+
+        self.buyer_company_name = (
+            buyer_company_name
+            or self.company_name
+        ).strip()
+
+        self.manager_name = str(
+            manager_name
+        ).strip()
+
+        self.manager_company_name = str(
+            manager_company_name
+        ).strip()
+
+        self.signature_date = (
+            signature_date
+            or date
+        )
 
 class NDAContractData:
     """

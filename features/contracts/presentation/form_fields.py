@@ -55,19 +55,37 @@ def render_performance_contract_fields(
         )
 
         # Synchronize artist name with
-        # company name until manually edited
-        sync_linked_text_field(
-            source_value=company_name,
+        # company name until manually edited.
+        # Skip synchronization when a profile
+        # has just been loaded.
+        if not st.session_state.get(
+            f"{key_prefix}_profile_loaded",
+            False,
+        ):
 
-            target_key=artist_key,
+            sync_linked_text_field(
+                source_value=company_name,
 
-            touched_key=artist_touched_key,
-        )
+                target_key=artist_key,
+
+                touched_key=artist_touched_key,
+            )
             
         artist = st.text_input(
             "Artist Name",
             key=artist_key,
         )
+        
+        # Clear profile-load protection after
+        # the artist field has been rendered.
+        if st.session_state.get(
+            f"{key_prefix}_profile_loaded",
+            False,
+        ):
+
+            st.session_state[
+                f"{key_prefix}_profile_loaded"
+            ] = False
 
         # Detect manual override
         detect_manual_override(
@@ -435,6 +453,17 @@ def render_performance_contract_fields(
         key=f"{key_prefix}_buyer_company_name",
     )
 
+    manager_name = st.text_input(
+        "Manager Name",
+        key=f"{key_prefix}_manager_name",
+    )
+
+    manager_company_name = st.text_input(
+        "Manager Company Name",
+        value=company_name,
+        key=f"{key_prefix}_manager_company_name",
+    )
+
     st.markdown("### Per-Show Details")
 
     # Return normalized form payload
@@ -565,6 +594,14 @@ def render_performance_contract_fields(
             buyer_company_name
         ),
 
+        "manager_name": (
+            manager_name
+        ),
+
+        "manager_company_name": (
+            manager_company_name
+        ),
+        
         # Per-show configuration payload
         "shows": show_details,
     }

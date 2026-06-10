@@ -242,7 +242,6 @@ def render_profile_autofill(
             # so profile autofill propagates
             # into dependent show sections
             sync_reset_keys = [
-                f"{key_prefix}_artist_touched",
                 f"{key_prefix}_signatory_touched",
 
                 f"{key_prefix}_show_city_0_touched",
@@ -258,7 +257,13 @@ def render_profile_autofill(
                 st.session_state[
                     reset_key
                 ] = False
-                
+
+            # Prevent Company Name sync
+            # from overwriting profile values.
+            st.session_state[
+                f"{key_prefix}_profile_loaded"
+            ] = True
+            
             # Save selected profile state
             st.session_state[
                 last_profile_key

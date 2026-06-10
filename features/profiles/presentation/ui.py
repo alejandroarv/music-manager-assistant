@@ -90,37 +90,6 @@ def render_profiles(container):
         ),
     )
 
-    purchaser_name = st.text_input(
-        "Purchaser Name",
-
-        value=(
-            loaded_profile.purchaser_name
-            if loaded_profile
-            else ""
-        ),
-    )
-
-    purchaser_address = st.text_area(
-        "Purchaser Address",
-
-        value=(
-            loaded_profile.purchaser_address
-            if loaded_profile
-            else ""
-        ),
-    )
-
-    signatory = st.text_input(
-        "Signatory",
-
-        value=(
-            loaded_profile.signatory
-            if loaded_profile
-            else ""
-        ),
-    )
-
-
     # Travel & Hospitality Defaults
     st.markdown(
         "### Travel & Hospitality"
@@ -220,11 +189,6 @@ def render_profiles(container):
                 company_name=company_name,
 
                 company_address=company_address,
-
-                purchaser_name=purchaser_name,
-                purchaser_address=purchaser_address,
-
-                signatory=signatory,
 
                 air_transportation=air_transportation,
 

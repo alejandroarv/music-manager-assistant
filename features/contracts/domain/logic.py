@@ -742,6 +742,53 @@ def iter_tables_recursive(table):
                 )
 
 
+def iter_table_cells_recursive(table):
+    """
+    Recursively iterate through all cells in
+    a table, including nested table cells.
+    """
+
+    for current_table in iter_tables_recursive(table):
+        for row in current_table.rows:
+            for cell in row.cells:
+                yield cell
+
+
+def replace_text_in_cell(cell, replacements):
+    """
+    Replace placeholder text inside a table
+    cell while preserving paragraph structure.
+    """
+
+    for paragraph in cell.paragraphs:
+
+        full_text = "".join(
+            run.text
+            for run in paragraph.runs
+        )
+
+        if not full_text:
+            continue
+
+        new_text = full_text
+
+        # Apply all signature placeholders that may appear in
+        # either the nested purchaser side or visible company side.
+        for target, value in replacements.items():
+            new_text = new_text.replace(
+                target,
+                str(value)
+            )
+
+        if new_text == full_text:
+            continue
+
+        set_paragraph_text(
+            paragraph,
+            new_text
+        )
+
+
 def fill_show_table(
     table,
     show,
@@ -1521,53 +1568,39 @@ def fill_signature_table(doc, data):
     sections within the contract template.
     """
 
+    replacements = {
+        "[sig|req|signer1]": "[sig|req|signer1]",
+        "Buyer Name": data["buyer_name"],
+        "Buyer Company Name": data["buyer_company_name"],
+        "Buyer Company": data["buyer_company_name"],
+        "[date|date|signer1]": format_header_date(
+            data["signature_date"]
+        ),
+        "Manager Name": data["manager_name"],
+        "Manager Company Name": data["manager_company_name"],
+    }
+
     for table in get_body_tables(doc):
 
-        if (
-            "Buyer Name"
-            not in get_table_text(table)
+        table_text = get_table_text_recursive(table)
+
+        if not (
+            "PURCHASER" in table_text
+            and "COMPANY" in table_text
+            and (
+                "Buyer Name" in table_text
+                or "Manager Name" in table_text
+            )
         ):
             continue
 
-        nested = (
-            table.rows[0]
-            .cells[0]
-            .tables[0]
-        )
-
-        values = [
-            "[sig|req|signer1]",
-            data["buyer_name"],
-            data["buyer_company_name"],
-            format_header_date(
-                data["signature_date"]
+        # Replace signature-related placeholders across both
+        # the nested purchaser table and the outer company cell.
+        for cell in iter_table_cells_recursive(table):
+            replace_text_in_cell(
+                cell,
+                replacements
             )
-        ]
-
-        replace_targets = [
-            "[sig|req|signer1]",
-            "Buyer Name",
-            "Buyer Company name",
-            "[date|date|signer1]"
-        ]
-
-        # Replace signature-related placeholders
-        for row in nested.rows:
-            for cell in row.cells:
-
-                for target, value in zip(
-                    replace_targets,
-                    values
-                ):
-
-                    if target in cell.text:
-
-                        cell.text = (
-                            cell.text.replace(
-                                target,
-                                value
-                            )
-                        )
 
         return
 
@@ -1846,6 +1879,30 @@ def build_performance_contract(
     fill_signature_table(
         doc,
         normalized
+    )
+
+    replace_label_only(
+        doc,
+        "Buyer Company",
+        normalized["buyer_name"]
+    )
+
+    replace_label_only(
+        doc,
+        "Buyer Company Name",
+        normalized["buyer_company_name"]
+    )
+
+    replace_label_only(
+        doc,
+        "Manager Name",
+        normalized["manager_name"]
+    )
+
+    replace_label_only(
+        doc,
+        "Manager Company Name",
+        normalized["manager_company_name"]
     )
 
     # Build fallback single-show structure
