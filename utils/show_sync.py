@@ -52,13 +52,13 @@ def initialize_show_sync(
             touched_key=touched_key,
         )
 
-    # Initialize additional shows
-    elif target_key not in st.session_state:
+    # Synchronize additional shows
+    else:
 
-        st.session_state[
-            target_key
-        ] = (
-            source_value
-            if source_value
-            else fallback_value
+        sync_linked_text_field(
+            source_value=source_value,
+
+            target_key=target_key,
+
+            touched_key=touched_key,
         )

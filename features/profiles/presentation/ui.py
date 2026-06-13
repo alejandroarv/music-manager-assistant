@@ -90,6 +90,17 @@ def render_profiles(container):
         ),
     )
 
+    # Show length field
+    show_length = st.text_input(
+        "Default Show Length",
+
+        value=(
+            loaded_profile.show_length
+            if loaded_profile
+            else "90 Minutes"
+        ),
+    )
+
     # Travel & Hospitality Defaults
     st.markdown(
         "### Travel & Hospitality"
@@ -122,6 +133,39 @@ def render_profiles(container):
             loaded_profile.ground_transportation
             if loaded_profile
             else ""
+        ),
+    )
+
+    air_freight = st.selectbox(
+        "Air Freight & Excess Baggage",
+
+        options=[
+            "Included",
+            "Half Covered",
+            "Not Included",
+            "Custom",
+        ],
+
+        index=(
+            [
+                "Included",
+                "Half Covered",
+                "Not Included",
+                "Custom",
+            ].index(
+                loaded_profile.air_freight
+            )
+            if (
+                loaded_profile
+                and loaded_profile.air_freight
+                in [
+                    "Included",
+                    "Half Covered",
+                    "Not Included",
+                    "Custom",
+                ]
+            )
+            else 2
         ),
     )
 
@@ -169,6 +213,42 @@ def render_profiles(container):
         ),
     )
 
+    complimentary_tickets = st.selectbox(
+        "Complimentary Tickets",
+
+        options=[
+            "None",
+            "10 Tickets",
+            "20 Tickets",
+            "50 Tickets",
+            "Custom",
+        ],
+
+        index=(
+            [
+                "None",
+                "10 Tickets",
+                "20 Tickets",
+                "50 Tickets",
+                "Custom",
+            ].index(
+                loaded_profile.complimentary_tickets
+            )
+            if (
+                loaded_profile
+                and loaded_profile.complimentary_tickets
+                in [
+                    "None",
+                    "10 Tickets",
+                    "20 Tickets",
+                    "50 Tickets",
+                    "Custom",
+                ]
+            )
+            else 0
+        ),
+    )
+
     # Save / Update Logic
     if st.button("Save Profile"):
 
@@ -190,11 +270,15 @@ def render_profiles(container):
 
                 company_address=company_address,
 
+                show_length=show_length,
+
                 air_transportation=air_transportation,
 
                 hotel_accommodations=hotel_accommodations,
 
                 ground_transportation=ground_transportation,
+
+                air_freight=air_freight,
 
                 production=production,
 
@@ -203,6 +287,10 @@ def render_profiles(container):
                 merchandising_terms=merchandising_terms,
 
                 special_provisions=special_provisions,
+
+                complimentary_tickets=(
+                    complimentary_tickets
+                ),
             )
 
             # Update Existing Profile

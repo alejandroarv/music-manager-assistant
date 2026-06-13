@@ -96,7 +96,6 @@ def render_show_details_section(
     date,
     show_length,
     capacity,
-    ticketing_fee_percent,
     general_notes,
 ):
     """
@@ -470,6 +469,25 @@ def render_show_details_section(
             ):
 
                 st.markdown("Ticket Scaling")
+
+                ticketing_fee_percent = (
+                    st.number_input(
+                        f"Ticketing Fee % {i + 1}",
+
+                        min_value=0.0,
+
+                        max_value=100.0,
+
+                        value=0.0,
+
+                        step=0.1,
+
+                        key=(
+                            f"{key_prefix}"
+                            f"_ticketing_fee_percent_{i}"
+                        ),
+                    )
+                )
 
                 # Automatically calculate ticket
                 # line totals from inventory data

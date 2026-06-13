@@ -50,50 +50,9 @@ def render_performance_contract_fields(
             f"{key_prefix}_artist"
         )
 
-        artist_touched_key = (
-            f"{artist_key}_touched"
-        )
-
-        # Synchronize artist name with
-        # company name until manually edited.
-        # Skip synchronization when a profile
-        # has just been loaded.
-        if not st.session_state.get(
-            f"{key_prefix}_profile_loaded",
-            False,
-        ):
-
-            sync_linked_text_field(
-                source_value=company_name,
-
-                target_key=artist_key,
-
-                touched_key=artist_touched_key,
-            )
-            
         artist = st.text_input(
             "Artist Name",
             key=artist_key,
-        )
-        
-        # Clear profile-load protection after
-        # the artist field has been rendered.
-        if st.session_state.get(
-            f"{key_prefix}_profile_loaded",
-            False,
-        ):
-
-            st.session_state[
-                f"{key_prefix}_profile_loaded"
-            ] = False
-
-        # Detect manual override
-        detect_manual_override(
-            source_value=company_name,
-
-            target_value=artist,
-
-            touched_key=artist_touched_key,
         )
 
         purchaser_name = st.text_input(
@@ -191,25 +150,6 @@ def render_performance_contract_fields(
         except ValueError:
 
             fee = 0
-
-        ticketing_fee_percent = (
-            st.number_input(
-                "Ticketing Fee %",
-
-                min_value=0.0,
-
-                max_value=100.0,
-
-                value=0.0,
-
-                step=0.1,
-
-                key=(
-                    f"{key_prefix}"
-                    f"_ticketing_fee_percent"
-                ),
-            )
-        )
 
     # Address-related sections
     col3, col4 = st.columns(2)
@@ -488,10 +428,6 @@ def render_performance_contract_fields(
 
             capacity=capacity,
 
-            ticketing_fee_percent=(
-                ticketing_fee_percent
-            ),
-
             general_notes=general_notes,
         )
     )
@@ -514,10 +450,6 @@ def render_performance_contract_fields(
 
         "city": city,
         "fee": fee,
-
-        "ticketing_fee_percent": (
-            ticketing_fee_percent
-        ),
 
         "number_of_shows": (
             number_of_shows

@@ -19,6 +19,7 @@ Responsibilities:
 
 from io import BytesIO
 from copy import deepcopy
+from pydoc import doc
 
 from core.models.contracts import (
     NDAContractData,
@@ -384,6 +385,42 @@ def update_template_headers(doc, data):
                 effective_date
             )
 
+def update_footer(
+    doc,
+    data,
+):
+    """
+    Update footer placeholders with
+    contract information.
+    """
+
+    footer_line = (
+        f"{data['artist']} | "
+        f"{data['venue']} | | "
+        f"{data['city']} | "
+        f"{format_header_date(data['date'])}"
+    )
+
+    for section in doc.sections:
+
+        for paragraph in section.footer.paragraphs:
+
+            text = paragraph.text.strip()
+
+            if (
+                "Artist Name" in text
+                and "Venue" in text
+                and "City, Country" in text
+            ):
+
+                print(
+                    "REPLACING FOOTER"
+                )
+
+                set_paragraph_text(
+                    paragraph,
+                    footer_line,
+                )
 
 def number_to_words(value):
     """
@@ -1153,59 +1190,6 @@ def fill_expense_table(table, show):
     )
 
 
-def fill_approved_walkout_section(doc, shows):
-    """
-    Add calculated walkout values to the
-    approved production expenses section.
-    """
-
-    lines = []
-
-    for index, show in enumerate(shows):
-
-        expenses = show.get("expenses", {})
-
-        walkout = format_currency(
-            expenses.get(
-                "walkout_potential",
-                0,
-            )
-        )
-
-        if len(shows) == 1:
-            lines.append(
-                f"Approved Walkout: {walkout}"
-            )
-        else:
-            lines.append(
-                "Approved Walkout "
-                f"{index + 1} - "
-                f"{show.get('venue', '')}: "
-                f"{walkout}"
-            )
-
-    if not lines:
-        return
-
-    for paragraph in doc.paragraphs:
-
-        if paragraph.text.strip() != (
-            "APPROVED PRODUCTION EXPENSES"
-        ):
-            continue
-
-        # The single-show template was not reliably showing inserted or
-        # appended description text, so attach the value to the visible section
-        # heading itself using Word line breaks.
-        run = paragraph.add_run()
-        run.add_break()
-        run.add_text(
-            "\n".join(lines)
-        )
-
-        return
-
-
 def update_fee_table(
     doc,
     shows,
@@ -1627,7 +1611,26 @@ def build_performance_contract(
     )
 
     # Load DOCX contract template
-    doc = get_template(template_name)
+    doc = get_template(
+        template_name
+    )
+
+    print(
+        "DEBUG CONTRACT START"
+    )
+
+    for table in get_all_tables(doc):
+
+        table_text = "\n".join(
+            cell.text
+            for row in table.rows
+            for cell in row.cells
+        )
+
+        print(
+            "TABLE FOUND:",
+            table_text,
+        )
 
     # Normalize contract data before rendering
     normalized = normalize_performance_contract(
@@ -1660,6 +1663,11 @@ def build_performance_contract(
     update_template_headers(
         doc,
         normalized
+    )
+
+    update_footer(
+        doc,
+        normalized,
     )
 
     replace_everywhere(
@@ -1845,10 +1853,10 @@ def build_performance_contract(
         normalized["complimentary_tickets"]
     )
 
-    replace_everywhere(
+    replace_exact_text(
         doc,
         "Artist Name - 100% Headliner",
-        f"{data.artist} - 100% Headliner",
+        f"{normalized['artist']} - 100% Headliner",
     )
 
     # Populate large free-text sections
@@ -1951,13 +1959,6 @@ def build_performance_contract(
         formatted_fee
     )
 
-    fill_approved_walkout_section(
-        doc,
-        normalized_shows[
-            : data.number_of_shows
-        ],
-    )
-
     # Export final DOCX document
     buffer = BytesIO()
 
@@ -1967,6 +1968,37 @@ def build_performance_contract(
 
     return buffer.getvalue()
 
+def replace_exact_text(
+    doc,
+    target,
+    replacement,
+):
+    """
+    Replace an entire cell or paragraph
+    when its text exactly matches the target.
+    """
+
+    for paragraph in doc.paragraphs:
+
+        if paragraph.text.strip() == target:
+
+            set_paragraph_text(
+                paragraph,
+                replacement,
+            )
+
+    for table in get_all_tables(doc):
+
+        for row in table.rows:
+
+            for cell in row.cells:
+
+                if (
+                    cell.text.strip()
+                    == target
+                ):
+
+                    cell.text = replacement
 
 def build_nda_contract(
     data: NDAContractData,

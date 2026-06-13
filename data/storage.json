@@ -14698,35 +14698,6 @@
         "timestamp": "2026-05-30T19:11:05.143380+00:00"
     },
     {
-        "type": "artist_profile",
-        "name": "Bad Bunny",
-        "content": {
-            "artist_name": "Bad Bunny",
-            "company_name": "Bad Bunny INC",
-            "company_address": "Badbynny home",
-            "purchaser_name": "Luchy",
-            "purchaser_address": "Luchy home",
-            "signatory": "Arnulfo",
-            "merchandising_terms": "yes",
-            "production": "yes",
-            "catering": "yes",
-            "special_provisions": "yes",
-            "air_transportation": "yes",
-            "hotel_accommodations": "yes",
-            "ground_transportation": "yes",
-            "show_length": "90 Minutes",
-            "profile_notes": "",
-            "default_contract_type": "performance",
-            "contract_defaults": {},
-            "additional_data": {}
-        },
-        "metadata": {
-            "artist": "Bad Bunny"
-        },
-        "id": "7c2a9dde-658b-4b06-83ee-9c7461c9b6ce",
-        "timestamp": "2026-06-05T18:42:02.762113+00:00"
-    },
-    {
         "type": "performance_contract",
         "name": "Bad Bunny INC",
         "content": {
@@ -16783,5 +16754,1304 @@
         },
         "id": "48d266d8-106f-4e87-bf16-38590f4caf6c",
         "timestamp": "2026-06-10T20:28:02.433075+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny INC",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny INC",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fads",
+            "purchaser_address": "",
+            "signatory": "fadsfdas",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fdsa",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fads",
+            "fee": 321.0,
+            "ticketing_fee_percent": 12.0,
+            "number_of_shows": 1,
+            "notes": "fdas",
+            "show_length": "90 Minutes",
+            "capacity": "4132",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "fads",
+            "ground_transportation": "yes",
+            "meals_incidentals": "afds",
+            "special_provisions": "yes",
+            "concessionaire_fee": "fds",
+            "seller": "fads",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "afds",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "fads",
+            "merchandising_terms": "yes",
+            "buyer_name": "fadsfdas",
+            "buyer_company_name": "fad",
+            "shows": [
+                {
+                    "city": "fads",
+                    "venue": "fdsa",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "4132",
+                    "notes": "fdas",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny INC",
+            "venue": "fdsa",
+            "date": "2026-06-13",
+            "number_of_shows": 1
+        },
+        "id": "4b4ce240-a12d-4b63-a494-a917d89e994d",
+        "timestamp": "2026-06-13T17:37:03.072067+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fad",
+            "purchaser_address": "",
+            "signatory": "fadafds",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fdas",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fdas",
+            "fee": 213.0,
+            "ticketing_fee_percent": 21.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fadafds",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fdas",
+                    "venue": "fdas",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 114297.99,
+                    "ticketing_fee_percent": 21.0,
+                    "ticketing_fee_amount": 30383.01,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 114297.99,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 114297.99,
+                        "walkout_potential": 114297.99
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fdas",
+            "date": "2026-06-13",
+            "number_of_shows": 1
+        },
+        "id": "3f32222d-1245-4e8f-a89e-c58ed8d8f2cf",
+        "timestamp": "2026-06-13T17:49:25.354584+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fads",
+            "purchaser_address": "",
+            "signatory": "fads",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fdsa",
+            "fee": 2313.0,
+            "ticketing_fee_percent": 21.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fads",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fdsa",
+                    "venue": "fad",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 114297.99,
+                    "ticketing_fee_percent": 21.0,
+                    "ticketing_fee_amount": 30383.01,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 114297.99,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 114297.99,
+                        "walkout_potential": 114297.99
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "number_of_shows": 1
+        },
+        "id": "1e16e85d-fe74-4e05-92d4-e87832b7837b",
+        "timestamp": "2026-06-13T17:54:53.951204+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fads",
+            "purchaser_address": "",
+            "signatory": "fads",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fdsa",
+            "fee": 2313.0,
+            "ticketing_fee_percent": 21.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fads",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fdsa",
+                    "venue": "fad",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 114297.99,
+                    "ticketing_fee_percent": 21.0,
+                    "ticketing_fee_amount": 30383.01,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 114297.99,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 114297.99,
+                        "walkout_potential": 114297.99
+                    }
+                },
+                {
+                    "city": "fdsa",
+                    "venue": "fad",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 114297.99,
+                    "ticketing_fee_percent": 21.0,
+                    "ticketing_fee_amount": 30383.01,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 114297.99,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 114297.99,
+                        "walkout_potential": 114297.99
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "number_of_shows": 2
+        },
+        "id": "54661d06-2aa8-48d2-81a7-8035c3e63281",
+        "timestamp": "2026-06-13T17:55:11.266523+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fdas",
+            "purchaser_address": "",
+            "signatory": "fdas",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fads",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "afds",
+            "fee": 213.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fdas",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "afds",
+                    "venue": "fads",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fads",
+            "date": "2026-06-13",
+            "number_of_shows": 1
+        },
+        "id": "cdf71e6d-ff6a-4295-8f04-73ff9ab12fed",
+        "timestamp": "2026-06-13T17:56:53.966902+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fda",
+            "purchaser_address": "",
+            "signatory": "fdafad",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fad",
+            "fee": 213.0,
+            "ticketing_fee_percent": 12.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fdafad",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fad",
+                    "venue": "fad",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 127319.28,
+                    "ticketing_fee_percent": 12.0,
+                    "ticketing_fee_amount": 17361.72,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 127319.28,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 127319.28,
+                        "walkout_potential": 127319.28
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "number_of_shows": 1
+        },
+        "id": "39ed5ef2-8f81-46f6-bac3-0ec73047f981",
+        "timestamp": "2026-06-13T17:59:21.570749+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fad",
+            "purchaser_address": "",
+            "signatory": "fad",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fad",
+            "fee": 213.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fad",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fad",
+                    "venue": "fad",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fad",
+            "date": "2026-06-13",
+            "number_of_shows": 1
+        },
+        "id": "7b1af8eb-1393-45b7-93b4-dbdf11de495c",
+        "timestamp": "2026-06-13T18:04:33.851208+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fads",
+            "purchaser_address": "",
+            "signatory": "fadfdas",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fda",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fads",
+            "fee": 123.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fadfdas",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fads",
+                    "venue": "fda",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fda",
+            "date": "2026-06-13",
+            "number_of_shows": 1
+        },
+        "id": "04348fa1-5e4e-466d-a169-1ec1200f9723",
+        "timestamp": "2026-06-13T18:10:35.637926+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "fads",
+            "purchaser_address": "",
+            "signatory": "fadfdas",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "fda",
+            "date": "2026-06-13",
+            "signature_date": "2026-06-13",
+            "city": "fads",
+            "fee": 123.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "",
+            "ground_transportation": "yes",
+            "meals_incidentals": "",
+            "special_provisions": "yes",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "fadfdas",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fads",
+                    "venue": "fda",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                },
+                {
+                    "city": "fads",
+                    "venue": "fda",
+                    "date": "2026-06-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "fda",
+            "date": "2026-06-13",
+            "number_of_shows": 2
+        },
+        "id": "1b7bf573-c069-40fe-b822-001899f46213",
+        "timestamp": "2026-06-13T18:10:55.264868+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "merchandising_terms": "yes",
+            "production": "yes",
+            "catering": "yes",
+            "special_provisions": "yes",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "ground_transportation": "yes",
+            "air_freight": "Included",
+            "show_length": "100 Minutes",
+            "complimentary_tickets": "20 Tickets",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "0301e428-affa-4277-835c-2a86c448aa49",
+        "timestamp": "2026-06-13T19:16:22.680766+00:00"
     }
 ]

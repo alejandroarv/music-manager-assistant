@@ -36,8 +36,13 @@ class ArtistProfile:
     hotel_accommodations: str = ""
     ground_transportation: str = ""
 
+    air_freight: str = "Not Included"
+
     # Default performance length for contracts
     show_length: str = "90 Minutes"
+
+    # Default complimentary tickets preset
+    complimentary_tickets: str = "None"
 
     # Internal notes for profile management
     profile_notes: str = ""
@@ -69,7 +74,13 @@ class ArtistProfile:
             "air_transportation": self.air_transportation,
             "hotel_accommodations": self.hotel_accommodations,
             "ground_transportation": self.ground_transportation,
+
+            "air_freight": self.air_freight,
+
             "show_length": self.show_length,
+            "complimentary_tickets": (
+                self.complimentary_tickets
+            ),
             "profile_notes": self.profile_notes,
             "default_contract_type": self.default_contract_type,
             "contract_defaults": self.contract_defaults,
@@ -101,8 +112,24 @@ class ArtistProfile:
             special_provisions=data.get("special_provisions", ""),
             air_transportation=data.get("air_transportation", ""),
             hotel_accommodations=data.get("hotel_accommodations", ""),
-            ground_transportation=data.get("ground_transportation", ""),
-            show_length=data.get("show_length", "90 Minutes"),
+            ground_transportation=data.get(
+                "ground_transportation",
+                "",
+            ),
+
+            air_freight=data.get(
+                "air_freight",
+                "Not Included",
+            ),
+
+            show_length=data.get(
+                "show_length",
+                "90 Minutes",
+            ),
+            complimentary_tickets=data.get(
+                "complimentary_tickets",
+                "",
+            ),
             profile_notes=data.get("profile_notes", ""),
             default_contract_type=data.get(
                 "default_contract_type",

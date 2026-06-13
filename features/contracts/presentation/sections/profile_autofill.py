@@ -155,6 +155,13 @@ def render_profile_autofill(
             )
 
             st.session_state[
+                f"{key_prefix}_air_freight"
+            ] = defaults.get(
+                "air_freight",
+                "",
+            )
+            
+            st.session_state[
                 f"{key_prefix}_special_provisions"
             ] = defaults.get(
                 "special_provisions",
@@ -162,18 +169,33 @@ def render_profile_autofill(
             )
 
             st.session_state[
-                f"{key_prefix}_production_catering"
+                f"{key_prefix}_production"
             ] = defaults.get(
-                "production_catering",
+                "production",
                 "",
             )
 
+            st.session_state[
+                f"{key_prefix}_catering"
+            ] = defaults.get(
+                "catering",
+                "",
+                
+            )
             st.session_state[
                 f"{key_prefix}_merchandising_terms"
             ] = defaults.get(
                 "merchandising_terms",
                 "",
             )
+
+            st.session_state[
+                f"{key_prefix}_complimentary_tickets"
+            ] = defaults.get(
+                "complimentary_tickets",
+                "",
+            )
+
             # Core show defaults
             st.session_state[
                 f"{key_prefix}_venue"

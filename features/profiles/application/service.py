@@ -223,9 +223,17 @@ class ProfileService:
                 profile.ground_transportation
             ),
 
+            "air_freight": (
+                profile.air_freight
+            ),
+            
             # Show defaults
             "show_length": (
                 profile.show_length
+            ),
+
+            "complimentary_tickets": (
+                profile.complimentary_tickets
             ),
 
             # Contract preset defaults
