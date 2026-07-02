@@ -18034,12 +18034,17 @@
             "company_name": "Bad Bunny INC",
             "company_address": "Badbynny home",
             "merchandising_terms": "yes",
+            "concessionaire_fee": "fads",
+            "seller": "fads",
+            "hard_merchandising": "fads",
+            "soft_merchandising": "fda",
             "production": "yes",
             "catering": "yes",
             "special_provisions": "yes",
             "air_transportation": "yes",
             "hotel_accommodations": "yes",
             "ground_transportation": "yes",
+            "meals_incidentals": "fadsf",
             "air_freight": "Included",
             "show_length": "100 Minutes",
             "complimentary_tickets": "20 Tickets",
@@ -18051,7 +18056,132 @@
         "metadata": {
             "artist": "Bad Bunny"
         },
-        "id": "0301e428-affa-4277-835c-2a86c448aa49",
-        "timestamp": "2026-06-13T19:16:22.680766+00:00"
+        "id": "6dae2f04-5d71-4410-9e1f-d7f4296ce5fd",
+        "timestamp": "2026-07-02T19:32:29.507912+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Bad Bunny INC",
+            "purchaser_address": "",
+            "signatory": "Bad Bunny INC",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "afd",
+            "date": "2026-07-02",
+            "signature_date": "2026-07-02",
+            "city": "fdas",
+            "fee": 12.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "100 Minutes",
+            "capacity": "",
+            "air_transportation": "yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "Included",
+            "ground_transportation": "yes",
+            "meals_incidentals": "fadsf",
+            "special_provisions": "yes",
+            "concessionaire_fee": "fads",
+            "seller": "fads",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "20 Tickets",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Bad Bunny INC",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "fdas",
+                    "venue": "afd",
+                    "date": "2026-07-02",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "100 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "afd",
+            "date": "2026-07-02",
+            "number_of_shows": 1
+        },
+        "id": "176a9719-c624-41df-b6eb-20ada6b4156e",
+        "timestamp": "2026-07-02T19:35:04.849254+00:00"
     }
 ]

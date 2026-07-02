@@ -27,14 +27,29 @@ class ArtistProfile:
 
     # Frequently reused contract clauses and provisions
     merchandising_terms: str = ""
+
+    concessionaire_fee: str = ""
+
+    seller: str = ""
+
+    hard_merchandising: str = ""
+
+    soft_merchandising: str = ""
+
     production: str = ""
+
     catering: str = ""
+
     special_provisions: str = ""
 
     # Transportation and hospitality requirements
     air_transportation: str = ""
+
     hotel_accommodations: str = ""
+
     ground_transportation: str = ""
+
+    meals_incidentals: str = ""
 
     air_freight: str = "Not Included"
 
@@ -67,15 +82,45 @@ class ArtistProfile:
             "artist_name": self.artist_name,
             "company_name": self.company_name,
             "company_address": self.company_address,
-            "merchandising_terms": self.merchandising_terms,
-            "production": self.production,
+            "merchandising_terms": (
+                self.merchandising_terms
+            ),
+
+            "concessionaire_fee": (
+                self.concessionaire_fee
+            ),
+
+            "seller": (
+                self.seller
+            ),
+
+            "hard_merchandising": (
+                self.hard_merchandising
+            ),
+
+            "soft_merchandising": (
+                self.soft_merchandising
+            ),
+
+            "production": (
+                self.production
+            ),
+            
             "catering": self.catering,
             "special_provisions": self.special_provisions,
             "air_transportation": self.air_transportation,
             "hotel_accommodations": self.hotel_accommodations,
-            "ground_transportation": self.ground_transportation,
+            "ground_transportation": (
+                self.ground_transportation
+            ),
 
-            "air_freight": self.air_freight,
+            "meals_incidentals": (
+                self.meals_incidentals
+            ),
+
+            "air_freight": (
+                self.air_freight
+            ),
 
             "show_length": self.show_length,
             "complimentary_tickets": (
@@ -100,7 +145,31 @@ class ArtistProfile:
             artist_name=data.get("artist_name", ""),
             company_name=data.get("company_name", ""),
             company_address=data.get("company_address", ""),
-            merchandising_terms=data.get("merchandising_terms", ""),
+            merchandising_terms=data.get(
+                "merchandising_terms",
+                "",
+            ),
+
+            concessionaire_fee=data.get(
+                "concessionaire_fee",
+                "",
+            ),
+
+            seller=data.get(
+                "seller",
+                "",
+            ),
+
+            hard_merchandising=data.get(
+                "hard_merchandising",
+                "",
+            ),
+
+            soft_merchandising=data.get(
+                "soft_merchandising",
+                "",
+            ),
+
             production=data.get(
                 "production",
                 ""
@@ -114,6 +183,11 @@ class ArtistProfile:
             hotel_accommodations=data.get("hotel_accommodations", ""),
             ground_transportation=data.get(
                 "ground_transportation",
+                "",
+            ),
+
+            meals_incidentals=data.get(
+                "meals_incidentals",
                 "",
             ),
 

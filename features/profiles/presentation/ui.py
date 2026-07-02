@@ -8,6 +8,25 @@ from core.models.artist_profile import (
     ArtistProfile,
 )
 
+from features.profiles.presentation.sections.identity import (
+    render_identity_section,
+)
+
+from features.profiles.presentation.sections.travel import (
+    render_travel_section,
+)
+
+from features.profiles.presentation.sections.merchandising import (
+    render_merchandising_section,
+)
+
+from features.profiles.presentation.sections.production import (
+    render_production_section,
+)
+
+from features.profiles.presentation.sections.defaults import (
+    render_defaults_section,
+)
 
 def render_profiles(container):
     """
@@ -58,196 +77,145 @@ def render_profiles(container):
     # Profile Form
     st.divider()
 
-    st.subheader("Profile Details")
 
-    # Prefill fields when profile exists
-    artist_name = st.text_input(
-        "Artist Name",
-        value=(
-            loaded_profile.artist_name
-            if loaded_profile
-            else ""
-        ),
+    identity = (
+        render_identity_section(
+            loaded_profile
+        )
     )
 
-    company_name = st.text_input(
-        "Company Name",
-        value=(
-            loaded_profile.company_name
-            if loaded_profile
-            else ""
-        ),
+    artist_name = (
+        identity[
+            "artist_name"
+        ]
     )
 
-    # Core Contract Identity Fields
-    company_address = st.text_area(
-        "Company Address",
-
-        value=(
-            loaded_profile.company_address
-            if loaded_profile
-            else ""
-        ),
+    company_name = (
+        identity[
+            "company_name"
+        ]
     )
 
-    # Show length field
-    show_length = st.text_input(
-        "Default Show Length",
-
-        value=(
-            loaded_profile.show_length
-            if loaded_profile
-            else "90 Minutes"
-        ),
+    company_address = (
+        identity[
+            "company_address"
+        ]
     )
 
-    # Travel & Hospitality Defaults
-    st.markdown(
-        "### Travel & Hospitality"
+    defaults = (
+        render_defaults_section(
+            loaded_profile
+        )
     )
 
-    air_transportation = st.text_input(
-        "Air Transportation",
-
-        value=(
-            loaded_profile.air_transportation
-            if loaded_profile
-            else ""
-        ),
+    show_length = (
+        defaults[
+            "show_length"
+        ]
     )
 
-    hotel_accommodations = st.text_input(
-        "Hotel Accommodations",
-
-        value=(
-            loaded_profile.hotel_accommodations
-            if loaded_profile
-            else ""
-        ),
+    travel = (
+        render_travel_section(
+            loaded_profile
+        )
     )
 
-    ground_transportation = st.text_input(
-        "Ground Transportation",
-
-        value=(
-            loaded_profile.ground_transportation
-            if loaded_profile
-            else ""
-        ),
+    air_transportation = (
+        travel[
+            "air_transportation"
+        ]
     )
 
-    air_freight = st.selectbox(
-        "Air Freight & Excess Baggage",
-
-        options=[
-            "Included",
-            "Half Covered",
-            "Not Included",
-            "Custom",
-        ],
-
-        index=(
-            [
-                "Included",
-                "Half Covered",
-                "Not Included",
-                "Custom",
-            ].index(
-                loaded_profile.air_freight
-            )
-            if (
-                loaded_profile
-                and loaded_profile.air_freight
-                in [
-                    "Included",
-                    "Half Covered",
-                    "Not Included",
-                    "Custom",
-                ]
-            )
-            else 2
-        ),
+    hotel_accommodations = (
+        travel[
+            "hotel_accommodations"
+        ]
     )
 
-    # Reusable Contract Clauses
-    st.markdown(
-        "### Contract Clauses"
+    ground_transportation = (
+        travel[
+            "ground_transportation"
+        ]
     )
 
-    production = st.text_area(
-        "Production",
-
-        value=(
-            loaded_profile.production
-            if loaded_profile
-            else ""
-        ),
+    meals_incidentals = (
+        travel[
+            "meals_incidentals"
+        ]
     )
 
-    catering = st.text_area(
-        "Catering",
-
-        value=(
-            loaded_profile.catering
-            if loaded_profile
-            else ""
-        ),
-    )
-    merchandising_terms = st.text_area(
-        "Merchandising Terms",
-
-        value=(
-            loaded_profile.merchandising_terms
-            if loaded_profile
-            else ""
-        ),
+    air_freight = (
+        travel[
+            "air_freight"
+        ]
     )
 
-    special_provisions = st.text_area(
-        "Special Provisions",
-
-        value=(
-            loaded_profile.special_provisions
-            if loaded_profile
-            else ""
-        ),
+    production_section = (
+        render_production_section(
+            loaded_profile
+        )
     )
 
-    complimentary_tickets = st.selectbox(
-        "Complimentary Tickets",
-
-        options=[
-            "None",
-            "10 Tickets",
-            "20 Tickets",
-            "50 Tickets",
-            "Custom",
-        ],
-
-        index=(
-            [
-                "None",
-                "10 Tickets",
-                "20 Tickets",
-                "50 Tickets",
-                "Custom",
-            ].index(
-                loaded_profile.complimentary_tickets
-            )
-            if (
-                loaded_profile
-                and loaded_profile.complimentary_tickets
-                in [
-                    "None",
-                    "10 Tickets",
-                    "20 Tickets",
-                    "50 Tickets",
-                    "Custom",
-                ]
-            )
-            else 0
-        ),
+    production = (
+        production_section[
+            "production"
+        ]
     )
+
+    catering = (
+        production_section[
+            "catering"
+        ]
+    )
+
+    special_provisions = (
+        production_section[
+            "special_provisions"
+        ]
+    )
+
+    merchandising = (
+        render_merchandising_section(
+            loaded_profile
+        )
+    )
+
+    merchandising_terms = (
+        merchandising[
+            "merchandising_terms"
+        ]
+    )
+
+    concessionaire_fee = (
+        merchandising[
+            "concessionaire_fee"
+        ]
+    )
+
+    seller = (
+        merchandising[
+            "seller"
+        ]
+    )
+
+    hard_merchandising = (
+        merchandising[
+            "hard_merchandising"
+        ]
+    )
+
+    soft_merchandising = (
+        merchandising[
+            "soft_merchandising"
+        ]
+    )
+
+    complimentary_tickets = (
+        merchandising[
+            "complimentary_tickets"
+        ]
+    )
+
 
     # Save / Update Logic
     if st.button("Save Profile"):
@@ -276,21 +244,50 @@ def render_profiles(container):
 
                 hotel_accommodations=hotel_accommodations,
 
-                ground_transportation=ground_transportation,
+                ground_transportation=(
+                    ground_transportation
+                ),
 
-                air_freight=air_freight,
+                meals_incidentals=(
+                    meals_incidentals
+                ),
+
+                air_freight=(
+                    air_freight
+                ),
 
                 production=production,
 
                 catering=catering,
                 
-                merchandising_terms=merchandising_terms,
+                merchandising_terms=(
+                    merchandising_terms
+                ),
 
-                special_provisions=special_provisions,
+                concessionaire_fee=(
+                    concessionaire_fee
+                ),
+
+                seller=(
+                    seller
+                ),
+
+                hard_merchandising=(
+                    hard_merchandising
+                ),
+
+                soft_merchandising=(
+                    soft_merchandising
+                ),
+
+                special_provisions=(
+                    special_provisions
+                ),
 
                 complimentary_tickets=(
                     complimentary_tickets
                 ),
+
             )
 
             # Update Existing Profile

@@ -155,6 +155,13 @@ def render_profile_autofill(
             )
 
             st.session_state[
+                f"{key_prefix}_meals_incidentals"
+            ] = defaults.get(
+                "meals_incidentals",
+                "",
+            )
+
+            st.session_state[
                 f"{key_prefix}_air_freight"
             ] = defaults.get(
                 "air_freight",
@@ -182,6 +189,34 @@ def render_profile_autofill(
                 "",
                 
             )
+            st.session_state[
+                f"{key_prefix}_concessionaire_fee"
+            ] = defaults.get(
+                "concessionaire_fee",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_seller"
+            ] = defaults.get(
+                "seller",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_hard_merchandising"
+            ] = defaults.get(
+                "hard_merchandising",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_soft_merchandising"
+            ] = defaults.get(
+                "soft_merchandising",
+                "",
+            )
+
             st.session_state[
                 f"{key_prefix}_merchandising_terms"
             ] = defaults.get(

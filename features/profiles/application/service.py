@@ -198,6 +198,22 @@ class ProfileService:
                 profile.merchandising_terms
             ),
 
+            "concessionaire_fee": (
+                profile.concessionaire_fee
+            ),
+
+            "seller": (
+                profile.seller
+            ),
+
+            "hard_merchandising": (
+                profile.hard_merchandising
+            ),
+
+            "soft_merchandising": (
+                profile.soft_merchandising
+            ),
+
             "production": (
                 profile.production
             ),
@@ -221,6 +237,10 @@ class ProfileService:
 
             "ground_transportation": (
                 profile.ground_transportation
+            ),
+
+            "meals_incidentals": (
+                profile.meals_incidentals
             ),
 
             "air_freight": (
