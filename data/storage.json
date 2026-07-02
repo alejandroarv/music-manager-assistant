@@ -18027,39 +18027,6 @@
         "timestamp": "2026-06-13T18:10:55.264868+00:00"
     },
     {
-        "type": "artist_profile",
-        "name": "Bad Bunny",
-        "content": {
-            "artist_name": "Bad Bunny",
-            "company_name": "Bad Bunny INC",
-            "company_address": "Badbynny home",
-            "merchandising_terms": "yes",
-            "concessionaire_fee": "fads",
-            "seller": "fads",
-            "hard_merchandising": "fads",
-            "soft_merchandising": "fda",
-            "production": "yes",
-            "catering": "yes",
-            "special_provisions": "yes",
-            "air_transportation": "yes",
-            "hotel_accommodations": "yes",
-            "ground_transportation": "yes",
-            "meals_incidentals": "fadsf",
-            "air_freight": "Included",
-            "show_length": "100 Minutes",
-            "complimentary_tickets": "20 Tickets",
-            "profile_notes": "",
-            "default_contract_type": "performance",
-            "contract_defaults": {},
-            "additional_data": {}
-        },
-        "metadata": {
-            "artist": "Bad Bunny"
-        },
-        "id": "6dae2f04-5d71-4410-9e1f-d7f4296ce5fd",
-        "timestamp": "2026-07-02T19:32:29.507912+00:00"
-    },
-    {
         "type": "performance_contract",
         "name": "Bad Bunny",
         "content": {
@@ -18183,5 +18150,38 @@
         },
         "id": "176a9719-c624-41df-b6eb-20ada6b4156e",
         "timestamp": "2026-07-02T19:35:04.849254+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "merchandising_terms": "yes",
+            "concessionaire_fee": "fads",
+            "seller": "fads",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "production": "yes",
+            "catering": "yes",
+            "special_provisions": "yes",
+            "air_transportation": "yes yes",
+            "hotel_accommodations": "yes",
+            "ground_transportation": "yes",
+            "meals_incidentals": "Yes Please",
+            "air_freight": "Included",
+            "show_length": "100 Minutes",
+            "complimentary_tickets": "20 Tickets",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "5c8052d0-cc73-4339-899b-d23f2447fc49",
+        "timestamp": "2026-07-02T22:22:18.680860+00:00"
     }
 ]

@@ -45,9 +45,21 @@ def render_performance(container):
         container,
     )
 
-    if st.button(
-        "Generate Performance Contract"
-    ):
+    col1, col2 = st.columns(2)
+
+    with col1:
+
+        generate_contract = st.button(
+            "Generate Performance Contract"
+        )
+
+    with col2:
+
+        save_profile = st.button(
+            "Save Artist Profile"
+        )
+
+    if generate_contract:
 
         # Delegate contract generation to
         # the application service layer
@@ -71,6 +83,24 @@ def render_performance(container):
                 f"Warning: {result.error}"
             )
 
+    if save_profile:
+
+        try:
+
+            container.profile_service.save_profile_from_contract(
+                form_data
+            )
+
+            st.success(
+                "Artist profile saved."
+            )
+
+        except Exception as e:
+
+            st.error(
+                f"Failed to save profile: {e}"
+            )
+               
     # Display download controls once the
     # contract has been generated
     if contract_key in st.session_state:

@@ -28,6 +28,9 @@ from utils.helpers import (
     make_json_safe,
 )
 
+from core.models.artist_profile import (
+    ArtistProfile,
+)
 
 class ContractService:
     """
@@ -348,3 +351,4 @@ class ContractService:
         return self.generate_nda_contract(
             contract_data
         )
+    

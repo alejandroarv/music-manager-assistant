@@ -261,3 +261,133 @@ class ProfileService:
                 profile.contract_defaults
             ),
         }
+    
+    def save_profile_from_contract(
+        self,
+        form_data,
+    ):
+        """
+        Create an artist profile from
+        performance contract form data.
+        """
+
+        profile = ArtistProfile(
+
+            artist_name=form_data.get(
+                "artist",
+                "",
+            ),
+
+            company_name=form_data.get(
+                "company_name",
+                "",
+            ),
+
+            company_address=form_data.get(
+                "company_address",
+                "",
+            ),
+
+            air_transportation=form_data.get(
+                "air_transportation",
+                "",
+            ),
+
+            hotel_accommodations=form_data.get(
+                "hotel_accommodations",
+                "",
+            ),
+
+            ground_transportation=form_data.get(
+                "ground_transportation",
+                "",
+            ),
+
+            meals_incidentals=form_data.get(
+                "meals_incidentals",
+                "",
+            ),
+
+            air_freight=form_data.get(
+                "air_freight",
+                "",
+            ),
+
+            show_length=form_data.get(
+                "show_length",
+                "90 Minutes",
+            ),
+
+            complimentary_tickets=form_data.get(
+                "complimentary_tickets",
+                "",
+            ),
+
+            merchandising_terms=form_data.get(
+                "merchandising_terms",
+                "",
+            ),
+
+            concessionaire_fee=form_data.get(
+                "concessionaire_fee",
+                "",
+            ),
+
+            seller=form_data.get(
+                "seller",
+                "",
+            ),
+
+            hard_merchandising=form_data.get(
+                "hard_merchandising",
+                "",
+            ),
+
+            soft_merchandising=form_data.get(
+                "soft_merchandising",
+                "",
+            ),
+
+            production=form_data.get(
+                "production",
+                "",
+            ),
+
+            catering=form_data.get(
+                "catering",
+                "",
+            ),
+
+            special_provisions=form_data.get(
+                "special_provisions",
+                "",
+            ),
+        )
+
+        existing_profiles = (
+            self.get_all_profiles()
+        )
+
+        existing_record = next(
+            (
+                record
+                for record in existing_profiles
+                if (
+                    record["name"].strip().lower()
+                    ==
+                    profile.artist_name.strip().lower()
+                )
+            ),
+            None,
+        )
+
+        if existing_record:
+
+            return self.update_profile(
+                existing_record["id"],
+                profile,
+            )
+
+        return self.create_profile(
+            profile
+        )
