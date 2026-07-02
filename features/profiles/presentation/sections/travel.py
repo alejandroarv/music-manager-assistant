@@ -4,7 +4,7 @@
 import streamlit as st
 
 
-def render_travel_section(
+def render_terms_section(
     loaded_profile,
 ):
     """

@@ -7,7 +7,7 @@ from utils.state_sync import (
 
 from features.contracts.presentation.sections import (
     render_profile_autofill,
-    render_travel_terms_section,
+    render_terms_section,
     render_merchandising_section,
     render_show_details_section,
 )
@@ -242,7 +242,7 @@ def render_performance_contract_fields(
 
     # Travel & Terms Section
     travel_terms = (
-        render_travel_terms_section(
+        render_terms_section(
             key_prefix
         )
     )

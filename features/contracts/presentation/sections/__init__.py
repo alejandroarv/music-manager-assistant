@@ -5,7 +5,7 @@ from .profile_autofill import (
 )
 
 from .travel_terms import (
-    render_travel_terms_section,
+    render_terms_section,
 )
 
 from .merchandising import (

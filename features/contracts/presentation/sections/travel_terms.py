@@ -4,7 +4,7 @@
 import streamlit as st
 
 
-def render_travel_terms_section(
+def render_terms_section(
     key_prefix,
 ):
     """
@@ -59,6 +59,11 @@ def render_travel_terms_section(
     # Business & Contract Fields
     with col9:
 
+        # Merchandising
+        st.markdown(
+            "#### Merchandising"
+        )
+
         concessionaire_fee = st.text_input(
             "Concessionaire Fee",
             key=f"{key_prefix}_concessionaire_fee",
@@ -73,7 +78,12 @@ def render_travel_terms_section(
             "Complimentary Tickets",
             key=f"{key_prefix}_complimentary_tickets",
         )
-        
+
+        # Production
+        st.markdown(
+            "#### Production"
+        )
+
         production = st.text_area(
             "Production",
             key=f"{key_prefix}_production",
@@ -88,7 +98,6 @@ def render_travel_terms_section(
             "Special Provisions",
             key=f"{key_prefix}_special_provisions",
         )
-
 
     # Return normalized section payload
     return {
@@ -120,7 +129,9 @@ def render_travel_terms_section(
             concessionaire_fee
         ),
 
-        "seller": seller,
+        "seller": (
+            seller
+        ),
 
         "special_provisions": (
             special_provisions

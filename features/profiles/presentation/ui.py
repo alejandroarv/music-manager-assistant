@@ -13,7 +13,7 @@ from features.profiles.presentation.sections.identity import (
 )
 
 from features.profiles.presentation.sections.travel import (
-    render_travel_section,
+    render_terms_section,
 )
 
 from features.profiles.presentation.sections.merchandising import (
@@ -115,7 +115,7 @@ def render_profiles(container):
     )
 
     travel = (
-        render_travel_section(
+        render_terms_section(
             loaded_profile
         )
     )
