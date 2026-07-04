@@ -130,6 +130,10 @@ class ContractService:
 
                     "venue": data.venue,
 
+                    "venue_address": (
+                        data.venue_address
+                    ),
+
                     "date": str(data.date),
 
                     "signature_date": str(

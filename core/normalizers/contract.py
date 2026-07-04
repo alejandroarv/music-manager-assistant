@@ -50,7 +50,7 @@ def normalize_show(show, data):
         # Venue information
         "venue": safe_value(show.get("venue") or data["venue"]),
         "venue_address": safe_value(
-            show.get("venue_address") or show.get("venue") or data["venue"]
+            show.get("venue_address") or data["venue_address"]
         ),
 
         # Performance details
@@ -130,6 +130,7 @@ def normalize_performance_contract(data):
 
         # Venue information
         "venue": safe_value(data.venue),
+        "venue_address": safe_value(data.venue_address),
         "city": safe_value(data.city),
 
         # Date information

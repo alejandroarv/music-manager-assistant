@@ -12,6 +12,10 @@ from utils.show_sync import (
     initialize_show_sync,
 )
 
+from features.contracts.presentation.sections.venue_profile_autofill import (
+    render_venue_profile_autofill,
+)
+
 # Default ticket pricing configuration used
 # to initialize ticket scaling tables
 DEFAULT_TICKET_ROWS = [
@@ -90,9 +94,11 @@ def compute_expense_totals(
 
 def render_show_details_section(
     key_prefix,
+    container,
     number_of_shows,
     city,
     venue,
+    venue_address,
     date,
     show_length,
     capacity,
@@ -133,12 +139,80 @@ def render_show_details_section(
                     f"{show_city_key}_touched"
                 )
 
+                show_venue_key = (
+                    f"{key_prefix}_show_venue_{i}"
+                )
+
+                show_venue_touched_key = (
+                    f"{show_venue_key}_touched"
+                )
+
+                show_venue_address_key = (
+                    f"{key_prefix}_show_venue_address_{i}"
+                )
+
+                show_venue_address_touched_key = (
+                    f"{show_venue_address_key}_touched"
+                )
+
+                capacity_key = (
+                    f"{key_prefix}_capacity_{i}"
+                )
+
+                capacity_touched_key = (
+                    f"{capacity_key}_touched"
+                )
+
+                selected_venue_profile = (
+                    render_venue_profile_autofill(
+                        key_prefix=(
+                            f"{key_prefix}_show_{i}"
+                        ),
+
+                        container=container,
+
+                        venue_key=show_venue_key,
+
+                        city_key=show_city_key,
+
+                        venue_address_key=(
+                            show_venue_address_key
+                        ),
+
+                        capacity_key=capacity_key,
+                    )
+                )
+
+                venue_source = (
+                    selected_venue_profile.venue_name
+                    if selected_venue_profile
+                    else venue
+                )
+
+                city_source = (
+                    selected_venue_profile.city
+                    if selected_venue_profile
+                    else city
+                )
+
+                venue_address_source = (
+                    selected_venue_profile.venue_address
+                    if selected_venue_profile
+                    else venue_address
+                )
+
+                capacity_source = (
+                    selected_venue_profile.venue_capacity
+                    if selected_venue_profile
+                    else capacity
+                )
+
                 # Initialize synchronized
                 # show city state
                 initialize_show_sync(
                     i=i,
 
-                    source_value=city,
+                    source_value=city_source,
 
                     target_key=show_city_key,
 
@@ -156,7 +230,7 @@ def render_show_details_section(
                 if i == 0:
 
                     detect_manual_override(
-                        source_value=city,
+                        source_value=city_source,
 
                         target_value=show_city,
 
@@ -165,20 +239,12 @@ def render_show_details_section(
                         ),
                     )
                   
-                show_venue_key = (
-                    f"{key_prefix}_show_venue_{i}"
-                )
-
-                show_venue_touched_key = (
-                    f"{show_venue_key}_touched"
-                )
-
                 # Initialize synchronized
                 # show venue state
                 initialize_show_sync(
                     i=i,
 
-                    source_value=venue,
+                    source_value=venue_source,
 
                     target_key=show_venue_key,
 
@@ -187,21 +253,58 @@ def render_show_details_section(
                     ),
                 )
 
+
                 show_venue = st.text_input(
                     f"Venue {i + 1}",
                     key=show_venue_key,
+                )
+
+                initialize_show_sync(
+                    i=i,
+
+                    source_value=venue_address_source,
+
+                    target_key=(
+                        show_venue_address_key
+                    ),
+
+                    touched_key=(
+                        show_venue_address_touched_key
+                    ),
+                )
+
+                show_venue_address = st.text_input(
+                    f"Venue Address {i + 1}",
+                    key=show_venue_address_key,
                 )
 
                 # Detect manual override
                 if i == 0:
 
                     detect_manual_override(
-                        source_value=venue,
+                        source_value=venue_source,
 
                         target_value=show_venue,
 
                         touched_key=(
                             show_venue_touched_key
+                        ),
+                    )
+
+                # Detect manual override
+                if i == 0:
+
+                    detect_manual_override(
+                        source_value=(
+                            venue_address_source
+                        ),
+
+                        target_value=(
+                            show_venue_address
+                        ),
+
+                        touched_key=(
+                            show_venue_address_touched_key
                         ),
                     )
 
@@ -367,19 +470,12 @@ def render_show_details_section(
                         ),
                     )
 
-                capacity_key = (
-                    f"{key_prefix}_capacity_{i}"
-                )
-                capacity_touched_key = (
-                    f"{capacity_key}_touched"
-                )
-
                 # Initialize synchronized
                 # show capacity state
                 initialize_show_sync(
                     i=i,
 
-                    source_value=capacity,
+                    source_value=capacity_source,
 
                     target_key=capacity_key,
 
@@ -396,7 +492,7 @@ def render_show_details_section(
                 if i == 0:
 
                     detect_manual_override(
-                        source_value=capacity,
+                        source_value=capacity_source,
 
                         target_value=show_capacity,
 
@@ -944,6 +1040,9 @@ def render_show_details_section(
                 {
                     "city": show_city,
                     "venue": show_venue,
+                    "venue_address": (
+                        show_venue_address
+                    ),
                     "date": show_date,
                     "schedules": (
                         schedule_rows

@@ -59,6 +59,10 @@ def render_performance(container):
             "Save Artist Profile"
         )
 
+        save_venue = st.button(
+            "Save Venue Profile"
+        )
+
     if generate_contract:
 
         # Delegate contract generation to
@@ -101,6 +105,24 @@ def render_performance(container):
                 f"Failed to save profile: {e}"
             )
                
+    if save_venue:
+
+        try:
+
+            container.venue_profile_service.create_profile_from_contract(
+                form_data
+            )
+
+            st.success(
+                "Venue profile saved."
+            )
+
+        except Exception as e:
+
+            st.error(
+                f"Failed to save venue profile: {e}"
+            )
+            
     # Display download controls once the
     # contract has been generated
     if contract_key in st.session_state:

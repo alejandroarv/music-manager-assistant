@@ -15,6 +15,9 @@ from features.profiles.application.service import (
     ProfileService,
 )
 
+from features.venue_profiles.application.service import (
+    VenueProfileService,
+)
 # Application configuration
 from core.config import settings
 
@@ -78,4 +81,10 @@ class Container:
         # defaults, and future contract autofill support
         self.profile_service = ProfileService(
             self.record_repository
+        )
+
+        self.venue_profile_service = (
+            VenueProfileService(
+                self.record_repository
+            )
         )

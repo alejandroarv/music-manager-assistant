@@ -182,6 +182,11 @@ class ProfileService:
         rather than spreading it across UI code.
         """
 
+        contract_defaults = (
+            profile.contract_defaults
+            or {}
+        )
+
         return {
 
             # Artist / company information
@@ -252,13 +257,27 @@ class ProfileService:
                 profile.show_length
             ),
 
+            "capacity": (
+                contract_defaults.get(
+                    "capacity",
+                    "",
+                )
+            ),
+
+            "notes": (
+                contract_defaults.get(
+                    "notes",
+                    "",
+                )
+            ),
+
             "complimentary_tickets": (
                 profile.complimentary_tickets
             ),
 
             # Contract preset defaults
             "contract_defaults": (
-                profile.contract_defaults
+                contract_defaults
             ),
         }
     
@@ -362,6 +381,20 @@ class ProfileService:
                 "special_provisions",
                 "",
             ),
+
+            contract_defaults={
+                # Reusable show defaults
+                # captured from contracts
+                "capacity": form_data.get(
+                    "capacity",
+                    "",
+                ),
+
+                "notes": form_data.get(
+                    "notes",
+                    "",
+                ),
+            },
         )
 
         existing_profiles = (

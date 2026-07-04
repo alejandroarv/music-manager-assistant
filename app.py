@@ -33,6 +33,9 @@ from features.tour.presentation import (
     render_tour,
 )
 
+from features.venue_profiles import (
+    render_venue_profiles,
+)
 
 # Configure global application logging.
 # Used for:
@@ -81,6 +84,7 @@ st.title("Music Manager Assistant")
 menu = [
     "Contracts",
     "Artist Profiles",
+    "Venue Profiles",
     "Booking",
     "Tour Planner",
     "History",  
@@ -134,4 +138,12 @@ elif choice == "Booking":
 
 elif choice == "Artist Profiles":
     # Render artist profile management workflow
-    render_profiles(container)
+    render_profiles(
+        container
+        )
+
+elif choice == "Venue Profiles":
+    # Render venue profile management workflow
+    render_venue_profiles(
+        container
+        )

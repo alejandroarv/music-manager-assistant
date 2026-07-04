@@ -18183,5 +18183,289 @@
         },
         "id": "5c8052d0-cc73-4339-899b-d23f2447fc49",
         "timestamp": "2026-07-02T22:22:18.680860+00:00"
+    },
+    {
+        "type": "venue_profile",
+        "name": "Movistar Arena",
+        "content": {
+            "venue_name": "Movistar Arena",
+            "city": "Bogotaa",
+            "venue_address": "calle 2 carrera 2",
+            "venue_capacity": "",
+            "venue_notes": ""
+        },
+        "metadata": {
+            "venue": "Movistar Arena"
+        },
+        "id": "aa734956-a3d6-4541-acef-9722106dbfd2",
+        "timestamp": "2026-07-04T19:03:22.901160+00:00"
+    },
+    {
+        "type": "venue_profile",
+        "name": "Mov",
+        "content": {
+            "venue_name": "Mov",
+            "city": "Madrid",
+            "venue_address": "yesyes",
+            "venue_capacity": "",
+            "venue_notes": ""
+        },
+        "metadata": {
+            "venue": "Mov"
+        },
+        "id": "2cfe1507-c0f8-4da2-b439-0a9b06372937",
+        "timestamp": "2026-07-04T19:04:05.795058+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Bad Bunny INC",
+            "purchaser_address": "",
+            "signatory": "Bad Bunny INC",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-04",
+            "signature_date": "2026-07-04",
+            "city": "Bogotaa",
+            "fee": 12.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "100 Minutes",
+            "capacity": "",
+            "air_transportation": "yes yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "Included",
+            "ground_transportation": "yes",
+            "meals_incidentals": "Yes Please",
+            "special_provisions": "yes",
+            "concessionaire_fee": "fads",
+            "seller": "fads",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "20 Tickets",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Bad Bunny INC",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "date": "2026-07-04",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-04",
+            "number_of_shows": 1
+        },
+        "id": "fd33d887-11ba-419f-b29c-976b22bb92ee",
+        "timestamp": "2026-07-04T19:16:47.658453+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Bad Bunny INC",
+            "purchaser_name": "Bad Bunny INC",
+            "purchaser_address": "",
+            "signatory": "Bad Bunny INC",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Badbynny home",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-04",
+            "signature_date": "2026-07-04",
+            "city": "Bogotaa",
+            "fee": 12.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "100 Minutes",
+            "capacity": "",
+            "air_transportation": "yes yes",
+            "hotel_accommodations": "yes",
+            "air_freight": "Included",
+            "ground_transportation": "yes",
+            "meals_incidentals": "Yes Please",
+            "special_provisions": "yes",
+            "concessionaire_fee": "fads",
+            "seller": "fads",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "20 Tickets",
+            "production": "yes",
+            "catering": "yes",
+            "additional_addenda": "",
+            "merchandising_terms": "yes",
+            "buyer_name": "Bad Bunny INC",
+            "buyer_company_name": "Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "date": "2026-07-04",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-04",
+            "number_of_shows": 1
+        },
+        "id": "4c33e7ad-242d-42a5-a9ee-6a48b41becea",
+        "timestamp": "2026-07-04T20:14:47.784914+00:00"
     }
 ]

@@ -1919,7 +1919,7 @@ def build_performance_contract(
         {
             "date": normalized["date"],
             "venue": normalized["venue"],
-            "venue_address": normalized["venue"],
+            "venue_address": normalized["venue_address"],
             "time": "",
             "notes": normalized["additional_acts"],
             "capacity": normalized["capacity"],

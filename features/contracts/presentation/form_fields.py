@@ -12,6 +12,10 @@ from features.contracts.presentation.sections import (
     render_show_details_section,
 )
 
+from features.contracts.presentation.sections.venue_profile_autofill import (
+    render_venue_profile_autofill,
+)
+
 def render_performance_contract_fields(
     key_prefix: str,
     container,
@@ -34,6 +38,12 @@ def render_performance_contract_fields(
         container,
     )
 
+    # Venue Profile Autofill
+    render_venue_profile_autofill(
+        key_prefix,
+        container,
+    )
+    
     st.markdown("### Core Details")
 
     col1, col2 = st.columns(2)
@@ -106,6 +116,11 @@ def render_performance_contract_fields(
         city = st.text_input(
             "Primary City",
             key=city_key,
+        )
+
+        venue_address = st.text_area(
+            "Venue Address",
+            key=f"{key_prefix}_venue_address",
         )
 
         date = st.date_input(
@@ -414,6 +429,8 @@ def render_performance_contract_fields(
         render_show_details_section(
             key_prefix=key_prefix,
 
+            container=container,
+
             number_of_shows=(
                 number_of_shows
             ),
@@ -421,6 +438,10 @@ def render_performance_contract_fields(
             city=city,
 
             venue=venue,
+
+            venue_address=(
+                venue_address
+            ),
 
             date=date,
 
@@ -449,6 +470,11 @@ def render_performance_contract_fields(
         "signature_date": signature_date,
 
         "city": city,
+
+        "venue_address": (
+            venue_address
+        ),
+
         "fee": fee,
 
         "number_of_shows": (

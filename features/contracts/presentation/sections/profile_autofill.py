@@ -231,20 +231,6 @@ def render_profile_autofill(
                 "",
             )
 
-            # Core show defaults
-            st.session_state[
-                f"{key_prefix}_venue"
-            ] = defaults.get(
-                "venue",
-                "",
-            )
-
-            st.session_state[
-                f"{key_prefix}_city"
-            ] = defaults.get(
-                "city",
-                "",
-            )
 
             st.session_state[
                 f"{key_prefix}_capacity"
@@ -300,20 +286,74 @@ def render_profile_autofill(
             # into dependent show sections
             sync_reset_keys = [
                 f"{key_prefix}_signatory_touched",
-
-                f"{key_prefix}_show_city_0_touched",
-                f"{key_prefix}_show_venue_0_touched",
-                f"{key_prefix}_show_date_0_touched",
-                f"{key_prefix}_show_length_0_touched",
-                f"{key_prefix}_capacity_0_touched",
-                f"{key_prefix}_show_notes_0_touched",
             ]
+
+            sync_target_keys = [
+                f"{key_prefix}_signatory",
+            ]
+
+            for show_index in range(12):
+
+                sync_target_keys.extend(
+                    [
+                        (
+                            f"{key_prefix}_show_city_"
+                            f"{show_index}"
+                        ),
+
+                        (
+                            f"{key_prefix}_show_venue_"
+                            f"{show_index}"
+                        ),
+
+                        (
+                            f"{key_prefix}_show_date_"
+                            f"{show_index}"
+                        ),
+
+                        (
+                            f"{key_prefix}_show_length_"
+                            f"{show_index}"
+                        ),
+
+                        (
+                            f"{key_prefix}_capacity_"
+                            f"{show_index}"
+                        ),
+
+                        (
+                            f"{key_prefix}_show_notes_"
+                            f"{show_index}"
+                        ),
+                    ]
+                )
+
+            for target_key in sync_target_keys:
+
+                sync_reset_keys.append(
+                    f"{target_key}_touched"
+                )
+
+                sync_reset_keys.append(
+                    f"{target_key}_last_source"
+                )
 
             for reset_key in sync_reset_keys:
 
-                st.session_state[
-                    reset_key
-                ] = False
+                if reset_key.endswith(
+                    "_last_source"
+                ):
+
+                    st.session_state.pop(
+                        reset_key,
+                        None,
+                    )
+
+                else:
+
+                    st.session_state[
+                        reset_key
+                    ] = False
 
             # Prevent Company Name sync
             # from overwriting profile values.

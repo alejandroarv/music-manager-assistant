@@ -19,6 +19,7 @@ class PerformanceContractData:
         venue="",
         date=None,
         city="",
+        venue_address="",
         fee=0,
         *,
         purchaser_name=None,
@@ -98,6 +99,9 @@ class PerformanceContractData:
         self.venue = venue.strip()
         self.date = date
         self.city = city.strip()
+        self.venue_address = str(
+            venue_address
+        ).strip()
         self.fee = float(fee)
         self.number_of_shows = int(number_of_shows)
 
