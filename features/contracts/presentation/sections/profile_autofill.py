@@ -231,13 +231,26 @@ def render_profile_autofill(
                 "",
             )
 
-
-            st.session_state[
-                f"{key_prefix}_capacity"
-            ] = defaults.get(
-                "capacity",
-                "",
+            capacities = defaults.get(
+                "capacities",
+                [],
             )
+
+            for show_index in range(12):
+
+                st.session_state[
+                    (
+                        f"{key_prefix}_capacity_default_"
+                        f"{show_index}"
+                    )
+                ] = (
+                    capacities[show_index]
+                    if show_index < len(capacities)
+                    else defaults.get(
+                        "capacity",
+                        "",
+                    )
+                )
 
             st.session_state[
                 f"{key_prefix}_notes"

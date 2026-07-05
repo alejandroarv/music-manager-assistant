@@ -5,8 +5,8 @@ from datetime import datetime
 from core.models.record import Record
 from core.models.tour import TourData
 
-from core.repositories.record_repository import (
-    RecordRepository,
+from core.repositories.interface import (
+    Repository,
 )
 
 from features.tour.domain.logic import (
@@ -29,7 +29,7 @@ class TourService:
 
     def __init__(
         self,
-        repository: RecordRepository
+        repository: Repository
     ):
         """
         Initialize the service with

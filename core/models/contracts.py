@@ -114,8 +114,32 @@ class PerformanceContractData:
 
         # Show configuration
         self.show_length = str(show_length).strip()
-        self.shows = shows or []
-        self.capacity = str(capacity).strip()
+        legacy_capacity = str(capacity).strip()
+
+        if shows:
+
+            self.shows = [
+                {
+                    **show,
+                    "capacity": show.get(
+                        "capacity"
+                    ) or legacy_capacity,
+                }
+                for show in shows
+            ]
+
+        else:
+
+            self.shows = (
+                [
+                    {
+                        "capacity": legacy_capacity,
+                    }
+                ]
+                if legacy_capacity
+                else []
+            )
+
         self.ticketing_fee_percent = (
             float(ticketing_fee_percent)
         )

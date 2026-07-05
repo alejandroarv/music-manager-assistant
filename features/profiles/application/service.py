@@ -187,6 +187,38 @@ class ProfileService:
             or {}
         )
 
+        capacity = (
+            contract_defaults.get(
+                "capacity",
+                "",
+            )
+        )
+
+        if not capacity:
+
+            shows = contract_defaults.get(
+                "shows",
+                [],
+            )
+
+            if shows:
+
+                capacity = shows[0].get(
+                    "capacity",
+                    "",
+                )
+
+        capacities = [
+            show.get(
+                "capacity",
+                "",
+            )
+            for show in contract_defaults.get(
+                "shows",
+                [],
+            )
+        ]
+
         return {
 
             # Artist / company information
@@ -258,10 +290,11 @@ class ProfileService:
             ),
 
             "capacity": (
-                contract_defaults.get(
-                    "capacity",
-                    "",
-                )
+                capacity
+            ),
+
+            "capacities": (
+                capacities
             ),
 
             "notes": (
@@ -385,15 +418,23 @@ class ProfileService:
             contract_defaults={
                 # Reusable show defaults
                 # captured from contracts
-                "capacity": form_data.get(
-                    "capacity",
-                    "",
-                ),
-
                 "notes": form_data.get(
                     "notes",
                     "",
                 ),
+
+                "shows": [
+                    {
+                        "capacity": show.get(
+                            "capacity",
+                            "",
+                        ),
+                    }
+                    for show in form_data.get(
+                        "shows",
+                        [],
+                    )
+                ],
             },
         )
 

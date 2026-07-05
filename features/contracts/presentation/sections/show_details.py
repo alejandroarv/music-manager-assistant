@@ -16,6 +16,12 @@ from features.contracts.presentation.sections.venue_profile_autofill import (
     render_venue_profile_autofill,
 )
 
+from features.contracts.domain.logic import (
+    compute_ticket_totals,
+    compute_line_total,
+    compute_expense_totals,
+)
+
 # Default ticket pricing configuration used
 # to initialize ticket scaling tables
 DEFAULT_TICKET_ROWS = [
@@ -27,71 +33,6 @@ DEFAULT_TICKET_ROWS = [
     ("Popular", 1500, 0, 28.69, 43035.00),
 ]
 
-def compute_ticket_totals(
-    ticket_rows: list[dict]
-) -> tuple[float, float]:
-    """
-    Calculate gross and net ticket revenue
-    projections from ticket rows.
-    """
-
-    gross = sum(
-        float(row.get("line_total", 0) or 0)
-        for row in ticket_rows
-    )
-
-    # Gross and net are currently identical
-    # but remain separated for future logic
-    return gross, gross
-
-def compute_line_total(
-    total: float,
-    comps_kills: float,
-    price: float
-) -> float:
-    """
-    Calculate sellable inventory revenue
-    for a ticket tier.
-    """
-
-    sellable = max(
-        float(total or 0)
-        - float(comps_kills or 0),
-        0.0,
-    )
-
-    return sellable * float(price or 0)
-
-def compute_expense_totals(
-    fixed_expenses: float,
-    variable_expenses: float,
-    net_potential: float,
-) -> tuple[float, float, float, float]:
-    """
-    Calculate expense and profit projection values.
-    """
-
-    total_est_expenses = (
-        float(fixed_expenses or 0)
-        + float(variable_expenses or 0)
-    )
-
-    break_even = total_est_expenses
-
-    amount_to_split = (
-        float(net_potential or 0)
-        - total_est_expenses
-    )
-
-    walkout_potential = amount_to_split
-
-    return (
-        break_even,
-        total_est_expenses,
-        amount_to_split,
-        walkout_potential,
-    )
-
 def render_show_details_section(
     key_prefix,
     container,
@@ -101,7 +42,7 @@ def render_show_details_section(
     venue_address,
     date,
     show_length,
-    capacity,
+    capacity_defaults,
     general_notes,
 ):
     """
@@ -204,7 +145,11 @@ def render_show_details_section(
                 capacity_source = (
                     selected_venue_profile.venue_capacity
                     if selected_venue_profile
-                    else capacity
+                    else (
+                        capacity_defaults[i]
+                        if i < len(capacity_defaults)
+                        else ""
+                    )
                 )
 
                 # Initialize synchronized
@@ -227,17 +172,15 @@ def render_show_details_section(
                 )
 
                 # Detect manual override
-                if i == 0:
+                detect_manual_override(
+                    source_value=city_source,
 
-                    detect_manual_override(
-                        source_value=city_source,
+                    target_value=show_city,
 
-                        target_value=show_city,
-
-                        touched_key=(
-                            show_city_touched_key
-                        ),
-                    )
+                    touched_key=(
+                        show_city_touched_key
+                    ),
+                )
                   
                 # Initialize synchronized
                 # show venue state
@@ -279,34 +222,30 @@ def render_show_details_section(
                 )
 
                 # Detect manual override
-                if i == 0:
+                detect_manual_override(
+                    source_value=venue_source,
 
-                    detect_manual_override(
-                        source_value=venue_source,
+                    target_value=show_venue,
 
-                        target_value=show_venue,
-
-                        touched_key=(
-                            show_venue_touched_key
-                        ),
-                    )
+                    touched_key=(
+                        show_venue_touched_key
+                    ),
+                )
 
                 # Detect manual override
-                if i == 0:
+                detect_manual_override(
+                    source_value=(
+                        venue_address_source
+                    ),
 
-                    detect_manual_override(
-                        source_value=(
-                            venue_address_source
-                        ),
+                    target_value=(
+                        show_venue_address
+                    ),
 
-                        target_value=(
-                            show_venue_address
-                        ),
-
-                        touched_key=(
-                            show_venue_address_touched_key
-                        ),
-                    )
+                    touched_key=(
+                        show_venue_address_touched_key
+                    ),
+                )
 
                 show_date_key = (
                     f"{key_prefix}_show_date_{i}"  
@@ -338,17 +277,15 @@ def render_show_details_section(
                 )
 
                 # Detect manual override
-                if i == 0:
+                detect_manual_override(
+                    source_value=date,
 
-                    detect_manual_override(
-                        source_value=date,
+                    target_value=show_date,
 
-                        target_value=show_date,
-
-                        touched_key=(
-                            show_date_touched_key
-                        ),
-                    )
+                    touched_key=(
+                        show_date_touched_key
+                    ),
+                )
 
             # Scheduling and capacity fields
             with top_mid:
@@ -456,19 +393,17 @@ def render_show_details_section(
                 )
 
                 # Detect manual override
-                if i == 0:
+                detect_manual_override(
+                    source_value=show_length,
 
-                    detect_manual_override(
-                        source_value=show_length,
+                    target_value=(
+                        show_length_value
+                    ),
 
-                        target_value=(
-                            show_length_value
-                        ),
-
-                        touched_key=(
-                            show_length_touched_key
-                        ),
-                    )
+                    touched_key=(
+                        show_length_touched_key
+                    ),
+                )
 
                 # Initialize synchronized
                 # show capacity state
@@ -489,17 +424,15 @@ def render_show_details_section(
                     key=capacity_key,
                 )
                 # Detect manual override
-                if i == 0:
+                detect_manual_override(
+                    source_value=capacity_source,
 
-                    detect_manual_override(
-                        source_value=capacity_source,
+                    target_value=show_capacity,
 
-                        target_value=show_capacity,
-
-                        touched_key=(
-                            capacity_touched_key
-                        ),
-                    )
+                    touched_key=(
+                        capacity_touched_key
+                    ),
+                )
 
             # Per-show notes and support acts
             with top_right:
@@ -532,17 +465,15 @@ def render_show_details_section(
                 )
 
                 # Detect manual override
-                if i == 0:
+                detect_manual_override(
+                    source_value=general_notes,
 
-                    detect_manual_override(
-                        source_value=general_notes,
+                    target_value=show_notes,
 
-                        target_value=show_notes,
-
-                        touched_key=(
-                            show_notes_touched_key
-                        ),
-                    )
+                    touched_key=(
+                        show_notes_touched_key
+                    ),
+                )
 
             # Expand advanced financial sections
             # automatically for multi-show contracts

@@ -43,6 +43,71 @@ from features.contracts.application.formatters import (
     format_purchaser_term,
 )
 
+def compute_ticket_totals(
+    ticket_rows: list[dict]
+) -> tuple[float, float]:
+    """
+    Calculate gross and net ticket revenue
+    projections from ticket rows.
+    """
+
+    gross = sum(
+        float(row.get("line_total", 0) or 0)
+        for row in ticket_rows
+    )
+
+    # Gross and net are currently identical
+    # but remain separated for future logic
+    return gross, gross
+
+def compute_line_total(
+    total: float,
+    comps_kills: float,
+    price: float
+) -> float:
+    """
+    Calculate sellable inventory revenue
+    for a ticket tier.
+    """
+
+    sellable = max(
+        float(total or 0)
+        - float(comps_kills or 0),
+        0.0,
+    )
+
+    return sellable * float(price or 0)
+
+def compute_expense_totals(
+    fixed_expenses: float,
+    variable_expenses: float,
+    net_potential: float,
+) -> tuple[float, float, float, float]:
+    """
+    Calculate expense and profit projection values.
+    """
+
+    total_est_expenses = (
+        float(fixed_expenses or 0)
+        + float(variable_expenses or 0)
+    )
+
+    break_even = total_est_expenses
+
+    amount_to_split = (
+        float(net_potential or 0)
+        - total_est_expenses
+    )
+
+    walkout_potential = amount_to_split
+
+    return (
+        break_even,
+        total_est_expenses,
+        amount_to_split,
+        walkout_potential,
+    )
+
 def get_all_tables(doc):
     """
     Retrieve all tables from the document,
@@ -412,10 +477,6 @@ def update_footer(
                 and "Venue" in text
                 and "City, Country" in text
             ):
-
-                print(
-                    "REPLACING FOOTER"
-                )
 
                 set_paragraph_text(
                     paragraph,
@@ -829,9 +890,7 @@ def replace_text_in_cell(cell, replacements):
 def fill_show_table(
     table,
     show,
-    show_length,
-    capacity,
-    notes
+    show_length
 ):
     """
     Populate a show detail table using
@@ -1536,8 +1595,6 @@ def fill_show_sections(doc, shows):
             show_tables[index],
             show,
             show["show_length"],
-            show["capacity"],
-            show["additional_acts"],
         )
         replace_schedule_preserve_format(
             doc,
@@ -1614,23 +1671,6 @@ def build_performance_contract(
     doc = get_template(
         template_name
     )
-
-    print(
-        "DEBUG CONTRACT START"
-    )
-
-    for table in get_all_tables(doc):
-
-        table_text = "\n".join(
-            cell.text
-            for row in table.rows
-            for cell in row.cells
-        )
-
-        print(
-            "TABLE FOUND:",
-            table_text,
-        )
 
     # Normalize contract data before rendering
     normalized = normalize_performance_contract(
@@ -1739,12 +1779,6 @@ def build_performance_contract(
         doc,
         "ADDITIONAL ACTS:",
         normalized["additional_acts"]
-    )
-
-    replace_everywhere(
-        doc,
-        "CAPACITY:",
-        normalized["capacity"]
     )
 
     # Travel and logistics sections
@@ -1922,7 +1956,7 @@ def build_performance_contract(
             "venue_address": normalized["venue_address"],
             "time": "",
             "notes": normalized["additional_acts"],
-            "capacity": normalized["capacity"],
+            "capacity": "",
             "show_length": normalized["show_length"],
             "city": normalized["city"],
         }

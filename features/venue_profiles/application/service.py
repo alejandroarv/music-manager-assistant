@@ -179,6 +179,20 @@ class VenueProfileService:
         from performance contract data.
         """
 
+        shows = form_data.get(
+            "shows",
+            [],
+        )
+
+        venue_capacity = (
+            shows[0].get(
+                "capacity",
+                "",
+            )
+            if shows
+            else ""
+        )
+
         profile = VenueProfile(
 
             venue_name=form_data.get(
@@ -196,10 +210,7 @@ class VenueProfileService:
                 "",
             ),
 
-            venue_capacity=form_data.get(
-                "capacity",
-                "",
-            ),
+            venue_capacity=venue_capacity,
         )
 
         existing_profiles = (

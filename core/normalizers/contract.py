@@ -65,7 +65,7 @@ def normalize_show(show, data):
             show.get("additional_acts") or data["additional_acts"],
             default="None"
         ),
-        "capacity": safe_value(show.get("capacity") or data["capacity"]),
+        "capacity": safe_value(show.get("capacity")),
         "show_length": safe_value(show.get("show_length") or data["show_length"]),
         "city": show.get("city", data["city"]),
 
@@ -147,7 +147,6 @@ def normalize_performance_contract(data):
 
         # Show configuration
         "show_length": safe_value(data.show_length),
-        "capacity": safe_value(data.capacity),
 
         # Travel and logistics
         "air_transportation": fallback(data.air_transportation, "Provided"),

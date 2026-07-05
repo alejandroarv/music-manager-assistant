@@ -41,9 +41,19 @@ def render_venue_profile_autofill(
 
     if capacity_key is None:
 
-        capacity_key = (
-            f"{key_prefix}_capacity"
-        )
+        capacity_keys = [
+            (
+                f"{key_prefix}_capacity_default_"
+                f"{show_index}"
+            )
+            for show_index in range(12)
+        ]
+
+    else:
+
+        capacity_keys = [
+            capacity_key
+        ]
 
     # Retrieve saved venue profiles
     profiles = (
@@ -117,9 +127,11 @@ def render_venue_profile_autofill(
             venue_address_key
         ] = profile.venue_address
 
-        st.session_state[
-            capacity_key
-        ] = profile.venue_capacity
+        for capacity_key in capacity_keys:
+
+            st.session_state[
+                capacity_key
+            ] = profile.venue_capacity
 
         # Reset synchronized field flags
         # so venue autofill can propagate
@@ -128,7 +140,7 @@ def render_venue_profile_autofill(
             city_key,
             venue_key,
             venue_address_key,
-            capacity_key,
+            *capacity_keys,
         ]
 
         sync_reset_keys = []

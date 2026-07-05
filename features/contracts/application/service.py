@@ -11,8 +11,8 @@ from core.models.contracts import (
 )
 
 from core.models.record import Record
-from core.repositories.record_repository import (
-    RecordRepository,
+from core.repositories.interface import (
+    Repository,
 )
 
 from core.result import Result
@@ -47,7 +47,7 @@ class ContractService:
 
     def __init__(
         self,
-        repository: RecordRepository
+        repository: Repository
     ):
         self.repo = repository
 
@@ -157,8 +157,6 @@ class ContractService:
                     "show_length": (
                         data.show_length
                     ),
-
-                    "capacity": data.capacity,
 
                     # Logistics information
                     "air_transportation": (

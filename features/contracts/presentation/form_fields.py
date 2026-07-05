@@ -249,11 +249,70 @@ def render_performance_contract_fields(
 
     with col7:
 
-        capacity = st.text_input(
-            "Default Capacity",
-            key=f"{key_prefix}_capacity",
-        )
+        # Default capacities used to initialize
+        # each individual show's capacity.
+        capacity_defaults = []
 
+        # Render one capacity field
+        # for each configured show.
+        for i in range(number_of_shows):
+
+            capacity_defaults.append(
+
+                st.text_input(
+                    f"Capacity Show {i + 1}",
+                    key=(
+                        f"{key_prefix}"
+                        f"_capacity_default_{i}"
+                    ),
+                )
+
+            )
+
+
+    # Shared fallback notes used to initialize
+    # per-show additional acts fields
+    general_notes = st.text_area(
+        "Default Additional Acts / Notes",
+        key=f"{key_prefix}_notes",
+    )
+
+    st.markdown("### Per-Show Details")
+
+    # Return normalized form payload
+    # consumed by the application layer
+    # Render dynamic per-show
+    # configuration sections
+    show_details = (
+        render_show_details_section(
+            key_prefix=key_prefix,
+
+            container=container,
+
+            number_of_shows=(
+                number_of_shows
+            ),
+
+            city=city,
+
+            venue=venue,
+
+            venue_address=(
+                venue_address
+            ),
+
+            date=date,
+
+            show_length=show_length,
+
+            capacity_defaults=(
+                capacity_defaults
+            ),
+
+
+            general_notes=general_notes,
+        )
+    )
 
     # Travel & Terms Section
     travel_terms = (
@@ -357,13 +416,6 @@ def render_performance_contract_fields(
         ]
     )
 
-    # Shared fallback notes used to initialize
-    # per-show additional acts fields
-    general_notes = st.text_area(
-        "Default Additional Acts / Notes",
-        key=f"{key_prefix}_notes",
-    )
-
     # Buyer signature configuration
     buyer_name_key = (
         f"{key_prefix}_buyer_name"
@@ -419,39 +471,6 @@ def render_performance_contract_fields(
         key=f"{key_prefix}_manager_company_name",
     )
 
-    st.markdown("### Per-Show Details")
-
-    # Return normalized form payload
-    # consumed by the application layer
-    # Render dynamic per-show
-    # configuration sections
-    show_details = (
-        render_show_details_section(
-            key_prefix=key_prefix,
-
-            container=container,
-
-            number_of_shows=(
-                number_of_shows
-            ),
-
-            city=city,
-
-            venue=venue,
-
-            venue_address=(
-                venue_address
-            ),
-
-            date=date,
-
-            show_length=show_length,
-
-            capacity=capacity,
-
-            general_notes=general_notes,
-        )
-    )
 
     return {
         "artist": artist,
@@ -482,7 +501,7 @@ def render_performance_contract_fields(
         ),
 
         "show_length": show_length,
-        "capacity": capacity,
+
 
         "notes": general_notes,
 

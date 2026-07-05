@@ -2,8 +2,8 @@
 
 import json
 
-from core.repositories.record_repository import (
-    RecordRepository,
+from core.repositories.interface import (
+    Repository,
 )
 
 
@@ -25,7 +25,7 @@ class HistoryService:
 
     def __init__(
         self,
-        repository: RecordRepository
+        repository: Repository
     ):
         """
         Initialize the history service with
