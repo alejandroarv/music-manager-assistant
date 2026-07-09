@@ -19,12 +19,31 @@ def render_identity_section(
     )
 
     artist_name = st.text_input(
+
         "Artist Name",
 
         value=(
+
             loaded_profile.artist_name
+
             if loaded_profile
-            else ""
+
+            else st.session_state.get(
+                "selected_artist_name",
+                "",
+            )
+
+        ),
+
+    )
+
+    profile_name = st.text_input(
+        "Profile Name",
+
+        value=(
+            loaded_profile.profile_name
+            if loaded_profile
+            else "Default"
         ),
     )
 
@@ -51,6 +70,8 @@ def render_identity_section(
     return {
 
         "artist_name": artist_name,
+
+        "profile_name": profile_name,
 
         "company_name": company_name,
 

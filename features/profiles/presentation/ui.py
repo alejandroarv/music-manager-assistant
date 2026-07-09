@@ -43,35 +43,174 @@ def render_profiles(container):
         .get_all_profiles()
     )
 
-    # Build profile selection list
-    profile_names = [
-        profile["name"]
+    # Tracks whether the user is creating
+    # a brand-new profile
+    if (
+        "creating_new_profile"
+        not in st.session_state
+    ):
+
+        st.session_state[
+            "creating_new_profile"
+        ] = False
+
+    # Build unique artist list
+    artist_names = sorted({
+
+        profile["content"].get(
+            "artist_name",
+            "",
+        )
+
         for profile in profiles
-    ]
+
+    })
 
     # Profile Selection
     st.subheader("Load Existing Profile")
 
-    selected_profile = st.selectbox(
-        "Select Profile",
+    selected_artist = st.selectbox(
+
+        "Artist",
+
         options=[
-            "New Profile",
-            *profile_names,
+
+            "New Artist",
+
+            *artist_names,
+
         ],
+
     )
+
+    # Remember the currently selected artist
+    st.session_state[
+        "selected_artist_name"
+    ] = (
+        selected_artist
+    )
+
+    # Profiles belonging to the selected artist
+    available_profiles = [
+
+        profile
+
+        for profile in profiles
+
+        if (
+
+            profile["content"].get(
+                "artist_name",
+                "",
+            )
+
+            ==
+
+            selected_artist
+
+        )
+
+    ]
+
+    profile_names = [
+
+        profile["content"].get(
+            "profile_name",
+            "Default",
+        )
+
+        for profile in available_profiles
+
+    ]
+
+    selected_profile_name = st.selectbox(
+
+        "Profile",
+
+        options=profile_names
+
+        if selected_artist != "New Profile"
+
+        else [],
+
+    )
+
+    # Create a new profile
+    if st.button(
+
+        "➕ New Profile",
+
+    ):
+
+        st.session_state[
+            "creating_new_profile"
+        ] = True
+
+        st.rerun()
 
     # Default form values
     loaded_profile = None
 
-    # Load selected profile
-    if selected_profile != "New Profile":
+    # Currently selected repository record
+    selected_record = None
 
-        loaded_profile = (
-            container.profile_service
-            .get_profile_by_artist(
-                selected_profile
-            )
+    # Load the selected profile variant
+    if (
+
+        selected_artist != "New Artist"
+
+        and
+
+        selected_profile_name
+
+    ):
+
+        selected_record = next(
+
+            (
+
+                profile
+
+                for profile in available_profiles
+
+                if (
+
+                    profile["content"].get(
+                        "profile_name",
+                        "Default",
+                    )
+
+                    ==
+
+                    selected_profile_name
+
+                )
+
+            ),
+
+            None,
+
         )
+
+        if (
+
+            selected_record
+
+            and
+
+            not st.session_state[
+                "creating_new_profile"
+            ]
+
+        ):
+
+            loaded_profile = (
+                ArtistProfile.from_dict(
+                    selected_record[
+                        "content"
+                    ]
+                )
+            )
 
 
     # Profile Form
@@ -87,6 +226,12 @@ def render_profiles(container):
     artist_name = (
         identity[
             "artist_name"
+        ]
+    )
+
+    profile_name = (
+        identity[
+            "profile_name"
         ]
     )
 
@@ -234,6 +379,8 @@ def render_profiles(container):
 
                 artist_name=artist_name,
 
+                profile_name=profile_name,
+
                 company_name=company_name,
 
                 company_address=company_address,
@@ -291,30 +438,21 @@ def render_profiles(container):
             )
 
             # Update Existing Profile
-            if loaded_profile:
+            if selected_record:
 
-                # Find original record ID
-                original_record = next(
-                    (
-                        record
-                        for record in profiles
-                        if record["name"]
-                        ==
-                        selected_profile
-                    ),
-                    None,
+                container.profile_service.update_profile(
+
+                    selected_record["id"],
+
+                    profile,
+
                 )
 
-                if original_record:
+                st.success(
 
-                    container.profile_service.update_profile(
-                        original_record["id"],
-                        profile,
-                    )
+                    "Profile updated."
 
-                    st.success(
-                        "Profile updated."
-                    )
+                )
 
             # Create New Profile
             else:

@@ -20,6 +20,9 @@ class ArtistProfile:
     # Core artist identity
     artist_name: str
 
+    # Reusable profile configuration name
+    profile_name: str = "Default"
+
     # Company / business information
     company_name: str = ""
     company_address: str = ""
@@ -80,6 +83,7 @@ class ArtistProfile:
         """
         return {
             "artist_name": self.artist_name,
+            "profile_name": self.profile_name,
             "company_name": self.company_name,
             "company_address": self.company_address,
             "merchandising_terms": (
@@ -143,6 +147,10 @@ class ArtistProfile:
         
         return cls(
             artist_name=data.get("artist_name", ""),
+            profile_name=data.get(
+                "profile_name",
+                "Default",
+            ),
             company_name=data.get("company_name", ""),
             company_address=data.get("company_address", ""),
             merchandising_terms=data.get(
