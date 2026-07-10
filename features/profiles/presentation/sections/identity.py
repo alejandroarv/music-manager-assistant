@@ -5,7 +5,13 @@ import streamlit as st
 
 
 def render_identity_section(
+
     loaded_profile,
+
+    default_artist_name="",
+
+    default_profile_name="Default",
+
 ):
     """
     Render artist identity fields.
@@ -28,23 +34,26 @@ def render_identity_section(
 
             if loaded_profile
 
-            else st.session_state.get(
-                "selected_artist_name",
-                "",
-            )
+            else default_artist_name
 
         ),
 
     )
 
     profile_name = st.text_input(
+
         "Profile Name",
 
         value=(
+
             loaded_profile.profile_name
+
             if loaded_profile
-            else "Default"
+
+            else default_profile_name
+
         ),
+
     )
 
     company_name = st.text_input(

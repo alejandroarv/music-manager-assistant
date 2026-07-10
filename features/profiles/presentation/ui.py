@@ -219,7 +219,33 @@ def render_profiles(container):
 
     identity = (
         render_identity_section(
-            loaded_profile
+
+            loaded_profile,
+
+            default_artist_name=(
+
+                selected_artist
+
+                if selected_artist
+                !=
+                "New Artist"
+
+                else ""
+
+            ),
+
+            default_profile_name=(
+
+                ""
+
+                if st.session_state[
+                    "creating_new_profile"
+                ]
+
+                else "Default"
+
+            ),
+
         )
     )
 
@@ -438,7 +464,17 @@ def render_profiles(container):
             )
 
             # Update Existing Profile
-            if selected_record:
+            if (
+
+                selected_record
+
+                and
+
+                not st.session_state[
+                    "creating_new_profile"
+                ]
+
+            ):
 
                 container.profile_service.update_profile(
 
@@ -460,6 +496,11 @@ def render_profiles(container):
                 container.profile_service.create_profile(
                     profile
                 )
+
+                # Return to normal edit mode
+                st.session_state[
+                    "creating_new_profile"
+                ] = False
 
                 st.success(
                     "Profile saved."

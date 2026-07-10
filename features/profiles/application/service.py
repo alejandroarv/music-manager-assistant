@@ -9,6 +9,9 @@ from core.models.artist_profile import ArtistProfile
 # Generic persistence record model used throughout the app
 from core.models.record import Record
 
+from features.profiles.domain.logic import (
+    build_artist_profile,
+)
 
 class ProfileService:
     """

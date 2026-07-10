@@ -19914,5 +19914,39 @@
         },
         "id": "24fe24c8-7269-49f1-a5d1-fdaf25413be2",
         "timestamp": "2026-07-05T19:04:42.427178+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "profile_name": "Argentina",
+            "company_name": "",
+            "company_address": "",
+            "merchandising_terms": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "production": "",
+            "catering": "",
+            "special_provisions": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "air_freight": "Not Included",
+            "show_length": "90 Minutes",
+            "complimentary_tickets": "None",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "9c702a5b-e9e3-49e3-8b73-1c98605ba478",
+        "timestamp": "2026-07-10T16:56:03.661928+00:00"
     }
 ]
