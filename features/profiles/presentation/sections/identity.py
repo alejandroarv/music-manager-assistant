@@ -8,6 +8,8 @@ def render_identity_section(
 
     loaded_profile,
 
+    container,
+
     default_artist_name="",
 
     default_profile_name="Default",
@@ -23,6 +25,22 @@ def render_identity_section(
     st.subheader(
         "Profile Details"
     )
+
+    companies = (
+
+        container
+        .company_profile_service
+        .get_all_profiles()
+
+    )
+
+    company_names = [
+
+        company["name"]
+
+        for company in companies
+
+    ]
 
     artist_name = st.text_input(
 
@@ -56,24 +74,42 @@ def render_identity_section(
 
     )
 
-    company_name = st.text_input(
-        "Company Name",
+    default_company = st.selectbox(
 
-        value=(
-            loaded_profile.company_name
-            if loaded_profile
-            else ""
+        "Default Company",
+
+        options=[
+
+            "None",
+
+            *company_names,
+
+        ],
+
+        index=(
+
+            ["None", *company_names].index(
+
+                loaded_profile.default_company
+
+                if (
+
+                    loaded_profile
+
+                    and
+
+                    loaded_profile.default_company
+
+                    in company_names
+
+                )
+
+                else "None"
+
+            )
+
         ),
-    )
 
-    company_address = st.text_area(
-        "Company Address",
-
-        value=(
-            loaded_profile.company_address
-            if loaded_profile
-            else ""
-        ),
     )
 
     return {
@@ -82,9 +118,7 @@ def render_identity_section(
 
         "profile_name": profile_name,
 
-        "company_name": company_name,
-
-        "company_address": (
-            company_address
+        "default_company": (
+            default_company
         ),
     }

@@ -318,6 +318,8 @@ def render_profiles(container):
 
             loaded_profile,
 
+            container,
+
             default_artist_name=(
 
                 selected_artist
@@ -357,16 +359,12 @@ def render_profiles(container):
         ]
     )
 
-    company_name = (
-        identity[
-            "company_name"
-        ]
-    )
+    default_company = (
 
-    company_address = (
         identity[
-            "company_address"
+            "default_company"
         ]
+
     )
 
     defaults = (
@@ -495,6 +493,41 @@ def render_profiles(container):
             )
 
         else:
+            company_name = ""
+
+            company_address = ""
+
+            if (
+
+                default_company
+
+                and
+
+                default_company != "None"
+
+            ):
+
+                company_profile = (
+
+                    container
+                    .company_profile_service
+                    .get_profile_by_company(
+
+                        default_company
+
+                    )
+
+                )
+
+                if company_profile:
+
+                    company_name = (
+                        company_profile.company_name
+                    )
+
+                    company_address = (
+                        company_profile.company_address
+                    )
 
             # Build updated profile model
             profile = ArtistProfile(
@@ -503,10 +536,12 @@ def render_profiles(container):
 
                 profile_name=profile_name,
 
+                default_company=default_company,
+
                 company_name=company_name,
 
                 company_address=company_address,
-
+                
                 show_length=show_length,
 
                 air_transportation=air_transportation,

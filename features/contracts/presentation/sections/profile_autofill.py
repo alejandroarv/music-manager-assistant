@@ -411,6 +411,17 @@ def render_profile_autofill(
             st.session_state[
                 f"{key_prefix}_profile_loaded"
             ] = True
+
+            default_company = (
+                defaults.get(
+                    "default_company",
+                    "None",
+                )
+            )
+
+            st.session_state[
+                f"{key_prefix}_company_selector"
+            ] = default_company
             
             # Save selected profile state
             st.session_state[
@@ -514,7 +525,6 @@ def render_company_autofill(
         if profile:
 
             defaults = (
-
                 container
                 .company_profile_service
                 .build_form_defaults(

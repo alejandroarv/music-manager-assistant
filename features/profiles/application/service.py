@@ -227,10 +227,8 @@ class ProfileService:
             # Artist / company information
             "artist_name": profile.artist_name,
 
-            "company_name": profile.company_name,
-
-            "company_address": (
-                profile.company_address
+            "default_company": (
+                profile.default_company
             ),
 
             # Reusable contract clauses

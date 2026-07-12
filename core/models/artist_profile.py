@@ -11,8 +11,9 @@ class ArtistProfile:
     Profiles store artist-specific information that can
     automatically populate future contracts and workflows
 
-    This mode separates:
-    - Reusable artist/company data
+    This model separates:
+    - Artist identity and preset relationships
+    - Cached company snapshot data
     - Contract preset defaults
     - Flexible future expansion data
     """
@@ -23,10 +24,18 @@ class ArtistProfile:
     # Reusable profile configuration name
     profile_name: str = "Default"
 
-    # Company / business information
+    # Cached company information copied
+    # from the selected Default Company.
+    # These values represent a snapshot
+    # taken when the Artist Profile is
+    # saved, allowing existing presets to
+    # remain stable even if the Company
+    # Profile changes later.
     company_name: str = ""
     company_address: str = ""
 
+    # Default reusable company profile
+    default_company: str = ""
 
     # Frequently reused contract clauses and provisions
     merchandising_terms: str = ""
@@ -86,6 +95,7 @@ class ArtistProfile:
             "profile_name": self.profile_name,
             "company_name": self.company_name,
             "company_address": self.company_address,
+            "default_company": self.default_company,
             "merchandising_terms": (
                 self.merchandising_terms
             ),
@@ -153,6 +163,10 @@ class ArtistProfile:
             ),
             company_name=data.get("company_name", ""),
             company_address=data.get("company_address", ""),
+            default_company=data.get(
+                "default_company",
+                "",
+            ),
             merchandising_terms=data.get(
                 "merchandising_terms",
                 "",

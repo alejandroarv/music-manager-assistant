@@ -19901,40 +19901,6 @@
         "timestamp": "2026-07-12T18:24:43.675259+00:00"
     },
     {
-        "type": "artist_profile",
-        "name": "Bad Bunny",
-        "content": {
-            "artist_name": "Bad Bunny",
-            "profile_name": "Colombia",
-            "company_name": "",
-            "company_address": "",
-            "merchandising_terms": "",
-            "concessionaire_fee": "",
-            "seller": "",
-            "hard_merchandising": "",
-            "soft_merchandising": "",
-            "production": "",
-            "catering": "",
-            "special_provisions": "",
-            "air_transportation": "",
-            "hotel_accommodations": "",
-            "ground_transportation": "",
-            "meals_incidentals": "",
-            "air_freight": "Not Included",
-            "show_length": "90 Minutes",
-            "complimentary_tickets": "None",
-            "profile_notes": "",
-            "default_contract_type": "performance",
-            "contract_defaults": {},
-            "additional_data": {}
-        },
-        "metadata": {
-            "artist": "Bad Bunny"
-        },
-        "id": "a4cebb8e-ea36-4c9b-a5af-a92c30839edf",
-        "timestamp": "2026-07-12T18:25:09.596953+00:00"
-    },
-    {
         "type": "company_profile",
         "name": "Bad Bynny INC",
         "content": {
@@ -19963,40 +19929,6 @@
         },
         "id": "351d010b-1d14-4a23-ab17-9262ca36a7f7",
         "timestamp": "2026-07-12T19:14:12.814622+00:00"
-    },
-    {
-        "type": "artist_profile",
-        "name": "Bad Bunny",
-        "content": {
-            "artist_name": "Bad Bunny",
-            "profile_name": "Argentina",
-            "company_name": "Bad Bunny INC",
-            "company_address": "Bad Bunny INC HQ",
-            "merchandising_terms": "fads",
-            "concessionaire_fee": "fad",
-            "seller": "fad",
-            "hard_merchandising": "fad",
-            "soft_merchandising": "fad",
-            "production": "fads",
-            "catering": "fdas",
-            "special_provisions": "fad",
-            "air_transportation": "fasd",
-            "hotel_accommodations": "fads",
-            "ground_transportation": "afds",
-            "meals_incidentals": "fad",
-            "air_freight": "Half Covered",
-            "show_length": "90 Minutes",
-            "complimentary_tickets": "50 Tickets",
-            "profile_notes": "",
-            "default_contract_type": "performance",
-            "contract_defaults": {},
-            "additional_data": {}
-        },
-        "metadata": {
-            "artist": "Bad Bunny"
-        },
-        "id": "12d52d85-f77b-4479-9066-65c96b01b47f",
-        "timestamp": "2026-07-12T19:16:06.475624+00:00"
     },
     {
         "type": "venue_profile",
@@ -20139,5 +20071,90 @@
         },
         "id": "0a1f9f33-b0eb-4a24-950d-b9ebb83680de",
         "timestamp": "2026-07-12T19:17:17.187545+00:00"
+    },
+    {
+        "type": "company_profile",
+        "name": "Live Nation",
+        "content": {
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "company_notes": "123 Main Street here",
+            "additional_data": {}
+        },
+        "metadata": {
+            "company": "Live Nation"
+        },
+        "id": "ebea922e-07c3-4ea7-88a5-02890ae0d643",
+        "timestamp": "2026-07-12T20:26:13.360152+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "profile_name": "Colombia",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "default_company": "Live Nation",
+            "merchandising_terms": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "production": "",
+            "catering": "",
+            "special_provisions": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "air_freight": "Not Included",
+            "show_length": "90 Minutes",
+            "complimentary_tickets": "None",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "8324c39b-f668-4bea-bf38-9c0e92971242",
+        "timestamp": "2026-07-12T20:26:29.290920+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "profile_name": "Argentina",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "default_company": "Live Nation",
+            "merchandising_terms": "fads",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": "fad",
+            "soft_merchandising": "fad",
+            "production": "fads",
+            "catering": "fdas",
+            "special_provisions": "fad",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "air_freight": "Half Covered",
+            "show_length": "90 Minutes",
+            "complimentary_tickets": "50 Tickets",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "59db190a-17c0-4340-9d97-13a343e9d34e",
+        "timestamp": "2026-07-12T20:27:04.968778+00:00"
     }
 ]
