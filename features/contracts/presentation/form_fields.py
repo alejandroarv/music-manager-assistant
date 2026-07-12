@@ -7,6 +7,7 @@ from utils.state_sync import (
 
 from features.contracts.presentation.sections import (
     render_profile_autofill,
+    render_company_autofill,
     render_terms_section,
     render_merchandising_section,
     render_show_details_section,
@@ -38,6 +39,12 @@ def render_performance_contract_fields(
         container,
     )
 
+    # Company Profile Autofill
+    render_company_autofill(
+        key_prefix,
+        container,
+    )
+    
     # Venue Profile Autofill
     render_venue_profile_autofill(
         key_prefix,

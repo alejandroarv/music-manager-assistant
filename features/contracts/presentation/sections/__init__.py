@@ -2,6 +2,7 @@
 
 from .profile_autofill import (
     render_profile_autofill,
+    render_company_autofill,
 )
 
 from .travel_terms import (

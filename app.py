@@ -33,8 +33,12 @@ from features.tour.presentation import (
     render_tour,
 )
 
-from features.venue_profiles import (
+from features.venue_profiles.presentation.ui import (
     render_venue_profiles,
+)
+
+from features.companies.presentation.ui import (
+    render_company_profiles,
 )
 
 # Configure global application logging.
@@ -85,9 +89,10 @@ menu = [
     "Contracts",
     "Artist Profiles",
     "Venue Profiles",
+    "Companies",
     "Booking",
     "Tour Planner",
-    "History",  
+    "History",
 ]
 
 choice = st.sidebar.selectbox(
@@ -145,5 +150,11 @@ elif choice == "Artist Profiles":
 elif choice == "Venue Profiles":
     # Render venue profile management workflow
     render_venue_profiles(
+        container
+        )
+
+elif choice == "Companies":
+    # Render company profile management workflow
+    render_company_profiles(
         container
         )

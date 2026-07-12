@@ -21,7 +21,9 @@ from features.venue_profiles.application.service import (
 # Application configuration
 from core.config import settings
 
-
+from features.companies.application.service import (
+    CompanyProfileService,
+)
 
 class Container:
     """
@@ -86,5 +88,11 @@ class Container:
         self.venue_profile_service = (
             VenueProfileService(
                 self.record_repository
+            )
+        )
+
+        self.company_profile_service = (
+            CompanyProfileService(
+                self.record_repository,
             )
         )

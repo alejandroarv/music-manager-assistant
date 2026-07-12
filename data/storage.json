@@ -18153,22 +18153,6 @@
     },
     {
         "type": "venue_profile",
-        "name": "Movistar Arena",
-        "content": {
-            "venue_name": "Movistar Arena",
-            "city": "Bogotaa",
-            "venue_address": "calle 2 carrera 2",
-            "venue_capacity": "",
-            "venue_notes": ""
-        },
-        "metadata": {
-            "venue": "Movistar Arena"
-        },
-        "id": "aa734956-a3d6-4541-acef-9722106dbfd2",
-        "timestamp": "2026-07-04T19:03:22.901160+00:00"
-    },
-    {
-        "type": "venue_profile",
         "name": "Mov",
         "content": {
             "venue_name": "Mov",
@@ -19884,40 +19868,6 @@
     },
     {
         "type": "artist_profile",
-        "name": "Bad Bunny",
-        "content": {
-            "artist_name": "Bad Bunny",
-            "profile_name": "Argentina",
-            "company_name": "",
-            "company_address": "",
-            "merchandising_terms": "",
-            "concessionaire_fee": "",
-            "seller": "",
-            "hard_merchandising": "",
-            "soft_merchandising": "",
-            "production": "",
-            "catering": "",
-            "special_provisions": "",
-            "air_transportation": "",
-            "hotel_accommodations": "",
-            "ground_transportation": "",
-            "meals_incidentals": "",
-            "air_freight": "Not Included",
-            "show_length": "90 Minutes",
-            "complimentary_tickets": "None",
-            "profile_notes": "",
-            "default_contract_type": "performance",
-            "contract_defaults": {},
-            "additional_data": {}
-        },
-        "metadata": {
-            "artist": "Bad Bunny"
-        },
-        "id": "9c702a5b-e9e3-49e3-8b73-1c98605ba478",
-        "timestamp": "2026-07-10T16:56:03.661928+00:00"
-    },
-    {
-        "type": "artist_profile",
         "name": "Maluma",
         "content": {
             "artist_name": "Maluma",
@@ -19983,5 +19933,211 @@
         },
         "id": "a4cebb8e-ea36-4c9b-a5af-a92c30839edf",
         "timestamp": "2026-07-12T18:25:09.596953+00:00"
+    },
+    {
+        "type": "company_profile",
+        "name": "Bad Bynny INC",
+        "content": {
+            "company_name": "Bad Bynny INC",
+            "company_address": "Bad Bunny INC HQ",
+            "company_notes": "Bad Bunny's company",
+            "additional_data": {}
+        },
+        "metadata": {
+            "company": "Bad Bynny INC"
+        },
+        "id": "449e3553-7a03-4482-adc3-d3b978fad15f",
+        "timestamp": "2026-07-12T19:02:11.537246+00:00"
+    },
+    {
+        "type": "company_profile",
+        "name": "Not Bad Bunny INC",
+        "content": {
+            "company_name": "Not Bad Bunny INC",
+            "company_address": "Not Bad Bunny INC HQ",
+            "company_notes": "Not Bad Bunny INC company",
+            "additional_data": {}
+        },
+        "metadata": {
+            "company": "Not Bad Bunny INC"
+        },
+        "id": "351d010b-1d14-4a23-ab17-9262ca36a7f7",
+        "timestamp": "2026-07-12T19:14:12.814622+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "profile_name": "Argentina",
+            "company_name": "Bad Bunny INC",
+            "company_address": "Bad Bunny INC HQ",
+            "merchandising_terms": "fads",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": "fad",
+            "soft_merchandising": "fad",
+            "production": "fads",
+            "catering": "fdas",
+            "special_provisions": "fad",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "air_freight": "Half Covered",
+            "show_length": "90 Minutes",
+            "complimentary_tickets": "50 Tickets",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "12d52d85-f77b-4479-9066-65c96b01b47f",
+        "timestamp": "2026-07-12T19:16:06.475624+00:00"
+    },
+    {
+        "type": "venue_profile",
+        "name": "Movistar Arena",
+        "content": {
+            "venue_name": "Movistar Arena",
+            "city": "Bogotaa",
+            "venue_address": "calle 2 carrera 2",
+            "venue_capacity": "fad",
+            "venue_notes": "fads"
+        },
+        "metadata": {
+            "venue": "Movistar Arena"
+        },
+        "id": "ca47715c-439b-4bc1-bbb1-df681eb6a34e",
+        "timestamp": "2026-07-12T19:16:22.467951+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Not Bad Bunny INC",
+            "purchaser_name": "Not Bad Bunny INC",
+            "purchaser_address": "",
+            "signatory": "Not Bad Bunny INC",
+            "company_name": "Not Bad Bunny INC",
+            "company_address": "Not Bad Bunny INC HQ",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-12",
+            "signature_date": "2026-07-12",
+            "city": "Bogotaa",
+            "fee": 213.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": "Allowed",
+            "soft_merchandising": "Allowed",
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Not Bad Bunny INC",
+            "buyer_company_name": "Not Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-12",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-12",
+            "number_of_shows": 1
+        },
+        "id": "0a1f9f33-b0eb-4a24-950d-b9ebb83680de",
+        "timestamp": "2026-07-12T19:17:17.187545+00:00"
     }
 ]

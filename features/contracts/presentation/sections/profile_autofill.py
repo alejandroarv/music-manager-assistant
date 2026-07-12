@@ -8,6 +8,10 @@ from core.models.artist_profile import (
     ArtistProfile,
 )
 
+from core.models.company_profile import (
+    CompanyProfile,
+)
+
 def render_profile_autofill(
     key_prefix,
     container,
@@ -418,3 +422,123 @@ def render_profile_autofill(
             st.rerun()
 
     return selected_profile
+
+def render_company_autofill(
+    key_prefix,
+    container,
+):
+    """
+    Render company profile autofill controls
+    and synchronize selected company data
+    into Streamlit session state.
+    """
+
+    companies = (
+
+        container
+        .company_profile_service
+        .get_all_profiles()
+
+    )
+
+    company_options = {
+
+        company["name"]: {
+
+            "record": company,
+
+            "model": CompanyProfile.from_dict(
+
+                company["content"]
+
+            ),
+
+        }
+
+        for company in companies
+
+    }
+
+    last_company_key = (
+        f"{key_prefix}_last_company"
+    )
+
+    selected_company = st.selectbox(
+
+        "Company",
+
+        options=[
+
+            "None",
+
+            *company_options.keys(),
+
+        ],
+
+        key=f"{key_prefix}_company_selector",
+
+    )
+
+    # Only autofill when the selected
+    # company actually changes
+    if (
+
+        selected_company != "None"
+
+        and
+
+        st.session_state.get(
+            last_company_key
+        ) != selected_company
+
+    ):
+
+        selected_company_data = (
+
+            company_options.get(
+                selected_company
+            )
+
+        )
+
+        profile = (
+
+            selected_company_data["model"]
+
+            if selected_company_data
+
+            else None
+
+        )
+
+        if profile:
+
+            defaults = (
+
+                container
+                .company_profile_service
+                .build_form_defaults(
+                    profile
+                )
+
+            )
+
+            st.session_state[
+                f"{key_prefix}_company_name"
+            ] = defaults.get(
+                "company_name",
+                "",
+            )
+
+            st.session_state[
+                f"{key_prefix}_company_address"
+            ] = defaults.get(
+                "company_address",
+                "",
+            )
+            
+            st.session_state[
+                last_company_key
+            ] = selected_company
+
+            st.rerun()
