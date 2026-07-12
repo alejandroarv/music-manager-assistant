@@ -18152,39 +18152,6 @@
         "timestamp": "2026-07-02T19:35:04.849254+00:00"
     },
     {
-        "type": "artist_profile",
-        "name": "Bad Bunny",
-        "content": {
-            "artist_name": "Bad Bunny",
-            "company_name": "Bad Bunny INC",
-            "company_address": "Badbynny home",
-            "merchandising_terms": "yes",
-            "concessionaire_fee": "fads",
-            "seller": "fads",
-            "hard_merchandising": "Allowed",
-            "soft_merchandising": "Allowed",
-            "production": "yes",
-            "catering": "yes",
-            "special_provisions": "yes",
-            "air_transportation": "yes yes",
-            "hotel_accommodations": "yes",
-            "ground_transportation": "yes",
-            "meals_incidentals": "Yes Please",
-            "air_freight": "Included",
-            "show_length": "100 Minutes",
-            "complimentary_tickets": "20 Tickets",
-            "profile_notes": "",
-            "default_contract_type": "performance",
-            "contract_defaults": {},
-            "additional_data": {}
-        },
-        "metadata": {
-            "artist": "Bad Bunny"
-        },
-        "id": "5c8052d0-cc73-4339-899b-d23f2447fc49",
-        "timestamp": "2026-07-02T22:22:18.680860+00:00"
-    },
-    {
         "type": "venue_profile",
         "name": "Movistar Arena",
         "content": {
@@ -19948,5 +19915,73 @@
         },
         "id": "9c702a5b-e9e3-49e3-8b73-1c98605ba478",
         "timestamp": "2026-07-10T16:56:03.661928+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Maluma",
+        "content": {
+            "artist_name": "Maluma",
+            "profile_name": "Argentina",
+            "company_name": "",
+            "company_address": "",
+            "merchandising_terms": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "production": "",
+            "catering": "",
+            "special_provisions": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "air_freight": "Not Included",
+            "show_length": "90 Minutes",
+            "complimentary_tickets": "None",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Maluma"
+        },
+        "id": "c76262c8-50bb-462e-8382-7463667f8aef",
+        "timestamp": "2026-07-12T18:24:43.675259+00:00"
+    },
+    {
+        "type": "artist_profile",
+        "name": "Bad Bunny",
+        "content": {
+            "artist_name": "Bad Bunny",
+            "profile_name": "Colombia",
+            "company_name": "",
+            "company_address": "",
+            "merchandising_terms": "",
+            "concessionaire_fee": "",
+            "seller": "",
+            "hard_merchandising": "",
+            "soft_merchandising": "",
+            "production": "",
+            "catering": "",
+            "special_provisions": "",
+            "air_transportation": "",
+            "hotel_accommodations": "",
+            "ground_transportation": "",
+            "meals_incidentals": "",
+            "air_freight": "Not Included",
+            "show_length": "90 Minutes",
+            "complimentary_tickets": "None",
+            "profile_notes": "",
+            "default_contract_type": "performance",
+            "contract_defaults": {},
+            "additional_data": {}
+        },
+        "metadata": {
+            "artist": "Bad Bunny"
+        },
+        "id": "a4cebb8e-ea36-4c9b-a5af-a92c30839edf",
+        "timestamp": "2026-07-12T18:25:09.596953+00:00"
     }
 ]

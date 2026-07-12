@@ -3,6 +3,10 @@
 # Streamlit UI framework
 import streamlit as st
 
+# Strongly-typed profile model
+from core.models.artist_profile import (
+    ArtistProfile,
+)
 
 def render_profile_autofill(
     key_prefix,
@@ -31,11 +35,27 @@ def render_profile_autofill(
         .get_all_profiles()
     )
 
-    # Build dropdown options
-    profile_names = [
-        profile["name"]
+    # Build display labels while keeping
+    # the original profile records
+    profile_options = {
+
+        (
+            f"{profile['content'].get('artist_name', '')}"
+            f" — "
+            f"{profile['content'].get('profile_name', 'Default')}"
+        ): {
+
+            "record": profile,
+
+            "model": ArtistProfile.from_dict(
+                profile["content"]
+            ),
+
+        }
+
         for profile in profiles
-    ]
+
+    }
 
     # Session-state key used to prevent
     # repeated autofill overwrites
@@ -46,16 +66,20 @@ def render_profile_autofill(
 
     # Profile Selector
     selected_profile = st.selectbox(
+
         "Artist Profile",
 
         options=[
+
             "None",
-            *profile_names,
+
+            *profile_options.keys(),
+
         ],
 
         key=f"{key_prefix}_profile_selector",
-    )
 
+    )
 
     # Autofill Synchronization
 
@@ -69,12 +93,22 @@ def render_profile_autofill(
         ) != selected_profile
     ):
 
-        # Load selected artist profile
-        profile = (
-            container.profile_service
-            .get_profile_by_artist(
+        # Retrieve the selected profile
+        # directly from the dropdown map
+        selected_profile_data = (
+            profile_options.get(
                 selected_profile
             )
+        )
+
+        profile = (
+
+            selected_profile_data["model"]
+
+            if selected_profile_data
+
+            else None
+
         )
 
         if profile:

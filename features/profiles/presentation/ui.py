@@ -54,6 +54,32 @@ def render_profiles(container):
             "creating_new_profile"
         ] = False
 
+    # Tracks the currently selected artist
+    if (
+
+        "selected_artist"
+
+        not in st.session_state
+
+    ):
+
+        st.session_state[
+            "selected_artist"
+        ] = "New Artist"
+
+    # Tracks the currently selected profile
+    if (
+
+        "selected_profile"
+
+        not in st.session_state
+
+    ):
+
+        st.session_state[
+            "selected_profile"
+        ] = ""
+
     # Build unique artist list
     artist_names = sorted({
 
@@ -68,27 +94,48 @@ def render_profiles(container):
 
     # Profile Selection
     st.subheader("Load Existing Profile")
+    artist_options = [
+
+        "New Artist",
+
+        *artist_names,
+
+    ]
+
+    # Keep the selected artist valid
+    if (
+
+        st.session_state[
+            "selected_artist"
+        ]
+
+        not in artist_options
+
+    ):
+
+        st.session_state[
+            "selected_artist"
+        ] = "New Artist"
 
     selected_artist = st.selectbox(
 
         "Artist",
 
-        options=[
+        options=artist_options,
 
-            "New Artist",
+        index=artist_options.index(
 
-            *artist_names,
+            st.session_state[
+                "selected_artist"
+            ]
 
-        ],
+        ),
 
     )
 
-    # Remember the currently selected artist
     st.session_state[
-        "selected_artist_name"
-    ] = (
-        selected_artist
-    )
+        "selected_artist"
+    ] = selected_artist
 
     # Profiles belonging to the selected artist
     available_profiles = [
@@ -123,17 +170,66 @@ def render_profiles(container):
 
     ]
 
+    profile_options = (
+
+        profile_names
+
+        if selected_artist != "New Artist"
+
+        else []
+
+    )
+
+    # Keep the selected profile valid
+    if (
+
+        st.session_state[
+            "selected_profile"
+        ]
+
+        not in profile_options
+
+    ):
+
+        st.session_state[
+            "selected_profile"
+        ] = (
+
+            profile_options[0]
+
+            if profile_options
+
+            else ""
+
+        )
+
     selected_profile_name = st.selectbox(
 
         "Profile",
 
-        options=profile_names
+        options=profile_options,
 
-        if selected_artist != "New Profile"
+        index=(
 
-        else [],
+            profile_options.index(
+
+                st.session_state[
+                    "selected_profile"
+                ]
+
+            )
+
+            if profile_options
+
+            else None
+
+        ),
 
     )
+
+    st.session_state[
+        "selected_profile"
+    ] = selected_profile_name
 
     # Create a new profile
     if st.button(
@@ -497,6 +593,15 @@ def render_profiles(container):
                     profile
                 )
 
+                # Automatically select the newly created profile
+                st.session_state[
+                    "selected_artist"
+                ] = artist_name
+
+                st.session_state[
+                    "selected_profile"
+                ] = profile_name
+                
                 # Return to normal edit mode
                 st.session_state[
                     "creating_new_profile"
