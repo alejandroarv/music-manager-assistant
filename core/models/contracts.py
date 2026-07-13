@@ -44,9 +44,15 @@ class PerformanceContractData:
         meals_incidentals="Provided",
         special_provisions="None",
         concessionaire_fee="0%",
+
         seller="TBD",
-        hard_merchandising="Allowed",
-        soft_merchandising="Allowed",
+
+        hard_merchandising=100,
+        hard_concessionaire_fee=0,
+
+        soft_merchandising=100,
+        soft_concessionaire_fee=0,
+
         complimentary_tickets="20",
         production="Standard production provided",
         catering="Standard catering provided",
@@ -153,10 +159,29 @@ class PerformanceContractData:
 
         # Additional contractual terms
         self.special_provisions = str(special_provisions).strip()
-        self.concessionaire_fee = str(concessionaire_fee).strip()
-        self.seller = str(seller).strip()
-        self.hard_merchandising = str(hard_merchandising).strip()
-        self.soft_merchandising = str(soft_merchandising).strip()
+        self.concessionaire_fee = str(
+            concessionaire_fee
+        ).strip()
+
+        self.seller = str(
+            seller
+        ).strip()
+
+        self.hard_merchandising = int(
+            hard_merchandising
+        )
+
+        self.hard_concessionaire_fee = int(
+            hard_concessionaire_fee
+        )
+
+        self.soft_merchandising = int(
+            soft_merchandising
+        )
+
+        self.soft_concessionaire_fee = int(
+            soft_concessionaire_fee
+        )
         self.complimentary_tickets = str(complimentary_tickets).strip()
         self.production = str(
             production

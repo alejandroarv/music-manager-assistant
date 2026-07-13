@@ -159,8 +159,25 @@ def normalize_performance_contract(data):
         "special_provisions": fallback(data.special_provisions, "None"),
         "concessionaire_fee": fallback(data.concessionaire_fee, "0%"),
         "seller": fallback(data.seller, "TBD"),
-        "hard_merchandising": fallback(data.hard_merchandising, "Allowed"),
-        "soft_merchandising": fallback(data.soft_merchandising, "Allowed"),
+        "hard_merchandising": fallback(
+            data.hard_merchandising,
+            100,
+        ),
+
+        "hard_concessionaire_fee": fallback(
+            data.hard_concessionaire_fee,
+            0,
+        ),
+
+        "soft_merchandising": fallback(
+            data.soft_merchandising,
+            100,
+        ),
+
+        "soft_concessionaire_fee": fallback(
+            data.soft_concessionaire_fee,
+            0,
+        ),
         "complimentary_tickets": fallback(data.complimentary_tickets, "20"),
         "production": fallback(
             data.production,

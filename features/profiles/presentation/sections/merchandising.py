@@ -39,24 +39,52 @@ def render_merchandising_section(
         ),
     )
 
-    hard_merchandising = st.text_input(
-        "Hard Merchandising",
+    hard_merchandising = st.number_input(
+
+        "Hard Merchandising (%)",
+
+        min_value=0,
+
+        max_value=100,
 
         value=(
             loaded_profile.hard_merchandising
             if loaded_profile
-            else ""
+            else 100
         ),
+
+        step=1,
+
     )
 
-    soft_merchandising = st.text_input(
-        "Soft Merchandising",
+    st.caption(
+
+        f"Hard Concessionaire Fee: {100 - hard_merchandising}%"
+
+    )
+
+    soft_merchandising = st.number_input(
+
+        "Soft Merchandising (%)",
+
+        min_value=0,
+
+        max_value=100,
 
         value=(
             loaded_profile.soft_merchandising
             if loaded_profile
-            else ""
+            else 100
         ),
+
+        step=1,
+
+    )
+
+    st.caption(
+
+        f"Soft Concessionaire Fee: {100 - soft_merchandising}%"
+
     )
 
     complimentary_tickets = st.selectbox(

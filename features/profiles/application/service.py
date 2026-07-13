@@ -393,12 +393,12 @@ class ProfileService:
 
             hard_merchandising=form_data.get(
                 "hard_merchandising",
-                "",
+                100,
             ),
 
             soft_merchandising=form_data.get(
                 "soft_merchandising",
-                "",
+                100,
             ),
 
             production=form_data.get(

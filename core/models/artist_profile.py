@@ -40,13 +40,18 @@ class ArtistProfile:
     # Frequently reused contract clauses and provisions
     merchandising_terms: str = ""
 
+# TODO:
+# Verify with client whether this general
+# concessionaire fee should remain or be
+# replaced by the hard/soft merchandising
+# concession structure.
     concessionaire_fee: str = ""
 
     seller: str = ""
 
-    hard_merchandising: str = ""
+    hard_merchandising: int = 100
 
-    soft_merchandising: str = ""
+    soft_merchandising: int = 100
 
     production: str = ""
 
@@ -145,7 +150,40 @@ class ArtistProfile:
             "contract_defaults": self.contract_defaults,
             "additional_data": self.additional_data,
         }
+    
+    @staticmethod
+    def normalize_percentage(
+        value,
+    ):
+        """
+        Normalize legacy merchandising values.
 
+        Older profiles stored values such as:
+        - Allowed
+        - Restricted
+        - Not Allowed
+
+        New profiles store integer percentages.
+        """
+
+        if isinstance(
+            value,
+            int,
+        ):
+
+            return value
+
+        try:
+
+            return int(value)
+
+        except (
+            TypeError,
+            ValueError,
+        ):
+
+            return 100
+        
     @classmethod
     def from_dict(cls, data):
         """
@@ -182,14 +220,26 @@ class ArtistProfile:
                 "",
             ),
 
-            hard_merchandising=data.get(
-                "hard_merchandising",
-                "",
+            hard_merchandising=(
+                cls.normalize_percentage(
+
+                    data.get(
+                        "hard_merchandising",
+                        100,
+                    )
+
+                )
             ),
 
-            soft_merchandising=data.get(
-                "soft_merchandising",
-                "",
+            soft_merchandising=(
+                cls.normalize_percentage(
+
+                    data.get(
+                        "soft_merchandising",
+                        100,
+                    )
+
+                )
             ),
 
             production=data.get(

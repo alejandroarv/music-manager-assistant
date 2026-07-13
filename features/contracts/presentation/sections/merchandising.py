@@ -34,16 +34,26 @@ def render_merchandising_section(
 
     with merch_col1:
 
-        hard_merchandising = st.selectbox(
-            "Hard Merchandising",
+        hard_merchandising = st.number_input(
 
-            options=[
-                "Allowed",
-                "Restricted",
-                "Not Allowed",
-            ],
+            "Hard Merchandising (%)",
+
+            min_value=0,
+
+            max_value=100,
+
+            value=100,
+
+            step=1,
 
             key=f"{key_prefix}_hard_merchandising",
+
+        )
+
+        st.caption(
+
+            f"Hard Concessionaire Fee: {100 - hard_merchandising}%"
+
         )
 
     # ==================================================
@@ -52,18 +62,27 @@ def render_merchandising_section(
 
     with merch_col2:
 
-        soft_merchandising = st.selectbox(
-            "Soft Merchandising",
+        soft_merchandising = st.number_input(
 
-            options=[
-                "Allowed",
-                "Restricted",
-                "Not Allowed",
-            ],
+            "Soft Merchandising (%)",
+
+            min_value=0,
+
+            max_value=100,
+
+            value=100,
+
+            step=1,
 
             key=f"{key_prefix}_soft_merchandising",
+
         )
 
+        st.caption(
+
+            f"Soft Concessionaire Fee: {100 - soft_merchandising}%"
+
+        )
     # ==================================================
     # Merchandising Terms
     # ==================================================
@@ -80,12 +99,21 @@ def render_merchandising_section(
 
     # Return normalized section payload
     return {
+
         "hard_merchandising": (
             hard_merchandising
         ),
 
+        "hard_concessionaire_fee": (
+            100 - hard_merchandising
+        ),
+
         "soft_merchandising": (
             soft_merchandising
+        ),
+
+        "soft_concessionaire_fee": (
+            100 - soft_merchandising
         ),
 
         "merchandising_terms": (

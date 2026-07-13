@@ -20123,6 +20123,132 @@
         "timestamp": "2026-07-12T20:26:29.290920+00:00"
     },
     {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Not Bad Bunny INC",
+            "purchaser_name": "Not Bad Bunny INC",
+            "purchaser_address": "",
+            "signatory": "Not Bad Bunny INC",
+            "company_name": "Not Bad Bunny INC",
+            "company_address": "Not Bad Bunny INC HQ",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-13",
+            "signature_date": "2026-07-13",
+            "city": "Bogotaa",
+            "fee": 123.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": "100",
+            "soft_merchandising": "100",
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "",
+            "buyer_name": "Not Bad Bunny INC",
+            "buyer_company_name": "Not Bad Bunny INC",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-13",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 144681.0,
+                        "walkout_potential": 144681.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-13",
+            "number_of_shows": 1
+        },
+        "id": "60735550-c05a-4081-b72f-d498c55e2640",
+        "timestamp": "2026-07-13T18:37:26.829449+00:00"
+    },
+    {
         "type": "artist_profile",
         "name": "Bad Bunny",
         "content": {
@@ -20134,8 +20260,8 @@
             "merchandising_terms": "fads",
             "concessionaire_fee": "fad",
             "seller": "fad",
-            "hard_merchandising": "fad",
-            "soft_merchandising": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
             "production": "fads",
             "catering": "fdas",
             "special_provisions": "fad",
@@ -20154,7 +20280,7 @@
         "metadata": {
             "artist": "Bad Bunny"
         },
-        "id": "59db190a-17c0-4340-9d97-13a343e9d34e",
-        "timestamp": "2026-07-12T20:27:04.968778+00:00"
+        "id": "02066d40-31ce-40c8-9057-c64da33af9c5",
+        "timestamp": "2026-07-13T18:54:33.734381+00:00"
     }
 ]
