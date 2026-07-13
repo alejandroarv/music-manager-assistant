@@ -22,6 +22,10 @@ from features.contracts.domain.logic import (
     compute_expense_totals,
 )
 
+from features.contracts.presentation.sections.expense_table import (
+    render_expense_table,
+)
+
 # Default ticket pricing configuration used
 # to initialize ticket scaling tables
 DEFAULT_TICKET_ROWS = [
@@ -808,30 +812,25 @@ def render_show_details_section(
                 # Expense input fields
                 with e1:
 
-                    fixed_expenses = st.number_input(
-                        f"Fixed Expenses {i + 1}",
 
-                        min_value=0.0,
+                    fixed_rows, fixed_expenses = (
+                        render_expense_table(
+                            key_prefix=key_prefix,
 
-                        step=100.0,
+                            show_index=i,
 
-                        key=(
-                            f"{key_prefix}"
-                            f"_fixed_expenses_{i}"
-                        ),
+                            expense_category="fixed",
+                        )
                     )
 
-                    variable_expenses = st.number_input(
-                        f"Variable Expenses {i + 1}",
+                    variable_rows, variable_expenses = (
+                        render_expense_table(
+                            key_prefix=key_prefix,
 
-                        min_value=0.0,
+                            show_index=i,
 
-                        step=100.0,
-
-                        key=(
-                            f"{key_prefix}"
-                            f"_variable_expenses_{i}"
-                        ),
+                            expense_category="variable",
+                        )
                     )
 
                 # Break-even and estimated expense calculations
@@ -906,8 +905,6 @@ def render_show_details_section(
                                 ),
                             )
                         )
-
-                # Profit-sharing and walkout projections
                 with e3:
 
                     if auto_expense_math:
@@ -965,6 +962,90 @@ def render_show_details_section(
                                 ),
                             )
                         )
+ 
+                # ==========================================
+                # Expense Breakdown
+                # ==========================================
+
+                st.markdown(
+                    "##### Expense Breakdown"
+                )
+
+                summary_rows = []
+
+                for expense in fixed_rows:
+
+                    if (
+                        expense["type"]
+                        or expense["amount"] > 0
+                    ):
+
+                        summary_rows.append(
+                            {
+                                "Category": "Fixed",
+
+                                "Expense Type": (
+                                    expense["type"]
+                                ),
+
+                                "Amount": (
+                                    expense["amount"]
+                                ),
+                            }
+                        )
+
+                for expense in variable_rows:
+
+                    if (
+                        expense["type"]
+                        or expense["amount"] > 0
+                    ):
+
+                        summary_rows.append(
+                            {
+                                "Category": "Variable",
+
+                                "Expense Type": (
+                                    expense["type"]
+                                ),
+
+                                "Amount": (
+                                    expense["amount"]
+                                ),
+                            }
+                        )
+
+                if summary_rows:
+
+                    st.dataframe(
+
+                        summary_rows,
+
+                        use_container_width=True,
+
+                        hide_index=True,
+
+                        column_config={
+
+                            "Amount": (
+                                st.column_config.NumberColumn(
+
+                                    "Amount",
+
+                                    format="$%.2f",
+
+                                )
+                            ),
+
+                        },
+
+                    )
+
+                else:
+
+                    st.info(
+                        "No expenses added."
+                    )
 
             # Store normalized per-show configuration
             show_details.append(
@@ -1018,6 +1099,17 @@ def render_show_details_section(
 
                     # Expense breakdown projections
                     "expenses": {
+
+                        # Detailed expense rows
+                        "fixed_rows": (
+                            fixed_rows
+                        ),
+
+                        "variable_rows": (
+                            variable_rows
+                        ),
+
+                        # Expense totals
                         "fixed_expenses": (
                             fixed_expenses
                         ),
@@ -1026,6 +1118,7 @@ def render_show_details_section(
                             variable_expenses
                         ),
 
+                        # Financial calculations
                         "break_even": (
                             break_even
                         ),
