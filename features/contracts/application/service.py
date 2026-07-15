@@ -142,6 +142,27 @@ class ContractService:
 
                     "city": data.city,
                     "fee": data.fee,
+
+                    "deal_type": (
+                        data.deal_type
+                    ),
+
+                    "flat_guarantee": (
+                        data.flat_guarantee
+                    ),
+
+                    "percentage": (
+                        data.percentage
+                    ),
+
+                    "deal_basis": (
+                        data.deal_basis
+                    ),
+
+                    "minimum_guarantee": (
+                        data.minimum_guarantee
+                    ),
+
                     "ticketing_fee_percent": (
                         data.ticketing_fee_percent
                     ),

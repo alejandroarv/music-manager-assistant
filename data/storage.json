@@ -20282,5 +20282,37 @@
         },
         "id": "02066d40-31ce-40c8-9057-c64da33af9c5",
         "timestamp": "2026-07-13T18:54:33.734381+00:00"
+    },
+    {
+        "type": "deal_profile",
+        "name": "Not deal",
+        "content": {
+            "profile_name": "Not deal",
+            "base_deal_type": "Flat Guarantee",
+            "flat_guarantee": 100.0,
+            "percentage": 34.0,
+            "deal_basis": "Gross",
+            "minimum_guarantee": 12.0,
+            "notes": "yesnoyess"
+        },
+        "metadata": null,
+        "id": "dad504a4-a99d-46c9-bf47-cb232f6e961a",
+        "timestamp": "2026-07-15T22:25:29.556294+00:00"
+    },
+    {
+        "type": "deal_profile",
+        "name": "deal deal",
+        "content": {
+            "profile_name": "deal deal",
+            "base_deal_type": "Buyout",
+            "flat_guarantee": 300.0,
+            "percentage": 6.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 300.0,
+            "notes": "fadsfds"
+        },
+        "metadata": null,
+        "id": "0391f3c8-0a24-4bbf-b037-45f28f160f45",
+        "timestamp": "2026-07-15T22:49:21.356420+00:00"
     }
 ]

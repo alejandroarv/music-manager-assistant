@@ -24,6 +24,9 @@ from core.config import settings
 from features.companies.application.service import (
     CompanyProfileService,
 )
+from features.deal_profiles.application.service import (
+    DealProfileService,
+)
 
 class Container:
     """
@@ -93,6 +96,12 @@ class Container:
 
         self.company_profile_service = (
             CompanyProfileService(
+                self.record_repository,
+            )
+        )
+
+        self.deal_profile_service = (
+            DealProfileService(
                 self.record_repository,
             )
         )

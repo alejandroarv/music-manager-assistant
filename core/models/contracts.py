@@ -21,6 +21,16 @@ class PerformanceContractData:
         city="",
         venue_address="",
         fee=0,
+
+        deal_type="Flat Guarantee",
+
+        flat_guarantee=0,
+
+        percentage=0,
+
+        deal_basis="Net",
+
+        minimum_guarantee=0,
         *,
         purchaser_name=None,
         purchaser_address=None,
@@ -83,8 +93,43 @@ class PerformanceContractData:
         if int(number_of_shows) < 1:
             raise ValueError("Number of shows must be at least 1")
         
-        if float(fee) <= 0:
-            raise ValueError("Flat Guarantee must be greater than 0")
+        if deal_type in (
+
+            "Flat Guarantee",
+
+            "Versus Deal",
+
+            "Buyout",
+
+        ):
+
+            if float(
+                flat_guarantee
+            ) <= 0:
+
+                raise ValueError(
+
+                    "Guarantee must be greater than 0"
+
+                )
+
+        elif deal_type in (
+
+            "Percentage Deal",
+
+            "Door Deal",
+
+        ):
+
+            if float(
+                percentage
+            ) <= 0:
+
+                raise ValueError(
+
+                    "Percentage must be greater than 0"
+
+                )
 
         # Maintain compatibility with older note-based contract data
         resolved_additional_acts = additional_acts if additional_acts else notes
@@ -109,6 +154,26 @@ class PerformanceContractData:
             venue_address
         ).strip()
         self.fee = float(fee)
+
+        self.deal_type = str(
+            deal_type
+        ).strip()
+
+        self.flat_guarantee = float(
+            flat_guarantee
+        )
+
+        self.percentage = float(
+            percentage
+        )
+
+        self.deal_basis = str(
+            deal_basis
+        ).strip()
+
+        self.minimum_guarantee = float(
+            minimum_guarantee
+        )
         self.number_of_shows = int(number_of_shows)
 
         # Additional performer information

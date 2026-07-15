@@ -41,6 +41,10 @@ from features.companies.presentation.ui import (
     render_company_profiles,
 )
 
+from features.deal_profiles.presentation.ui import (
+    render_deal_profiles,
+)
+
 # Configure global application logging.
 # Used for:
 # - Persistence events
@@ -90,9 +94,11 @@ menu = [
     "Artist Profiles",
     "Venue Profiles",
     "Companies",
+    "Deal Profiles",
     "Booking",
     "Tour Planner",
     "History",
+    
 ]
 
 choice = st.sidebar.selectbox(
@@ -158,3 +164,10 @@ elif choice == "Companies":
     render_company_profiles(
         container
         )
+
+elif choice == "Deal Profiles":
+
+    # Render deal profile management workflow
+    render_deal_profiles(
+        container
+    )

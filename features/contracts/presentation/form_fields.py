@@ -17,6 +17,10 @@ from features.contracts.presentation.sections.venue_profile_autofill import (
     render_venue_profile_autofill,
 )
 
+from features.contracts.presentation.sections.deal_structure import (
+    render_deal_structure_section,
+)
+
 def render_performance_contract_fields(
     key_prefix: str,
     container,
@@ -191,6 +195,14 @@ def render_performance_contract_fields(
             value=venue,
             key=f"{key_prefix}_company_address",
         )
+
+    # Deal Structure
+    deal_data = (
+        render_deal_structure_section(
+            key_prefix,
+            container,
+        )
+    )
 
     st.markdown("### Show Setup")
 
@@ -501,7 +513,59 @@ def render_performance_contract_fields(
             venue_address
         ),
 
-        "fee": fee,
+        "fee": (
+
+            deal_data[
+                "flat_guarantee"
+            ]
+
+            if deal_data[
+                "deal_type"
+            ]
+
+            in [
+
+                "Flat Guarantee",
+
+                "Versus Deal",
+
+                "Buyout",
+
+            ]
+
+            else 0
+
+        ),
+
+        "deal_type": (
+            deal_data[
+                "deal_type"
+            ]
+        ),
+
+        "flat_guarantee": (
+            deal_data[
+                "flat_guarantee"
+            ]
+        ),
+
+        "percentage": (
+            deal_data[
+                "percentage"
+            ]
+        ),
+
+        "deal_basis": (
+            deal_data[
+                "deal_basis"
+            ]
+        ),
+
+        "minimum_guarantee": (
+            deal_data[
+                "minimum_guarantee"
+            ]
+        ),
 
         "number_of_shows": (
             number_of_shows

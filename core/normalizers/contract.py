@@ -139,8 +139,34 @@ def normalize_performance_contract(data):
 
         # Financial and scheduling information
         "fee": data.fee,
-        "number_of_shows": data.number_of_shows,
-        "ticketing_fee_percent": data.ticketing_fee_percent,
+
+        "deal_type": (
+            data.deal_type
+        ),
+
+        "flat_guarantee": (
+            data.flat_guarantee
+        ),
+
+        "percentage": (
+            data.percentage
+        ),
+
+        "deal_basis": (
+            data.deal_basis
+        ),
+
+        "minimum_guarantee": (
+            data.minimum_guarantee
+        ),
+
+        "number_of_shows": (
+            data.number_of_shows
+        ),
+
+        "ticketing_fee_percent": (
+            data.ticketing_fee_percent
+        ),
 
         # Performer information
         "additional_acts": fallback(data.additional_acts, "None"),

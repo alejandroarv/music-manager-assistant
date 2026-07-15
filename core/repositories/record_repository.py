@@ -83,6 +83,51 @@ class RecordRepository:
 
         return record_dict
 
+    def update(
+        self,
+        record: Record,
+    ):
+        """
+        Update an existing persisted record.
+
+        Args:
+            record:
+                Updated record instance.
+        """
+
+        data = self.storage.load_all()
+
+        record_dict = (
+            record.to_dict()
+            if hasattr(record, "to_dict")
+            else record.__dict__.copy()
+        )
+
+        for index, existing in enumerate(data):
+
+            if existing["id"] == record.id:
+
+                record_dict["timestamp"] = (
+                    existing["timestamp"]
+                )
+
+                data[index] = record_dict
+
+                self.storage.save_all(
+                    data
+                )
+
+                logger.info(
+                    "Updated record: %s",
+                    record.id,
+                )
+
+                return record_dict
+
+        raise ValueError(
+            "Record not found."
+        )
+    
     def get_all(self):
         """
         Retrieve all persisted records.
