@@ -114,7 +114,7 @@ def render_performance_contract_fields(
         )
             
 
-    # Right-side event and fee fields
+    # Right-side event fields
     with col2:
 
         venue = st.text_input(
@@ -144,38 +144,6 @@ def render_performance_contract_fields(
             value=date,
             key=f"{key_prefix}_signature_date",
         )
-
-        fee_key = f"{key_prefix}_fee"
-
-        # Initialize fee field
-        if fee_key not in st.session_state:
-
-            st.session_state[fee_key] = ""
-
-        fee_input = st.text_input(  
-            "Flat Guarantee",
-            key=fee_key,
-            placeholder="Enter amount in USD",
-        )
-
-        # Remove commas before conversion
-        clean_fee = (
-            fee_input
-            .replace(",", "")
-            .strip()
-        )
-
-        # Convert formatted value into float
-        try:
-            fee = (
-                float(clean_fee)
-                if clean_fee
-                else 0
-            )
-
-        except ValueError:
-
-            fee = 0
 
     # Address-related sections
     col3, col4 = st.columns(2)
@@ -302,6 +270,7 @@ def render_performance_contract_fields(
     # consumed by the application layer
     # Render dynamic per-show
     # configuration sections
+
     show_details = (
         render_show_details_section(
             key_prefix=key_prefix,
@@ -328,8 +297,23 @@ def render_performance_contract_fields(
                 capacity_defaults
             ),
 
-
             general_notes=general_notes,
+
+            deal_type=(
+                deal_data["deal_type"]
+            ),
+
+            flat_guarantee=(
+                deal_data["flat_guarantee"]
+            ),
+
+            percentage=(
+                deal_data["percentage"]
+            ),
+
+            deal_basis=(
+                deal_data["deal_basis"]
+            ),
         )
     )
 
@@ -558,12 +542,6 @@ def render_performance_contract_fields(
         "deal_basis": (
             deal_data[
                 "deal_basis"
-            ]
-        ),
-
-        "minimum_guarantee": (
-            deal_data[
-                "minimum_guarantee"
             ]
         ),
 

@@ -20314,5 +20314,1178 @@
         "metadata": null,
         "id": "0391f3c8-0a24-4bbf-b037-45f28f160f45",
         "timestamp": "2026-07-15T22:49:21.356420+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Live Nation",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "",
+            "signatory": "Live Nation",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-17",
+            "signature_date": "2026-07-17",
+            "city": "Bogotaa",
+            "fee": 300.0,
+            "deal_type": "Buyout",
+            "flat_guarantee": 300.0,
+            "percentage": 0.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 0.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Live Nation",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 300.0,
+                        "walkout_potential": 300.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-17",
+            "number_of_shows": 1
+        },
+        "id": "6b31bd63-4673-4c07-b357-681a9f6209bc",
+        "timestamp": "2026-07-17T19:53:39.405957+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Live Nation",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "",
+            "signatory": "Live Nation",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-17",
+            "signature_date": "2026-07-17",
+            "city": "Bogotaa",
+            "fee": 300.0,
+            "deal_type": "Buyout",
+            "flat_guarantee": 300.0,
+            "percentage": 0.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 0.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Live Nation",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 300.0,
+                        "walkout_potential": 300.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-17",
+            "number_of_shows": 1
+        },
+        "id": "86b33761-09a5-4453-a714-4e4fc76fc403",
+        "timestamp": "2026-07-17T20:04:33.221103+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Live Nation",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "",
+            "signatory": "Live Nation",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-17",
+            "signature_date": "2026-07-17",
+            "city": "Bogotaa",
+            "fee": 300.0,
+            "deal_type": "Flat Guarantee",
+            "flat_guarantee": 300.0,
+            "percentage": 0.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 0.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Live Nation",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 300.0,
+                        "walkout_potential": 300.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-17",
+            "number_of_shows": 1
+        },
+        "id": "6ac67310-f1f4-4caa-a205-4d7e79c4b02f",
+        "timestamp": "2026-07-17T20:04:56.956559+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny",
+            "client": "Live Nation",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "",
+            "signatory": "Live Nation",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-17",
+            "signature_date": "2026-07-17",
+            "city": "Bogotaa",
+            "fee": 300.0,
+            "deal_type": "Versus Deal",
+            "flat_guarantee": 300.0,
+            "percentage": 6.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 0.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Live Nation",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 8680.86,
+                        "walkout_potential": 8680.86
+                    }
+                },
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 8680.86,
+                        "walkout_potential": 8680.86
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-17",
+            "number_of_shows": 2
+        },
+        "id": "35aeb1fe-dfe4-47c4-9c6d-8a0c6b6b9b2e",
+        "timestamp": "2026-07-17T20:05:41.477823+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_multi",
+            "artist": "Bad Bunny",
+            "client": "Live Nation",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "",
+            "signatory": "Live Nation",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-17",
+            "signature_date": "2026-07-17",
+            "city": "Bogotaa",
+            "fee": 300.0,
+            "deal_type": "Buyout",
+            "flat_guarantee": 300.0,
+            "percentage": 0.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 0.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 2,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Live Nation",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 300.0,
+                        "walkout_potential": 300.0
+                    }
+                },
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 300.0,
+                        "walkout_potential": 300.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-17",
+            "number_of_shows": 2
+        },
+        "id": "83c90cd3-28e1-4611-aca7-040cf6f0ad44",
+        "timestamp": "2026-07-17T20:10:02.137766+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Live Nation",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "",
+            "signatory": "Live Nation",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-17",
+            "signature_date": "2026-07-17",
+            "city": "Bogotaa",
+            "fee": 300.0,
+            "deal_type": "Buyout",
+            "flat_guarantee": 300.0,
+            "percentage": 0.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 0.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Live Nation",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 300.0,
+                        "walkout_potential": 300.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-17",
+            "number_of_shows": 1
+        },
+        "id": "5501331d-d3eb-4fa8-841c-c7364abf0c93",
+        "timestamp": "2026-07-17T21:49:00.755459+00:00"
+    },
+    {
+        "type": "performance_contract",
+        "name": "Bad Bunny",
+        "content": {
+            "format": "docx",
+            "template": "performance_single",
+            "artist": "Bad Bunny",
+            "client": "Live Nation",
+            "purchaser_name": "Live Nation",
+            "purchaser_address": "",
+            "signatory": "Live Nation",
+            "company_name": "Live Nation",
+            "company_address": "123 Main Street",
+            "venue": "Movistar Arena",
+            "venue_address": "calle 2 carrera 2",
+            "date": "2026-07-17",
+            "signature_date": "2026-07-17",
+            "city": "Bogotaa",
+            "fee": 300.0,
+            "deal_type": "Buyout",
+            "flat_guarantee": 300.0,
+            "percentage": 0.0,
+            "deal_basis": "Net",
+            "minimum_guarantee": 0.0,
+            "ticketing_fee_percent": 0.0,
+            "number_of_shows": 1,
+            "notes": "",
+            "show_length": "90 Minutes",
+            "air_transportation": "fasd",
+            "hotel_accommodations": "fads",
+            "air_freight": "Half Covered",
+            "ground_transportation": "afds",
+            "meals_incidentals": "fad",
+            "special_provisions": "fad",
+            "concessionaire_fee": "fad",
+            "seller": "fad",
+            "hard_merchandising": 70,
+            "soft_merchandising": 40,
+            "complimentary_tickets": "50 Tickets",
+            "production": "fads",
+            "catering": "fdas",
+            "additional_addenda": "",
+            "merchandising_terms": "fads",
+            "buyer_name": "Live Nation",
+            "buyer_company_name": "Live Nation",
+            "shows": [
+                {
+                    "city": "Bogotaa",
+                    "venue": "Movistar Arena",
+                    "venue_address": "calle 2 carrera 2",
+                    "date": "2026-07-17",
+                    "schedules": [
+                        {
+                            "type": "",
+                            "time": ""
+                        }
+                    ],
+                    "show_length": "90 Minutes",
+                    "capacity": "fad",
+                    "notes": "",
+                    "ticket_rows": [
+                        {
+                            "label": "Platinum",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 57.38,
+                            "line_total": 22952.0
+                        },
+                        {
+                            "label": "Gold",
+                            "total": 400,
+                            "comps_kills": 0,
+                            "price": 49.18,
+                            "line_total": 19672.0
+                        },
+                        {
+                            "label": "VIP",
+                            "total": 100,
+                            "comps_kills": 0,
+                            "price": 40.98,
+                            "line_total": 4098.0
+                        },
+                        {
+                            "label": "Platea Oeste",
+                            "total": 600,
+                            "comps_kills": 0,
+                            "price": 36.89,
+                            "line_total": 22134.0
+                        },
+                        {
+                            "label": "Platea Este",
+                            "total": 1000,
+                            "comps_kills": 0,
+                            "price": 32.79,
+                            "line_total": 32790.0
+                        },
+                        {
+                            "label": "Popular",
+                            "total": 1500,
+                            "comps_kills": 0,
+                            "price": 28.69,
+                            "line_total": 43035.0
+                        }
+                    ],
+                    "gross_potential": 144681.0,
+                    "net_potential": 144681.0,
+                    "ticketing_fee_percent": 0.0,
+                    "ticketing_fee_amount": 0.0,
+                    "include_merchandising": false,
+                    "merchandising_revenue": 0.0,
+                    "expenses": {
+                        "fixed_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "variable_rows": [
+                            {
+                                "type": "",
+                                "amount": 0.0
+                            }
+                        ],
+                        "fixed_expenses": 0.0,
+                        "variable_expenses": 0.0,
+                        "break_even": 0.0,
+                        "net_potential": 144681.0,
+                        "total_est_expenses": 0.0,
+                        "amount_to_split": 300.0,
+                        "walkout_potential": 300.0
+                    }
+                }
+            ]
+        },
+        "metadata": {
+            "artist": "Bad Bunny",
+            "venue": "Movistar Arena",
+            "date": "2026-07-17",
+            "number_of_shows": 1
+        },
+        "id": "02adf768-5a65-44cd-9dc0-dc90b222a15f",
+        "timestamp": "2026-07-17T21:51:47.180385+00:00"
     }
 ]

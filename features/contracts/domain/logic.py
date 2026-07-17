@@ -78,10 +78,70 @@ def compute_line_total(
 
     return sellable * float(price or 0)
 
+def compute_walkout_potential(
+    deal_type: str,
+    flat_guarantee: float,
+    percentage: float,
+    deal_basis: str,
+    gross_potential: float,
+    net_potential: float,
+) -> float:
+    """
+    Calculate the projected artist walkout
+    based on the selected deal structure.
+    """
+
+    gross_potential = float(gross_potential or 0)
+    net_potential = float(net_potential or 0)
+    flat_guarantee = float(flat_guarantee or 0)
+    percentage = float(percentage or 0)
+
+    if deal_type == "Flat Guarantee":
+        return flat_guarantee
+
+    if deal_type == "Buyout":
+        return flat_guarantee
+
+    if deal_type == "Percentage Deal":
+
+        base = (
+            net_potential
+            if deal_basis == "Net"
+            else gross_potential
+        )
+
+        return base * (percentage / 100)
+
+    if deal_type == "Versus Deal":
+
+        base = (
+            net_potential
+            if deal_basis == "Net"
+            else gross_potential
+        )
+
+        percentage_amount = (
+            base * (percentage / 100)
+        )
+
+        return max(
+            flat_guarantee,
+            percentage_amount,
+        )
+
+    if deal_type == "Door Deal":
+
+        return (
+            gross_potential
+            * (percentage / 100)
+        )
+
+    return 0.0
+
 def compute_expense_totals(
     fixed_expenses: float,
     variable_expenses: float,
-    net_potential: float,
+    walkout_potential: float,
 ) -> tuple[float, float, float, float]:
     """
     Calculate expense and profit projection values.
@@ -94,12 +154,14 @@ def compute_expense_totals(
 
     break_even = total_est_expenses
 
-    amount_to_split = (
-        float(net_potential or 0)
-        - total_est_expenses
+    walkout_potential = float(
+        walkout_potential or 0
     )
 
-    walkout_potential = amount_to_split
+    amount_to_split = (
+        walkout_potential
+        - total_est_expenses
+    )
 
     return (
         break_even,
@@ -107,6 +169,77 @@ def compute_expense_totals(
         amount_to_split,
         walkout_potential,
     )
+
+def build_performance_fee_clause(
+    deal_type: str,
+    flat_guarantee: float,
+    percentage: float,
+    deal_basis: str,
+) -> str:
+    """
+    Build the contract Performance Fee clause
+    based on the selected deal structure.
+    """
+
+    formatted_guarantee = format_currency(
+        flat_guarantee
+    )
+
+    formatted_percentage = format_percent(
+        percentage
+    )
+
+    if deal_type == "Flat Guarantee":
+
+        return (
+            f"Flat Guarantee of "
+            f"{formatted_guarantee} "
+            "NET of any and all "
+            "local withholding taxes."
+        )
+
+    if deal_type == "Versus Deal":
+
+        return (
+            f"The greater of a Minimum "
+            f"Guarantee of "
+            f"{formatted_guarantee} "
+            "NET of any and all local "
+            "withholding taxes, or "
+            f"{formatted_percentage}% "
+            f"of {deal_basis} Box Office "
+            "Receipts."
+        )
+
+    if deal_type == "Percentage Deal":
+
+        return (
+            f"{formatted_percentage}% "
+            f"of {deal_basis} Box Office "
+            "Receipts, payable NET of "
+            "any and all local "
+            "withholding taxes."
+        )
+
+    if deal_type == "Door Deal":
+
+        return (
+            f"{formatted_percentage}% "
+            "of Gross Door Receipts, "
+            "payable NET of any and all "
+            "local withholding taxes."
+        )
+
+    if deal_type == "Buyout":
+
+        return (
+            f"Buyout Amount of "
+            f"{formatted_guarantee} "
+            "NET of any and all local "
+            "withholding taxes."
+        )
+
+    return ""
 
 def get_all_tables(doc):
     """
@@ -192,11 +325,23 @@ def replace_label_only(
 
                     return
                 
-def replace_fee(doc, formatted_fee):
+def replace_performance_fee(
+    doc,
+    deal_type,
+    flat_guarantee,
+    percentage,
+    deal_basis,
+):
     """
-    Replace flat guarantee fee sections
+    Replace Performance Fee sections
     within contract templates.
     """
+    performance_fee_clause = build_performance_fee_clause(
+        deal_type,
+        flat_guarantee,
+        percentage,
+        deal_basis,
+    )
 
     for table in get_all_tables(doc):
         for row in table.rows:
@@ -211,11 +356,9 @@ def replace_fee(doc, formatted_fee):
 
                         set_paragraph_text(
                             paragraph,
-                            f"Flat Guarantee of "
-                            f"$ {formatted_fee} "
-                            "NET of any and all "
-                            "local withholding taxes.",
+                            performance_fee_clause,
                         )
+
 
 
 def fill_after_header(doc, header_text, value):
@@ -995,7 +1138,7 @@ def format_percent(value):
     return f"{numeric_value:g}"
 
 
-def fill_ticketing_fee_paragraph(cell, fee_text):
+def fill_ticketing_fee_paragraph(cell, ticketing_fee_text):
     """
     Fill the ticketing-fee value without disturbing
     the nested gross/net potential table.
@@ -1012,7 +1155,7 @@ def fill_ticketing_fee_paragraph(cell, fee_text):
         # in a nested table. Appending the value to the label paragraph keeps it
         # visible without rewriting the nested gross/net potential rows.
         paragraph.add_run(
-            f"\n{fee_text}"
+            f"\n{ticketing_fee_text}"
         )
 
         return True
@@ -1125,7 +1268,7 @@ def fill_ticket_summary_table(table, show):
         )
     )
 
-    fee_text = (
+    ticketing_fee_text = (
         f"{format_percent(ticketing_fee_percent)}% "
         f"({format_currency(ticketing_fee_amount)})"
     )
@@ -1133,7 +1276,7 @@ def fill_ticket_summary_table(table, show):
     for cell in table.rows[0].cells:
         fill_ticketing_fee_paragraph(
             cell,
-            fee_text,
+            ticketing_fee_text,
         )
 
     for nested in (
@@ -1249,15 +1392,25 @@ def fill_expense_table(table, show):
     )
 
 
-def update_fee_table(
+def update_performance_fee_table(
     doc,
     shows,
-    formatted_fee
+    deal_type,
+    flat_guarantee,
+    percentage,
+    deal_basis,
 ):
     """
-    Update multi-show flat guarantee sections
-    across contract fee tables.
+    Update multi-show Performance Fee sections
+    across contract payment tables.
     """
+
+    performance_fee_clause = build_performance_fee_clause(
+        deal_type,
+        flat_guarantee,
+        percentage,
+        deal_basis,
+    )
 
     for table in get_body_tables(doc):
 
@@ -1276,10 +1429,7 @@ def update_fee_table(
         # Update primary guarantee section
         set_paragraph_text(
             cell.paragraphs[0],
-            "Flat Guarantee of "
-            f"$ {formatted_fee} "
-            "NET of any and all "
-            "local withholding taxes.",
+            performance_fee_clause,
         )
 
         # Retrieve existing event paragraphs
@@ -1300,12 +1450,56 @@ def update_fee_table(
         # Populate show-specific guarantees
         for index, show in enumerate(shows):
 
+            if deal_type == "Flat Guarantee":
+
+                line = (
+                    f"Flat Guarantee of "
+                    f"{format_currency(flat_guarantee)} "
+                    f"for the event on "
+                    f"{show.get('date', '')}"
+                )
+
+            elif deal_type == "Buyout":
+
+                line = (
+                    f"Buyout Amount of "
+                    f"{format_currency(flat_guarantee)} "
+                    f"for the event on "
+                    f"{show.get('date', '')}"
+                )
+
+            elif deal_type == "Versus Deal":
+
+                line = (
+                    f"Versus Deal for the event on "
+                    f"{show.get('date', '')}"
+                )
+
+            elif deal_type == "Percentage Deal":
+
+                line = (
+                    f"{format_percent(percentage)}% "
+                    f"of {deal_basis} Box Office "
+                    f"Receipts for the event on "
+                    f"{show.get('date', '')}"
+                )
+
+            elif deal_type == "Door Deal":
+
+                line = (
+                    f"{format_percent(percentage)}% "
+                    f"of Gross Door Receipts "
+                    f"for the event on "
+                    f"{show.get('date', '')}"
+                )
+
+            else:
+
+                line = ""
+
             set_paragraph_text(
                 event_paragraphs[index],
-                "Flat Guarantee of "
-                f"$ {formatted_fee} "
-                f"for the event on "
-                f"{show.get('date', '')}",
+                line,
             )
 
         # Clear unused template paragraphs
@@ -1319,7 +1513,10 @@ def update_fee_table(
 def update_show_related_tables(
     doc,
     shows,
-    formatted_fee
+    deal_type,
+    flat_guarantee,
+    percentage,
+    deal_basis,
 ):
     """
     Update all show-related financial
@@ -1366,13 +1563,16 @@ def update_show_related_tables(
             )
 
     # Multi-show contracts require
-    # expanded fee breakdown sections
+    # expanded payment breakdown sections
     if len(shows) > 1:
 
-        update_fee_table(
+        update_performance_fee_table(
             doc,
             shows,
-            formatted_fee
+            deal_type,
+            flat_guarantee,
+            percentage,
+            deal_basis,
         )
 
 def fill_single_show_details(doc, show):
@@ -1686,19 +1886,14 @@ def build_performance_contract(
             data.number_of_shows
         )
 
-    try:
-        fee_value = float(data.fee)
-
-    except (ValueError, TypeError):
-
-        fee_value = 0.0
-
-    formatted_fee = format_currency(
-        fee_value
-    ).replace("$", "")
-
     # Populate shared contract sections
-    replace_fee(doc, formatted_fee)
+    replace_performance_fee(
+        doc,
+        normalized["deal_type"],
+        normalized["flat_guarantee"],
+        normalized["percentage"],
+        normalized["deal_basis"],
+    )
 
     update_template_headers(
         doc,
@@ -1990,7 +2185,10 @@ def build_performance_contract(
         normalized_shows[
             : data.number_of_shows
         ],
-        formatted_fee
+        normalized["deal_type"],
+        normalized["flat_guarantee"],
+        normalized["percentage"],
+        normalized["deal_basis"],
     )
 
     # Export final DOCX document

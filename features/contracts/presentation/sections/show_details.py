@@ -19,6 +19,7 @@ from features.contracts.presentation.sections.venue_profile_autofill import (
 from features.contracts.domain.logic import (
     compute_ticket_totals,
     compute_line_total,
+    compute_walkout_potential,
     compute_expense_totals,
 )
 
@@ -48,6 +49,10 @@ def render_show_details_section(
     show_length,
     capacity_defaults,
     general_notes,
+    deal_type,
+    flat_guarantee,
+    percentage,
+    deal_basis,
 ):
     """
     Render per-show configuration sections.
@@ -835,6 +840,29 @@ def render_show_details_section(
 
                 # Break-even and estimated expense calculations
                 with e2:
+                    
+                    st.write(
+                        "Deal Debug",
+                        {
+                            "deal_type": deal_type,
+                            "flat_guarantee": flat_guarantee,
+                            "percentage": percentage,
+                            "deal_basis": deal_basis,
+                            "gross": gross_potential,
+                            "net": net_potential,
+                        },
+                    )
+
+                    computed_walkout_potential = (
+                        compute_walkout_potential(
+                            deal_type=deal_type,
+                            flat_guarantee=flat_guarantee,
+                            percentage=percentage,
+                            deal_basis=deal_basis,
+                            gross_potential=gross_potential,
+                            net_potential=net_potential,
+                        )
+                    )
 
                     (
                         computed_break_even,
@@ -844,7 +872,7 @@ def render_show_details_section(
                     ) = compute_expense_totals(
                         fixed_expenses,
                         variable_expenses,
-                        net_potential,
+                        computed_walkout_potential,
                     )
 
                     if auto_expense_math:
