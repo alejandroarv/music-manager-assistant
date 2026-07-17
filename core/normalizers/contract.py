@@ -180,7 +180,12 @@ def normalize_performance_contract(data):
         "air_freight": fallback(data.air_freight, "Included"),
         "ground_transportation": fallback(data.ground_transportation, "Provided"),
         "meals_incidentals": fallback(data.meals_incidentals, "Provided"),
+        "visas_required": data.visas_required,
 
+        "visa_responsible_party": fallback(
+            data.visa_responsible_party,
+            "Purchaser",
+        ),
         # Business and merchandising terms
         "special_provisions": fallback(data.special_provisions, "None"),
         "concessionaire_fee": fallback(data.concessionaire_fee, "0%"),

@@ -241,6 +241,67 @@ def build_performance_fee_clause(
 
     return ""
 
+def build_visa_clause(
+    visas_required: bool,
+    responsible_party: str,
+) -> str:
+    """
+    Build the Visas / Work Permits clause.
+    """
+
+    if visas_required:
+
+        return (
+            f"{responsible_party} shall provide and pay "
+            "for all necessary visas, work permits, and "
+            "documents required for Company, Artist, and "
+            "touring party to enter into, perform in, and "
+            "depart from the place of the Engagement."
+        )
+
+    return (
+        "The parties acknowledge that no visas or work "
+        "permits are required for the performance(s) "
+        "covered by this Agreement. Each party remains "
+        "responsible for complying with all applicable "
+        "laws and regulations."
+    )
+
+def replace_visa_clause(
+    doc,
+    visas_required,
+    responsible_party,
+):
+    """
+    Replace the Visas / Work Permits paragraph
+    immediately following its section heading.
+    """
+
+    visa_clause = build_visa_clause(
+        visas_required,
+        responsible_party,
+    )
+
+    paragraphs = doc.paragraphs
+
+    for index, paragraph in enumerate(paragraphs):
+
+        if (
+            "VISAS/WORK PERMITS"
+            in paragraph.text.upper()
+        ):
+
+            # The paragraph immediately after the heading
+            # contains the legal visa clause.
+            if index + 1 < len(paragraphs):
+
+                set_paragraph_text(
+                    paragraphs[index + 1],
+                    visa_clause,
+                )
+
+            return
+        
 def get_all_tables(doc):
     """
     Retrieve all tables from the document,
@@ -2044,7 +2105,27 @@ def build_performance_contract(
             ],
         )
     )
-    
+
+    replace_visa_clause(
+        doc,
+        normalized["visas_required"],
+        (
+            normalized["purchaser_name"]
+            if normalized["visa_responsible_party"] == "Purchaser"
+            else normalized["company_name"]
+        ),
+    )
+
+    replace_visa_clause(
+        doc,
+        normalized["visas_required"],
+        (
+            normalized["purchaser_name"]
+            if normalized["visa_responsible_party"] == "Purchaser"
+            else normalized["company_name"]
+        ),
+    )
+
     # Contract and merchandising terms
     replace_label_only(
         doc,

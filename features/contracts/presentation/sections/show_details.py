@@ -840,18 +840,6 @@ def render_show_details_section(
 
                 # Break-even and estimated expense calculations
                 with e2:
-                    
-                    st.write(
-                        "Deal Debug",
-                        {
-                            "deal_type": deal_type,
-                            "flat_guarantee": flat_guarantee,
-                            "percentage": percentage,
-                            "deal_basis": deal_basis,
-                            "gross": gross_potential,
-                            "net": net_potential,
-                        },
-                    )
 
                     computed_walkout_potential = (
                         compute_walkout_potential(

@@ -1,3 +1,5 @@
+# core/models/contracts.py
+
 class PerformanceContractData:
     """
     Structure data model for performance contracts
@@ -52,6 +54,10 @@ class PerformanceContractData:
         air_freight="Included",
         ground_transportation="Provided",
         meals_incidentals="Provided",
+
+        visas_required=True,
+        visa_responsible_party="Purchaser",
+
         special_provisions="None",
         concessionaire_fee="0%",
 
@@ -222,6 +228,18 @@ class PerformanceContractData:
         self.ground_transportation = str(ground_transportation).strip()
         self.meals_incidentals = str(meals_incidentals).strip()
 
+        if isinstance(visas_required, str):
+            self.visas_required = (
+                visas_required.strip().lower() == "yes"
+            )
+        else:
+            self.visas_required = bool(
+                visas_required
+            )
+
+        self.visa_responsible_party = str(
+            visa_responsible_party
+        ).strip()
         # Additional contractual terms
         self.special_provisions = str(special_provisions).strip()
         self.concessionaire_fee = str(

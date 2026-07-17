@@ -11,6 +11,7 @@ from features.contracts.presentation.sections import (
     render_terms_section,
     render_merchandising_section,
     render_show_details_section,
+    travel_terms,
 )
 
 from features.contracts.presentation.sections.venue_profile_autofill import (
@@ -355,6 +356,18 @@ def render_performance_contract_fields(
         ]
     )
 
+    visas_required = (
+        travel_terms[
+            "visas_required"
+        ]
+    )
+
+    visa_responsible_party = (
+        travel_terms[
+            "visa_responsible_party"
+        ]
+    )
+
     complimentary_tickets = (
         travel_terms[
             "complimentary_tickets"
@@ -573,6 +586,13 @@ def render_performance_contract_fields(
             meals_incidentals
         ),
 
+        "visas_required": (
+            visas_required
+        ),
+
+        "visa_responsible_party": (
+            visa_responsible_party
+        ),
         # Contract terms
         "special_provisions": (
             special_provisions

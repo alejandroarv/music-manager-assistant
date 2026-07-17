@@ -55,7 +55,17 @@ def render_terms_section(
             key=f"{key_prefix}_meals_incidentals",
         )
 
-
+        visas_required = st.selectbox(
+            "Visas Required",
+            ["Yes", "No"],
+            key=f"{key_prefix}_visas_required",
+        )
+        
+        visa_responsible_party = st.selectbox(
+            "Visa Responsible Party",
+            ["Purchaser", "Company"],
+            key=f"{key_prefix}_visa_responsible_party",
+        )
     # Business & Contract Fields
     with col9:
 
@@ -119,6 +129,14 @@ def render_terms_section(
 
         "meals_incidentals": (
             meals_incidentals
+        ),
+
+        "visas_required": (
+            visas_required == "Yes"
+        ),
+
+        "visa_responsible_party": (
+            visa_responsible_party
         ),
 
         "complimentary_tickets": (
