@@ -23,6 +23,10 @@ from features.contracts.domain.logic import (
     build_performance_contract,
 )
 
+from core.normalizers.contract import (
+    normalize_performance_contract,
+)
+
 from utils.helpers import (
     format_filename,
     make_json_safe,
@@ -89,6 +93,9 @@ class ContractService:
             return contract_result
 
         try:
+            normalized = normalize_performance_contract(
+                data
+            )
 
             # Select contract template based on
             # single-show or multi-show configuration
@@ -181,23 +188,93 @@ class ContractService:
 
                     # Logistics information
                     "air_transportation": (
-                        data.air_transportation
+                        normalized[
+                            "air_transportation"
+                        ]
+                    ),
+
+                    "air_transportation_required": (
+                        data.air_transportation_required
+                    ),
+
+                    "air_transportation_yes": (
+                        data.air_transportation_yes
+                    ),
+
+                    "air_transportation_no": (
+                        data.air_transportation_no
                     ),
 
                     "hotel_accommodations": (
-                        data.hotel_accommodations
+                        normalized[
+                            "hotel_accommodations"
+                        ]
+                    ),
+
+                    "hotel_accommodations_required": (
+                        data.hotel_accommodations_required
+                    ),
+
+                    "hotel_accommodations_yes": (
+                        data.hotel_accommodations_yes
+                    ),
+
+                    "hotel_accommodations_no": (
+                        data.hotel_accommodations_no
                     ),
 
                     "air_freight": (
-                        data.air_freight
+                        normalized[
+                            "air_freight"
+                        ]
+                    ),
+
+                    "air_freight_required": (
+                        data.air_freight_required
+                    ),
+
+                    "air_freight_yes": (
+                        data.air_freight_yes
+                    ),
+
+                    "air_freight_no": (
+                        data.air_freight_no
                     ),
 
                     "ground_transportation": (
-                        data.ground_transportation
+                        normalized[
+                            "ground_transportation"
+                        ]
+                    ),
+
+                    "ground_transportation_required": (
+                        data.ground_transportation_required
+                    ),
+
+                    "ground_transportation_yes": (
+                        data.ground_transportation_yes
+                    ),
+
+                    "ground_transportation_no": (
+                        data.ground_transportation_no
                     ),
 
                     "meals_incidentals": (
-                        data.meals_incidentals
+                        normalized[
+                            "meals_incidentals"
+                        ]
+                    ),
+
+                    "meals_incidentals_required": (
+                        data.meals_incidentals_required
+                    ),
+
+                    "meals_incidentals_yes": (
+                        data.meals_incidentals_yes
+                    ),
+
+                    "meals_incidentals_no": (
+                        data.meals_incidentals_no
                     ),
 
                     # Contract terms

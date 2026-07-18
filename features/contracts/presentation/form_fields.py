@@ -1,3 +1,5 @@
+# features/contracts/presentation/form_fields.py
+
 import streamlit as st
 
 from utils.state_sync import (
@@ -326,33 +328,93 @@ def render_performance_contract_fields(
     )
 
     # Extract normalized section values
-    air_transportation = (
+    air_transportation_required = (
         travel_terms[
-            "air_transportation"
+            "air_transportation_required"
         ]
     )
 
-    hotel_accommodations = (
+    air_transportation_yes = (
         travel_terms[
-            "hotel_accommodations"
+            "air_transportation_yes"
         ]
     )
 
-    air_freight = (
+    air_transportation_no = (
         travel_terms[
-            "air_freight"
+            "air_transportation_no"
         ]
     )
 
-    ground_transportation = (
+    hotel_accommodations_required = (
         travel_terms[
-            "ground_transportation"
+            "hotel_accommodations_required"
         ]
     )
 
-    meals_incidentals = (
+    hotel_accommodations_yes = (
         travel_terms[
-            "meals_incidentals"
+            "hotel_accommodations_yes"
+        ]
+    )
+
+    hotel_accommodations_no = (
+        travel_terms[
+            "hotel_accommodations_no"
+        ]
+    )
+
+    air_freight_required = (
+        travel_terms[
+            "air_freight_required"
+        ]
+    )
+
+    air_freight_yes = (
+        travel_terms[
+            "air_freight_yes"
+        ]
+    )
+
+    air_freight_no = (
+        travel_terms[
+            "air_freight_no"
+        ]
+    )
+
+    ground_transportation_required = (
+        travel_terms[
+            "ground_transportation_required"
+        ]
+    )
+
+    ground_transportation_yes = (
+        travel_terms[
+            "ground_transportation_yes"
+        ]
+    )
+
+    ground_transportation_no = (
+        travel_terms[
+            "ground_transportation_no"
+        ]
+    )
+
+    meals_incidentals_required = (
+        travel_terms[
+            "meals_incidentals_required"
+        ]
+    )
+
+    meals_incidentals_yes = (
+        travel_terms[
+            "meals_incidentals_yes"
+        ]
+    )
+
+    meals_incidentals_no = (
+        travel_terms[
+            "meals_incidentals_no"
         ]
     )
 
@@ -568,22 +630,64 @@ def render_performance_contract_fields(
         "notes": general_notes,
 
         # Travel and logistics
-        "air_transportation": (
-            air_transportation
+        "air_transportation_required": (
+            air_transportation_required
         ),
 
-        "hotel_accommodations": (
-            hotel_accommodations
+        "air_transportation_yes": (
+            air_transportation_yes
         ),
 
-        "air_freight": air_freight,
-
-        "ground_transportation": (
-            ground_transportation
+        "air_transportation_no": (
+            air_transportation_no
+        ),
+        
+        "hotel_accommodations_required": (
+            hotel_accommodations_required
         ),
 
-        "meals_incidentals": (
-            meals_incidentals
+        "hotel_accommodations_yes": (
+            hotel_accommodations_yes
+        ),
+
+        "hotel_accommodations_no": (
+            hotel_accommodations_no
+        ),
+
+        "air_freight_required": (
+            air_freight_required
+        ),
+
+        "air_freight_yes": (
+            air_freight_yes
+        ),
+
+        "air_freight_no": (
+            air_freight_no
+        ),
+
+        "ground_transportation_required": (
+            ground_transportation_required
+        ),
+
+        "ground_transportation_yes": (
+            ground_transportation_yes
+        ),
+
+        "ground_transportation_no": (
+            ground_transportation_no
+        ),
+
+        "meals_incidentals_required": (
+            meals_incidentals_required
+        ),
+
+        "meals_incidentals_yes": (
+            meals_incidentals_yes
+        ),
+
+        "meals_incidentals_no": (
+            meals_incidentals_no
         ),
 
         "visas_required": (

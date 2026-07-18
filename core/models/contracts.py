@@ -49,11 +49,25 @@ class PerformanceContractData:
         show_length="90 minutes",
         capacity="",
         ticketing_fee_percent=0.0,
-        air_transportation="Provided",
-        hotel_accommodations="Provided",
-        air_freight="Included",
-        ground_transportation="Provided",
-        meals_incidentals="Provided",
+        air_transportation_required=True,
+        air_transportation_yes="",
+        air_transportation_no="",
+        hotel_accommodations_required=True,
+        hotel_accommodations_yes="",
+        hotel_accommodations_no="",
+        air_freight_required=True,
+        air_freight_yes="",
+        air_freight_no="",
+        ground_transportation_required=True,
+        ground_transportation_yes="",
+        ground_transportation_no="",
+        meals_incidentals_required=True,
+        meals_incidentals_yes="",
+        meals_incidentals_no="",
+        hotel_accommodations=None,
+        air_freight=None,
+        ground_transportation=None,
+        meals_incidentals=None,
 
         visas_required=True,
         visa_responsible_party="Purchaser",
@@ -222,11 +236,99 @@ class PerformanceContractData:
         )
         
         # Logistics and accommodations
-        self.air_transportation = str(air_transportation).strip()
-        self.hotel_accommodations = str(hotel_accommodations).strip()
-        self.air_freight = str(air_freight).strip()
-        self.ground_transportation = str(ground_transportation).strip()
-        self.meals_incidentals = str(meals_incidentals).strip()
+
+        if isinstance(air_transportation_required, str):
+            self.air_transportation_required = (
+                air_transportation_required.strip().lower() == "yes"
+            )
+        else:
+            self.air_transportation_required = bool(
+                air_transportation_required
+            )
+
+        self.air_transportation_yes = str(
+            air_transportation_yes
+        ).strip()
+
+        self.air_transportation_no = str(
+            air_transportation_no
+        ).strip()
+
+        if isinstance(hotel_accommodations_required, str):
+            self.hotel_accommodations_required = (
+                hotel_accommodations_required.strip().lower() == "yes"
+            )
+        else:
+            self.hotel_accommodations_required = bool(
+                hotel_accommodations_required
+            )
+
+        self.hotel_accommodations_yes = str(
+            hotel_accommodations_yes
+            or hotel_accommodations
+            or ""
+        ).strip()
+
+        self.hotel_accommodations_no = str(
+            hotel_accommodations_no
+        ).strip()
+
+        if isinstance(air_freight_required, str):
+            self.air_freight_required = (
+                air_freight_required.strip().lower() == "yes"
+            )
+        else:
+            self.air_freight_required = bool(
+                air_freight_required
+            )
+
+        self.air_freight_yes = str(
+            air_freight_yes
+            or air_freight
+            or ""
+        ).strip()
+
+        self.air_freight_no = str(
+            air_freight_no
+        ).strip()
+
+        if isinstance(ground_transportation_required, str):
+            self.ground_transportation_required = (
+                ground_transportation_required.strip().lower() == "yes"
+            )
+        else:
+            self.ground_transportation_required = bool(
+                ground_transportation_required
+            )
+
+        self.ground_transportation_yes = str(
+            ground_transportation_yes
+            or ground_transportation
+            or ""
+        ).strip()
+
+        self.ground_transportation_no = str(
+            ground_transportation_no
+        ).strip()
+
+        if isinstance(meals_incidentals_required, str):
+            self.meals_incidentals_required = (
+                meals_incidentals_required.strip().lower() == "yes"
+            )
+        else:
+            self.meals_incidentals_required = bool(
+                meals_incidentals_required
+            )
+
+        self.meals_incidentals_yes = str(
+            meals_incidentals_yes
+            or meals_incidentals
+            or ""
+        ).strip()
+
+        self.meals_incidentals_no = str(
+            meals_incidentals_no
+        ).strip()
 
         if isinstance(visas_required, str):
             self.visas_required = (

@@ -4,6 +4,60 @@
 import streamlit as st
 
 
+AIR_TRANSPORTATION_YES_DEFAULT = (
+    "Purchaser shall provide and pay for round-trip economy airfare "
+    "for Artist and Artist's approved touring personnel."
+)
+
+AIR_TRANSPORTATION_NO_DEFAULT = (
+    "Artist shall be responsible for all air transportation arrangements "
+    "and expenses unless otherwise agreed in writing."
+)
+
+HOTEL_ACCOMMODATIONS_YES_DEFAULT = (
+    "Purchaser shall provide hotel accommodations consisting of the agreed "
+    "number of single and double occupancy rooms at a minimum three-star "
+    "hotel, unless otherwise agreed in writing."
+)
+
+HOTEL_ACCOMMODATIONS_NO_DEFAULT = (
+    "Artist shall be responsible for securing and paying for all hotel "
+    "accommodations unless otherwise agreed in writing."
+)
+
+GROUND_TRANSPORTATION_YES_DEFAULT = (
+    "Purchaser shall provide all required local ground transportation "
+    "between the airport, hotel, venue, and any approved promotional "
+    "appearances."
+)
+
+GROUND_TRANSPORTATION_NO_DEFAULT = (
+    "Artist shall be responsible for all local ground transportation "
+    "arrangements and expenses unless otherwise agreed in writing."
+)
+
+MEALS_INCIDENTALS_YES_DEFAULT = (
+    "Purchaser shall provide reasonable meals and incidental expenses "
+    "for Artist and Artist's approved touring personnel throughout the "
+    "engagement."
+)
+
+MEALS_INCIDENTALS_NO_DEFAULT = (
+    "Artist shall be responsible for all meals and incidental expenses "
+    "unless otherwise agreed in writing."
+)
+
+AIR_FREIGHT_YES_DEFAULT = (
+    "Purchaser shall reimburse all approved air freight and excess baggage "
+    "charges reasonably incurred in connection with the performance."
+)
+
+AIR_FREIGHT_NO_DEFAULT = (
+    "Artist shall be responsible for all air freight and excess baggage "
+    "charges unless otherwise agreed in writing."
+)
+
+
 def render_terms_section(
     key_prefix,
 ):
@@ -30,29 +84,94 @@ def render_terms_section(
     # Travel & Logistics Fields
     with col8:
 
-        air_transportation = st.text_input(
+        air_transportation_required = st.selectbox(
             "Air Transportation",
-            key=f"{key_prefix}_air_transportation",
+            ["Yes", "No"],
+            key=f"{key_prefix}_air_transportation_required",
         )
 
-        hotel_accommodations = st.text_input(
+        air_transportation_yes = st.text_input(
+            "If Yes",
+            value=AIR_TRANSPORTATION_YES_DEFAULT,
+            key=f"{key_prefix}_air_transportation_yes",
+        )
+
+        air_transportation_no = st.text_input(
+            "If No",
+            value=AIR_TRANSPORTATION_NO_DEFAULT,
+            key=f"{key_prefix}_air_transportation_no",
+        )
+
+        hotel_accommodations_required = st.selectbox(
             "Hotel Accommodations",
-            key=f"{key_prefix}_hotel_accommodations",
+            ["Yes", "No"],
+            key=f"{key_prefix}_hotel_accommodations_required",
         )
 
-        air_freight = st.text_input(
+        hotel_accommodations_yes = st.text_input(
+            "If Yes",
+            value=HOTEL_ACCOMMODATIONS_YES_DEFAULT,
+            key=f"{key_prefix}_hotel_accommodations_yes",
+        )
+
+        hotel_accommodations_no = st.text_input(
+            "If No",
+            value=HOTEL_ACCOMMODATIONS_NO_DEFAULT,
+            key=f"{key_prefix}_hotel_accommodations_no",
+        )
+
+        air_freight_required = st.selectbox(
             "Air Freight & Excess Baggage",
-            key=f"{key_prefix}_air_freight",
+            ["Yes", "No"],
+            key=f"{key_prefix}_air_freight_required",
         )
 
-        ground_transportation = st.text_input(
+        air_freight_yes = st.text_input(
+            "If Yes",
+            value=AIR_FREIGHT_YES_DEFAULT,
+            key=f"{key_prefix}_air_freight_yes",
+        )
+
+        air_freight_no = st.text_input(
+            "If No",
+            value=AIR_FREIGHT_NO_DEFAULT,
+            key=f"{key_prefix}_air_freight_no",
+        )
+
+        ground_transportation_required = st.selectbox(
             "Ground Transportation",
-            key=f"{key_prefix}_ground_transportation",
+            ["Yes", "No"],
+            key=f"{key_prefix}_ground_transportation_required",
         )
 
-        meals_incidentals = st.text_input(
+        ground_transportation_yes = st.text_input(
+            "If Yes",
+            value=GROUND_TRANSPORTATION_YES_DEFAULT,
+            key=f"{key_prefix}_ground_transportation_yes",
+        )
+
+        ground_transportation_no = st.text_input(
+            "If No",
+            value=GROUND_TRANSPORTATION_NO_DEFAULT,
+            key=f"{key_prefix}_ground_transportation_no",
+        )
+
+        meals_incidentals_required = st.selectbox(
             "Meals & Incidentals",
-            key=f"{key_prefix}_meals_incidentals",
+            ["Yes", "No"],
+            key=f"{key_prefix}_meals_incidentals_required",
+        )
+
+        meals_incidentals_yes = st.text_input(
+            "If Yes",
+            value=MEALS_INCIDENTALS_YES_DEFAULT,
+            key=f"{key_prefix}_meals_incidentals_yes",
+        )
+
+        meals_incidentals_no = st.text_input(
+            "If No",
+            value=MEALS_INCIDENTALS_NO_DEFAULT,
+            key=f"{key_prefix}_meals_incidentals_no",
         )
 
         visas_required = st.selectbox(
@@ -111,24 +230,64 @@ def render_terms_section(
 
     # Return normalized section payload
     return {
-        "air_transportation": (
-            air_transportation
+        "air_transportation_required": (
+            air_transportation_required == "Yes"
         ),
 
-        "hotel_accommodations": (
-            hotel_accommodations
+        "air_transportation_yes": (
+            air_transportation_yes
         ),
 
-        "air_freight": (
-            air_freight
+        "air_transportation_no": (
+            air_transportation_no
         ),
 
-        "ground_transportation": (
-            ground_transportation
+        "hotel_accommodations_required": (
+            hotel_accommodations_required == "Yes"
         ),
 
-        "meals_incidentals": (
-            meals_incidentals
+        "hotel_accommodations_yes": (
+            hotel_accommodations_yes
+        ),
+
+        "hotel_accommodations_no": (
+            hotel_accommodations_no
+        ),
+
+        "air_freight_required": (
+            air_freight_required == "Yes"
+        ),
+
+        "air_freight_yes": (
+            air_freight_yes
+        ),
+
+        "air_freight_no": (
+            air_freight_no
+        ),
+
+        "ground_transportation_required": (
+            ground_transportation_required == "Yes"
+        ),
+
+        "ground_transportation_yes": (
+            ground_transportation_yes
+        ),
+
+        "ground_transportation_no": (
+            ground_transportation_no
+        ),
+
+        "meals_incidentals_required": (
+            meals_incidentals_required == "Yes"
+        ),
+
+        "meals_incidentals_yes": (
+            meals_incidentals_yes
+        ),
+
+        "meals_incidentals_no": (
+            meals_incidentals_no
         ),
 
         "visas_required": (

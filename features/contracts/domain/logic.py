@@ -39,10 +39,6 @@ from utils.contract_helpers import (
     parse_date_value,
 )
 
-from features.contracts.application.formatters import (
-    format_purchaser_term,
-)
-
 def compute_ticket_totals(
     ticket_rows: list[dict]
 ) -> tuple[float, float]:
@@ -2041,69 +2037,39 @@ def build_performance_contract(
     replace_everywhere(
         doc,
         "Air Transportation:",
-        format_purchaser_term(
-            normalized["purchaser_name"],
-
-            "Air Transportation",
-
-            normalized["air_transportation"],
-        )
+        normalized["air_transportation"]
     )
 
     replace_everywhere(
         doc,
         "Hotel Accommodations:",
-        format_purchaser_term(
-            normalized["purchaser_name"],
-
-            "Hotel Accommodations",
-
-            normalized[
-                "hotel_accommodations"
-            ],
-        )
+        normalized[
+            "hotel_accommodations"
+        ]
     )
 
     replace_everywhere(
         doc,
         "Air Freight & Excess Baggage:",
-        format_purchaser_term(
-            normalized["purchaser_name"],
-
-            "Air Freight & Excess Baggage",
-
-            normalized[
-                "air_freight"
-            ],
-        )
+        normalized[
+            "air_freight"
+        ]
     )
 
     replace_everywhere(
         doc,
         "Ground Transportation:",
-        format_purchaser_term(
-            normalized["purchaser_name"],
-
-            "Ground Transportation",
-
-            normalized[
-                "ground_transportation"
-            ],
-        )
+        normalized[
+            "ground_transportation"
+        ]
     )
 
     replace_everywhere(
         doc,
         "Meals & Incidentals:",
-        format_purchaser_term(
-            normalized["purchaser_name"],
-
-            "Meals & Incidentals",
-
-            normalized[
-                "meals_incidentals"
-            ],
-        )
+        normalized[
+            "meals_incidentals"
+        ]
     )
 
     replace_visa_clause(

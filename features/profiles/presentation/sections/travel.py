@@ -3,6 +3,14 @@
 
 import streamlit as st
 
+from features.contracts.presentation.sections.travel_terms import (
+    AIR_FREIGHT_YES_DEFAULT,
+    AIR_TRANSPORTATION_YES_DEFAULT,
+    GROUND_TRANSPORTATION_YES_DEFAULT,
+    HOTEL_ACCOMMODATIONS_YES_DEFAULT,
+    MEALS_INCIDENTALS_YES_DEFAULT,
+)
+
 
 def render_terms_section(
     loaded_profile,
@@ -25,7 +33,7 @@ def render_terms_section(
         value=(
             loaded_profile.air_transportation
             if loaded_profile
-            else ""
+            else AIR_TRANSPORTATION_YES_DEFAULT
         ),
     )
 
@@ -35,7 +43,7 @@ def render_terms_section(
         value=(
             loaded_profile.hotel_accommodations
             if loaded_profile
-            else ""
+            else HOTEL_ACCOMMODATIONS_YES_DEFAULT
         ),
     )
 
@@ -45,7 +53,7 @@ def render_terms_section(
         value=(
             loaded_profile.ground_transportation
             if loaded_profile
-            else ""
+            else GROUND_TRANSPORTATION_YES_DEFAULT
         ),
     )
 
@@ -55,40 +63,17 @@ def render_terms_section(
         value=(
             loaded_profile.meals_incidentals
             if loaded_profile
-            else ""
+            else MEALS_INCIDENTALS_YES_DEFAULT
         ),
     )
 
-    air_freight = st.selectbox(
+    air_freight = st.text_input(
         "Air Freight & Excess Baggage",
 
-        options=[
-            "Included",
-            "Half Covered",
-            "Not Included",
-            "Custom",
-        ],
-
-        index=(
-            [
-                "Included",
-                "Half Covered",
-                "Not Included",
-                "Custom",
-            ].index(
-                loaded_profile.air_freight
-            )
-            if (
-                loaded_profile
-                and loaded_profile.air_freight
-                in [
-                    "Included",
-                    "Half Covered",
-                    "Not Included",
-                    "Custom",
-                ]
-            )
-            else 2
+        value=(
+            loaded_profile.air_freight
+            if loaded_profile
+            else AIR_FREIGHT_YES_DEFAULT
         ),
     )
 

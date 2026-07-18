@@ -171,38 +171,188 @@ def render_profile_autofill(
 
 
             # Terms & Logistics
-            st.session_state[
-                f"{key_prefix}_air_transportation"
-            ] = defaults.get(
+            air_transportation_default = defaults.get(
                 "air_transportation",
                 "",
             )
 
+            air_transportation_required = defaults.get(
+                "air_transportation_required",
+                bool(air_transportation_default),
+            )
+
+            if isinstance(air_transportation_required, str):
+                air_transportation_required = (
+                    air_transportation_required.strip().lower() == "yes"
+                )
+
             st.session_state[
-                f"{key_prefix}_hotel_accommodations"
+                f"{key_prefix}_air_transportation_required"
+            ] = (
+                "Yes"
+                if air_transportation_required
+                else "No"
+            )
+
+            st.session_state[
+                f"{key_prefix}_air_transportation_yes"
             ] = defaults.get(
+                "air_transportation_yes",
+                air_transportation_default,
+            )
+
+            st.session_state[
+                f"{key_prefix}_air_transportation_no"
+            ] = defaults.get(
+                "air_transportation_no",
+                "",
+            )
+
+            hotel_accommodations_default = defaults.get(
                 "hotel_accommodations",
                 "",
             )
 
+            hotel_accommodations_required = defaults.get(
+                "hotel_accommodations_required",
+                bool(hotel_accommodations_default),
+            )
+
+            if isinstance(hotel_accommodations_required, str):
+                hotel_accommodations_required = (
+                    hotel_accommodations_required.strip().lower() == "yes"
+                )
+
             st.session_state[
-                f"{key_prefix}_ground_transportation"
+                f"{key_prefix}_hotel_accommodations_required"
+            ] = (
+                "Yes"
+                if hotel_accommodations_required
+                else "No"
+            )
+
+            st.session_state[
+                f"{key_prefix}_hotel_accommodations_yes"
             ] = defaults.get(
+                "hotel_accommodations_yes",
+                hotel_accommodations_default,
+            )
+
+            st.session_state[
+                f"{key_prefix}_hotel_accommodations_no"
+            ] = defaults.get(
+                "hotel_accommodations_no",
+                "",
+            )
+
+            ground_transportation_default = defaults.get(
                 "ground_transportation",
                 "",
             )
 
+            ground_transportation_required = defaults.get(
+                "ground_transportation_required",
+                bool(ground_transportation_default),
+            )
+
+            if isinstance(ground_transportation_required, str):
+                ground_transportation_required = (
+                    ground_transportation_required.strip().lower() == "yes"
+                )
+
             st.session_state[
-                f"{key_prefix}_meals_incidentals"
+                f"{key_prefix}_ground_transportation_required"
+            ] = (
+                "Yes"
+                if ground_transportation_required
+                else "No"
+            )
+
+            st.session_state[
+                f"{key_prefix}_ground_transportation_yes"
             ] = defaults.get(
+                "ground_transportation_yes",
+                ground_transportation_default,
+            )
+
+            st.session_state[
+                f"{key_prefix}_ground_transportation_no"
+            ] = defaults.get(
+                "ground_transportation_no",
+                "",
+            )
+
+            meals_incidentals_default = defaults.get(
                 "meals_incidentals",
                 "",
             )
 
+            meals_incidentals_required = defaults.get(
+                "meals_incidentals_required",
+                bool(meals_incidentals_default),
+            )
+
+            if isinstance(meals_incidentals_required, str):
+                meals_incidentals_required = (
+                    meals_incidentals_required.strip().lower() == "yes"
+                )
+
             st.session_state[
-                f"{key_prefix}_air_freight"
+                f"{key_prefix}_meals_incidentals_required"
+            ] = (
+                "Yes"
+                if meals_incidentals_required
+                else "No"
+            )
+
+            st.session_state[
+                f"{key_prefix}_meals_incidentals_yes"
             ] = defaults.get(
+                "meals_incidentals_yes",
+                meals_incidentals_default,
+            )
+
+            st.session_state[
+                f"{key_prefix}_meals_incidentals_no"
+            ] = defaults.get(
+                "meals_incidentals_no",
+                "",
+            )
+
+            air_freight_default = defaults.get(
                 "air_freight",
+                "",
+            )
+
+            air_freight_required = defaults.get(
+                "air_freight_required",
+                bool(air_freight_default),
+            )
+
+            if isinstance(air_freight_required, str):
+                air_freight_required = (
+                    air_freight_required.strip().lower() == "yes"
+                )
+
+            st.session_state[
+                f"{key_prefix}_air_freight_required"
+            ] = (
+                "Yes"
+                if air_freight_required
+                else "No"
+            )
+
+            st.session_state[
+                f"{key_prefix}_air_freight_yes"
+            ] = defaults.get(
+                "air_freight_yes",
+                air_freight_default,
+            )
+
+            st.session_state[
+                f"{key_prefix}_air_freight_no"
+            ] = defaults.get(
+                "air_freight_no",
                 "",
             )
             

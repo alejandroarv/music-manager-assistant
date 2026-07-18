@@ -1,4 +1,5 @@
 # core/normalizers/contract.py
+
 from utils.contract_helpers import (
     safe_value,
     format_contract_date,
@@ -175,11 +176,36 @@ def normalize_performance_contract(data):
         "show_length": safe_value(data.show_length),
 
         # Travel and logistics
-        "air_transportation": fallback(data.air_transportation, "Provided"),
-        "hotel_accommodations": fallback(data.hotel_accommodations, "Provided"),
-        "air_freight": fallback(data.air_freight, "Included"),
-        "ground_transportation": fallback(data.ground_transportation, "Provided"),
-        "meals_incidentals": fallback(data.meals_incidentals, "Provided"),
+        "air_transportation": fallback(
+            data.air_transportation_yes
+            if data.air_transportation_required
+            else data.air_transportation_no,
+            "Provided",
+        ),
+        "hotel_accommodations": fallback(
+            data.hotel_accommodations_yes
+            if data.hotel_accommodations_required
+            else data.hotel_accommodations_no,
+            "Provided",
+        ),
+        "air_freight": fallback(
+            data.air_freight_yes
+            if data.air_freight_required
+            else data.air_freight_no,
+            "Included",
+        ),
+        "ground_transportation": fallback(
+            data.ground_transportation_yes
+            if data.ground_transportation_required
+            else data.ground_transportation_no,
+            "Provided",
+        ),
+        "meals_incidentals": fallback(
+            data.meals_incidentals_yes
+            if data.meals_incidentals_required
+            else data.meals_incidentals_no,
+            "Provided",
+        ),
         "visas_required": data.visas_required,
 
         "visa_responsible_party": fallback(
